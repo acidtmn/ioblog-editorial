@@ -1,0 +1,62 @@
+/* Размеры зависят от контейнера, а не окна: одна обложка работает и в карточке, и в статье. */
+.io-cover{container-type:inline-size;position:relative;width:100%;height:100%;min-width:0;aspect-ratio:16/9;overflow:hidden;background:#c7e6d3;color:#194a39;isolation:isolate}
+.io-cover__canvas{position:absolute;inset:0;background:radial-gradient(ellipse at 85% 0%,#f6f5dc,transparent 60%),linear-gradient(125deg,#d5efdf,#9bceb7);font-size:1cqw}
+.io-cover__canvas:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#1c654515 1px,transparent 1px),linear-gradient(90deg,#1c654515 1px,transparent 1px);background-size:6cqw 6cqw;mask-image:linear-gradient(90deg,transparent,#000)}
+.io-cover__brand{position:absolute;top:7%;left:7%;font:700 1.25cqw/1.4 "DM Sans",sans-serif;letter-spacing:.16em}
+.io-cover__brand:before{content:"";display:inline-block;width:.8cqw;height:.8cqw;background:#d7754c;border-radius:50%;margin-right:1cqw}
+.io-cover__headline{position:absolute;left:7%;top:30%;font:400 13cqw/1.1 Georgia,serif;letter-spacing:-.06em}
+.io-cover__caption{position:absolute;left:7%;top:64%;font:500 2.4cqw/1.35 "DM Sans",sans-serif}
+.io-cover__edition{position:absolute;right:7%;bottom:7%;font:600 1.1cqw/1.3 "DM Sans",sans-serif;letter-spacing:.13em}
+.io-cover__stack{position:absolute;left:58%;top:27%;width:31%;height:48%;background:#fbfcf0;border-radius:2cqw;transform:rotate(-8deg);box-shadow:1.8cqw 2cqw 0 #4f977f35,-2cqw -2cqw 0 #f8fbea88,0 3cqw 6cqw #19513b22;padding:5cqw 3cqw 2cqw}
+.io-cover__keys{display:flex;gap:1.5cqw;margin-bottom:2.5cqw}
+.io-cover__keys b{padding:1.2cqw 1.4cqw;border-radius:.8cqw;background:#e0ecdf;box-shadow:0 .5cqw 0 #c5d4c3;font:700 4cqw/1 "DM Sans",sans-serif}
+.io-cover__keys b:last-child{background:#265f49;color:#fff;box-shadow:0 .5cqw 0 #164432}
+.io-cover__stack i{display:block;width:85%;height:.7cqw;background:#ccdfce;margin:1.8cqw 0}
+.io-cover__stack i:last-child{width:55%}
+.cs-overlay-background>.io-cover{position:absolute;inset:0}
+/* Категория выводится темой поверх обычных фото; на рисованной обложке она закрыла бы надпись. */
+.ioblog-has-css-cover .cs-overlay-post-meta{display:none}
+
+/* Универсальная серия: только CSS и текст, без сетевых запросов и тяжёлых изображений. */
+.io-cover--editorial{--cover-a:#d9f5e9;--cover-b:#82d6bd;--cover-ink:#103f36;--cover-accent:#087f68;background:var(--cover-a);color:var(--cover-ink)}
+.io-cover--editorial .io-cover__canvas{background:radial-gradient(circle at 82% 18%,rgba(255,255,255,.72),transparent 24%),linear-gradient(135deg,var(--cover-a),var(--cover-b));font-size:1cqw}
+.io-cover--editorial .io-cover__canvas:before{background-image:linear-gradient(rgba(15,48,63,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(15,48,63,.08) 1px,transparent 1px);background-size:5cqw 5cqw;mask-image:linear-gradient(90deg,#000,transparent 78%)}
+.io-cover--editorial .io-cover__brand{max-width:54%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-transform:uppercase}
+.io-cover__topic{position:absolute;left:7%;top:26%;z-index:2;width:56%;font:750 clamp(16px,4.8cqw,58px)/1.02 "DM Sans",sans-serif;letter-spacing:-.045em;text-wrap:balance}
+.io-cover--editorial .io-cover__caption{top:auto;bottom:13%;max-width:48%;font-size:1.8cqw;font-weight:650}
+.io-cover__symbol{position:absolute;right:7%;top:21%;width:28%;height:56%;border:1px solid rgba(255,255,255,.68);border-radius:3.2cqw;background:rgba(255,255,255,.5);box-shadow:-2.4cqw 2.8cqw 0 color-mix(in srgb,var(--cover-accent) 18%,transparent),0 3cqw 7cqw rgba(9,31,43,.16);transform:rotate(5deg);backdrop-filter:blur(3px)}
+.io-cover__symbol:before{content:"";position:absolute;left:18%;top:17%;width:42%;aspect-ratio:1;border-radius:28%;background:var(--cover-accent);box-shadow:3.2cqw 1.4cqw 0 rgba(255,255,255,.78)}
+.io-cover__symbol:after{content:"";position:absolute;left:18%;right:18%;bottom:20%;height:1.1cqw;border-radius:2cqw;background:var(--cover-accent);box-shadow:0 -3cqw 0 color-mix(in srgb,var(--cover-accent) 48%,transparent)}
+.io-cover__symbol i{position:absolute;border-radius:50%;background:rgba(255,255,255,.9)}
+.io-cover__symbol i:nth-child(1){right:12%;top:-8%;width:7cqw;height:7cqw}
+.io-cover__symbol i:nth-child(2){left:-14%;bottom:2%;width:4cqw;height:4cqw}
+.io-cover__symbol i:nth-child(3){right:-8%;bottom:11%;width:2.2cqw;height:2.2cqw;background:var(--cover-accent)}
+.io-cover--terminal{--cover-a:#d8f7eb;--cover-b:#5fc9a8;--cover-ink:#073b31;--cover-accent:#087d64}
+.io-cover--signal{--cover-a:#dff4ff;--cover-b:#72bfe5;--cover-ink:#123c57;--cover-accent:#157db1}
+.io-cover--mobile{--cover-a:#fff0cf;--cover-b:#f3b86b;--cover-ink:#573715;--cover-accent:#e77832}
+.io-cover--security{--cover-a:#e6e9ff;--cover-b:#91a0ee;--cover-ink:#202a5c;--cover-accent:#4054c7}
+.io-cover--steam{--cover-a:#dbeaf7;--cover-b:#7198bc;--cover-ink:#102f49;--cover-accent:#1d5b86}
+.io-cover--road{--cover-a:#ffe5d6;--cover-b:#e99169;--cover-ink:#552718;--cover-accent:#bf4d2e}
+.io-cover--space{--cover-a:#dde0ff;--cover-b:#8f83d7;--cover-ink:#25204b;--cover-accent:#4d3ea0}
+.io-cover--paper{--cover-a:#f2efd8;--cover-b:#c9bd80;--cover-ink:#413917;--cover-accent:#847323}
+.io-cover--media{--cover-a:#ffe0e8;--cover-b:#df86a3;--cover-ink:#572035;--cover-accent:#b83261}
+.io-cover--aurora{--cover-a:#d9fff3;--cover-b:#63d6c5;--cover-ink:#093f3b;--cover-accent:#087f74}
+.io-cover--cobalt{--cover-a:#e1edff;--cover-b:#79a6ed;--cover-ink:#172f59;--cover-accent:#2e64bd}
+.io-cover--coral{--cover-a:#fff0df;--cover-b:#ef9b80;--cover-ink:#5a2a20;--cover-accent:#c8563d}
+.io-cover--plum{--cover-a:#f2e6ff;--cover-b:#b28adb;--cover-ink:#43245f;--cover-accent:#7742a8}
+
+/* Автообложка сохраняет полный заголовок и меняет кегль по фактической длине. */
+.io-cover--auto .io-cover__topic{top:23%;max-height:55%;width:58%;overflow:hidden}
+.io-cover--title-regular .io-cover__topic{font-size:clamp(14px,4.8cqw,58px)}
+.io-cover--title-long .io-cover__topic{font-size:clamp(13px,3.85cqw,48px);line-height:1.04}
+.io-cover--title-xlong .io-cover__topic{font-size:clamp(12px,3.2cqw,40px);line-height:1.06}
+
+/* Мотив orbit превращает правый объект в мягкую орбитальную диаграмму. */
+.io-cover--motif-orbit .io-cover__symbol{border-radius:50%;transform:rotate(-7deg);background:radial-gradient(circle at 38% 35%,rgba(255,255,255,.94) 0 12%,transparent 13%),rgba(255,255,255,.38)}
+.io-cover--motif-orbit .io-cover__symbol:before{left:19%;top:19%;width:58%;border:1.1cqw solid var(--cover-accent);border-radius:50%;background:transparent;box-shadow:none}
+.io-cover--motif-orbit .io-cover__symbol:after{left:8%;right:8%;bottom:46%;height:.7cqw;box-shadow:none;transform:rotate(-28deg)}
+
+/* Мотив rails напоминает интерфейсную панель и хорошо работает на технических темах. */
+.io-cover--motif-rails .io-cover__symbol{top:24%;height:50%;border-radius:2cqw;transform:rotate(2deg);background:rgba(255,255,255,.52)}
+.io-cover--motif-rails .io-cover__symbol:before{left:14%;top:16%;width:72%;height:8%;aspect-ratio:auto;border-radius:2cqw;box-shadow:0 4cqw 0 color-mix(in srgb,var(--cover-accent) 62%,transparent),0 8cqw 0 color-mix(in srgb,var(--cover-accent) 32%,transparent)}
+.io-cover--motif-rails .io-cover__symbol:after{left:14%;right:auto;bottom:14%;width:24%;height:2.2cqw;box-shadow:4.3cqw 0 0 rgba(255,255,255,.9),8.6cqw 0 0 rgba(255,255,255,.9)}

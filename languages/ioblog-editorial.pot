@@ -1,0 +1,1400 @@
+# Copyright (C) 2026 Kirill Aleksandrov
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: IO Blog Editorial 1.5.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ioblog-editorial\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-09-30T15:18:30+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: ioblog-editorial\n"
+
+#. Plugin Name of the plugin
+#: ioblog-editorial-pro.php
+msgid "IO Blog Editorial Pro"
+msgstr ""
+
+#. Description of the plugin
+#: ioblog-editorial-pro.php
+msgid "Publishing tools for IO Blog Editorial: advertising, cover editor, link cards, redirects, and integrations."
+msgstr ""
+
+#. Author of the plugin
+#. Author of the theme
+#: ioblog-editorial-pro.php
+#: style.css
+msgid "Kirill Aleksandrov"
+msgstr ""
+
+#. Author URI of the plugin
+#. Author URI of the theme
+#: ioblog-editorial-pro.php
+#: style.css
+msgid "https://kodalexandrova.ru/"
+msgstr ""
+
+#: inc/admin/cover-editor.php:10
+msgid "IO Blog CSS cover"
+msgstr ""
+
+#: inc/admin/cover-editor.php:21
+msgid "Terminal"
+msgstr ""
+
+#: inc/admin/cover-editor.php:21
+msgid "Signal"
+msgstr ""
+
+#: inc/admin/cover-editor.php:22
+msgid "Mobile"
+msgstr ""
+
+#: inc/admin/cover-editor.php:22
+msgid "Security"
+msgstr ""
+
+#: inc/admin/cover-editor.php:23
+msgid "Games"
+msgstr ""
+
+#: inc/admin/cover-editor.php:23
+msgid "Road"
+msgstr ""
+
+#: inc/admin/cover-editor.php:24
+msgid "Space"
+msgstr ""
+
+#: inc/admin/cover-editor.php:24
+msgid "Paper"
+msgstr ""
+
+#: inc/admin/cover-editor.php:25
+msgid "Media"
+msgstr ""
+
+#: inc/admin/cover-editor.php:25
+msgid "Aurora"
+msgstr ""
+
+#: inc/admin/cover-editor.php:26
+msgid "Cobalt"
+msgstr ""
+
+#: inc/admin/cover-editor.php:26
+msgid "Coral"
+msgstr ""
+
+#: inc/admin/cover-editor.php:27
+msgid "Plum"
+msgstr ""
+
+#: inc/admin/cover-editor.php:27
+msgid "Win + V"
+msgstr ""
+
+#: inc/admin/cover-editor.php:33
+msgid "Cover style"
+msgstr ""
+
+#: inc/admin/cover-editor.php:35
+msgid "Automatic"
+msgstr ""
+
+#: inc/admin/cover-editor.php:36
+msgid "Disabled"
+msgstr ""
+
+#: inc/admin/cover-editor.php:40
+msgid "Short cover title"
+msgstr ""
+
+#: inc/admin/cover-editor.php:41
+msgid "Kicker"
+msgstr ""
+
+#: inc/admin/cover-editor.php:42
+msgid "Caption"
+msgstr ""
+
+#: inc/admin/cover-editor.php:43
+msgid "Automatic covers appear when no featured image is set. A manually selected style replaces the featured image on the site."
+msgstr ""
+
+#: inc/admin/settings-sections.php:11
+msgid "Enabled"
+msgstr ""
+
+#: inc/admin/settings-sections.php:22
+msgid "Advertising slots"
+msgstr ""
+
+#: inc/admin/settings-sections.php:22
+msgid "Administrator HTML and JavaScript are allowed. For manual placement, use <code>[ioblog_ad slot=\"inline\"]</code>."
+msgstr ""
+
+#: inc/admin/settings-sections.php:23
+msgid "After the hero section"
+msgstr ""
+
+#: inc/admin/settings-sections.php:23
+msgid "Between the hero and categories on the homepage."
+msgstr ""
+
+#: inc/admin/settings-sections.php:24
+msgid "Inside an article"
+msgstr ""
+
+#: inc/admin/settings-sections.php:24
+msgid "Automatically after the selected paragraph or manually via shortcode."
+msgstr ""
+
+#: inc/admin/settings-sections.php:25
+msgid "After paragraph number"
+msgstr ""
+
+#: inc/admin/settings-sections.php:26
+msgid "Right sidebar"
+msgstr ""
+
+#: inc/admin/settings-sections.php:26
+msgid "Below the table of contents in the sticky article sidebar."
+msgstr ""
+
+#: inc/admin/settings-sections.php:27
+msgid "After the article"
+msgstr ""
+
+#: inc/admin/settings-sections.php:27
+msgid "A full-width native banner before the recommendations."
+msgstr ""
+
+#: inc/admin/settings-sections.php:30
+#: inc/admin/settings-sections.php:31
+msgid "Short links"
+msgstr ""
+
+#: inc/admin/settings-sections.php:30
+msgid "One link per line: <code>slug|https://address|307</code>. Status codes 301, 302, 307, and 308 are supported."
+msgstr ""
+
+#: inc/admin/settings-sections.php:34
+msgid "Integrations"
+msgstr ""
+
+#: inc/admin/settings-sections.php:34
+msgid "Analytics and service snippets. Use only code you trust."
+msgstr ""
+
+#: inc/admin/settings-sections.php:36
+msgid "Code before <code>&lt;/head&gt;</code>"
+msgstr ""
+
+#: inc/admin/settings-sections.php:37
+msgid "Code before <code>&lt;/body&gt;</code>"
+msgstr ""
+
+#: inc/admin/settings-sections.php:40
+msgid "Telegram channel"
+msgstr ""
+
+#: inc/admin/settings-sections.php:41
+msgid "Telegram Instant View metadata"
+msgstr ""
+
+#: inc/advertising.php:26
+msgid "Advertisement"
+msgstr ""
+
+#: inc/blocks/link-card.php:59
+msgid "Enter a page URL to build a preview."
+msgstr ""
+
+#. translators: %s: destination host name.
+#: inc/blocks/link-card.php:65
+#, php-format
+msgid "Open link on %s"
+msgstr ""
+
+#. translators: %s: destination host name.
+#: inc/blocks/link-card.php:65
+msgid "Open link"
+msgstr ""
+
+#: inc/services/class-link-preview-service.php:55
+msgid "Enter a complete address beginning with http:// or https://."
+msgstr ""
+
+#: inc/services/class-link-preview-service.php:142
+msgid "The page did not return accessible HTML."
+msgstr ""
+
+#: inc/services/class-link-preview-service.php:170
+msgid "A safe HTML parser is not available on this server."
+msgstr ""
+
+#: inc/services/class-link-preview-service.php:181
+msgid "The page HTML could not be read."
+msgstr ""
+
+#: inc/services/class-link-preview-service.php:200
+msgid "No title was found on the page."
+msgstr ""
+
+#: ioblog-editorial-pro.php:40
+msgid "IO Blog Editorial Pro requires the IO Blog Editorial theme version 1.5.0 or later."
+msgstr ""
+
+#: template-parts/link-card.php:28
+msgid "Related material"
+msgstr ""
+
+#: template-parts/link-card.php:42
+msgid "Read also"
+msgstr ""
+
+#: template-parts/link-card.php:42
+msgid "External resource"
+msgstr ""
+
+#: assets/js/editor-link-card.js:51
+msgid "Card settings"
+msgstr ""
+
+#: assets/js/editor-link-card.js:53
+msgid "Page URL"
+msgstr ""
+
+#: assets/js/editor-link-card.js:58
+msgid "Enter a complete address beginning with https://"
+msgstr ""
+
+#: assets/js/editor-link-card.js:60
+msgid "Refresh preview"
+msgstr ""
+
+#: assets/js/editor-link-card.js:62
+msgid "Show image"
+msgstr ""
+
+#: assets/js/editor-link-card.js:67
+msgid "Open in a new tab"
+msgstr ""
+
+#: assets/js/editor-link-card.js:83
+#: assets/js/editor-link-card.js:120
+msgid "Link card"
+msgstr ""
+
+#: assets/js/editor-link-card.js:84
+msgid "Paste a link to an IO Blog post or an external website."
+msgstr ""
+
+#: assets/js/editor-link-card.js:98
+msgid "Create card"
+msgstr ""
+
+#: assets/js/editor-link-card.js:112
+msgid "No preview is available for this link. A clean text link will be shown on the site."
+msgstr ""
+
+#: assets/js/editor-link-card.js:121
+msgid "A preview of an internal post or external page by URL."
+msgstr ""
+
+#: assets/js/editor-link-card.js:124
+msgid "link"
+msgstr ""
+
+#: assets/js/editor-link-card.js:124
+msgid "preview"
+msgstr ""
+
+#: assets/js/editor-link-card.js:124
+msgid "embed"
+msgstr ""
+
+#: blocks/link-card/block.json
+msgctxt "block title"
+msgid "Link card"
+msgstr ""
+
+#: blocks/link-card/block.json
+msgctxt "block description"
+msgid "A preview of an internal post or external page by URL."
+msgstr ""
+
+#: blocks/link-card/block.json
+msgctxt "block keyword"
+msgid "link"
+msgstr ""
+
+#: blocks/link-card/block.json
+msgctxt "block keyword"
+msgid "preview"
+msgstr ""
+
+#: blocks/link-card/block.json
+msgctxt "block keyword"
+msgid "embed"
+msgstr ""
+
+#. Theme Name of the theme
+#: style.css
+msgid "IO Blog Editorial"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "A modern editorial WordPress theme for technology blogs, magazines, and personal publications."
+msgstr ""
+
+#: 404.php:12
+msgid "Page not found"
+msgstr ""
+
+#: 404.php:13
+msgid "The address may have changed. Try searching for the material you need."
+msgstr ""
+
+#: 404.php:15
+msgid "Return to homepage"
+msgstr ""
+
+#: comments.php:13
+#: inc/admin/settings-page.php:139
+#: single.php:33
+#: single.php:35
+msgid "Comments"
+msgstr ""
+
+#: comments.php:21
+msgid "Join the discussion"
+msgstr ""
+
+#: comments.php:22
+msgid "Submit"
+msgstr ""
+
+#: comments.php:24
+msgid "Keep it concise and relevant. Attach an image when it helps the discussion."
+msgstr ""
+
+#: comments.php:30
+msgid "Close image"
+msgstr ""
+
+#: comments.php:30
+msgid "Image attached to a comment"
+msgstr ""
+
+#: footer.php:13
+#: inc/customizer.php:28
+msgid "An independent blog about technology, computers, software, and practical solutions without the noise."
+msgstr ""
+
+#: footer.php:15
+#: inc/setup.php:36
+msgid "Footer menu"
+msgstr ""
+
+#: footer.php:16
+msgid "Information"
+msgstr ""
+
+#: footer.php:24
+#: inc/customizer.php:29
+msgid "© 2026 IO Blog. All rights reserved."
+msgstr ""
+
+#: footer.php:25
+msgid "Made with care for readers"
+msgstr ""
+
+#: header.php:18
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:21
+msgid "IO Blog — homepage"
+msgstr ""
+
+#: header.php:23
+msgid "Technology<br>for everyday life"
+msgstr ""
+
+#: header.php:26
+#: inc/setup.php:35
+msgid "Primary menu"
+msgstr ""
+
+#: header.php:31
+msgid "Open search"
+msgstr ""
+
+#: header.php:32
+msgid "Toggle color scheme"
+msgstr ""
+
+#: header.php:33
+msgid "Open menu"
+msgstr ""
+
+#: home.php:22
+#: inc/customizer.php:21
+msgid "Independent technology journal"
+msgstr ""
+
+#: home.php:23
+#: inc/customizer.php:25
+msgid "Technology"
+msgstr ""
+
+#: home.php:23
+#: inc/customizer.php:26
+msgid "without the noise"
+msgstr ""
+
+#: home.php:24
+#: inc/customizer.php:27
+msgid "Windows, Docker, gadgets, cars, and practical ideas that actually work."
+msgstr ""
+
+#: home.php:26
+#: inc/customizer.php:22
+msgid "Practical guides"
+msgstr ""
+
+#: home.php:26
+#: inc/customizer.php:23
+msgid "Honest reviews"
+msgstr ""
+
+#: home.php:26
+#: inc/customizer.php:24
+msgid "First-hand experience"
+msgstr ""
+
+#: home.php:33
+msgid "Read new articles"
+msgstr ""
+
+#: home.php:34
+msgid "About the blog"
+msgstr ""
+
+#: home.php:49
+#: inc/admin/settings-page.php:167
+#: inc/admin/settings-page.php:173
+msgid "Editor’s choice"
+msgstr ""
+
+#: home.php:49
+msgid "A hand-picked collection from the editorial team"
+msgstr ""
+
+#: home.php:58
+msgid "Latest articles"
+msgstr ""
+
+#: home.php:58
+#: single.php:82
+msgid "All articles"
+msgstr ""
+
+#: home.php:58
+msgid "New articles, reviews, and guides"
+msgstr ""
+
+#: home.php:62
+msgid "More stories are on the way"
+msgstr ""
+
+#: home.php:62
+msgid "The newest articles will appear here."
+msgstr ""
+
+#: inc/admin/settings-page.php:37
+msgid "IO Blog settings"
+msgstr ""
+
+#: inc/admin/settings-page.php:87
+msgid "Do not show"
+msgstr ""
+
+#: inc/admin/settings-page.php:87
+msgid "Automatic selection"
+msgstr ""
+
+#: inc/admin/settings-page.php:131
+#: inc/admin/settings-page.php:145
+msgid "Site management"
+msgstr ""
+
+#: inc/admin/settings-page.php:131
+msgid "Design, reading, and publishing settings for your blog."
+msgstr ""
+
+#: inc/admin/settings-page.php:132
+msgid "Theme is active"
+msgstr ""
+
+#: inc/admin/settings-page.php:132
+msgid "View site"
+msgstr ""
+
+#: inc/admin/settings-page.php:136
+msgid "Appearance"
+msgstr ""
+
+#: inc/admin/settings-page.php:137
+msgid "Menus"
+msgstr ""
+
+#: inc/admin/settings-page.php:138
+msgid "Categories"
+msgstr ""
+
+#: inc/admin/settings-page.php:149
+msgid "Site language"
+msgstr ""
+
+#: inc/admin/settings-page.php:149
+msgid "The selected language is applied to WordPress, the public site, and your administrator profile."
+msgstr ""
+
+#: inc/admin/settings-page.php:151
+msgid "WordPress language"
+msgstr ""
+
+#: inc/admin/settings-page.php:159
+msgid "If the selected WordPress language pack is missing, it will be installed through the standard WordPress translation service when settings are saved."
+msgstr ""
+
+#: inc/admin/settings-page.php:163
+#: index.php:23
+#: single.php:17
+msgid "Homepage"
+msgstr ""
+
+#: inc/admin/settings-page.php:163
+msgid "Choose the editorial sections and the content featured on the front page."
+msgstr ""
+
+#: inc/admin/settings-page.php:165
+msgid "Hero section"
+msgstr ""
+
+#: inc/admin/settings-page.php:166
+msgid "Category shortcuts"
+msgstr ""
+
+#: inc/admin/settings-page.php:170
+msgid "Featured article"
+msgstr ""
+
+#: inc/admin/settings-page.php:171
+msgid "About page"
+msgstr ""
+
+#: inc/admin/settings-page.php:172
+msgid "Posts per page"
+msgstr ""
+
+#: inc/admin/settings-page.php:173
+msgid "Select up to five articles with Ctrl or Command. Leave empty for automatic selection."
+msgstr ""
+
+#: inc/admin/settings-page.php:174
+msgid "Section order"
+msgstr ""
+
+#: inc/admin/settings-page.php:174
+msgid "Categories → choice → latest"
+msgstr ""
+
+#: inc/admin/settings-page.php:174
+msgid "Choice → categories → latest"
+msgstr ""
+
+#: inc/admin/settings-page.php:174
+msgid "Choice → latest → categories"
+msgstr ""
+
+#: inc/admin/settings-page.php:179
+msgid "Typography and article layout"
+msgstr ""
+
+#: inc/admin/settings-page.php:179
+msgid "Reading presets keep font size, rhythm, and article width balanced."
+msgstr ""
+
+#: inc/admin/settings-page.php:181
+msgid "Typography preset"
+msgstr ""
+
+#: inc/admin/settings-page.php:181
+msgid "Editorial"
+msgstr ""
+
+#: inc/admin/settings-page.php:181
+msgid "Compact"
+msgstr ""
+
+#: inc/admin/settings-page.php:181
+msgid "Comfortable"
+msgstr ""
+
+#: inc/admin/settings-page.php:182
+msgid "Article layout"
+msgstr ""
+
+#: inc/admin/settings-page.php:182
+msgid "Article with sidebar"
+msgstr ""
+
+#: inc/admin/settings-page.php:182
+msgid "Focused reading"
+msgstr ""
+
+#: inc/admin/settings-page.php:182
+msgid "Wide article"
+msgstr ""
+
+#: inc/admin/settings-page.php:183
+msgid "Body text size, px"
+msgstr ""
+
+#: inc/admin/settings-page.php:184
+msgid "Line height"
+msgstr ""
+
+#: inc/admin/settings-page.php:185
+msgid "Reading width, px"
+msgstr ""
+
+#: inc/admin/settings-page.php:190
+msgid "Interface and content"
+msgstr ""
+
+#: inc/admin/settings-page.php:190
+msgid "Core settings for live search and user-generated content."
+msgstr ""
+
+#: inc/admin/settings-page.php:192
+msgid "Minimum search characters"
+msgstr ""
+
+#: inc/admin/settings-page.php:193
+msgid "Results in the search window"
+msgstr ""
+
+#: inc/admin/settings-page.php:194
+msgid "Image limit, MB"
+msgstr ""
+
+#: inc/admin/settings-page.php:197
+msgid "Images in comments"
+msgstr ""
+
+#: inc/admin/settings-page.php:198
+msgid "Emoji panel"
+msgstr ""
+
+#: inc/admin/settings-page.php:199
+msgid "Safe SVG uploads"
+msgstr ""
+
+#: inc/admin/settings-page.php:204
+msgid "Form protection"
+msgstr ""
+
+#: inc/admin/settings-page.php:204
+msgid "Built-in protection requires no keys. An external provider is enabled only after both keys are filled in."
+msgstr ""
+
+#: inc/admin/settings-page.php:206
+msgid "CAPTCHA provider"
+msgstr ""
+
+#: inc/admin/settings-page.php:206
+msgid "Built-in protection"
+msgstr ""
+
+#: inc/admin/settings-page.php:207
+msgid "Site key"
+msgstr ""
+
+#: inc/admin/settings-page.php:208
+msgid "Secret key"
+msgstr ""
+
+#: inc/admin/settings-page.php:208
+msgid "Key saved"
+msgstr ""
+
+#: inc/admin/settings-page.php:208
+msgid "Enter key"
+msgstr ""
+
+#: inc/admin/settings-page.php:213
+msgid "Footer social networks"
+msgstr ""
+
+#: inc/admin/settings-page.php:217
+#: inc/social.php:17
+msgid "VK"
+msgstr ""
+
+#: inc/admin/settings-page.php:218
+#: inc/social.php:18
+msgid "Odnoklassniki"
+msgstr ""
+
+#: inc/admin/settings-page.php:224
+msgid "Your edition"
+msgstr ""
+
+#: inc/admin/settings-page.php:224
+msgid "Pro publishing tools are active."
+msgstr ""
+
+#: inc/admin/settings-page.php:224
+msgid "The free theme is ready for your blog. Install the Pro extension to add publishing tools."
+msgstr ""
+
+#: inc/admin/settings-page.php:225
+msgid "Free: layouts, typography, dark mode, live search, automatic covers, Gutenberg patterns, comments, and form protection."
+msgstr ""
+
+#: inc/admin/settings-page.php:226
+msgid "Pro: visual cover editor, link preview cards, advertising slots, short links, and integration snippets."
+msgstr ""
+
+#: inc/admin/settings-page.php:230
+msgid "All changes saved"
+msgstr ""
+
+#: inc/admin/settings-page.php:230
+msgid "You have unsaved changes"
+msgstr ""
+
+#: inc/admin/settings-page.php:231
+msgid "Save settings"
+msgstr ""
+
+#: inc/admin/site-language.php:61
+msgid "The language pack could not be installed. The current language has been kept."
+msgstr ""
+
+#: inc/anti-spam.php:22
+msgid "Leave this field empty"
+msgstr ""
+
+#: inc/anti-spam.php:40
+msgid "The comment was rejected by the anti-spam system."
+msgstr ""
+
+#: inc/anti-spam.php:40
+#: inc/anti-spam.php:50
+#: inc/anti-spam.php:55
+msgid "Spam protection"
+msgstr ""
+
+#: inc/anti-spam.php:50
+msgid "The form has expired. Refresh the page and submit your comment again."
+msgstr ""
+
+#: inc/anti-spam.php:55
+msgid "Too many comments were submitted in a short time. Try again in 10 minutes."
+msgstr ""
+
+#: inc/captcha.php:82
+msgid "This form is protected by the built-in IO Blog anti-spam."
+msgstr ""
+
+#: inc/captcha.php:137
+msgid "Confirm that you are not a robot."
+msgstr ""
+
+#: inc/captcha.php:154
+msgid "CAPTCHA verification failed. Refresh the page and try again."
+msgstr ""
+
+#: inc/captcha.php:171
+msgid "CAPTCHA verification"
+msgstr ""
+
+#. translators: %d: estimated reading time in minutes.
+#: inc/cards.php:46
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of comments.
+#: inc/cards.php:49
+#, php-format
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/category-icons.php:47
+msgid "Popular topics"
+msgstr ""
+
+#: inc/comments.php:20
+msgid "Image attachments are disabled in the site settings."
+msgstr ""
+
+#: inc/comments.php:20
+msgid "Upload disabled"
+msgstr ""
+
+#: inc/comments.php:24
+msgid "The image upload could not be verified. Go back and try again."
+msgstr ""
+
+#: inc/comments.php:24
+msgid "Upload error"
+msgstr ""
+
+#. translators: %d: maximum image size in megabytes.
+#: inc/comments.php:30
+#, php-format
+msgid "The image must be smaller than %d MB."
+msgstr ""
+
+#. translators: %d: maximum image size in megabytes.
+#: inc/comments.php:30
+msgid "File is too large"
+msgstr ""
+
+#: inc/comments.php:35
+msgid "Only JPG, PNG, WebP, and GIF files are allowed."
+msgstr ""
+
+#: inc/comments.php:35
+msgid "Unsupported file"
+msgstr ""
+
+#: inc/comments.php:86
+msgid "Open comment image"
+msgstr ""
+
+#: inc/comments.php:88
+msgid "Reply"
+msgstr ""
+
+#: inc/comments.php:106
+msgid "Comment"
+msgstr ""
+
+#: inc/comments.php:107
+msgid "Write a comment…"
+msgstr ""
+
+#: inc/comments.php:110
+msgid "Add image"
+msgstr ""
+
+#: inc/comments.php:111
+msgid "Add emoji"
+msgstr ""
+
+#. translators: %d: maximum image size in megabytes.
+#: inc/comments.php:112
+#, php-format
+msgid "JPG, PNG, WebP, or GIF up to %d MB"
+msgstr ""
+
+#: inc/customizer.php:16
+msgid "IO Blog homepage"
+msgstr ""
+
+#: inc/customizer.php:17
+msgid "IO Blog footer"
+msgstr ""
+
+#: inc/customizer.php:18
+msgid "IO Blog interface"
+msgstr ""
+
+#: inc/customizer.php:21
+msgid "Homepage eyebrow"
+msgstr ""
+
+#: inc/customizer.php:22
+msgid "First highlight"
+msgstr ""
+
+#: inc/customizer.php:23
+msgid "Second highlight"
+msgstr ""
+
+#: inc/customizer.php:24
+msgid "Third highlight"
+msgstr ""
+
+#: inc/customizer.php:25
+msgid "First title line"
+msgstr ""
+
+#: inc/customizer.php:26
+msgid "Accent line"
+msgstr ""
+
+#: inc/customizer.php:27
+msgid "Description"
+msgstr ""
+
+#: inc/customizer.php:28
+msgid "Site description"
+msgstr ""
+
+#: inc/customizer.php:29
+msgid "Copyright text"
+msgstr ""
+
+#: inc/customizer.php:30
+msgid "Search heading"
+msgstr ""
+
+#: inc/customizer.php:30
+#: searchform.php:10
+#: template-parts/search-modal.php:14
+msgid "What are you looking for?"
+msgstr ""
+
+#: inc/customizer.php:42
+msgid "Default color scheme"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "Follow system"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "Light"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "Dark"
+msgstr ""
+
+#. translators: %d: minimum number of search characters.
+#: inc/search.php:84
+#: template-parts/search-modal.php:22
+#, php-format
+msgid "Enter at least %d characters"
+msgstr ""
+
+#. translators: %d: minimum number of search characters.
+#: inc/search.php:85
+msgid "Searching articles…"
+msgstr ""
+
+#: inc/search.php:86
+msgid "Nothing found. Try another search."
+msgstr ""
+
+#: inc/search.php:87
+msgid "Search is temporarily unavailable. Please try again."
+msgstr ""
+
+#. translators: %d: number of matching articles.
+#: inc/search.php:89
+#, php-format
+msgid "%d matching articles"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:148
+msgid "Articles"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:149
+msgid "New publication"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:230
+msgid "A focused tool"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:231
+msgid "System under control"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:232
+#: inc/services/class-css-cover-generator.php:246
+msgid "Reliable connectivity"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:233
+#: inc/services/class-css-cover-generator.php:247
+msgid "Phone under control"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:234
+#: inc/services/class-css-cover-generator.php:248
+msgid "Safe practices"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:235
+msgid "Useful habit"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:236
+msgid "Gaming practice"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:237
+#: inc/services/class-css-cover-generator.php:250
+msgid "Driver practice"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:238
+msgid "Understanding AI"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:239
+#: inc/services/class-css-cover-generator.php:251
+msgid "Explained simply"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:240
+#: inc/services/class-css-cover-generator.php:253
+msgid "Working with video"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:241
+msgid "The essentials"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:242
+msgid "Technology without the noise"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:245
+msgid "Step-by-step setup"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:249
+msgid "Game library"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:252
+msgid "Everyday organization"
+msgstr ""
+
+#: inc/services/class-css-cover-generator.php:257
+msgid "Useful and practical"
+msgstr ""
+
+#: inc/setup.php:56
+msgid "Article sidebar"
+msgstr ""
+
+#: inc/setup.php:58
+msgid "Widgets displayed in the sticky sidebar of a single article."
+msgstr ""
+
+#. translators: %s: social network name.
+#: inc/social.php:62
+#, php-format
+msgid "IO Blog on %s"
+msgstr ""
+
+#: inc/svg.php:37
+msgid "SVG uploads are disabled or unavailable for your role."
+msgstr ""
+
+#: inc/svg.php:42
+msgid "The SVG must be a valid file no larger than 1 MB."
+msgstr ""
+
+#: inc/svg.php:48
+msgid "The SVG contains prohibited active or external content."
+msgstr ""
+
+#: inc/svg.php:59
+msgid "The file is not a valid SVG."
+msgstr ""
+
+#: inc/toc.php:90
+#: single.php:47
+msgid "Table of contents"
+msgstr ""
+
+#: inc/toc.php:91
+msgid "In this article"
+msgstr ""
+
+#: index.php:12
+#: template-parts/search-modal.php:14
+msgid "Site search"
+msgstr ""
+
+#: index.php:12
+msgid "IO Blog archive"
+msgstr ""
+
+#. translators: %s: search query.
+#: index.php:13
+#, php-format
+msgid "Search results for: %s"
+msgstr ""
+
+#: index.php:23
+msgid "Nothing found"
+msgstr ""
+
+#: index.php:23
+msgid "Try a different search or browse the latest articles."
+msgstr ""
+
+#: patterns/article-summary.php
+msgctxt "Pattern title"
+msgid "Article summary"
+msgstr ""
+
+#: patterns/article-summary.php
+msgctxt "Pattern description"
+msgid "A compact conclusion with three takeaways."
+msgstr ""
+
+#: patterns/article-summary.php:10
+msgid "In short"
+msgstr ""
+
+#: patterns/article-summary.php:11
+msgid "The first conclusion the reader should remember."
+msgstr ""
+
+#: patterns/article-summary.php:11
+msgid "The most useful action to take next."
+msgstr ""
+
+#: patterns/article-summary.php:11
+msgid "An important limitation or safety note."
+msgstr ""
+
+#: patterns/pros-cons.php
+msgctxt "Pattern title"
+msgid "Pros and cons"
+msgstr ""
+
+#: patterns/pros-cons.php
+msgctxt "Pattern description"
+msgid "Two balanced columns for an honest comparison."
+msgstr ""
+
+#: patterns/pros-cons.php:11
+msgid "What works well"
+msgstr ""
+
+#: patterns/pros-cons.php:11
+msgid "A clear advantage supported by experience."
+msgstr ""
+
+#: patterns/pros-cons.php:11
+msgid "Another benefit that matters in practice."
+msgstr ""
+
+#: patterns/pros-cons.php:14
+msgid "What to consider"
+msgstr ""
+
+#: patterns/pros-cons.php:14
+msgid "A limitation the reader should know about."
+msgstr ""
+
+#: patterns/pros-cons.php:14
+msgid "A trade-off or requirement before starting."
+msgstr ""
+
+#: patterns/step-by-step.php
+msgctxt "Pattern title"
+msgid "Step-by-step guide"
+msgstr ""
+
+#: patterns/step-by-step.php
+msgctxt "Pattern description"
+msgid "A three-step practical instruction."
+msgstr ""
+
+#: patterns/step-by-step.php:10
+msgid "Do it step by step"
+msgstr ""
+
+#: patterns/step-by-step.php:11
+msgid "Prepare"
+msgstr ""
+
+#: patterns/step-by-step.php:11
+msgid "Explain what is needed before the reader begins."
+msgstr ""
+
+#: patterns/step-by-step.php:12
+msgid "Configure"
+msgstr ""
+
+#: patterns/step-by-step.php:12
+msgid "Describe the main action with exact names and expected results."
+msgstr ""
+
+#: patterns/step-by-step.php:13
+msgid "Check the result"
+msgstr ""
+
+#: patterns/step-by-step.php:13
+msgid "Show how to confirm that everything works correctly."
+msgstr ""
+
+#: patterns/useful-note.php
+msgctxt "Pattern title"
+msgid "Useful note"
+msgstr ""
+
+#: patterns/useful-note.php
+msgctxt "Pattern description"
+msgid "A concise highlighted note for practical details."
+msgstr ""
+
+#: patterns/useful-note.php:11
+msgid "Useful to know"
+msgstr ""
+
+#: patterns/useful-note.php:14
+msgid "Add one practical detail that helps the reader avoid a mistake or save time."
+msgstr ""
+
+#: searchform.php:9
+msgid "Search the site"
+msgstr ""
+
+#: searchform.php:11
+#: template-parts/search-modal.php:18
+#: template-parts/search-modal.php:20
+msgid "Search"
+msgstr ""
+
+#: single.php:16
+msgid "Breadcrumbs"
+msgstr ""
+
+#: single.php:28
+msgid "Article actions"
+msgstr ""
+
+#: single.php:29
+#: single.php:31
+#: assets/js/interface.js:47
+msgid "Copy link"
+msgstr ""
+
+#: single.php:29
+msgid "Link copied"
+msgstr ""
+
+#: single.php:33
+msgid "Go to comments"
+msgstr ""
+
+#: single.php:54
+msgid "IO Blog editorial team"
+msgstr ""
+
+#: single.php:54
+msgid "We write about technology that makes everyday life easier."
+msgstr ""
+
+#: single.php:58
+msgid "Adjacent articles"
+msgstr ""
+
+#: single.php:60
+msgid "Previous article"
+msgstr ""
+
+#: single.php:61
+msgid "Next article"
+msgstr ""
+
+#: single.php:71
+msgid "New articles"
+msgstr ""
+
+#: single.php:82
+msgid "Read next"
+msgstr ""
+
+#. translators: %s: post title.
+#: template-parts/card.php:23
+#, php-format
+msgid "Read: %s"
+msgstr ""
+
+#: template-parts/covers/mint-keycaps.php:4
+msgid "Clipboard history: the Win and V keyboard shortcut"
+msgstr ""
+
+#: template-parts/covers/mint-keycaps.php:6
+msgid "USEFUL HABITS"
+msgstr ""
+
+#: template-parts/covers/mint-keycaps.php:8
+msgid "Everything you need.<br>Close at hand."
+msgstr ""
+
+#: template-parts/search-modal.php:11
+#: template-parts/search-modal.php:15
+msgid "Close search"
+msgstr ""
+
+#: template-parts/search-modal.php:19
+msgid "Article title or topic…"
+msgstr ""
+
+#: assets/js/interface.js:40
+msgid "Copy this link:"
+msgstr ""
+
+#: assets/js/interface.js:104
+msgid "Image preview"
+msgstr ""
+
+#: assets/js/interface.js:107
+msgid "Remove image"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Ink"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Emerald"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Mint"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Paper"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Mist"
+msgstr ""

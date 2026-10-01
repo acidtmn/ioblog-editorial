@@ -1,0 +1,26 @@
+.io-login-captcha {
+	margin: 18px 0 4px;
+}
+
+.io-login-captcha .io-captcha {
+	width: 100%;
+	min-height: 78px;
+}
+
+.io-login-captcha .smart-captcha,
+.io-login-captcha .g-recaptcha {
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+@media (max-width: 400px) {
+	.io-login-captcha {
+		margin-inline: -8px;
+	}
+
+	.io-login-captcha .smart-captcha,
+	.io-login-captcha .g-recaptcha {
+		transform: scale(.94);
+		transform-origin: left top;
+	}
+}

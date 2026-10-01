@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IO Blog Editorial 1.5.1 — Free и Pro</title>
+  <style>
+    :root{color-scheme:light dark;--bg:#edf5f8;--surface:#fff;--text:#102033;--muted:#5d6c7e;--line:#d5e1e8;--brand:#00866f;--brand-dark:#006552;--code:#e7f5f1}*{box-sizing:border-box}body{margin:0;background:linear-gradient(145deg,#e8f6f3 0,#f6f9fc 38%,#edf3fa 100%);color:var(--text);font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}.shell{width:min(1120px,calc(100% - 32px));margin:32px auto}.hero,.panel{background:color-mix(in srgb,var(--surface) 94%,transparent);border:1px solid var(--line);border-radius:24px;box-shadow:0 22px 70px rgba(24,58,76,.09)}.hero{padding:48px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}.eyebrow{color:var(--brand);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}h1{font-size:clamp(36px,6vw,70px);line-height:.96;letter-spacing:-.055em;margin:12px 0 18px}h1 span{color:var(--brand)}.lead{max-width:700px;color:var(--muted);font-size:19px}.version{padding:12px 18px;border-radius:999px;background:var(--brand);color:#fff;font-weight:800;white-space:nowrap}.layout{display:grid;grid-template-columns:250px 1fr;gap:24px;margin-top:24px}.toc{position:sticky;top:24px;align-self:start;padding:22px}.toc a{display:block;color:var(--muted);text-decoration:none;padding:7px 0}.toc a:hover{color:var(--brand)}main{display:grid;gap:20px}.panel{padding:32px}h2{margin:0 0 18px;font-size:28px;letter-spacing:-.025em}h3{margin:26px 0 8px}p,li{color:var(--muted)}code{background:var(--code);color:var(--brand-dark);border-radius:6px;padding:.12em .38em}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{padding:18px;border:1px solid var(--line);border-radius:16px;background:color-mix(in srgb,var(--surface) 88%,var(--bg))}.card strong{display:block;margin-bottom:4px}.notice{border-left:4px solid var(--brand);background:var(--code);padding:16px 18px;border-radius:4px 14px 14px 4px}.steps{counter-reset:steps;list-style:none;padding:0}.steps li{position:relative;padding:0 0 22px 46px}.steps li:before{counter-increment:steps;content:counter(steps);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--brand);color:#fff;font-weight:800}a{color:var(--brand-dark)}footer{text-align:center;color:var(--muted);padding:28px}@media(max-width:800px){.hero{padding:30px;grid-template-columns:1fr}.layout{grid-template-columns:1fr}.toc{position:static}.grid{grid-template-columns:1fr}.panel{padding:24px}}@media(prefers-color-scheme:dark){:root{--bg:#07111f;--surface:#0d192a;--text:#eff7ff;--muted:#adc0d2;--line:#24374c;--brand:#36d1b4;--brand-dark:#70e3cf;--code:#112c2c}body{background:radial-gradient(circle at 20% 0,#103330 0,#091526 42%,#060d18 100%)}.hero,.panel{box-shadow:0 22px 70px rgba(0,0,0,.22)}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">Документация темы WordPress</div>
+        <h1>IO Blog <span>Editorial</span></h1>
+        <p class="lead">Бесплатная редакционная тема для блога: настраиваемая главная, удобная статья, тёмная схема, живой поиск, CSS-обложки и Gutenberg-паттерны. Отдельное расширение Pro добавляет издательские инструменты.</p>
+      </div>
+      <div class="version">Free 1.5.1 · Pro 1.1.1</div>
+    </header>
+
+    <div class="layout">
+      <aside class="panel toc" aria-label="Содержание документации">
+        <strong>Содержание</strong>
+        <a href="#requirements">Требования</a>
+        <a href="#install">Установка</a>
+        <a href="#start">Первый запуск</a>
+        <a href="#settings">Настройки темы</a>
+        <a href="#content">Контент и Gutenberg</a>
+        <a href="#covers">CSS-обложки</a>
+        <a href="#translation">Переводы</a>
+        <a href="#privacy">Приватность</a>
+        <a href="#support">Обновление и поддержка</a>
+        <a href="#pro-license">Лицензия Pro</a>
+        <a href="#license">Лицензии</a>
+      </aside>
+
+      <main>
+        <section class="panel" id="requirements">
+          <h2>Системные требования</h2>
+          <div class="grid">
+            <div class="card"><strong>WordPress</strong>6.5 или новее; протестировано до 7.1.</div>
+            <div class="card"><strong>PHP</strong>8.1 или новее, рекомендуется PHP 8.2+.</div>
+            <div class="card"><strong>Редактор</strong>Gutenberg, встроенный в WordPress.</div>
+            <div class="card"><strong>Браузеры</strong>Актуальные версии Chrome, Firefox, Safari и Edge.</div>
+          </div>
+        </section>
+
+        <section class="panel" id="install">
+          <h2>Установка</h2>
+          <ol class="steps">
+            <li>Откройте в админке WordPress раздел <strong>Внешний вид → Темы → Добавить новую → Загрузить тему</strong>.</li>
+            <li>Выберите архив <code>ioblog-editorial-1.5.1.zip</code>, нажмите «Установить», затем «Активировать».</li>
+            <li>Для Pro откройте «Плагины → Добавить плагин → Загрузить плагин» и установите <code>ioblog-editorial-pro-1.1.1.zip</code>. Расширение требует активную тему версии 1.5.0 или новее. Это плагин для той же темы, а не вторая тема.</li>
+            <li>Назначьте меню областям «Основное меню» и «Меню в подвале».</li>
+            <li>В разделе «Настроить → Свойства сайта» установите логотип и штатную иконку сайта WordPress.</li>
+            <li>Откройте пункт <strong>IO Blog</strong> в главном меню админки и проверьте параметры поиска, комментариев и интеграций.</li>
+          </ol>
+          <div class="notice">Реклама, внешняя CAPTCHA, счётчики, социальные ссылки и Telegram по умолчанию отключены. Тема не отправляет данные внешним сервисам до явной настройки администратором.</div>
+        </section>
+
+        <section class="panel" id="start">
+          <h2>Первый запуск</h2>
+          <h3>Главная страница</h3>
+          <p>Главная строится из стандартной ленты записей. Во вкладке «Главная страница» можно выбрать главный материал и до пяти статей редакционной подборки, включить или скрыть секции, изменить их порядок и количество записей. Отключённые секции не забирают статьи из общей ленты. Ссылка «О блоге» появляется после выбора опубликованной страницы. Тексты первого экрана меняются через «Настроить → Главная IO Blog».</p>
+          <h3>Меню и подвал</h3>
+          <p>Создайте короткое основное меню и отдельное информационное меню подвала. Ссылки подвала выводятся из области WordPress «Меню в подвале», поэтому их не нужно править в коде.</p>
+          <h3>Логотип и favicon</h3>
+          <p>Логотип задаётся через Customizer. Для favicon используется стандартная настройка WordPress «Иконка сайта»: она создаёт корректные варианты для вкладок, мобильных устройств и панели администратора.</p>
+        </section>
+
+        <section class="panel" id="settings">
+          <h2>Панель IO Blog</h2>
+          <p>Настройки разделены на вкладки. Переключение сохраняет введённые значения; общая кнопка применяет изменения во всех разделах. Вкладки рекламы, коротких ссылок и интеграций появляются после активации Pro. При отключении расширения его настройки остаются в базе. Навигация работает с клавиатуры, а без JavaScript все разделы доступны обычной формой.</p>
+          <p>Во вкладке «Типографика и макет статьи» доступны редакционный, компактный и комфортный стили, размер текста 16–22 px, межстрочный интервал и ширина чтения. Макеты: с боковой колонкой, сосредоточенное чтение и широкая статья.</p>
+          <div class="grid">
+            <div class="card"><strong>Интерфейс</strong>Минимальная длина запроса, количество результатов живого поиска, изображения и emoji в комментариях.</div>
+            <div class="card"><strong>Защита форм</strong>Встроенный антиспам, Yandex SmartCaptcha или Google reCAPTCHA v2 для комментариев и форм входа.</div>
+            <div class="card"><strong>Реклама · Pro</strong>Места на главной, внутри статьи, в сайдбаре и после статьи; ручная вставка шорткодом.</div>
+            <div class="card"><strong>Интеграции · Pro</strong>Код в head/footer и представление для Telegram Instant View. Ссылки соцсетей в подвале доступны в Free.</div>
+          </div>
+          <h3>Ручная рекламная вставка</h3>
+          <p>Настройте слот «Внутри статьи», затем вставьте в редактор шорткод <code>[ioblog_ad slot="inline"]</code>. Код принимает только известные имена слотов.</p>
+          <h3>Короткие ссылки</h3>
+          <p>Одна строка соответствует одному перенаправлению: <code>slug|https://example.com/page|307</code>. Поддерживаются статусы 301, 302, 307 и 308.</p>
+        </section>
+
+        <section class="panel" id="content">
+          <h2>Gutenberg и статьи</h2>
+          <p>Тема поддерживает стандартные стили блоков, широкое выравнивание, адаптивные встраивания и стили редактора. Заголовки H2/H3 автоматически формируют содержание статьи, не затрагивая заголовки рекламных блоков.</p>
+          <h3>Нативные паттерны · Free</h3>
+          <p>В панели паттернов Gutenberg найдите «Полезная заметка», «Плюсы и минусы», «Пошаговая инструкция» или «Итоги статьи». Они состоят из штатных блоков WordPress, переводятся вместе с интерфейсом и остаются редактируемыми при смене темы.</p>
+          <h3>Блок «Карточка ссылки» · Pro</h3>
+          <p>В редакторе найдите блок «Карточка ссылки» и вставьте полный HTTPS-адрес. Для своих записей данные берутся напрямую из WordPress. Для внешнего сайта безопасный HTTP-клиент получает заголовок, описание и Open Graph-изображение; результат кэшируется.</p>
+          <h3>Комментарии</h3>
+          <p>Нативная форма WordPress поддерживает древовидные ответы, emoji и одно изображение допустимого формата. Ограничение размера задаётся в настройках темы. Изображения проходят проверку MIME-типа перед сохранением в медиатеке.</p>
+        </section>
+
+        <section class="panel" id="covers">
+          <h2>Автоматические CSS-обложки</h2>
+          <p>Если у записи нет миниатюры, тема автоматически создаёт лёгкую обложку из заголовка, рубрики и стабильной цветовой вариации. Обложка — это HTML/CSS, поэтому она не занимает место в медиатеке и не создаёт лишний сетевой запрос.</p>
+          <p>Автообложка Free появляется только при отсутствии миниатюры. В Pro доступен метабокс «CSS-обложка IO Blog»: палитра, короткий заголовок, надзаголовок, подпись и живой предпросмотр. Ручной выбор стиля заменяет миниатюру на сайте; «Автоматически» возвращает обычное поведение. Специальный вариант Win + V использует фиксированную композицию.</p>
+          <p>Pro распространяется отдельным архивом; лицензирование и официальные обновления настраиваются в разделе «Лицензия и обновления». Free не требует ключа и не зависит от магазина.</p>
+        </section>
+
+        <section class="panel" id="translation">
+          <h2>Мультиязычность</h2>
+          <p>Домен переводов: <code>ioblog-editorial</code>. Английский используется как исходный язык, а готовый русский перевод входит в архив. Переведены PHP-шаблоны, админка, сообщения ошибок, Gutenberg, JavaScript и подписи доступности.</p>
+          <ul>
+            <li><code>languages/ioblog-editorial.pot</code> — шаблон переводов.</li>
+            <li><code>languages/ru_RU.po</code> — редактируемый русский каталог темы.</li>
+            <li><code>languages/ru_RU.mo</code> — скомпилированный PHP-каталог в штатном формате WordPress 6.7+.</li>
+            <li>JSON-файлы в <code>languages/</code> — переводы JavaScript.</li>
+          </ul>
+          <p>Для нового языка создайте PO-файл из POT в Poedit или Loco Translate и сохраните его под именем <code>ioblog-editorial-LOCALE.po</code>.</p>
+        </section>
+
+        <section class="panel" id="privacy">
+          <h2>Приватность и внешние сервисы</h2>
+          <p>Свежая установка не выполняет внешних запросов. После включения SmartCaptcha или reCAPTCHA браузер загружает скрипт провайдера, а сервер отправляет токен и IP посетителя на проверку. Блок внешней ссылки обращается к указанному адресу только по действию редактора. Рекламный и аналитический код работает только после его ручного добавления.</p>
+          <p>При включении таких функций дополните политику конфиденциальности сайта условиями выбранного провайдера.</p>
+        </section>
+
+        <section class="panel" id="support">
+          <h2>Обновление и резервная копия</h2>
+          <p>Перед заменой темы сохраните каталог <code>wp-content/themes/ioblog-editorial</code> и резервную копию базы данных. Настройки темы хранятся в одной опции <code>ioblog_settings</code>; тексты Customizer — в стандартных theme mods WordPress.</p>
+          <p>Автор: <a href="https://kodalexandrova.ru/">Kirill Aleksandrov</a>. Free обновляется установочным ZIP; репозиторий исходников и бесплатные релизы: <a href="https://github.com/acidtmn/ioblog-editorial">acidtmn/ioblog-editorial</a>. Публичный репозиторий не содержит Pro и данных сайта.</p>
+        </section>
+
+        <section class="panel" id="pro-license">
+          <h2>Лицензия и обновления Pro</h2>
+          <ol class="steps">
+            <li>После установки Pro откройте <strong>IO Blog → Лицензия и обновления</strong>.</li>
+            <li>Введите ключ IOPRO из письма магазина, не пароль WordPress. Нажмите «Активировать»: только это действие может занять или восстановить слот.</li>
+            <li>«Проверить сейчас» проверяет существующую установку, не восстанавливая отключённую в кабинете привязку.</li>
+            <li>«Проверить обновления» получает доступный релиз. Установите его через штатный раздел плагинов WordPress; перед распаковкой проверяются SHA-256, структура и совместимость.</li>
+          </ol>
+          <p>Ключ хранится зашифрованным и не выводится обратно. Панель показывает привязанный домен, версии, срок обновлений, последнее подтверждение и время следующего запроса в часовом поясе сайта. Кнопки лицензии не используют общую форму сохранения настроек.</p>
+          <p>При отказе проверьте покупку и установки в <a href="https://kodalexandrova.ru/account">кабинете магазина</a>. Удаление ключа из WordPress не освобождает серверный слот. Перенос: отключите прежнюю установку в кабинете, удалите ключ локально, активируйте на новом домене.</p>
+          <div class="notice">Установленный Pro продолжает работать при истечении подписки и сбое сервиса. Ключ управляет официальными загрузками и обновлениями. Если /check отвечает 404, маршрут ещё не развёрнут: повторите позже. Автоматической подмены проверки активацией нет.</div>
+          <p>Для клиента необходимы расширения PHP Sodium, Intl и Zip. Multisite-активация не поддерживается. Подробная отдельная инструкция включена в Pro как <code>readme.html</code> и доступна по ссылке в панели лицензии.</p>
+          <p>Внешние HTTPS-запросы лицензирования передают магазину ключ, UUID установки и адрес сайта; запрос обновлений — только ключ и UUID. Пароли и телеметрия не передаются. Проверки работают через WP-Cron или действие администратора, а не при синхронном показе страниц посетителям.</p>
+        </section>
+
+        <section class="panel" id="license">
+          <h2>Лицензии и ресурсы</h2>
+          <p>Код и оригинальные визуальные ресурсы IO Blog Editorial: © 2026 Kirill Aleksandrov, GNU GPL v2 или новее.</p>
+          <p>Шрифт DM Sans: © 2014 The DM Sans Project Authors, SIL Open Font License 1.1. Полный текст находится в <code>assets/fonts/OFL.txt</code>, исходник — <a href="https://github.com/googlefonts/dm-fonts">googlefonts/dm-fonts</a>.</p>
+        </section>
+      </main>
+    </div>
+    <footer>IO Blog Editorial Free 1.5.1 · Pro 1.1.1 · Kirill Aleksandrov</footer>
+  </div>
+</body>
+</html>

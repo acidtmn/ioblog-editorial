@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "760px",
+      "wideSize": "1160px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        {
+          "slug": "ink",
+          "name": "Ink",
+          "color": "#101828"
+        },
+        {
+          "slug": "emerald",
+          "name": "Emerald",
+          "color": "#00866f"
+        },
+        {
+          "slug": "mint",
+          "name": "Mint",
+          "color": "#dff6ef"
+        },
+        {
+          "slug": "paper",
+          "name": "Paper",
+          "color": "#ffffff"
+        },
+        {
+          "slug": "mist",
+          "name": "Mist",
+          "color": "#f3f7fb"
+        }
+      ]
+    },
+    "spacing": {
+      "units": ["px", "rem", "em", "%", "vw", "vh"]
+    },
+    "typography": {
+      "dropCap": false,
+      "fluid": true
+    }
+  }
+}

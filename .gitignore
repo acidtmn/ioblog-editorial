@@ -1,0 +1,18 @@
+# Публичная копия содержит только Free: локальная инфраструктура и секреты сюда не попадают.
+.env
+.env.*
+wp-config.php
+credential*
+*.sql
+*.sql.gz
+*.log
+*.bak
+*.pem
+*.zip
+/backup/
+/output/
+/node_modules/
+/vendor/
+/ioblog-editorial-pro/
+.DS_Store
+Thumbs.db
