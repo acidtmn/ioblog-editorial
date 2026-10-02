@@ -46,7 +46,7 @@ if ( ! class_exists( 'Ioblog_Seo' ) ) {
 			$title       = self::get_meta_title();
 			$description = self::get_meta_description();
 			$canonical   = self::get_canonical_url();
-			$image_data  = self::get_meta_image_data();
+			$image_data  = apply_filters( 'ioblog_meta_image_data', self::get_meta_image_data(), get_queried_object_id() );
 			$image       = $image_data['url'] ?? '';
 			$type        = is_singular( 'post' ) ? 'article' : 'website';
 

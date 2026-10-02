@@ -26,6 +26,7 @@ while ( have_posts() ) {
 			<div class="io-article-header__bottom">
 				<?php ioblog_post_meta( $post_id, true ); ?>
 				<div class="io-article-actions" aria-label="<?php esc_attr_e( 'Article actions', 'ioblog-editorial' ); ?>">
+					<?php if ( ioblog_get_setting( 'library_enabled' ) && 'publish' === get_post_status() && ! get_post_field( 'post_password', $post_id ) ) { ?><button class="io-action-button io-save-article" type="button" hidden aria-pressed="false" aria-label="<?php esc_attr_e( 'Save for later', 'ioblog-editorial' ); ?>"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg><span class="screen-reader-text"><?php esc_html_e( 'Save for later', 'ioblog-editorial' ); ?></span></button><?php } ?>
 					<button class="io-action-button io-copy-link" type="button" aria-label="<?php esc_attr_e( 'Copy link', 'ioblog-editorial' ); ?>" data-label="<?php esc_attr_e( 'Link copied', 'ioblog-editorial' ); ?>" data-tooltip="<?php esc_attr_e( 'Copy link', 'ioblog-editorial' ); ?>">
 						<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"></path></svg>
 						<span class="screen-reader-text"><?php esc_html_e( 'Copy link', 'ioblog-editorial' ); ?></span>
@@ -44,8 +45,11 @@ while ( have_posts() ) {
 
 		<div class="io-article-layout">
 			<div class="io-article-main">
+				<?php get_template_part( 'template-parts/reading-resume' ); ?>
 				<details class="io-mobile-toc"><summary><?php esc_html_e( 'Table of contents', 'ioblog-editorial' ); ?></summary><?php ioblog_render_toc( $prepared['items'], 'io-toc--mobile' ); ?></details>
 				<div class="io-article-content entry-content"><?php echo $prepared['content']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Контент прошёл штатные фильтры WordPress. ?></div>
+				<?php do_action( 'ioblog_after_article_content', $post_id ); ?>
+				<?php get_template_part( 'template-parts/claps' ); ?>
 
 				<footer class="io-article-footer">
 					<?php the_tags( '<div class="io-tags">', '', '</div>' ); ?>

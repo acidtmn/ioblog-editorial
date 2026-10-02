@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: IO Blog Editorial 1.5.0\n"
+"Project-Id-Version: IO Blog Editorial 1.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ioblog-editorial\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-30T15:18:30+00:00\n"
+"POT-Creation-Date: 2026-10-02T12:30:52+00:00\n"
 "PO-Revision-Date: 2026-09-28 00:00+0500\n"
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -228,6 +228,177 @@ msgstr "Открыть ссылку на %s"
 msgid "Open link"
 msgstr "Открыть ссылку"
 
+#: inc/interests/admin.php:5
+#: inc/interests/view-template.php:5
+#: inc/interests/view.php:9
+msgid "Reader interests"
+msgstr "Интересы читателей"
+
+#: inc/interests/admin.php:15
+msgid "Access denied."
+msgstr "Доступ запрещён."
+
+#: inc/interests/controller.php:17
+#: inc/interests/service.php:9
+msgid "Statistics are temporarily unavailable."
+msgstr "Статистика временно недоступна."
+
+#: inc/interests/service.php:7
+#: inc/claps/service.php:32
+msgid "Refresh the article and allow cookies to continue."
+msgstr "Обновите статью и разрешите cookie, чтобы продолжить."
+
+#: inc/interests/service.php:8
+#: inc/claps/service.php:42
+msgid "Too many requests. Please wait and try again."
+msgstr "Слишком много запросов. Подождите и попробуйте снова."
+
+#: inc/interests/view-template.php:5
+msgid "Support, bookmarks, and topics readers could not find."
+msgstr "Поддержка, закладки и темы, которых читатели не нашли."
+
+#: inc/interests/view-template.php:5
+#: inc/interests/view.php:6
+msgid "Publishing and readership"
+msgstr "Публикации и читатели"
+
+#: inc/interests/view-template.php:6
+msgid "Articles readers support"
+msgstr "Статьи, которые поддерживают"
+
+#: inc/interests/view-template.php:7
+msgid "Counts represent browsers, not verified people. Order prioritizes supporters, then bookmarks and claps. Anonymous statistics are approximate."
+msgstr "Счётчики отражают браузеры, а не подтверждённых людей. Приоритет сортировки: поддержавшие, закладки, хлопки. Анонимная статистика приблизительна."
+
+#: inc/interests/view-template.php:8
+msgid "Collection is disabled. Enable it in Publishing and readership to begin. Existing data is preserved."
+msgstr "Сбор выключен. Включите его в разделе «Публикации и читатели». Ранее собранные данные сохраняются."
+
+#: inc/interests/view-template.php:9
+msgid "Article"
+msgstr "Статья"
+
+#: inc/interests/view-template.php:9
+#: template-parts/claps.php:21
+msgid "Supporters"
+msgstr "Поддержали"
+
+#: inc/interests/view-template.php:9
+#: template-parts/claps.php:21
+msgid "Claps"
+msgstr "Хлопки"
+
+#: inc/interests/view-template.php:9
+msgid "Bookmarks"
+msgstr "Закладки"
+
+#: inc/interests/view-template.php:9
+msgid "No statistics yet. Counters appear after reader actions."
+msgstr "Статистики пока нет. Счётчики появятся после действий читателей."
+
+#: inc/interests/view-template.php:11
+msgid "Searches without results"
+msgstr "Поиск без результатов"
+
+#: inc/interests/view-template.php:11
+msgid "Last 30 days. Email addresses, URLs and long numbers are excluded. Repeated queries from one address are counted at most once per hour."
+msgstr "За последние 30 дней. Email, URL и длинные числа исключаются. Повтор одной фразы с одного адреса учитывается не чаще раза в час."
+
+#: inc/interests/view-template.php:12
+msgid "Search query"
+msgstr "Поисковая фраза"
+
+#: inc/interests/view-template.php:12
+msgid "Requests"
+msgstr "Запросы"
+
+#: inc/interests/view-template.php:12
+msgid "No unsuccessful searches collected yet."
+msgstr "Поисковых фраз без результатов пока нет."
+
+#: inc/interests/view-template.php:14
+msgid "Social covers for existing articles"
+msgstr "Социальные обложки для существующих статей"
+
+#: inc/interests/view-template.php:14
+msgid "Creates cached 1200 × 630 PNG previews for CSS covers, twenty articles per batch. Requires PHP GD with FreeType. New articles are processed automatically on save."
+msgstr "Создаёт PNG-превью CSS-обложек 1200 × 630, по двадцать статей за запуск. Нужен PHP GD с FreeType. Новые статьи обрабатываются при сохранении."
+
+#. translators: %d is the number of covers processed in the current batch.
+#: inc/interests/view-template.php:17
+#, php-format
+msgid "Processed covers: %d"
+msgstr "Обработано обложек: %d"
+
+#: inc/interests/view-template.php:18
+msgid "All published articles have been checked."
+msgstr "Все опубликованные статьи проверены."
+
+#: inc/interests/view-template.php:19
+msgid "Enable automatic social covers and check GD/FreeType support before generating."
+msgstr "Перед генерацией включите автоматические обложки и проверьте наличие GD/FreeType."
+
+#: inc/interests/view-template.php:19
+msgid "Process next batch"
+msgstr "Обработать следующие статьи"
+
+#: inc/interests/view-template.php:19
+msgid "Generate social covers"
+msgstr "Создать социальные обложки"
+
+#: inc/interests/view.php:6
+msgid "Series, social covers, and first-party interest statistics."
+msgstr "Серии, социальные обложки и собственная статистика интереса."
+
+#: inc/interests/view.php:7
+msgid "Automatic social covers"
+msgstr "Автоматические обложки для соцсетей"
+
+#: inc/interests/view.php:7
+msgid "Collect reader interests"
+msgstr "Собирать статистику интересов"
+
+#: inc/interests/view.php:8
+msgid "Social covers are generated on article save. Statistics are opt-in: bookmark totals and unsuccessful search phrases are stored on your WordPress server; update your privacy notice before enabling."
+msgstr "Обложки создаются при сохранении статьи. Статистика включается по желанию: число закладок и поисковые фразы без результатов хранятся на вашем сервере WordPress. Перед включением обновите политику конфиденциальности."
+
+#: inc/interests/view.php:9
+#: inc/series/bootstrap.php:8
+#: inc/series/view.php:14
+msgid "Article series"
+msgstr "Серии статей"
+
+#: inc/series/admin.php:5
+#: inc/series/admin.php:9
+msgid "Chapter order"
+msgstr "Номер главы"
+
+#: inc/series/admin.php:8
+msgid "Assign the series in the article sidebar. Use a chapter number from 1 to 10000; zero places it after numbered chapters."
+msgstr "Выберите серию в боковой панели записи. Номер главы — от 1 до 10000; ноль размещает её после пронумерованных глав."
+
+#: inc/series/bootstrap.php:9
+msgid "Add a series"
+msgstr "Добавить серию"
+
+#: inc/series/bootstrap.php:9
+msgid "Edit series"
+msgstr "Редактировать серию"
+
+#. translators: 1: current chapter number, 2: published chapter count.
+#: inc/series/view.php:18
+#, php-format
+msgid "Chapter %1$d of %2$d"
+msgstr "Глава %1$d из %2$d"
+
+#: inc/series/view.php:19
+msgid "Read"
+msgstr "Прочитано"
+
+#: inc/series/view.php:20
+msgid "Next chapter"
+msgstr "Следующая глава"
+
 #: inc/services/class-link-preview-service.php:55
 msgid "Enter a complete address beginning with http:// or https://."
 msgstr "Укажите полный адрес с http:// или https://."
@@ -248,9 +419,9 @@ msgstr "Не удалось прочитать HTML страницы."
 msgid "No title was found on the page."
 msgstr "У страницы не найден заголовок."
 
-#: ioblog-editorial-pro.php:40
-msgid "IO Blog Editorial Pro requires the IO Blog Editorial theme version 1.5.0 or later."
-msgstr "Для IO Blog Editorial Pro нужна тема IO Blog Editorial версии 1.5.0 или новее."
+#: ioblog-editorial-pro.php:47
+msgid "IO Blog Editorial Pro requires the IO Blog Editorial theme version 1.6.0 or later."
+msgstr "Для IO Blog Editorial Pro нужна тема IO Blog Editorial версии 1.6.0 или новее."
 
 #: template-parts/link-card.php:28
 msgid "Related material"
@@ -370,8 +541,8 @@ msgstr "Вернуться на главную"
 
 #: comments.php:13
 #: inc/admin/settings-page.php:139
-#: single.php:33
-#: single.php:35
+#: single.php:34
+#: single.php:36
 msgid "Comments"
 msgstr "Комментарии"
 
@@ -436,14 +607,19 @@ msgid "Primary menu"
 msgstr "Основное меню"
 
 #: header.php:31
+#: template-parts/library.php:6
+msgid "My library"
+msgstr "Моя библиотека"
+
+#: header.php:32
 msgid "Open search"
 msgstr "Открыть поиск"
 
-#: header.php:32
+#: header.php:33
 msgid "Toggle color scheme"
 msgstr "Переключить цветовую тему"
 
-#: header.php:33
+#: header.php:34
 msgid "Open menu"
 msgstr "Открыть меню"
 
@@ -505,7 +681,7 @@ msgid "Latest articles"
 msgstr "Свежие материалы"
 
 #: home.php:58
-#: single.php:82
+#: single.php:86
 msgid "All articles"
 msgstr "Все материалы"
 
@@ -709,84 +885,100 @@ msgid "Emoji panel"
 msgstr "Панель смайликов"
 
 #: inc/admin/settings-page.php:199
+msgid "Article claps"
+msgstr "Хлопки под статьями"
+
+#: inc/admin/settings-page.php:200
+msgid "Personal reading library"
+msgstr "Личная библиотека читателя"
+
+#: inc/admin/settings-page.php:201
 msgid "Safe SVG uploads"
 msgstr "Безопасная загрузка SVG"
 
+#: inc/admin/settings-page.php:203
+msgid "Claps: up to 10 per article from each browser, with undo. Disabling claps preserves existing reactions."
+msgstr "До 10 хлопков на статью из одного браузера, с возможностью отмены. Отключение блока сохраняет накопленные реакции."
+
 #: inc/admin/settings-page.php:204
+msgid "The library remembers bookmarks and reading positions in the visitor browser without an account."
+msgstr "Библиотека сохраняет закладки и место чтения в браузере посетителя, без регистрации."
+
+#: inc/admin/settings-page.php:208
 msgid "Form protection"
 msgstr "Защита форм"
 
-#: inc/admin/settings-page.php:204
+#: inc/admin/settings-page.php:208
 msgid "Built-in protection requires no keys. An external provider is enabled only after both keys are filled in."
 msgstr "Встроенная защита не требует ключей. Внешний провайдер включается только после заполнения обоих ключей."
 
-#: inc/admin/settings-page.php:206
+#: inc/admin/settings-page.php:210
 msgid "CAPTCHA provider"
 msgstr "Провайдер CAPTCHA"
 
-#: inc/admin/settings-page.php:206
+#: inc/admin/settings-page.php:210
 msgid "Built-in protection"
 msgstr "Встроенная защита"
 
-#: inc/admin/settings-page.php:207
+#: inc/admin/settings-page.php:211
 msgid "Site key"
 msgstr "Ключ сайта"
 
-#: inc/admin/settings-page.php:208
+#: inc/admin/settings-page.php:212
 msgid "Secret key"
 msgstr "Секретный ключ"
 
-#: inc/admin/settings-page.php:208
+#: inc/admin/settings-page.php:212
 msgid "Key saved"
 msgstr "Ключ сохранён"
 
-#: inc/admin/settings-page.php:208
+#: inc/admin/settings-page.php:212
 msgid "Enter key"
 msgstr "Введите ключ"
 
-#: inc/admin/settings-page.php:213
+#: inc/admin/settings-page.php:217
 msgid "Footer social networks"
 msgstr "Социальные сети в подвале"
 
-#: inc/admin/settings-page.php:217
+#: inc/admin/settings-page.php:221
 #: inc/social.php:17
 msgid "VK"
 msgstr "ВКонтакте"
 
-#: inc/admin/settings-page.php:218
+#: inc/admin/settings-page.php:222
 #: inc/social.php:18
 msgid "Odnoklassniki"
 msgstr "Одноклассники"
 
-#: inc/admin/settings-page.php:224
+#: inc/admin/settings-page.php:228
 msgid "Your edition"
 msgstr "Ваша версия"
 
-#: inc/admin/settings-page.php:224
+#: inc/admin/settings-page.php:228
 msgid "Pro publishing tools are active."
 msgstr "Издательские инструменты Pro включены."
 
-#: inc/admin/settings-page.php:224
+#: inc/admin/settings-page.php:228
 msgid "The free theme is ready for your blog. Install the Pro extension to add publishing tools."
 msgstr "Бесплатная тема готова к работе. Установите расширение Pro, чтобы добавить издательские инструменты."
 
-#: inc/admin/settings-page.php:225
-msgid "Free: layouts, typography, dark mode, live search, automatic covers, Gutenberg patterns, comments, and form protection."
-msgstr "Free: макеты, типографика, тёмная тема, живой поиск, автообложки, паттерны Gutenberg, комментарии и защита форм."
-
-#: inc/admin/settings-page.php:226
-msgid "Pro: visual cover editor, link preview cards, advertising slots, short links, and integration snippets."
-msgstr "Pro: визуальный редактор обложек, карточки ссылок, рекламные места, короткие ссылки и код интеграций."
+#: inc/admin/settings-page.php:229
+msgid "Free: layouts, typography, dark mode, search, automatic covers, Gutenberg patterns, comments, form protection, claps, and a reading library."
+msgstr "Free: макеты, типографика, тёмная тема, поиск, автообложки, паттерны Gutenberg, комментарии, защита форм, хлопки и библиотека читателя."
 
 #: inc/admin/settings-page.php:230
+msgid "Pro: cover editor, link cards, advertising, short links, integrations, article series, social covers, and reader interests."
+msgstr "Pro: редактор обложек, карточки ссылок, реклама, короткие ссылки, интеграции, серии статей, социальные обложки и интересы читателей."
+
+#: inc/admin/settings-page.php:234
 msgid "All changes saved"
 msgstr "Все изменения сохранены"
 
-#: inc/admin/settings-page.php:230
+#: inc/admin/settings-page.php:234
 msgid "You have unsaved changes"
 msgstr "Есть несохранённые изменения"
 
-#: inc/admin/settings-page.php:231
+#: inc/admin/settings-page.php:235
 msgid "Save settings"
 msgstr "Сохранить настройки"
 
@@ -853,6 +1045,70 @@ msgstr[2] "%d комментариев"
 #: inc/category-icons.php:47
 msgid "Popular topics"
 msgstr "Популярные темы"
+
+#: inc/claps/access.php:8
+msgid "Claps are disabled."
+msgstr "Хлопки отключены."
+
+#: inc/claps/access.php:13
+msgid "This article is unavailable."
+msgstr "Эта статья недоступна."
+
+#: inc/claps/access.php:18
+#: inc/claps/access.php:22
+msgid "Open the article on this site and try again."
+msgstr "Откройте статью на этом сайте и попробуйте снова."
+
+#: inc/claps/bootstrap.php:24
+#: template-parts/claps.php:13
+msgid "Clap for this article"
+msgstr "Похлопать автору статьи"
+
+#: inc/claps/bootstrap.php:25
+msgid "All 10 claps given. Thank you!"
+msgstr "Все 10 хлопков отправлены. Спасибо!"
+
+#: inc/claps/bootstrap.php:26
+msgid "Thank you for supporting the author!"
+msgstr "Спасибо за поддержку автора!"
+
+#: inc/claps/bootstrap.php:27
+msgid "Your claps have been removed."
+msgstr "Ваши хлопки отменены."
+
+#: inc/claps/bootstrap.php:28
+msgid "Could not save your claps. Please try again."
+msgstr "Не удалось подтвердить хлопки. Обновите страницу или попробуйте ещё раз."
+
+#: inc/claps/bootstrap.php:29
+msgid "Loading claps…"
+msgstr "Загружаем хлопки…"
+
+#: inc/claps/bootstrap.php:30
+msgid "Saving your claps…"
+msgstr "Сохраняем хлопки…"
+
+#. translators: %1$d: claps from this browser; %2$d: maximum allowed claps.
+#: inc/claps/bootstrap.php:32
+#, php-format
+msgid "Yours: %1$d / %2$d"
+msgstr "Ваши: %1$d / %2$d"
+
+#: inc/claps/controller.php:26
+msgid "Claps are temporarily unavailable. Please try again later."
+msgstr "Хлопки временно недоступны. Попробуйте позже."
+
+#: inc/claps/service.php:21
+msgid "Allow cookies for this site to save your claps."
+msgstr "Разрешите cookie для этого сайта, чтобы сохранить хлопки."
+
+#: inc/claps/service.php:29
+msgid "You can give up to 10 claps per article."
+msgstr "На одну статью можно отправить до 10 хлопков."
+
+#: inc/claps/service.php:36
+msgid "Your claps changed in another tab. The counter has been refreshed."
+msgstr "Хлопки изменились в другой вкладке. Счётчик обновлён."
 
 #: inc/comments.php:20
 msgid "Image attachments are disabled in the site settings."
@@ -993,28 +1249,65 @@ msgstr "Светлая"
 msgid "Dark"
 msgstr "Тёмная"
 
+#: inc/library.php:14
+#: single.php:29
+msgid "Save for later"
+msgstr "Сохранить на потом"
+
+#: inc/library.php:14
+msgid "Saved for later"
+msgstr "Сохранено в библиотеке"
+
+#: inc/library.php:15
+msgid "Remove from library"
+msgstr "Убрать из библиотеки"
+
+#: inc/library.php:15
+msgid "Browser storage is unavailable. Allow site storage to use your library."
+msgstr "Хранилище браузера недоступно. Разрешите хранение данных сайта для работы библиотеки."
+
+#: inc/library.php:16
+msgid "Your library holds up to 100 articles. Remove an article before adding another."
+msgstr "В библиотеке можно сохранить до 100 статей. Удалите одну, чтобы добавить новую."
+
+#. translators: %d is the integer reading percentage, replaced by the browser script.
+#: inc/library.php:18
+#, php-format
+msgid "Read: %d%"
+msgstr "Прочитано: %d%"
+
+#. translators: %d is the integer reading percentage, replaced by the browser script.
+#: inc/library.php:18
+#: template-parts/reading-resume.php:6
+msgid "Continue reading"
+msgstr "Продолжить чтение"
+
+#: inc/library.php:19
+msgid "Save an article to find it here. Your library stays in this browser."
+msgstr "Сохраните статью, чтобы найти её здесь. Библиотека хранится только в этом браузере."
+
 #. translators: %d: minimum number of search characters.
-#: inc/search.php:84
+#: inc/search.php:85
 #: template-parts/search-modal.php:22
 #, php-format
 msgid "Enter at least %d characters"
 msgstr "Введите минимум %d символа"
 
 #. translators: %d: minimum number of search characters.
-#: inc/search.php:85
+#: inc/search.php:86
 msgid "Searching articles…"
 msgstr "Ищем материалы…"
 
-#: inc/search.php:86
+#: inc/search.php:87
 msgid "Nothing found. Try another search."
 msgstr "Ничего не нашли. Попробуйте другой запрос."
 
-#: inc/search.php:87
+#: inc/search.php:88
 msgid "Search is temporarily unavailable. Please try again."
 msgstr "Поиск временно недоступен. Попробуйте ещё раз."
 
 #. translators: %d: number of matching articles.
-#: inc/search.php:89
+#: inc/search.php:90
 #, php-format
 msgid "%d matching articles"
 msgstr "%d подходящих материалов"
@@ -1132,7 +1425,7 @@ msgid "The file is not a valid SVG."
 msgstr "Файл не является корректным SVG."
 
 #: inc/toc.php:90
-#: single.php:47
+#: single.php:49
 msgid "Table of contents"
 msgstr "Содержание статьи"
 
@@ -1297,45 +1590,45 @@ msgstr "Хлебные крошки"
 msgid "Article actions"
 msgstr "Действия со статьёй"
 
-#: single.php:29
-#: single.php:31
+#: single.php:30
+#: single.php:32
 #: assets/js/interface.js:47
 msgid "Copy link"
 msgstr "Скопировать ссылку"
 
-#: single.php:29
+#: single.php:30
 msgid "Link copied"
 msgstr "Ссылка скопирована"
 
-#: single.php:33
+#: single.php:34
 msgid "Go to comments"
 msgstr "Перейти к комментариям"
 
-#: single.php:54
+#: single.php:58
 msgid "IO Blog editorial team"
 msgstr "Команда редакции IO Blog"
 
-#: single.php:54
+#: single.php:58
 msgid "We write about technology that makes everyday life easier."
 msgstr "Пишем о технологиях, которые делают жизнь проще."
 
-#: single.php:58
+#: single.php:62
 msgid "Adjacent articles"
 msgstr "Соседние статьи"
 
-#: single.php:60
+#: single.php:64
 msgid "Previous article"
 msgstr "Предыдущая статья"
 
-#: single.php:61
+#: single.php:65
 msgid "Next article"
 msgstr "Следующая статья"
 
-#: single.php:71
+#: single.php:75
 msgid "New articles"
 msgstr "Новые статьи"
 
-#: single.php:82
+#: single.php:86
 msgid "Read next"
 msgstr "Читать далее"
 
@@ -1344,6 +1637,30 @@ msgstr "Читать далее"
 #, php-format
 msgid "Read: %s"
 msgstr "Читать: %s"
+
+#: template-parts/claps.php:8
+msgid "A little applause goes a long way"
+msgstr "Поддержка, которую слышно"
+
+#: template-parts/claps.php:9
+msgid "Was this useful?"
+msgstr "Было полезно?"
+
+#: template-parts/claps.php:10
+msgid "Give the author a round of applause. You can clap up to 10 times."
+msgstr "Поддержите автора хлопками. Можно хлопнуть до 10 раз."
+
+#: template-parts/claps.php:18
+msgid "Undo my claps"
+msgstr "Отменить хлопки"
+
+#: template-parts/claps.php:23
+msgid "No account needed. Your choice is remembered in this browser."
+msgstr "Без регистрации. Ваш выбор запоминается в этом браузере."
+
+#: template-parts/claps.php:25
+msgid "Enable JavaScript to give claps."
+msgstr "Чтобы похлопать автору, включите JavaScript."
 
 #: template-parts/covers/mint-keycaps.php:4
 msgid "Clipboard history: the Win and V keyboard shortcut"
@@ -1356,6 +1673,22 @@ msgstr "ПОЛЕЗНЫЕ ПРИВЫЧКИ"
 #: template-parts/covers/mint-keycaps.php:8
 msgid "Everything you need.<br>Close at hand."
 msgstr "Всё нужное.<br>Под рукой."
+
+#: template-parts/library.php:6
+msgid "Your reading space"
+msgstr "Ваше пространство для чтения"
+
+#: template-parts/library.php:6
+msgid "Close library"
+msgstr "Закрыть библиотеку"
+
+#: template-parts/library.php:7
+msgid "Saved articles and reading progress are kept on this device."
+msgstr "Сохранённые статьи и место чтения остаются на этом устройстве."
+
+#: template-parts/reading-resume.php:6
+msgid "Dismiss reading position"
+msgstr "Скрыть предложение продолжить чтение"
 
 #: template-parts/search-modal.php:11
 #: template-parts/search-modal.php:15

@@ -52,6 +52,7 @@ function ioblog_live_search_results( $search_term ) {
 	);
 	$items = array_map( 'ioblog_search_item', wp_list_pluck( $query->posts, 'ID' ) );
 	wp_reset_postdata();
+	do_action( 'ioblog_search_completed', $search_term, $items );
 	return $items;
 }
 

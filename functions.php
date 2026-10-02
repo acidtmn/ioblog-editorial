@@ -24,6 +24,8 @@ $ioblog_modules = array(
 	'captcha',
 	'anti-spam',
 	'comments',
+	'claps/bootstrap',
+	'library',
 	'social',
 	'svg',
 	'services/class-css-cover-generator',

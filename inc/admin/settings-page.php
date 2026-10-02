@@ -196,8 +196,12 @@ function ioblog_render_settings_page() {
 				<div class="io-admin-toggles">
 					<?php ioblog_admin_checkbox( 'comments_images', __( 'Images in comments', 'ioblog-editorial' ), $settings ); ?>
 					<?php ioblog_admin_checkbox( 'comments_emojis', __( 'Emoji panel', 'ioblog-editorial' ), $settings ); ?>
+					<?php ioblog_admin_checkbox( 'claps_enabled', __( 'Article claps', 'ioblog-editorial' ), $settings ); ?>
+					<?php ioblog_admin_checkbox( 'library_enabled', __( 'Personal reading library', 'ioblog-editorial' ), $settings ); ?>
 					<?php ioblog_admin_checkbox( 'svg_uploads', __( 'Safe SVG uploads', 'ioblog-editorial' ), $settings ); ?>
 				</div>
+				<p><?php esc_html_e( 'Claps: up to 10 per article from each browser, with undo. Disabling claps preserves existing reactions.', 'ioblog-editorial' ); ?></p>
+				<p><?php esc_html_e( 'The library remembers bookmarks and reading positions in the visitor browser without an account.', 'ioblog-editorial' ); ?></p>
 			</section>
 
 			<section class="io-admin-card" id="captcha">
@@ -222,8 +226,8 @@ function ioblog_render_settings_page() {
 			<?php do_action( 'ioblog_admin_settings_sections', $settings ); ?>
 			<section class="io-admin-card" id="edition">
 				<div class="io-admin-card__heading"><span><?php echo ioblog_has_pro() ? 'PRO' : 'FREE'; ?></span><div><h2><?php esc_html_e( 'Your edition', 'ioblog-editorial' ); ?></h2><p><?php echo esc_html( ioblog_has_pro() ? __( 'Pro publishing tools are active.', 'ioblog-editorial' ) : __( 'The free theme is ready for your blog. Install the Pro extension to add publishing tools.', 'ioblog-editorial' ) ); ?></p></div></div>
-				<p><?php esc_html_e( 'Free: layouts, typography, dark mode, live search, automatic covers, Gutenberg patterns, comments, and form protection.', 'ioblog-editorial' ); ?></p>
-				<p><?php esc_html_e( 'Pro: visual cover editor, link preview cards, advertising slots, short links, and integration snippets.', 'ioblog-editorial' ); ?></p>
+				<p><?php esc_html_e( 'Free: layouts, typography, dark mode, search, automatic covers, Gutenberg patterns, comments, form protection, claps, and a reading library.', 'ioblog-editorial' ); ?></p>
+				<p><?php esc_html_e( 'Pro: cover editor, link cards, advertising, short links, integrations, article series, social covers, and reader interests.', 'ioblog-editorial' ); ?></p>
 			</section>
 			</div>
 			<div class="io-admin-savebar">

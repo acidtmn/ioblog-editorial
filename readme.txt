@@ -3,7 +3,7 @@ Contributors: kirillaleksandrov
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.5.1
+Stable tag: 1.6.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, news, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -27,8 +27,10 @@ The theme uses local assets only by default. Advertising, analytics snippets, so
 * Standard featured images and responsive WordPress image sizes.
 * Sticky desktop table of contents and compact mobile table of contents.
 * Native comments with optional image attachments and an emoji picker.
+* Article claps: up to ten per browser, personal undo, clap and supporter counters.
+* Personal browser-local library with up to 100 bookmarks and explicit resume-reading controls.
 * Built-in anti-spam with optional Yandex SmartCaptcha or Google reCAPTCHA v2.
-* Optional Pro extension: link-card block, visual cover editor, advertising, short links, and integration snippets.
+* Optional Pro extension: link cards, visual cover editor, advertising, short links, series, social PNG covers and reader-interest dashboard.
 * Footer menu and optional Telegram, MAX, VK, and Odnoklassniki links.
 * Translation-ready PHP, JavaScript, block metadata, POT catalog, and Russian translation.
 * Local DM Sans font files; no font requests are made to third-party servers.
@@ -40,7 +42,7 @@ The theme uses local assets only by default. Advertising, analytics snippets, so
 3. Activate IO Blog Editorial.
 4. Open Appearance > Customize to set the homepage copy, footer text, and default color scheme.
 5. Open IO Blog in the main administration menu to configure the homepage, reading layout, search, comments, CAPTCHA, and social links.
-6. Optionally install IO Blog Editorial Pro 1.1.1 as a plugin to enable publishing tools. Install it through Plugins, not Themes. This is one theme with an optional extension, not two themes.
+6. Optionally install IO Blog Editorial Pro 1.2.0 as a plugin to enable publishing tools. Install it through Plugins, not Themes. This is one theme with an optional extension, not two themes.
 7. Assign menus to the Primary menu and Footer menu locations.
 8. Set the Site Icon in Appearance > Customize > Site Identity.
 
@@ -63,6 +65,8 @@ When a regular post has no featured image, Free creates a deterministic CSS cove
 The IO Blog administration page includes:
 
 * Live search minimum length and result count.
+* Article claps switch; disabling preserves existing reactions.
+* Personal reading library switch: saved articles, reading progress, and a resume-reading prompt.
 * Comment image size, emoji panel, and trusted-administrator SVG uploads.
 * Built-in anti-spam, Yandex SmartCaptcha, or Google reCAPTCHA v2.
 * Configurable homepage sections and article typography/layouts.
@@ -89,6 +93,10 @@ The package includes:
 == Privacy and External Services ==
 
 IO Blog Editorial does not contact external services on a fresh installation.
+
+Article claps are enabled by default and use this site's REST API. Reading a counter creates no cookie. The first action creates a signed, HttpOnly, SameSite=Lax browser cookie for one year (Secure on HTTPS). Reactions store a hashed browser identifier, post ID and clap count in local database tables. Short-lived rate-limit buckets contain keyed hashes, not raw IP addresses. Supporters represent browser identities, not verified people: clearing cookies or using another browser can create another identity. Disabling claps or switching themes preserves reaction data; permanently deleting a post removes its reactions. Include this functionality in your site's privacy notice.
+
+The personal library uses browser localStorage for up to 100 bookmarks and 50 recent unsaved reading positions. It validates same-origin links and never inserts stored titles as HTML. Reading progress stays in this browser; there is no account sync or transmission of progress to the server. Clearing browser storage removes the library. If storage is blocked, bookmarking reports an error rather than a false success. Disabling the library hides its controls without deleting browser data. Pro interest collection is separately opt-in and may aggregate explicit bookmark actions using the clap module's signed cookie; see the Pro guide before enabling it.
 
 When enabled by an administrator:
 
@@ -119,6 +127,16 @@ Yes. Upload a featured image in the post editor. It automatically replaces the g
 Use the bundled POT file with Poedit, Loco Translate, or the WordPress i18n tools. Save compiled translations with the `ioblog-editorial` text domain.
 
 == Changelog ==
+
+= 1.6.0 =
+
+* Added article claps to Free, with a ten-clap limit and personal undo.
+* Added a browser-local personal library, reading progress and explicit resume controls.
+* Added extension hooks for Pro series, social image metadata and optional interest statistics.
+* Added clap and supporter counters, keyboard controls, light/dark styling and reduced-motion support.
+* Added signed browser identities, article-bound action tokens, rate limits and conflict detection between tabs.
+* Kept personal responses out of shared page caches; replayed requests do not add duplicate claps.
+* Added an owner-controlled switch and complete Russian translations.
 
 = 1.5.1 =
 Updated the user guide for Pro 1.1.1, activation versus read-only checks, encrypted key storage and native updates. Added the public Free repository reference. Free runtime behavior and independent operation are unchanged.

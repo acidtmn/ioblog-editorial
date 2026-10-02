@@ -1,0 +1,28 @@
+/* Реакция наследует палитру темы: одинаковый контраст в светлом и тёмном режимах. */
+.io-claps { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 112px; gap: 24px 28px; margin-top: 44px; padding: clamp(22px, 4vw, 34px); border: 1px solid var(--io-border); border-radius: var(--io-radius-lg); background: radial-gradient(ellipse at 100% 0%, var(--io-accent-soft), transparent 65%), var(--io-surface); }
+.io-claps__eyebrow { display: block; margin-bottom: 10px; color: var(--io-accent); font-size: 11px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.io-claps .io-claps__intro h2 { margin: 0 0 10px; color: var(--io-text); font-size: clamp(24px, 3vw, 30px); line-height: 1.15; letter-spacing: -.035em; }
+.io-claps__intro p { max-width: 35ch; margin: 0; color: var(--io-muted); font-size: 14px; line-height: 1.65; }
+.io-claps__interaction { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.io-claps__button { position: relative; display: grid; place-items: center; width: 86px; height: 86px; padding: 18px; border: 1px solid var(--io-accent); border-radius: 50%; color: var(--io-accent); background: var(--io-surface); cursor: pointer; touch-action: manipulation; transition: background .18s, box-shadow .18s; }
+.io-claps__button:hover, .io-claps__button.has-claps { background: var(--io-accent-soft); box-shadow: 0 0 0 6px color-mix(in srgb, var(--io-accent) 9%, transparent); }
+.io-claps__button:disabled { cursor: default; opacity: .7; }
+.io-claps__icon { width: 48px; height: 48px; stroke-width: 1.8; overflow: visible; }
+.io-claps__hand--back { fill: var(--io-accent-soft); }
+.io-claps__hand--front { fill: var(--io-surface); }
+.io-claps__burst { position: absolute; top: -5px; right: -8px; padding: 3px 9px; border-radius: 999px; color: var(--io-surface); background: var(--io-accent); font-size: 13px; font-weight: 800; opacity: 0; pointer-events: none; }
+.io-claps__button.is-clapping .io-claps__icon { animation: io-clap .3s ease-out; }
+.io-claps__button.is-clapping .io-claps__burst { animation: io-clap-burst .6s ease-out; }
+.io-claps__mine { min-height: 18px; color: var(--io-muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.io-claps__undo { min-height: 32px; padding: 3px 5px; border: 0; background: none; color: var(--io-muted); font-size: 11px; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.io-claps__undo[hidden] { display: none; }
+.io-claps__button:focus-visible, .io-claps__undo:focus-visible { outline: 3px solid var(--io-accent); outline-offset: 5px; }
+.io-claps__footer { grid-column: 1 / -1; padding-top: 18px; border-top: 1px solid var(--io-border); }
+.io-claps__stats { display: flex; flex-wrap: wrap; gap: 12px 24px; color: var(--io-muted); font-size: 12px; }
+.io-claps__stats strong { margin-right: 4px; color: var(--io-text); font-size: 19px; font-variant-numeric: tabular-nums; }
+.io-claps__status { min-height: 21px; margin: 10px 0 0; color: var(--io-accent); font-size: 12px; }
+.io-claps__privacy { margin: 6px 0 0; color: var(--io-muted); font-size: 11px; }
+@keyframes io-clap { 50% { transform: rotate(-10deg) scale(1.12); } }
+@keyframes io-clap-burst { 15% { opacity: 1; } 100% { opacity: 0; transform: translateY(-22px); } }
+@media (max-width: 440px) { .io-claps { grid-template-columns: minmax(0, 1fr) 86px; gap: 20px 14px; } .io-claps__button { width: 72px; height: 72px; padding: 12px; } .io-claps__intro p { font-size: 13px; } .io-claps__eyebrow { font-size: 10px; letter-spacing: .04em; } }
+@media (prefers-reduced-motion: reduce) { .io-claps *, .io-claps *::before, .io-claps *::after { animation: none !important; transition: none !important; } }

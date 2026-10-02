@@ -30,6 +30,8 @@ function ioblog_settings_defaults() {
 		'reading_width'             => 790,
 		'comments_images'           => 1,
 		'comments_emojis'           => 1,
+		'claps_enabled'             => 1,
+		'library_enabled'           => 1,
 		'comment_image_max_mb'      => 5,
 		'captcha_provider'          => 'builtin',
 		'captcha_site_key'          => '',
@@ -91,7 +93,7 @@ function ioblog_sanitize_settings( $input ) {
 	$settings['reading_width']        = min( 920, max( 680, absint( $input['reading_width'] ?? 790 ) ) );
 	$settings['comment_image_max_mb'] = min( 10, max( 1, absint( $input['comment_image_max_mb'] ?? 5 ) ) );
 
-	foreach ( array( 'home_show_hero', 'home_show_categories', 'home_show_editorial', 'comments_images', 'comments_emojis', 'svg_uploads' ) as $checkbox ) {
+	foreach ( array( 'home_show_hero', 'home_show_categories', 'home_show_editorial', 'comments_images', 'comments_emojis', 'claps_enabled', 'library_enabled', 'svg_uploads' ) as $checkbox ) {
 		$settings[ $checkbox ] = empty( $input[ $checkbox ] ) ? 0 : 1;
 	}
 

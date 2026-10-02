@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: IO Blog Editorial 1.5.0\n"
+"Project-Id-Version: IO Blog Editorial 1.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ioblog-editorial\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-30T15:18:30+00:00\n"
+"POT-Creation-Date: 2026-10-02T12:30:52+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ioblog-editorial\n"
@@ -226,6 +226,177 @@ msgstr ""
 msgid "Open link"
 msgstr ""
 
+#: inc/interests/admin.php:5
+#: inc/interests/view-template.php:5
+#: inc/interests/view.php:9
+msgid "Reader interests"
+msgstr ""
+
+#: inc/interests/admin.php:15
+msgid "Access denied."
+msgstr ""
+
+#: inc/interests/controller.php:17
+#: inc/interests/service.php:9
+msgid "Statistics are temporarily unavailable."
+msgstr ""
+
+#: inc/interests/service.php:7
+#: inc/claps/service.php:32
+msgid "Refresh the article and allow cookies to continue."
+msgstr ""
+
+#: inc/interests/service.php:8
+#: inc/claps/service.php:42
+msgid "Too many requests. Please wait and try again."
+msgstr ""
+
+#: inc/interests/view-template.php:5
+msgid "Support, bookmarks, and topics readers could not find."
+msgstr ""
+
+#: inc/interests/view-template.php:5
+#: inc/interests/view.php:6
+msgid "Publishing and readership"
+msgstr ""
+
+#: inc/interests/view-template.php:6
+msgid "Articles readers support"
+msgstr ""
+
+#: inc/interests/view-template.php:7
+msgid "Counts represent browsers, not verified people. Order prioritizes supporters, then bookmarks and claps. Anonymous statistics are approximate."
+msgstr ""
+
+#: inc/interests/view-template.php:8
+msgid "Collection is disabled. Enable it in Publishing and readership to begin. Existing data is preserved."
+msgstr ""
+
+#: inc/interests/view-template.php:9
+msgid "Article"
+msgstr ""
+
+#: inc/interests/view-template.php:9
+#: template-parts/claps.php:21
+msgid "Supporters"
+msgstr ""
+
+#: inc/interests/view-template.php:9
+#: template-parts/claps.php:21
+msgid "Claps"
+msgstr ""
+
+#: inc/interests/view-template.php:9
+msgid "Bookmarks"
+msgstr ""
+
+#: inc/interests/view-template.php:9
+msgid "No statistics yet. Counters appear after reader actions."
+msgstr ""
+
+#: inc/interests/view-template.php:11
+msgid "Searches without results"
+msgstr ""
+
+#: inc/interests/view-template.php:11
+msgid "Last 30 days. Email addresses, URLs and long numbers are excluded. Repeated queries from one address are counted at most once per hour."
+msgstr ""
+
+#: inc/interests/view-template.php:12
+msgid "Search query"
+msgstr ""
+
+#: inc/interests/view-template.php:12
+msgid "Requests"
+msgstr ""
+
+#: inc/interests/view-template.php:12
+msgid "No unsuccessful searches collected yet."
+msgstr ""
+
+#: inc/interests/view-template.php:14
+msgid "Social covers for existing articles"
+msgstr ""
+
+#: inc/interests/view-template.php:14
+msgid "Creates cached 1200 × 630 PNG previews for CSS covers, twenty articles per batch. Requires PHP GD with FreeType. New articles are processed automatically on save."
+msgstr ""
+
+#. translators: %d is the number of covers processed in the current batch.
+#: inc/interests/view-template.php:17
+#, php-format
+msgid "Processed covers: %d"
+msgstr ""
+
+#: inc/interests/view-template.php:18
+msgid "All published articles have been checked."
+msgstr ""
+
+#: inc/interests/view-template.php:19
+msgid "Enable automatic social covers and check GD/FreeType support before generating."
+msgstr ""
+
+#: inc/interests/view-template.php:19
+msgid "Process next batch"
+msgstr ""
+
+#: inc/interests/view-template.php:19
+msgid "Generate social covers"
+msgstr ""
+
+#: inc/interests/view.php:6
+msgid "Series, social covers, and first-party interest statistics."
+msgstr ""
+
+#: inc/interests/view.php:7
+msgid "Automatic social covers"
+msgstr ""
+
+#: inc/interests/view.php:7
+msgid "Collect reader interests"
+msgstr ""
+
+#: inc/interests/view.php:8
+msgid "Social covers are generated on article save. Statistics are opt-in: bookmark totals and unsuccessful search phrases are stored on your WordPress server; update your privacy notice before enabling."
+msgstr ""
+
+#: inc/interests/view.php:9
+#: inc/series/bootstrap.php:8
+#: inc/series/view.php:14
+msgid "Article series"
+msgstr ""
+
+#: inc/series/admin.php:5
+#: inc/series/admin.php:9
+msgid "Chapter order"
+msgstr ""
+
+#: inc/series/admin.php:8
+msgid "Assign the series in the article sidebar. Use a chapter number from 1 to 10000; zero places it after numbered chapters."
+msgstr ""
+
+#: inc/series/bootstrap.php:9
+msgid "Add a series"
+msgstr ""
+
+#: inc/series/bootstrap.php:9
+msgid "Edit series"
+msgstr ""
+
+#. translators: 1: current chapter number, 2: published chapter count.
+#: inc/series/view.php:18
+#, php-format
+msgid "Chapter %1$d of %2$d"
+msgstr ""
+
+#: inc/series/view.php:19
+msgid "Read"
+msgstr ""
+
+#: inc/series/view.php:20
+msgid "Next chapter"
+msgstr ""
+
 #: inc/services/class-link-preview-service.php:55
 msgid "Enter a complete address beginning with http:// or https://."
 msgstr ""
@@ -246,8 +417,8 @@ msgstr ""
 msgid "No title was found on the page."
 msgstr ""
 
-#: ioblog-editorial-pro.php:40
-msgid "IO Blog Editorial Pro requires the IO Blog Editorial theme version 1.5.0 or later."
+#: ioblog-editorial-pro.php:47
+msgid "IO Blog Editorial Pro requires the IO Blog Editorial theme version 1.6.0 or later."
 msgstr ""
 
 #: template-parts/link-card.php:28
@@ -368,8 +539,8 @@ msgstr ""
 
 #: comments.php:13
 #: inc/admin/settings-page.php:139
-#: single.php:33
-#: single.php:35
+#: single.php:34
+#: single.php:36
 msgid "Comments"
 msgstr ""
 
@@ -434,14 +605,19 @@ msgid "Primary menu"
 msgstr ""
 
 #: header.php:31
-msgid "Open search"
+#: template-parts/library.php:6
+msgid "My library"
 msgstr ""
 
 #: header.php:32
-msgid "Toggle color scheme"
+msgid "Open search"
 msgstr ""
 
 #: header.php:33
+msgid "Toggle color scheme"
+msgstr ""
+
+#: header.php:34
 msgid "Open menu"
 msgstr ""
 
@@ -503,7 +679,7 @@ msgid "Latest articles"
 msgstr ""
 
 #: home.php:58
-#: single.php:82
+#: single.php:86
 msgid "All articles"
 msgstr ""
 
@@ -707,84 +883,100 @@ msgid "Emoji panel"
 msgstr ""
 
 #: inc/admin/settings-page.php:199
+msgid "Article claps"
+msgstr ""
+
+#: inc/admin/settings-page.php:200
+msgid "Personal reading library"
+msgstr ""
+
+#: inc/admin/settings-page.php:201
 msgid "Safe SVG uploads"
 msgstr ""
 
+#: inc/admin/settings-page.php:203
+msgid "Claps: up to 10 per article from each browser, with undo. Disabling claps preserves existing reactions."
+msgstr ""
+
 #: inc/admin/settings-page.php:204
+msgid "The library remembers bookmarks and reading positions in the visitor browser without an account."
+msgstr ""
+
+#: inc/admin/settings-page.php:208
 msgid "Form protection"
 msgstr ""
 
-#: inc/admin/settings-page.php:204
+#: inc/admin/settings-page.php:208
 msgid "Built-in protection requires no keys. An external provider is enabled only after both keys are filled in."
 msgstr ""
 
-#: inc/admin/settings-page.php:206
+#: inc/admin/settings-page.php:210
 msgid "CAPTCHA provider"
 msgstr ""
 
-#: inc/admin/settings-page.php:206
+#: inc/admin/settings-page.php:210
 msgid "Built-in protection"
 msgstr ""
 
-#: inc/admin/settings-page.php:207
+#: inc/admin/settings-page.php:211
 msgid "Site key"
 msgstr ""
 
-#: inc/admin/settings-page.php:208
+#: inc/admin/settings-page.php:212
 msgid "Secret key"
 msgstr ""
 
-#: inc/admin/settings-page.php:208
+#: inc/admin/settings-page.php:212
 msgid "Key saved"
 msgstr ""
 
-#: inc/admin/settings-page.php:208
+#: inc/admin/settings-page.php:212
 msgid "Enter key"
 msgstr ""
 
-#: inc/admin/settings-page.php:213
+#: inc/admin/settings-page.php:217
 msgid "Footer social networks"
 msgstr ""
 
-#: inc/admin/settings-page.php:217
+#: inc/admin/settings-page.php:221
 #: inc/social.php:17
 msgid "VK"
 msgstr ""
 
-#: inc/admin/settings-page.php:218
+#: inc/admin/settings-page.php:222
 #: inc/social.php:18
 msgid "Odnoklassniki"
 msgstr ""
 
-#: inc/admin/settings-page.php:224
+#: inc/admin/settings-page.php:228
 msgid "Your edition"
 msgstr ""
 
-#: inc/admin/settings-page.php:224
+#: inc/admin/settings-page.php:228
 msgid "Pro publishing tools are active."
 msgstr ""
 
-#: inc/admin/settings-page.php:224
+#: inc/admin/settings-page.php:228
 msgid "The free theme is ready for your blog. Install the Pro extension to add publishing tools."
 msgstr ""
 
-#: inc/admin/settings-page.php:225
-msgid "Free: layouts, typography, dark mode, live search, automatic covers, Gutenberg patterns, comments, and form protection."
-msgstr ""
-
-#: inc/admin/settings-page.php:226
-msgid "Pro: visual cover editor, link preview cards, advertising slots, short links, and integration snippets."
+#: inc/admin/settings-page.php:229
+msgid "Free: layouts, typography, dark mode, search, automatic covers, Gutenberg patterns, comments, form protection, claps, and a reading library."
 msgstr ""
 
 #: inc/admin/settings-page.php:230
+msgid "Pro: cover editor, link cards, advertising, short links, integrations, article series, social covers, and reader interests."
+msgstr ""
+
+#: inc/admin/settings-page.php:234
 msgid "All changes saved"
 msgstr ""
 
-#: inc/admin/settings-page.php:230
+#: inc/admin/settings-page.php:234
 msgid "You have unsaved changes"
 msgstr ""
 
-#: inc/admin/settings-page.php:231
+#: inc/admin/settings-page.php:235
 msgid "Save settings"
 msgstr ""
 
@@ -848,6 +1040,70 @@ msgstr[1] ""
 
 #: inc/category-icons.php:47
 msgid "Popular topics"
+msgstr ""
+
+#: inc/claps/access.php:8
+msgid "Claps are disabled."
+msgstr ""
+
+#: inc/claps/access.php:13
+msgid "This article is unavailable."
+msgstr ""
+
+#: inc/claps/access.php:18
+#: inc/claps/access.php:22
+msgid "Open the article on this site and try again."
+msgstr ""
+
+#: inc/claps/bootstrap.php:24
+#: template-parts/claps.php:13
+msgid "Clap for this article"
+msgstr ""
+
+#: inc/claps/bootstrap.php:25
+msgid "All 10 claps given. Thank you!"
+msgstr ""
+
+#: inc/claps/bootstrap.php:26
+msgid "Thank you for supporting the author!"
+msgstr ""
+
+#: inc/claps/bootstrap.php:27
+msgid "Your claps have been removed."
+msgstr ""
+
+#: inc/claps/bootstrap.php:28
+msgid "Could not save your claps. Please try again."
+msgstr ""
+
+#: inc/claps/bootstrap.php:29
+msgid "Loading claps…"
+msgstr ""
+
+#: inc/claps/bootstrap.php:30
+msgid "Saving your claps…"
+msgstr ""
+
+#. translators: %1$d: claps from this browser; %2$d: maximum allowed claps.
+#: inc/claps/bootstrap.php:32
+#, php-format
+msgid "Yours: %1$d / %2$d"
+msgstr ""
+
+#: inc/claps/controller.php:26
+msgid "Claps are temporarily unavailable. Please try again later."
+msgstr ""
+
+#: inc/claps/service.php:21
+msgid "Allow cookies for this site to save your claps."
+msgstr ""
+
+#: inc/claps/service.php:29
+msgid "You can give up to 10 claps per article."
+msgstr ""
+
+#: inc/claps/service.php:36
+msgid "Your claps changed in another tab. The counter has been refreshed."
 msgstr ""
 
 #: inc/comments.php:20
@@ -989,28 +1245,65 @@ msgstr ""
 msgid "Dark"
 msgstr ""
 
+#: inc/library.php:14
+#: single.php:29
+msgid "Save for later"
+msgstr ""
+
+#: inc/library.php:14
+msgid "Saved for later"
+msgstr ""
+
+#: inc/library.php:15
+msgid "Remove from library"
+msgstr ""
+
+#: inc/library.php:15
+msgid "Browser storage is unavailable. Allow site storage to use your library."
+msgstr ""
+
+#: inc/library.php:16
+msgid "Your library holds up to 100 articles. Remove an article before adding another."
+msgstr ""
+
+#. translators: %d is the integer reading percentage, replaced by the browser script.
+#: inc/library.php:18
+#, php-format
+msgid "Read: %d%"
+msgstr ""
+
+#. translators: %d is the integer reading percentage, replaced by the browser script.
+#: inc/library.php:18
+#: template-parts/reading-resume.php:6
+msgid "Continue reading"
+msgstr ""
+
+#: inc/library.php:19
+msgid "Save an article to find it here. Your library stays in this browser."
+msgstr ""
+
 #. translators: %d: minimum number of search characters.
-#: inc/search.php:84
+#: inc/search.php:85
 #: template-parts/search-modal.php:22
 #, php-format
 msgid "Enter at least %d characters"
 msgstr ""
 
 #. translators: %d: minimum number of search characters.
-#: inc/search.php:85
+#: inc/search.php:86
 msgid "Searching articles…"
 msgstr ""
 
-#: inc/search.php:86
+#: inc/search.php:87
 msgid "Nothing found. Try another search."
 msgstr ""
 
-#: inc/search.php:87
+#: inc/search.php:88
 msgid "Search is temporarily unavailable. Please try again."
 msgstr ""
 
 #. translators: %d: number of matching articles.
-#: inc/search.php:89
+#: inc/search.php:90
 #, php-format
 msgid "%d matching articles"
 msgstr ""
@@ -1128,7 +1421,7 @@ msgid "The file is not a valid SVG."
 msgstr ""
 
 #: inc/toc.php:90
-#: single.php:47
+#: single.php:49
 msgid "Table of contents"
 msgstr ""
 
@@ -1293,45 +1586,45 @@ msgstr ""
 msgid "Article actions"
 msgstr ""
 
-#: single.php:29
-#: single.php:31
+#: single.php:30
+#: single.php:32
 #: assets/js/interface.js:47
 msgid "Copy link"
 msgstr ""
 
-#: single.php:29
+#: single.php:30
 msgid "Link copied"
 msgstr ""
 
-#: single.php:33
+#: single.php:34
 msgid "Go to comments"
 msgstr ""
 
-#: single.php:54
+#: single.php:58
 msgid "IO Blog editorial team"
 msgstr ""
 
-#: single.php:54
+#: single.php:58
 msgid "We write about technology that makes everyday life easier."
 msgstr ""
 
-#: single.php:58
+#: single.php:62
 msgid "Adjacent articles"
 msgstr ""
 
-#: single.php:60
+#: single.php:64
 msgid "Previous article"
 msgstr ""
 
-#: single.php:61
+#: single.php:65
 msgid "Next article"
 msgstr ""
 
-#: single.php:71
+#: single.php:75
 msgid "New articles"
 msgstr ""
 
-#: single.php:82
+#: single.php:86
 msgid "Read next"
 msgstr ""
 
@@ -1339,6 +1632,30 @@ msgstr ""
 #: template-parts/card.php:23
 #, php-format
 msgid "Read: %s"
+msgstr ""
+
+#: template-parts/claps.php:8
+msgid "A little applause goes a long way"
+msgstr ""
+
+#: template-parts/claps.php:9
+msgid "Was this useful?"
+msgstr ""
+
+#: template-parts/claps.php:10
+msgid "Give the author a round of applause. You can clap up to 10 times."
+msgstr ""
+
+#: template-parts/claps.php:18
+msgid "Undo my claps"
+msgstr ""
+
+#: template-parts/claps.php:23
+msgid "No account needed. Your choice is remembered in this browser."
+msgstr ""
+
+#: template-parts/claps.php:25
+msgid "Enable JavaScript to give claps."
 msgstr ""
 
 #: template-parts/covers/mint-keycaps.php:4
@@ -1351,6 +1668,22 @@ msgstr ""
 
 #: template-parts/covers/mint-keycaps.php:8
 msgid "Everything you need.<br>Close at hand."
+msgstr ""
+
+#: template-parts/library.php:6
+msgid "Your reading space"
+msgstr ""
+
+#: template-parts/library.php:6
+msgid "Close library"
+msgstr ""
+
+#: template-parts/library.php:7
+msgid "Saved articles and reading progress are kept on this device."
+msgstr ""
+
+#: template-parts/reading-resume.php:6
+msgid "Dismiss reading position"
 msgstr ""
 
 #: template-parts/search-modal.php:11
