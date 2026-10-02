@@ -30,7 +30,7 @@ Reading a clap counter creates no cookie. Explicit claps use this site's signed 
 
 ## Optional Pro Extension
 
-This is **one theme**, not separate Free and Pro themes. The separately distributed Pro 1.2.0 plugin adds a visual cover editor, link cards, advertising, short links, integrations, ordered article series, save-time social PNG covers and an opt-in reader-interest dashboard in the same IO Blog dashboard. Pro 1.2.0 requires Free 1.6.0 or later.
+This is **one theme**, not separate Free and Pro themes. The separately distributed Pro 1.2.1 plugin adds a visual cover editor, link cards, advertising, short links, integrations, ordered article series, save-time social PNG covers and an opt-in reader-interest dashboard in the same IO Blog dashboard. Pro 1.2.1 requires Free 1.6.0 or later. Social PNG text uses the site language independently of an editor's profile language.
 
 **Pro code, license keys, customer data and site configuration are not included in this repository or its public releases.** Official Pro downloads and updates are managed separately by the author's store. Installing a paid package is not the same as activating a WordPress theme.
 
