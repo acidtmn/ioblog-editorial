@@ -1,53 +1,59 @@
 # IO Blog Editorial Free
 
-A lightweight editorial WordPress theme by **Kirill Aleksandrov** for personal blogs and technology publications.
+[English description](README.en.md)
+
+Лёгкая авторская тема WordPress для блогов и онлайн-журналов. Современная главная, удобное чтение, тёмная тема и инструменты для возвращения читателей без обязательной регистрации.
 
 **Free 1.7.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
 
-## Download and Install
+Автор: **Kirill Aleksandrov**, [kodalexandrova.ru](https://kodalexandrova.ru/).
 
-Download the installable `ioblog-editorial-1.7.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.7.0), not GitHub's automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify its SHA-256 against `SHA256SUMS.txt` if needed.
+## Скачать и установить
 
-In WordPress open **Appearance → Themes → Add New → Upload Theme**, choose the ZIP, install and activate. Then open **IO Blog** in the main dashboard menu. Configure the homepage, reading layout, search and comments; assign Primary and Footer menus. Set your logo and Site Icon in **Appearance → Customize → Site Identity**.
+Скачайте [установочный ZIP Free 1.7.0](https://github.com/acidtmn/ioblog-editorial/releases/download/v1.7.0/ioblog-editorial-1.7.0.zip) из [Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.7.0). Не используйте автоматически созданный архив **Source code**: установочный ZIP уже содержит правильный корневой каталог `ioblog-editorial/`. Контрольная сумма находится в `SHA256SUMS.txt` рядом с архивом.
 
-## Included in Free
+В WordPress откройте **Внешний вид → Темы → Добавить тему → Загрузить тему**, установите ZIP и активируйте тему. Затем откройте **IO Blog** в главном меню админки: настройте главную, типографику, поиск и комментарии. Назначьте меню шапки и подвала. Логотип и иконка сайта настраиваются в **Внешний вид → Настроить → Свойства сайта**.
 
-- Editorial homepage with a featured post, editor picks and a recent-post grid.
-- Reading presets, adjustable typography and three article layouts.
-- Light/dark modes and locally hosted DM Sans fonts.
-- Live search and a responsive table of contents.
-- Automatic lightweight HTML/CSS covers for posts without featured images.
-- Four native Gutenberg patterns and core block styling.
-- Native comments with optional images and an emoji picker.
-- Article claps: up to ten per browser, with personal undo and supporter counters.
-- A personal browser-local library with bookmarks, searchable reading history, status filters and resume-reading controls.
-- Private JSON export/import to transfer the library between devices on the same site, with validation and merge protection.
-- Built-in anti-spam and optional Yandex SmartCaptcha / Google reCAPTCHA.
-- Footer menu and optional social links.
-- English interface and bundled Russian translations.
+Free работает самостоятельно, без лицензионного ключа и подключения к магазину.
 
-External integrations are opt-in. Free does not require a license key or contact the licensing store.
-Reading a clap counter creates no cookie. Explicit claps use this site's signed anonymous cookie and local database; saved articles and reading positions use browser localStorage. There is no account sync. See the bundled privacy guide before deploying.
-Library exports contain reading history and should be kept private. Imports are limited to 256 KB, validate the whole file, preserve existing bookmarks, and require the same scheme, hostname and port. Import does not send history or bookmark events to Pro statistics.
+## Возможности Free
 
-## Optional Pro Extension
+- Настраиваемая главная: избранная статья, редакционная подборка и сетка свежих материалов.
+- Пресеты чтения, размер шрифта, межстрочный интервал, ширина текста и три макета статьи.
+- Светлый и тёмный режимы, адаптация для телефонов и локальные шрифты DM Sans.
+- Живой поиск и удобное оглавление статьи.
+- Автоматические HTML/CSS-обложки из заголовка и рубрики, если нет миниатюры.
+- Поддержка Gutenberg и четыре нативных переведённых паттерна.
+- Собственные комментарии с изображениями и всплывающей панелью эмодзи.
+- Хлопки: до десяти от одного браузера, отмена своей реакции и счётчик поддержавших.
+- Личная библиотека: закладки, поиск по заголовкам, история, фильтры чтения и продолжение с сохранённого места.
+- Экспорт и импорт библиотеки через личный JSON-файл, без облачного сервиса.
+- Встроенный антиспам и подключаемые Яндекс SmartCaptcha / Google reCAPTCHA.
+- Меню подвала и настраиваемые ссылки на Telegram, MAX, ВКонтакте и Одноклассники.
+- Английский интерфейс и полноценный русский перевод, включая Gutenberg и настройки.
 
-This is **one theme**, not separate Free and Pro themes. The separately distributed Pro 1.2.1 plugin adds a visual cover editor, link cards, advertising, short links, integrations, ordered article series, save-time social PNG covers and an opt-in reader-interest dashboard in the same IO Blog dashboard. Pro 1.2.1 requires Free 1.6.0 or later. Social PNG text uses the site language independently of an editor's profile language.
+## Что нового в 1.7.0
 
-**Pro code, license keys, customer data and site configuration are not included in this repository or its public releases.** Official Pro downloads and updates are managed separately by the author's store. Installing a paid package is not the same as activating a WordPress theme.
+Библиотека получила разделы **Закладки** и **История чтения**, поиск и фильтры **Не начато / Читаю / Прочитано**. JSON-экспорт помогает сохранить данные перед очисткой браузера или вручную перенести их на другое устройство. Импорт проверяет файл целиком и объединяет закладки без удаления существующих. Обновление прогресса больше не сбивает клавиатурный фокус в списке.
 
-## Documentation and Support
+## Pro для этой же темы
 
-The bundled [Russian user guide](readme.html) explains setup and the Free/Pro workflow. The [WordPress readme](readme.txt) contains requirements, translation information, privacy details and the changelog.
+Это **одна тема с отдельным Pro-расширением**, а не две разные темы. Плагин **Pro 1.2.1** добавляет редактор обложек, карточки ссылок, рекламные места, короткие ссылки, интеграции, серии статей, PNG-превью CSS-обложек для соцсетей и добровольную статистику интересов читателей. Требуется Free 1.6.0 или новее; с Free 1.7.0 совместим. Pro устанавливается через раздел **Плагины**, не через **Темы**.
 
-For reproducible bugs, open a GitHub issue with your WordPress/PHP/theme versions, steps, and screenshots. Never include passwords, CAPTCHA secrets, license keys or database exports. This repository is not a checkout or a licensing backend.
+**Код Pro, ключи, сведения о клиентах и настройки сайта не публикуются в этом репозитории.** Официальные загрузки и обновления Pro обслуживаются отдельно магазином автора.
 
-### Для русскоязычных пользователей
+## Приватность
 
-Скачайте установочный ZIP из **Releases**, установите через раздел тем WordPress и откройте **IO Blog** в админке. Free работает без ключа. Pro — отдельное расширение для этой же темы, оно не публикуется здесь. Полная инструкция находится в `readme.html`.
+Закладки и прогресс остаются в localStorage браузера: нет аккаунтов и автоматической синхронизации. До 100 закладок и 50 недавних несохранённых позиций. Файл экспорта содержит историю чтения, поэтому храните его в безопасности. Импорт принимает до 256 КБ и только для того же протокола, домена и порта; копия с продакшена не подходит для localhost. Импорт не передаёт историю или события закладок в Pro-статистику.
 
-## License
+Просмотр счётчика хлопков не создаёт cookie. Явная реакция использует подписанную анонимную cookie и локальную базу WordPress. Внешние интеграции подключает администратор. Подробности и ограничения описаны в руководстве; перед включением дополнительных сервисов обновите политику конфиденциальности сайта.
 
-Original code and visuals: © 2026 Kirill Aleksandrov, [GNU GPL v2 or later](license.txt). DM Sans is distributed under the [SIL Open Font License 1.1](assets/fonts/OFL.txt).
+## Инструкция и поддержка
 
-Author: [kodalexandrova.ru](https://kodalexandrova.ru/).
+[Русское руководство](readme.html) описывает настройку темы и работу с Pro. В [readme WordPress](readme.txt) находятся требования, сведения о переводах и история изменений.
+
+Об ошибках сообщайте через GitHub Issues: укажите версии WordPress/PHP/темы, шаги воспроизведения и скриншоты. Не публикуйте пароли, CAPTCHA-секреты, ключи лицензий или копии базы.
+
+## Лицензия
+
+Код и оригинальное оформление: © 2026 Kirill Aleksandrov, [GNU GPL v2 или новее](license.txt). Шрифты DM Sans распространяются по [SIL Open Font License 1.1](assets/fonts/OFL.txt).
