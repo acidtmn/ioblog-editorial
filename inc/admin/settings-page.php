@@ -201,7 +201,7 @@ function ioblog_render_settings_page() {
 					<?php ioblog_admin_checkbox( 'svg_uploads', __( 'Safe SVG uploads', 'ioblog-editorial' ), $settings ); ?>
 				</div>
 				<p><?php esc_html_e( 'Claps: up to 10 per article from each browser, with undo. Disabling claps preserves existing reactions.', 'ioblog-editorial' ); ?></p>
-				<p><?php esc_html_e( 'The library remembers bookmarks and reading positions in the visitor browser without an account.', 'ioblog-editorial' ); ?></p>
+				<p><?php esc_html_e( 'Readers can search bookmarks, filter their reading history, and export or import a private backup. Data stays in the browser without an account.', 'ioblog-editorial' ); ?></p>
 			</section>
 
 			<section class="io-admin-card" id="captcha">

@@ -3,7 +3,7 @@ Contributors: kirillaleksandrov
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.6.0
+Stable tag: 1.7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, news, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -28,7 +28,7 @@ The theme uses local assets only by default. Advertising, analytics snippets, so
 * Sticky desktop table of contents and compact mobile table of contents.
 * Native comments with optional image attachments and an emoji picker.
 * Article claps: up to ten per browser, personal undo, clap and supporter counters.
-* Personal browser-local library with up to 100 bookmarks and explicit resume-reading controls.
+* Personal browser-local library with bookmarks, searchable reading history, status filters, backup export/import and explicit resume controls.
 * Built-in anti-spam with optional Yandex SmartCaptcha or Google reCAPTCHA v2.
 * Optional Pro extension: link cards, visual cover editor, advertising, short links, series, social PNG covers and reader-interest dashboard.
 * Footer menu and optional Telegram, MAX, VK, and Odnoklassniki links.
@@ -42,7 +42,7 @@ The theme uses local assets only by default. Advertising, analytics snippets, so
 3. Activate IO Blog Editorial.
 4. Open Appearance > Customize to set the homepage copy, footer text, and default color scheme.
 5. Open IO Blog in the main administration menu to configure the homepage, reading layout, search, comments, CAPTCHA, and social links.
-6. Optionally install IO Blog Editorial Pro 1.2.0 as a plugin to enable publishing tools. Install it through Plugins, not Themes. This is one theme with an optional extension, not two themes.
+6. Optionally install IO Blog Editorial Pro 1.2.1 as a plugin to enable publishing tools. Install it through Plugins, not Themes. This is one theme with an optional extension, not two themes.
 7. Assign menus to the Primary menu and Footer menu locations.
 8. Set the Site Icon in Appearance > Customize > Site Identity.
 
@@ -66,7 +66,7 @@ The IO Blog administration page includes:
 
 * Live search minimum length and result count.
 * Article claps switch; disabling preserves existing reactions.
-* Personal reading library switch: saved articles, reading progress, and a resume-reading prompt.
+* Personal reading library switch: bookmarks, searchable history, reading-status filters, backup transfer and a resume-reading prompt.
 * Comment image size, emoji panel, and trusted-administrator SVG uploads.
 * Built-in anti-spam, Yandex SmartCaptcha, or Google reCAPTCHA v2.
 * Configurable homepage sections and article typography/layouts.
@@ -98,6 +98,8 @@ Article claps are enabled by default and use this site's REST API. Reading a cou
 
 The personal library uses browser localStorage for up to 100 bookmarks and 50 recent unsaved reading positions. It validates same-origin links and never inserts stored titles as HTML. Reading progress stays in this browser; there is no account sync or transmission of progress to the server. Clearing browser storage removes the library. If storage is blocked, bookmarking reports an error rather than a false success. Disabling the library hides its controls without deleting browser data. Pro interest collection is separately opt-in and may aggregate explicit bookmark actions using the clap module's signed cookie; see the Pro guide before enabling it.
 
+The library dialog includes Bookmarks and Reading history views, title search, and Not started / In progress / Finished filters. History includes both bookmarked and unsaved articles with recorded progress. Export library downloads a private JSON file containing post titles, same-origin URLs, bookmark flags, reading positions and update times. Keep this file private. Import library accepts this format up to 256 KB and only for the same site origin (scheme, hostname and port). It validates the entire file before writing, merges existing bookmarks, keeps the more recently updated reading position, and retains the 50 most recent unsaved entries. An import exceeding 100 bookmarks is rejected without discarding data. A storage error leaves the original snapshot unchanged. Restoring a file does not send bookmark events or reading history to Pro statistics. This is manual device-to-device transfer, not cloud synchronization; backups from production cannot be imported on localhost.
+
 When enabled by an administrator:
 
 * Yandex SmartCaptcha loads a script from `smartcaptcha.cloud.yandex.ru` and sends the visitor token and IP address to its validation endpoint. See https://yandex.com/legal/smartcaptcha_notice/.
@@ -127,6 +129,14 @@ Yes. Upload a featured image in the post editor. It automatically replaces the g
 Use the bundled POT file with Poedit, Loco Translate, or the WordPress i18n tools. Save compiled translations with the `ioblog-editorial` text domain.
 
 == Changelog ==
+
+= 1.7.0 =
+
+* Added searchable Bookmarks and Reading history views with reading-status filters.
+* Added private JSON export and atomic import with origin validation, bounded storage and merge protection.
+* Preserved keyboard focus when reading progress refreshes the library list.
+* Added Russian translations, mobile light/dark styling and updated administration hints and instructions.
+* Retained compatibility with Pro 1.2.1; no licensing or production configuration changes.
 
 = 1.6.0 =
 

@@ -2,11 +2,11 @@
 
 A lightweight editorial WordPress theme by **Kirill Aleksandrov** for personal blogs and technology publications.
 
-**Free 1.6.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
+**Free 1.7.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
 
 ## Download and Install
 
-Download the installable `ioblog-editorial-1.6.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.6.0), not GitHub's automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify its SHA-256 against `SHA256SUMS.txt` if needed.
+Download the installable `ioblog-editorial-1.7.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.7.0), not GitHub's automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify its SHA-256 against `SHA256SUMS.txt` if needed.
 
 In WordPress open **Appearance → Themes → Add New → Upload Theme**, choose the ZIP, install and activate. Then open **IO Blog** in the main dashboard menu. Configure the homepage, reading layout, search and comments; assign Primary and Footer menus. Set your logo and Site Icon in **Appearance → Customize → Site Identity**.
 
@@ -20,13 +20,15 @@ In WordPress open **Appearance → Themes → Add New → Upload Theme**, choose
 - Four native Gutenberg patterns and core block styling.
 - Native comments with optional images and an emoji picker.
 - Article claps: up to ten per browser, with personal undo and supporter counters.
-- A personal browser-local library with bookmarks, reading progress and resume-reading controls.
+- A personal browser-local library with bookmarks, searchable reading history, status filters and resume-reading controls.
+- Private JSON export/import to transfer the library between devices on the same site, with validation and merge protection.
 - Built-in anti-spam and optional Yandex SmartCaptcha / Google reCAPTCHA.
 - Footer menu and optional social links.
 - English interface and bundled Russian translations.
 
 External integrations are opt-in. Free does not require a license key or contact the licensing store.
 Reading a clap counter creates no cookie. Explicit claps use this site's signed anonymous cookie and local database; saved articles and reading positions use browser localStorage. There is no account sync. See the bundled privacy guide before deploying.
+Library exports contain reading history and should be kept private. Imports are limited to 256 KB, validate the whole file, preserve existing bookmarks, and require the same scheme, hostname and port. Import does not send history or bookmark events to Pro statistics.
 
 ## Optional Pro Extension
 

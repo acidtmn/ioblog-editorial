@@ -12,9 +12,16 @@
       heading:typeof item.heading === 'string' ? item.heading.slice(0, 200) : '',
       updated:Number.isFinite(item.updated) ? item.updated : 0};
   };
-  const read = () => {
+  const read = (strict = false) => {
+    let stored;
+    try { stored = localStorage.getItem(key); }
+    catch (error) {
+      // Резервная копия не должна считать отказ доступа пустой библиотекой и молча перезаписывать данные.
+      if (strict) throw error;
+      return [];
+    }
     try {
-      const raw = JSON.parse(localStorage.getItem(key) || '[]');
+      const raw = JSON.parse(stored || '[]');
       if (!Array.isArray(raw)) return [];
       const seen = new Set();
       return raw.slice(0, 150).map(normalize).filter(item => {
@@ -24,7 +31,8 @@
     } catch (_) { return []; }
   };
   const update = (article, changes) => {
-    const items = read();
+    let items;
+    try { items = read(true); } catch (_) { return 'error'; }
     const old = items.find(item => item.id === article.id);
     const item = normalize({...old, ...article, ...changes, updated:Date.now()});
     if (!item) return 'invalid';
@@ -39,8 +47,22 @@
     return null;
   };
   const remove = id => {
-    const old = read().find(item => item.id === id);
+    let items;
+    try { items = read(true); } catch (_) { return 'error'; }
+    const old = items.find(item => item.id === id);
     return old ? update(old, {saved:false}) : null;
   };
-  window.IOBlogLibraryStore = {key, read, update, remove};
+  const replace = items => {
+    // Весь снимок записывается одной операцией: ошибка импорта не оставляет половину библиотеки.
+    if (!Array.isArray(items) || items.length > 150) return 'invalid';
+    const normalized = items.map(normalize);
+    if (normalized.some(item => !item) || new Set(normalized.map(item => item.id)).size !== normalized.length) return 'invalid';
+    if (normalized.filter(item => item.saved).length > 100 || normalized.filter(item => !item.saved).length > 50) return 'limit';
+    try { localStorage.setItem(key, JSON.stringify(normalized)); }
+    catch (_) { return 'error'; }
+    // Восстановление файла не является новой реакцией читателя и не создаёт событий серверной статистики.
+    dispatchEvent(new CustomEvent('ioblog-library-change', {detail:{bulk:true, changedSaved:false}}));
+    return null;
+  };
+  window.IOBlogLibraryStore = {key, read, update, remove, normalize, replace};
 })();

@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: IO Blog Editorial 1.6.0\n"
+"Project-Id-Version: IO Blog Editorial 1.7.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ioblog-editorial\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-02T12:30:52+00:00\n"
+"POT-Creation-Date: 2026-10-02T13:21:09+00:00\n"
 "PO-Revision-Date: 2026-09-28 00:00+0500\n"
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -289,6 +289,7 @@ msgid "Claps"
 msgstr "Хлопки"
 
 #: inc/interests/view-template.php:9
+#: template-parts/library.php:9
 msgid "Bookmarks"
 msgstr "Закладки"
 
@@ -901,8 +902,8 @@ msgid "Claps: up to 10 per article from each browser, with undo. Disabling claps
 msgstr "До 10 хлопков на статью из одного браузера, с возможностью отмены. Отключение блока сохраняет накопленные реакции."
 
 #: inc/admin/settings-page.php:204
-msgid "The library remembers bookmarks and reading positions in the visitor browser without an account."
-msgstr "Библиотека сохраняет закладки и место чтения в браузере посетителя, без регистрации."
+msgid "Readers can search bookmarks, filter their reading history, and export or import a private backup. Data stays in the browser without an account."
+msgstr "Читатели могут искать закладки, фильтровать историю чтения и сохранять или восстанавливать личную резервную копию. Данные остаются в браузере, без регистрации."
 
 #: inc/admin/settings-page.php:208
 msgid "Form protection"
@@ -1249,42 +1250,72 @@ msgstr "Светлая"
 msgid "Dark"
 msgstr "Тёмная"
 
-#: inc/library.php:14
+#: inc/library.php:16
 #: single.php:29
 msgid "Save for later"
 msgstr "Сохранить на потом"
 
-#: inc/library.php:14
+#: inc/library.php:16
 msgid "Saved for later"
 msgstr "Сохранено в библиотеке"
 
-#: inc/library.php:15
+#: inc/library.php:17
 msgid "Remove from library"
 msgstr "Убрать из библиотеки"
 
-#: inc/library.php:15
+#: inc/library.php:17
 msgid "Browser storage is unavailable. Allow site storage to use your library."
 msgstr "Хранилище браузера недоступно. Разрешите хранение данных сайта для работы библиотеки."
 
-#: inc/library.php:16
+#: inc/library.php:18
 msgid "Your library holds up to 100 articles. Remove an article before adding another."
 msgstr "В библиотеке можно сохранить до 100 статей. Удалите одну, чтобы добавить новую."
 
 #. translators: %d is the integer reading percentage, replaced by the browser script.
-#: inc/library.php:18
+#: inc/library.php:20
 #, php-format
 msgid "Read: %d%"
 msgstr "Прочитано: %d%"
 
 #. translators: %d is the integer reading percentage, replaced by the browser script.
-#: inc/library.php:18
+#: inc/library.php:20
 #: template-parts/reading-resume.php:6
 msgid "Continue reading"
 msgstr "Продолжить чтение"
 
-#: inc/library.php:19
+#: inc/library.php:21
 msgid "Save an article to find it here. Your library stays in this browser."
 msgstr "Сохраните статью, чтобы найти её здесь. Библиотека хранится только в этом браузере."
+
+#: inc/library.php:22
+msgid "Start reading an article to see it here."
+msgstr "Начните читать статью, чтобы увидеть её здесь."
+
+#: inc/library.php:23
+msgid "No matching articles. Try another title or reading status."
+msgstr "Статьи не найдены. Попробуйте другой заголовок или состояние чтения."
+
+#. translators: %d is the number of matching articles, replaced by the browser script.
+#: inc/library.php:25
+#, php-format
+msgid "Articles found: %d"
+msgstr "Найдено статей: %d"
+
+#: inc/library.php:26
+msgid "Invalid backup. Choose an IO Blog library JSON file no larger than 256 KB."
+msgstr "Некорректная копия. Выберите JSON-файл библиотеки IO Blog размером не более 256 КБ."
+
+#: inc/library.php:27
+msgid "This backup belongs to a different site address. Import it on the original site."
+msgstr "Эта копия создана для другого адреса сайта. Импортируйте её на исходном сайте."
+
+#: inc/library.php:28
+msgid "Library restored. Existing bookmarks have been kept."
+msgstr "Библиотека восстановлена. Существующие закладки сохранены."
+
+#: inc/library.php:29
+msgid "Library file prepared. Keep it safe: it contains your reading history."
+msgstr "Файл библиотеки подготовлен. Храните его в безопасности: он содержит историю чтения."
 
 #. translators: %d: minimum number of search characters.
 #: inc/search.php:85
@@ -1685,6 +1716,58 @@ msgstr "Закрыть библиотеку"
 #: template-parts/library.php:7
 msgid "Saved articles and reading progress are kept on this device."
 msgstr "Сохранённые статьи и место чтения остаются на этом устройстве."
+
+#: template-parts/library.php:8
+msgid "Library view"
+msgstr "Вид библиотеки"
+
+#: template-parts/library.php:10
+msgid "Reading history"
+msgstr "История чтения"
+
+#: template-parts/library.php:13
+msgid "Search your library"
+msgstr "Поиск по библиотеке"
+
+#: template-parts/library.php:13
+msgid "Find an article..."
+msgstr "Найти статью..."
+
+#: template-parts/library.php:14
+msgid "Reading status"
+msgstr "Состояние чтения"
+
+#: template-parts/library.php:15
+msgid "All statuses"
+msgstr "Все состояния"
+
+#: template-parts/library.php:16
+msgid "Not started"
+msgstr "Не начато"
+
+#: template-parts/library.php:17
+msgid "In progress"
+msgstr "Читаю"
+
+#: template-parts/library.php:18
+msgid "Finished"
+msgstr "Прочитано"
+
+#: template-parts/library.php:25
+msgid "Export library"
+msgstr "Экспорт библиотеки"
+
+#: template-parts/library.php:25
+msgid "Import library"
+msgstr "Импорт библиотеки"
+
+#: template-parts/library.php:26
+msgid "Library backup file"
+msgstr "Файл резервной копии библиотеки"
+
+#: template-parts/library.php:27
+msgid "The file contains your reading history. Keep it private. Import merges data for this site without removing existing bookmarks."
+msgstr "Файл содержит историю чтения. Храните его в безопасности. Импорт объединяет данные этого сайта, не удаляя существующие закладки."
 
 #: template-parts/reading-resume.php:6
 msgid "Dismiss reading position"

@@ -10,19 +10,34 @@
   const status = dialog.querySelector('.io-library__status');
   const count = open?.querySelector('.io-library-count');
   const labels = config.labels;
+  const search = dialog.querySelector('.io-library__search');
+  const filter = dialog.querySelector('.io-library__filter');
+  const views = [...dialog.querySelectorAll('[data-library-view]')];
+  const summary = dialog.querySelector('.io-library__summary');
+  let view = 'saved';
   let opener;
-  const report = error => { status.textContent = error === 'limit' ? labels.limit : labels.error; if (!dialog.open) { opener = save; dialog.showModal(); } };
+  const report = error => {
+    if (!dialog.open) { opener = save; dialog.showModal(); render(); }
+    status.textContent = error === 'limit' ? labels.limit : labels.error;
+  };
   const render = () => {
-    const items = store.read().filter(row => row.saved);
-    if (count) { count.textContent = items.length; count.hidden = items.length === 0; }
+    const all = store.read().sort((a,b) => b.updated - a.updated || a.id - b.id);
+    const savedItems = all.filter(row => row.saved);
+    if (count) { count.textContent = savedItems.length; count.hidden = savedItems.length === 0; }
     if (save && config.current) {
-      const saved = items.some(row => row.id === config.current.id);
+      const saved = savedItems.some(row => row.id === config.current.id);
       save.setAttribute('aria-pressed', String(saved));
       save.setAttribute('aria-label', saved ? labels.saved : labels.save);
       save.dataset.tooltip = saved ? labels.saved : labels.save;
       save.querySelector('.screen-reader-text').textContent = saved ? labels.saved : labels.save;
       save.hidden = false;
     }
+    if (!dialog.open) return;
+    const query = search.value.trim().toLocaleLowerCase();
+    const items = all.filter(row => (view === 'saved' ? row.saved : row.progress > 0) && row.title.toLocaleLowerCase().includes(query) &&
+      (filter.value === 'all' || (filter.value === 'unread' && row.progress <= .04) || (filter.value === 'reading' && row.progress > .04 && row.progress < .98) || (filter.value === 'complete' && row.progress >= .98)));
+    const focused = list.contains(document.activeElement) ? {id:document.activeElement.dataset.articleId, action:document.activeElement.dataset.action} : null;
+    summary.textContent = labels.results.replace('%d', items.length);
     // Заголовки и ссылки из хранилища никогда не вставляются через innerHTML.
     list.replaceChildren();
     for (const item of items) {
@@ -32,6 +47,7 @@
       link.href = item.url;
       if (item.progress > .04 && item.progress < .98 && item.heading) link.hash = item.heading;
       link.textContent = item.title;
+      link.dataset.articleId = item.id; link.dataset.action = 'read';
       const detail = document.createElement('small');
       detail.textContent = labels.progress.replace('%d', Math.round(item.progress * 100));
       const progress = document.createElement('progress');
@@ -39,22 +55,33 @@
       body.append(link, detail, progress);
       const remove = document.createElement('button');
       remove.type = 'button'; remove.className = 'io-library__remove'; remove.textContent = '×';
+      remove.dataset.articleId = item.id; remove.dataset.action = 'remove';
       remove.setAttribute('aria-label', labels.remove + ': ' + item.title);
+      remove.hidden = !item.saved;
       remove.addEventListener('click', () => {
         const error = store.remove(item.id);
         if (error) { report(error); return; }
-        // После удаления возвращаем фокус на следующую запись либо кнопку закрытия, не теряя клавиатурную позицию.
-        const first = list.querySelector('a') || dialog.querySelector('.io-library-close');
-        first.focus();
       });
       row.append(body, remove); list.append(row);
     }
-    status.textContent = items.length ? '' : labels.empty;
+    // Перерисовка при сохранении прогресса не выбрасывает пользователя из списка при работе клавиатурой.
+    if (focused) {
+      const target = [...list.querySelectorAll('[data-article-id]')].find(el => el.dataset.articleId === focused.id && el.dataset.action === focused.action && !el.hidden);
+      (target || list.querySelector('a') || search).focus();
+    }
+    status.textContent = items.length ? '' : query || filter.value !== 'all' ? labels.noMatches : view === 'history' ? labels.emptyHistory : labels.empty;
   };
   if (open) {
     open.hidden = false;
-    open.addEventListener('click', () => { render(); opener = open; dialog.showModal(); });
+    open.addEventListener('click', () => { opener = open; dialog.showModal(); render(); });
   }
+  views.forEach(button => button.addEventListener('click', () => {
+    view = button.dataset.libraryView;
+    views.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    render();
+  }));
+  search.addEventListener('input', render);
+  filter.addEventListener('change', render);
   dialog.querySelector('.io-library-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', () => opener?.focus());
   dialog.addEventListener('click', event => { if (event.target === dialog) { const rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close(); } });
