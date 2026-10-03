@@ -136,6 +136,7 @@ function ioblog_render_settings_page() {
 			<a href="<?php echo esc_url( admin_url( 'admin.php?page=ioblog-settings-transfer' ) ); ?>"><?php esc_html_e( 'Export and import', 'ioblog-editorial' ); ?></a>
 			<a href="<?php echo esc_url( admin_url( 'admin.php?page=ioblog-design' ) ); ?>"><?php esc_html_e( 'Design studio', 'ioblog-editorial' ); ?></a>
 			<?php if ( class_exists( 'Ioblog_Community_Settings' ) ) { ?><a href="<?php echo esc_url( admin_url( 'admin.php?page=ioblog-community' ) ); ?>"><?php esc_html_e( 'Reader accounts', 'ioblog-editorial' ); ?></a><?php } ?>
+			<?php if ( class_exists( 'Ioblog_Mail_Settings' ) ) { ?><a href="<?php echo esc_url( admin_url( 'admin.php?page=ioblog-mail' ) ); ?>"><?php esc_html_e( 'Email / SMTP', 'ioblog-editorial' ); ?></a><?php } ?>
 			<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>"><?php esc_html_e( 'Appearance', 'ioblog-editorial' ); ?></a>
 			<a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>"><?php esc_html_e( 'Menus', 'ioblog-editorial' ); ?></a>
 			<a href="<?php echo esc_url( admin_url( 'edit-tags.php?taxonomy=category' ) ); ?>"><?php esc_html_e( 'Categories', 'ioblog-editorial' ); ?></a>

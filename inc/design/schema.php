@@ -31,6 +31,7 @@ final class Ioblog_Design_Schema {
 			$fields[ $key ] = array( 'type' => 'checkbox', 'default' => 1, 'label' => $label, 'group' => 'regions' );
 		}
 		$fields['card_ratio'] = array( 'type' => 'select', 'default' => 'wide', 'choices' => array( 'wide' => '16:9', 'classic' => '4:3', 'square' => '1:1' ), 'label' => 'Card image ratio', 'group' => 'geometry' );
+		$fields['header_navigation'] = array( 'type' => 'checkbox', 'default' => 1, 'label' => 'Header navigation', 'group' => 'regions' );
 		$fields['shadow'] = array( 'type' => 'select', 'default' => 'soft', 'choices' => array( 'none' => 'No shadow', 'soft' => 'Soft shadow', 'strong' => 'Strong shadow' ), 'label' => 'Shadows', 'group' => 'geometry' );
 		$fields['font_attachment'] = array( 'type' => 'number', 'default' => 0, 'min' => 0, 'max' => 2147483647, 'label' => 'Uploaded font', 'group' => 'fonts' );
 		foreach ( array( 'h1' => 64, 'h2' => 34, 'h3' => 28, 'h4' => 24, 'h5' => 21, 'h6' => 18 ) as $level => $size ) { $fields[ 'size_' . $level ] = array( 'type' => 'number', 'default' => $size, 'min' => 16, 'max' => 96, 'label' => strtoupper( $level ) . ', px', 'group' => 'fonts' ); }

@@ -3,6 +3,7 @@
 final class Ioblog_Design_Labels {
 	public static function text( $label ) {
 		$labels = array(
+			'Header navigation' => __( 'Header navigation', 'ioblog-editorial' ),
 			'Page background' => __( 'Page background', 'ioblog-editorial' ), 'Card background' => __( 'Card background', 'ioblog-editorial' ), 'Soft background' => __( 'Soft background', 'ioblog-editorial' ),
 			'Main text' => __( 'Main text', 'ioblog-editorial' ), 'Secondary text' => __( 'Secondary text', 'ioblog-editorial' ), 'Borders' => __( 'Borders', 'ioblog-editorial' ),
 			'Accent color' => __( 'Accent color', 'ioblog-editorial' ), 'Accent on hover' => __( 'Accent on hover', 'ioblog-editorial' ), 'Soft accent' => __( 'Soft accent', 'ioblog-editorial' ),

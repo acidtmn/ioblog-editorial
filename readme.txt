@@ -3,7 +3,7 @@ Contributors: kirillaleksandrov
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.9.0
+Stable tag: 1.9.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, news, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -11,6 +11,8 @@ Tags: blog, news, two-columns, right-sidebar, custom-logo, custom-menu, featured
 A fast, responsive editorial theme for technology blogs with dark mode, live search, CSS covers, and Gutenberg support.
 
 == Description ==
+
+Version 1.9.1 adds a Header navigation switch to Design studio > Site regions. Hide both desktop and mobile menus while keeping the homepage categories. The menu assignment is preserved and can be restored with the same switch.
 
 IO Blog Editorial is a responsive classic WordPress theme designed for readable technology publications, personal blogs, and online magazines. It combines a distinctive editorial homepage with a focused single-post layout, a sticky table of contents, accessible dark mode, and lightweight CSS-generated covers for posts without featured images.
 
@@ -58,6 +60,7 @@ The theme uses the standard posts index as its editorial homepage. In Settings >
 = Menus =
 
 Assign a concise navigation menu to Primary menu and informational links to Footer menu. The mobile menu is generated from the same Primary menu location.
+Header navigation can be hidden in IO Blog > Design studio > Site regions without deleting the assigned menu. Search, theme switching and account controls remain available.
 
 = Featured images and CSS covers =
 
@@ -144,6 +147,12 @@ Yes. Upload a featured image in the post editor. It automatically replaces the g
 Use the bundled POT file with Poedit, Loco Translate, or the WordPress i18n tools. Save compiled translations with the `ioblog-editorial` text domain.
 
 == Changelog ==
+
+= 1.9.1 =
+* Added a separate header-navigation switch to the design studio without removing assigned menus or header actions.
+* Added an SMTP administration shortcut when Pro 1.4.0 is active.
+* Extended complete settings backup with SMTP configuration and masked credential preview.
+* Updated Russian translations, account instructions and Free/Pro setup documentation.
 
 = 1.9.0 =
 * Added a design studio with 70 validated settings, private responsive preview and explicit publication.

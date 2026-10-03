@@ -4,11 +4,11 @@
 
 A lightweight editorial WordPress theme by **Kirill Aleksandrov** for personal blogs and technology publications.
 
-**Free 1.9.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
+**Free 1.9.1** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
 
 ## Download and Install
 
-Download the installable `ioblog-editorial-1.9.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.9.0), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
+Download the installable `ioblog-editorial-1.9.1.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.9.1), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
 
 In WordPress open **Appearance → Themes → Add New → Upload Theme**, install the ZIP and activate it. Then open **IO Blog** in the main dashboard menu. Configure the homepage, reading layout, search and comments; assign Primary and Footer menus. Set your logo and Site Icon in **Appearance → Customize → Site Identity**.
 
@@ -16,7 +16,7 @@ In WordPress open **Appearance → Themes → Add New → Upload Theme**, instal
 
 - Editorial homepage with a featured post, editor picks and a recent-post grid.
 - Reading presets, adjustable typography and three article layouts.
-- A 70-setting design studio: separate palettes, six font roles, heading sizes/weights, local WOFF2, geometry and region controls.
+- A 71-setting design studio: separate palettes, six font roles, heading sizes/weights, local WOFF2, geometry and region controls.
 - Private responsive preview, explicit publication, reader mode and a printable layout.
 - Light/dark modes and locally hosted DM Sans fonts.
 - Live search and a responsive table of contents.
@@ -36,7 +36,11 @@ External integrations are opt-in. Free requires no license key and does not cont
 
 Library exports contain reading history and should be kept private. Imports are limited to 256 KB, validate the whole file, preserve existing bookmarks and require the same scheme, hostname and port. Import does not send history or bookmark events to Pro statistics. See the privacy guide before deploying.
 
-## New in 1.9.0
+## New in 1.9.1
+
+Header navigation can now be hidden independently, preserving menu assignments and header actions. Complete settings backup includes Pro SMTP credentials with masked import preview. The dashboard includes an SMTP shortcut when Pro 1.4.0 is installed. Russian translations and setup guides have been updated.
+
+## Design Studio
 
 **IO Blog → Design studio** includes searchable settings, per-field reset, a contrast indicator and desktop/tablet/mobile previews. Preview drafts are restricted to their administrator and do not change the public site. WOFF2 uploads are administrator-only and limited to 2 MB. Design, conditional ads and Pro account configuration are included in complete backup. Previous release archives remain unchanged.
 
@@ -48,7 +52,9 @@ Library exports contain reading history and should be kept private. Imports are 
 
 ## Optional Pro Extension
 
-This is **one theme**, not separate Free and Pro themes. The separately distributed **Pro 1.3.0** plugin adds a visual cover editor, link cards, conditional advertising, short links, integrations, series, social PNG covers and opt-in reader interests. Publishing tools require Free 1.9.0 or later.
+This is **one theme**, not separate Free and Pro themes. The separately distributed **Pro 1.4.0** plugin adds a visual cover editor, link cards, conditional advertising, short links, integrations, series, social PNG covers and opt-in reader interests. Publishing tools require Free 1.9.0 or later.
+
+Pro 1.4.0 adds accessible login/recovery dialogs, email-code registration without a username field, bundled provider SVG icons, a responsive conversation UI with unread counts and drafts, and a separate SMTP panel with SSL/STARTTLS, strict-by-default certificate validation and administrator delivery tests. Complete private settings exports include the saved SMTP password.
 
 New independently switchable Pro modules include reader accounts, collections, opt-in library sync, category feed, own comments, confirmed email, sessions, notifications and consenting text messages with limits, blocking and reports. VK, Yandex, Telegram, Google and GitHub sign-in requires your registered applications. No Odnoklassniki or Mail.ru login is included. Digests require configured WordPress mail and cron. The account shortcode works independently of the active theme. Account modules are disabled by default.
 

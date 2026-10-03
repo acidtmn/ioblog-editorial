@@ -62,6 +62,8 @@ final class Ioblog_Design_Service {
 		$regions = array( 'header_search' => '.io-search-open', 'header_theme_switch' => '.io-theme-toggle', 'header_tagline' => '.io-brand__tagline', 'article_cover' => '.io-article-cover', 'article_author' => '.io-author-card', 'article_navigation' => '.io-post-navigation', 'article_related' => '.io-related', 'article_toc' => '.io-toc,.io-mobile-toc', 'sidebar_recent' => '.io-widget--popular', 'card_excerpt' => '.io-card__excerpt', 'card_meta' => '.io-card .io-post-meta', 'footer_social' => '.io-footer__social' );
 		foreach ( $regions as $key => $selector ) { if ( ! $config[ $key ] ) { $css .= $selector . '{display:none!important}'; } }
 		if ( ! $config['header_sticky'] ) { $css .= '.io-header{position:relative;top:auto}'; }
+		// Переключатель убирает обе версии меню, сохраняя назначение меню и рубрики под hero.
+		if ( ! $config['header_navigation'] ) { $css .= '.io-navigation,.io-mobile-nav,.io-menu-toggle{display:none!important}.io-header__actions{margin-left:auto}'; }
 		$css .= '@media(max-width:900px){.io-footer__grid{grid-template-columns:1fr}.entry-content{font-size:' . $config['mobile_reading_size'] . 'px}}';
 		return $css;
 	}

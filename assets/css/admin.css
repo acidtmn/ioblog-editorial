@@ -17,7 +17,7 @@
 }
 .io-admin-hero > div > span { color: var(--io-accent); font-size: 11px; font-weight: 750; letter-spacing: .12em; }
 .io-admin-version { display: inline-block; margin-left: 8px; padding: 3px 8px; border: 1px solid #b9d6ca; border-radius: 6px; letter-spacing: 0; }
-.io-admin-hero h1 { margin: 14px 0 10px; padding: 0; color: var(--io-ink); font-size: clamp(26px, 3vw, 36px); font-weight: 650; line-height: 1.2; letter-spacing: -.035em; }
+.io-admin-hero h1, .io-admin-hero .io-admin-title { margin: 14px 0 10px; padding: 0; color: var(--io-ink); font-size: clamp(26px, 3vw, 36px); font-weight: 650; line-height: 1.2; letter-spacing: -.035em; }
 .io-admin-hero p { max-width: 630px; margin: 0; color: var(--io-muted); font-size: 14px; line-height: 1.7; }
 .io-admin-hero__status { display: grid; grid-template-columns: 10px 1fr; align-items: center; gap: 10px; flex: 0 0 auto; font-size: 13px; }
 .io-admin-hero__status i { width: 8px; height: 8px; border-radius: 50%; background: var(--io-accent); box-shadow: 0 0 0 4px #d6eade; }
@@ -44,7 +44,7 @@
 .io-admin-fields { margin-top: 24px; }
 .io-admin label small { display: block; margin-top: 7px; color: var(--io-muted); line-height: 1.45; }
 .io-admin label > strong { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 600; line-height: 1.5; }
-.io-admin input:is([type=text], [type=url], [type=password], [type=number]), .io-admin select, .io-admin textarea { width: 100%; max-width: 100%; min-height: 44px; padding: 8px 12px; border: 1px solid #b9cdc5; border-radius: 8px; background-color: #fbfdfc; color: var(--io-ink); box-shadow: none; }
+.io-admin input:is([type=text], [type=url], [type=email], [type=password], [type=number]), .io-admin select, .io-admin textarea { width: 100%; max-width: 100%; min-height: 44px; padding: 8px 12px; border: 1px solid #b9cdc5; border-radius: 8px; background-color: #fbfdfc; color: var(--io-ink); box-shadow: none; }
 .io-admin textarea { padding: 14px; line-height: 1.65; resize: vertical; tab-size: 2; }
 .io-admin textarea.code { font-family: Consolas, 'Liberation Mono', monospace; font-size: 12px; }
 .io-admin input::placeholder { color: #677d73; opacity: 1; }

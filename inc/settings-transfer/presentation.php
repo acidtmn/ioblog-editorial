@@ -2,7 +2,7 @@
 /** Читаемые подписи и скрытие конфиденциальных значений только для предварительного просмотра. */
 final class Ioblog_Settings_Transfer_Presentation {
 	public static function summary( $key, $value ) {
-		if ( preg_match( '/(key|secret|token|password|credential|code|redirects|custom_css|community_config)/i', $key ) ) {
+		if ( preg_match( '/(key|secret|token|password|credential|code|redirects|custom_css|community_config|mail_config)/i', $key ) ) {
 			return empty( $value ) ? __( 'Empty', 'ioblog-editorial' ) : __( 'Protected content included', 'ioblog-editorial' );
 		}
 		$value = is_scalar( $value ) ? (string) $value : wp_json_encode( $value );
@@ -13,6 +13,7 @@ final class Ioblog_Settings_Transfer_Presentation {
 		$slots = array( 'home' => __( 'After the hero section', 'ioblog-editorial' ), 'inline' => __( 'Inside an article', 'ioblog-editorial' ), 'sidebar' => __( 'Right sidebar', 'ioblog-editorial' ), 'after' => __( 'After the article', 'ioblog-editorial' ) );
 		if ( preg_match( '/^ad_(home|inline|sidebar|after)_(code|enabled)$/D', $key, $match ) ) { return $slots[ $match[1] ]; }
 		$labels = array(
+			'mail_config' => __( 'Email / SMTP', 'ioblog-editorial' ),
 			'site_language' => __( 'WordPress language', 'ioblog-editorial' ),
 			'search_min_chars' => __( 'Minimum search characters', 'ioblog-editorial' ),
 			'search_limit' => __( 'Results in the search window', 'ioblog-editorial' ),
