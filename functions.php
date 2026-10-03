@@ -33,6 +33,7 @@ $ioblog_modules = array(
 	'seo',
 	'admin/site-language',
 	'admin/settings-page',
+	'settings-transfer/bootstrap',
 );
 
 foreach ( $ioblog_modules as $ioblog_module ) {

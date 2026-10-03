@@ -1,0 +1,36 @@
+/* Собственная область экрана: сообщения и таблицы не меняют стили других страниц админки. */
+.io-transfer .io-transfer-warning { padding: 18px 22px; margin: 22px 0; border: 1px solid #e6d3a6; border-radius: 14px; background: #fff8e8; color: #62491d; }
+.io-transfer .io-transfer-warning p { margin-bottom: 0; color: inherit; }
+.io-transfer .io-transfer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: stretch; }
+.io-transfer .io-transfer-grid .io-admin-card { margin: 0; }
+.io-transfer .io-transfer-list { padding-left: 20px; list-style: disc; line-height: 1.8; margin: 20px 0; }
+.io-transfer .button { min-height: 40px; padding: 4px 18px; border-radius: 8px; }
+.io-transfer .button-primary { background: var(--io-accent); border-color: var(--io-accent); }
+.io-transfer .button-primary:disabled { opacity: .6; }
+.io-transfer #io-transfer-file { display: block; width: 100%; margin: 14px 0; padding: 22px 16px; border: 1px dashed #a7c8be; border-radius: 10px; background: #f5faf8; box-sizing: border-box; }
+.io-transfer .io-transfer-status { min-height: 24px; color: #08735c; font-weight: 600; line-height: 1.7; }
+.io-transfer .io-transfer-status.is-error { color: #a62c33; }
+.io-transfer .io-transfer-preview { margin-top: 24px; }
+.io-transfer .io-transfer-preview[hidden] { display: none; }
+.io-transfer .io-transfer-groups { display: flex; flex-wrap: wrap; gap: 16px 24px; padding: 16px 0 24px; }
+.io-transfer .io-transfer-groups label { display: inline-flex; align-items: center; gap: 8px; }
+.io-transfer legend { font-weight: 600; }
+.io-transfer .io-transfer-table-wrap { overflow: auto; max-height: 440px; border: 1px solid var(--io-line); border-radius: 10px; }
+.io-transfer table { box-shadow: none; border: none; table-layout: fixed; min-width: 500px; }
+.io-transfer th, .io-transfer td { padding: 12px 16px; overflow-wrap: anywhere; }
+.io-transfer th { background: #edf6f2; font-weight: 600; }
+.io-transfer td small { display: block; margin-top: 5px; font-size: 11px; color: var(--io-muted); }
+.io-transfer .io-transfer-confirm { display: flex; gap: 10px; align-items: center; margin: 24px 0 18px; font-weight: 600; }
+.io-transfer input:focus-visible, .io-transfer button:focus-visible { outline: 2px solid #087d69; outline-offset: 3px; }
+@media (max-width: 900px) { .io-transfer .io-transfer-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+	.io-transfer .io-transfer-warning { padding: 16px; }
+	.io-transfer .io-transfer-groups { flex-direction: column; gap: 14px; }
+	.io-transfer .io-admin-hero .button { align-self: flex-start; }
+	.io-transfer table { min-width: 0; }
+	.io-transfer thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+	.io-transfer tbody, .io-transfer tr, .io-transfer td { display: block; width: auto; }
+	.io-transfer tr + tr { border-top: 1px solid var(--io-line); }
+	.io-transfer td::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 700; color: var(--io-muted); margin-bottom: 4px; }
+	.io-transfer .io-transfer-table-wrap { max-height: 560px; }
+}

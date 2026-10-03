@@ -3,7 +3,7 @@ Contributors: kirillaleksandrov
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.7.0
+Stable tag: 1.8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, news, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -29,6 +29,7 @@ The theme uses local assets only by default. Advertising, analytics snippets, so
 * Native comments with optional image attachments and an emoji picker.
 * Article claps: up to ten per browser, personal undo, clap and supporter counters.
 * Personal browser-local library with bookmarks, searchable reading history, status filters, backup export/import and explicit resume controls.
+* Full theme-settings JSON export/import, including saved Pro advertising code, analytics, CAPTCHA keys, Customizer values and custom CSS.
 * Built-in anti-spam with optional Yandex SmartCaptcha or Google reCAPTCHA v2.
 * Optional Pro extension: link cards, visual cover editor, advertising, short links, series, social PNG covers and reader-interest dashboard.
 * Footer menu and optional Telegram, MAX, VK, and Odnoklassniki links.
@@ -112,6 +113,18 @@ Site owners are responsible for updating their privacy policy when optional exte
 
 == Frequently Asked Questions ==
 
+= How do I back up and restore all theme settings? =
+
+Open IO Blog > Export and import. Download a current JSON backup before importing. The file includes every saved Free and Pro setting, including all advertising slots (code, switches and inline position), analytics snippets, short links, social networks, both CAPTCHA keys, language, site title/tagline, Customizer values, custom CSS and references to menus, logo and site icon. Pro configuration is preserved even with the extension disabled.
+
+Select a trusted JSON file up to 1 MB, preview its changes, choose sections (all selected by default), acknowledge trust and confirm within ten minutes. Configuration is not modified by preview. Changed settings, expired previews, malformed files and unavailable objects are detected before saving. Code and keys are masked in the preview but included in the file. Advertising/analytics HTML requires unfiltered_html capability. Selected sections are merged; other sections remain unchanged. Empty values can clear previous settings, including CAPTCHA secrets.
+
+The file is NOT encrypted. Keep it private: never publish it on GitHub, in public uploads, or send it to strangers. Only administrators with manage_options can export or import. Uploads are processed temporarily without creating a media-library attachment. An import preview is user-bound, single-use and valid for ten minutes. Its private WordPress transient is removed on confirmation or expiration cleanup; with disabled WP-Cron, physical database cleanup may occur later. Importing trusted executable snippets is an intentional administrator action.
+
+For a different domain, URLs in code and links are not rewritten. Check partner URLs and CAPTCHA domain restrictions. Install the target WordPress language pack before import; selecting its language also updates the current administrator locale. Object references are matched by slug/type, not foreign IDs; unavailable objects keep their destination settings and produce a warning. Transfer content and media first if these references are needed.
+
+This is NOT a full site backup: posts, Gutenberg content, per-post covers, media bytes, menu items, comments, claps and browser libraries are not copied. Pro license keys and installation activation are not transferable settings and remain excluded; activate a new domain separately. The importer does not install or activate Pro. On a normal write failure the importer attempts to restore old values; a database outage can prevent rollback, so retain a database backup as well.
+
 = Does the theme require a plugin? =
 
 No. The front-end layout, live search, CSS covers, comments, table of contents, and theme settings are self-contained. An optimization or caching plugin can be used separately.
@@ -129,6 +142,16 @@ Yes. Upload a featured image in the post editor. It automatically replaces the g
 Use the bundled POT file with Poedit, Loco Translate, or the WordPress i18n tools. Save compiled translations with the `ioblog-editorial` text domain.
 
 == Changelog ==
+
+= 1.8.0 =
+
+* Added a dedicated Export and import screen in the main IO Blog administration menu.
+* Added full JSON configuration backups, including advertising/integration code and CAPTCHA keys without silent exclusions.
+* Added section-selective preview and explicit confirmation, masked sensitive preview values, CSRF protection and administrator capability checks.
+* Added user-bound expiring one-use previews, stale-configuration detection, write verification and compensating rollback.
+* Added safe object-reference matching, Customizer/custom-CSS restoration and preservation of inactive Pro settings.
+* Updated English/Russian localization, responsive administration styles and complete backup instructions.
+* Retained Pro 1.2.1 unchanged; production and store services were not modified.
 
 = 1.7.0 =
 

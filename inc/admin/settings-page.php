@@ -133,6 +133,7 @@ function ioblog_render_settings_page() {
 		</header>
 
 		<nav class="io-admin-links">
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=ioblog-settings-transfer' ) ); ?>"><?php esc_html_e( 'Export and import', 'ioblog-editorial' ); ?></a>
 			<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>"><?php esc_html_e( 'Appearance', 'ioblog-editorial' ); ?></a>
 			<a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>"><?php esc_html_e( 'Menus', 'ioblog-editorial' ); ?></a>
 			<a href="<?php echo esc_url( admin_url( 'edit-tags.php?taxonomy=category' ) ); ?>"><?php esc_html_e( 'Categories', 'ioblog-editorial' ); ?></a>

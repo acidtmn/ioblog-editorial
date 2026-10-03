@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: IO Blog Editorial 1.7.0\n"
+"Project-Id-Version: IO Blog Editorial 1.8.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ioblog-editorial\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-02T13:21:09+00:00\n"
+"POT-Creation-Date: 2026-10-03T02:25:58+00:00\n"
 "PO-Revision-Date: 2026-09-28 00:00+0500\n"
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -133,6 +133,7 @@ msgid "Enabled"
 msgstr "Включено"
 
 #: inc/admin/settings-sections.php:22
+#: inc/settings-transfer/schema.php:13
 msgid "Advertising slots"
 msgstr "Рекламные места"
 
@@ -141,6 +142,7 @@ msgid "Administrator HTML and JavaScript are allowed. For manual placement, use 
 msgstr "Разрешён HTML и JavaScript администратора. Для ручной вставки используйте <code>[ioblog_ad slot=\"inline\"]</code>."
 
 #: inc/admin/settings-sections.php:23
+#: inc/settings-transfer/presentation.php:13
 msgid "After the hero section"
 msgstr "После главного экрана"
 
@@ -149,6 +151,7 @@ msgid "Between the hero and categories on the homepage."
 msgstr "Между главным экраном и рубриками на главной странице."
 
 #: inc/admin/settings-sections.php:24
+#: inc/settings-transfer/presentation.php:13
 msgid "Inside an article"
 msgstr "Внутри статьи"
 
@@ -157,10 +160,12 @@ msgid "Automatically after the selected paragraph or manually via shortcode."
 msgstr "Автоматически после выбранного абзаца или вручную через шорткод."
 
 #: inc/admin/settings-sections.php:25
+#: inc/settings-transfer/presentation.php:55
 msgid "After paragraph number"
 msgstr "После абзаца №"
 
 #: inc/admin/settings-sections.php:26
+#: inc/settings-transfer/presentation.php:13
 msgid "Right sidebar"
 msgstr "Правая колонка"
 
@@ -169,6 +174,7 @@ msgid "Below the table of contents in the sticky article sidebar."
 msgstr "Под содержанием статьи в липком сайдбаре."
 
 #: inc/admin/settings-sections.php:27
+#: inc/settings-transfer/presentation.php:13
 msgid "After the article"
 msgstr "После статьи"
 
@@ -178,6 +184,7 @@ msgstr "Полноширинный нативный баннер перед бл
 
 #: inc/admin/settings-sections.php:30
 #: inc/admin/settings-sections.php:31
+#: inc/settings-transfer/presentation.php:58
 msgid "Short links"
 msgstr "Короткие ссылки"
 
@@ -186,6 +193,7 @@ msgid "One link per line: <code>slug|https://address|307</code>. Status codes 30
 msgstr "Одна строка на ссылку: <code>slug|https://адрес|307</code>. Поддерживаются коды 301, 302, 307 и 308."
 
 #: inc/admin/settings-sections.php:34
+#: inc/settings-transfer/schema.php:14
 msgid "Integrations"
 msgstr "Интеграции"
 
@@ -541,7 +549,7 @@ msgid "Return to homepage"
 msgstr "Вернуться на главную"
 
 #: comments.php:13
-#: inc/admin/settings-page.php:139
+#: inc/admin/settings-page.php:140
 #: single.php:34
 #: single.php:36
 msgid "Comments"
@@ -668,8 +676,10 @@ msgid "About the blog"
 msgstr "О блоге"
 
 #: home.php:49
-#: inc/admin/settings-page.php:167
-#: inc/admin/settings-page.php:173
+#: inc/admin/settings-page.php:168
+#: inc/admin/settings-page.php:174
+#: inc/settings-transfer/presentation.php:21
+#: inc/settings-transfer/presentation.php:24
 msgid "Editor’s choice"
 msgstr "Выбор редакции"
 
@@ -711,7 +721,8 @@ msgid "Automatic selection"
 msgstr "Автоматический выбор"
 
 #: inc/admin/settings-page.php:131
-#: inc/admin/settings-page.php:145
+#: inc/admin/settings-page.php:146
+#: template-parts/admin/settings-transfer.php:8
 msgid "Site management"
 msgstr "Управление сайтом"
 
@@ -728,258 +739,291 @@ msgid "View site"
 msgstr "Открыть сайт"
 
 #: inc/admin/settings-page.php:136
+#: inc/settings-transfer/admin.php:4
+#: template-parts/admin/settings-transfer.php:7
+msgid "Export and import"
+msgstr "Экспорт и импорт"
+
+#: inc/admin/settings-page.php:137
+#: inc/settings-transfer/schema.php:15
 msgid "Appearance"
 msgstr "Внешний вид"
 
-#: inc/admin/settings-page.php:137
+#: inc/admin/settings-page.php:138
+#: inc/settings-transfer/presentation.php:49
 msgid "Menus"
 msgstr "Меню"
 
-#: inc/admin/settings-page.php:138
+#: inc/admin/settings-page.php:139
 msgid "Categories"
 msgstr "Рубрики"
 
-#: inc/admin/settings-page.php:149
+#: inc/admin/settings-page.php:150
 msgid "Site language"
 msgstr "Язык сайта"
 
-#: inc/admin/settings-page.php:149
+#: inc/admin/settings-page.php:150
 msgid "The selected language is applied to WordPress, the public site, and your administrator profile."
 msgstr "Выбранный язык применяется к WordPress, публичной части сайта и вашему профилю администратора."
 
-#: inc/admin/settings-page.php:151
+#: inc/admin/settings-page.php:152
+#: inc/settings-transfer/presentation.php:16
 msgid "WordPress language"
 msgstr "Язык WordPress"
 
-#: inc/admin/settings-page.php:159
+#: inc/admin/settings-page.php:160
 msgid "If the selected WordPress language pack is missing, it will be installed through the standard WordPress translation service when settings are saved."
 msgstr "Если выбранный языковой пакет WordPress отсутствует, он будет установлен штатной службой переводов WordPress при сохранении настроек."
 
-#: inc/admin/settings-page.php:163
+#: inc/admin/settings-page.php:164
+#: inc/settings-transfer/schema.php:10
 #: index.php:23
 #: single.php:17
 msgid "Homepage"
 msgstr "Главная"
 
-#: inc/admin/settings-page.php:163
+#: inc/admin/settings-page.php:164
 msgid "Choose the editorial sections and the content featured on the front page."
 msgstr "Выберите разделы и материалы для главной страницы."
 
-#: inc/admin/settings-page.php:165
+#: inc/admin/settings-page.php:166
+#: inc/settings-transfer/presentation.php:19
 msgid "Hero section"
 msgstr "Первый экран"
 
-#: inc/admin/settings-page.php:166
+#: inc/admin/settings-page.php:167
+#: inc/settings-transfer/presentation.php:20
 msgid "Category shortcuts"
 msgstr "Ссылки на рубрики"
 
-#: inc/admin/settings-page.php:170
+#: inc/admin/settings-page.php:171
+#: inc/settings-transfer/presentation.php:22
 msgid "Featured article"
 msgstr "Главная статья"
 
-#: inc/admin/settings-page.php:171
+#: inc/admin/settings-page.php:172
+#: inc/settings-transfer/presentation.php:23
 msgid "About page"
 msgstr "Страница о блоге"
 
-#: inc/admin/settings-page.php:172
+#: inc/admin/settings-page.php:173
+#: inc/settings-transfer/presentation.php:25
 msgid "Posts per page"
 msgstr "Записей на странице"
 
-#: inc/admin/settings-page.php:173
+#: inc/admin/settings-page.php:174
 msgid "Select up to five articles with Ctrl or Command. Leave empty for automatic selection."
 msgstr "Выберите до пяти статей с клавишей Ctrl или Command. Оставьте пустым для автоматического выбора."
 
-#: inc/admin/settings-page.php:174
+#: inc/admin/settings-page.php:175
+#: inc/settings-transfer/presentation.php:26
 msgid "Section order"
 msgstr "Порядок разделов"
 
-#: inc/admin/settings-page.php:174
+#: inc/admin/settings-page.php:175
 msgid "Categories → choice → latest"
 msgstr "Рубрики → выбор редакции → свежие"
 
-#: inc/admin/settings-page.php:174
+#: inc/admin/settings-page.php:175
 msgid "Choice → categories → latest"
 msgstr "Выбор редакции → рубрики → свежие"
 
-#: inc/admin/settings-page.php:174
+#: inc/admin/settings-page.php:175
 msgid "Choice → latest → categories"
 msgstr "Выбор редакции → свежие → рубрики"
 
-#: inc/admin/settings-page.php:179
+#: inc/admin/settings-page.php:180
 msgid "Typography and article layout"
 msgstr "Типографика и макет статьи"
 
-#: inc/admin/settings-page.php:179
+#: inc/admin/settings-page.php:180
 msgid "Reading presets keep font size, rhythm, and article width balanced."
 msgstr "Настройте размер текста, межстрочный интервал и ширину статьи."
 
-#: inc/admin/settings-page.php:181
+#: inc/admin/settings-page.php:182
+#: inc/settings-transfer/presentation.php:27
 msgid "Typography preset"
 msgstr "Стиль типографики"
 
-#: inc/admin/settings-page.php:181
+#: inc/admin/settings-page.php:182
 msgid "Editorial"
 msgstr "Редакционный"
 
-#: inc/admin/settings-page.php:181
+#: inc/admin/settings-page.php:182
 msgid "Compact"
 msgstr "Компактный"
 
-#: inc/admin/settings-page.php:181
+#: inc/admin/settings-page.php:182
 msgid "Comfortable"
 msgstr "Комфортный"
 
-#: inc/admin/settings-page.php:182
+#: inc/admin/settings-page.php:183
+#: inc/settings-transfer/presentation.php:28
 msgid "Article layout"
 msgstr "Макет статьи"
 
-#: inc/admin/settings-page.php:182
+#: inc/admin/settings-page.php:183
 msgid "Article with sidebar"
 msgstr "С боковой колонкой"
 
-#: inc/admin/settings-page.php:182
+#: inc/admin/settings-page.php:183
 msgid "Focused reading"
 msgstr "Сосредоточенное чтение"
 
-#: inc/admin/settings-page.php:182
+#: inc/admin/settings-page.php:183
 msgid "Wide article"
 msgstr "Широкая статья"
 
-#: inc/admin/settings-page.php:183
+#: inc/admin/settings-page.php:184
+#: inc/settings-transfer/presentation.php:29
 msgid "Body text size, px"
 msgstr "Размер текста, px"
 
-#: inc/admin/settings-page.php:184
+#: inc/admin/settings-page.php:185
+#: inc/settings-transfer/presentation.php:30
 msgid "Line height"
 msgstr "Межстрочный интервал"
 
-#: inc/admin/settings-page.php:185
+#: inc/admin/settings-page.php:186
+#: inc/settings-transfer/presentation.php:31
 msgid "Reading width, px"
 msgstr "Ширина текста, px"
 
-#: inc/admin/settings-page.php:190
+#: inc/admin/settings-page.php:191
 msgid "Interface and content"
 msgstr "Интерфейс и контент"
 
-#: inc/admin/settings-page.php:190
+#: inc/admin/settings-page.php:191
 msgid "Core settings for live search and user-generated content."
 msgstr "Основные параметры живого поиска и пользовательских материалов."
 
-#: inc/admin/settings-page.php:192
+#: inc/admin/settings-page.php:193
+#: inc/settings-transfer/presentation.php:17
 msgid "Minimum search characters"
 msgstr "Минимум символов поиска"
 
-#: inc/admin/settings-page.php:193
+#: inc/admin/settings-page.php:194
+#: inc/settings-transfer/presentation.php:18
 msgid "Results in the search window"
 msgstr "Результатов в окне"
 
-#: inc/admin/settings-page.php:194
+#: inc/admin/settings-page.php:195
+#: inc/settings-transfer/presentation.php:40
 msgid "Image limit, MB"
 msgstr "Лимит изображения, МБ"
 
-#: inc/admin/settings-page.php:197
+#: inc/admin/settings-page.php:198
+#: inc/settings-transfer/presentation.php:35
 msgid "Images in comments"
 msgstr "Изображения в комментариях"
 
-#: inc/admin/settings-page.php:198
+#: inc/admin/settings-page.php:199
+#: inc/settings-transfer/presentation.php:36
 msgid "Emoji panel"
 msgstr "Панель смайликов"
 
-#: inc/admin/settings-page.php:199
+#: inc/admin/settings-page.php:200
+#: inc/settings-transfer/presentation.php:37
 msgid "Article claps"
 msgstr "Хлопки под статьями"
 
-#: inc/admin/settings-page.php:200
+#: inc/admin/settings-page.php:201
+#: inc/settings-transfer/presentation.php:38
 msgid "Personal reading library"
 msgstr "Личная библиотека читателя"
 
-#: inc/admin/settings-page.php:201
+#: inc/admin/settings-page.php:202
+#: inc/settings-transfer/presentation.php:39
 msgid "Safe SVG uploads"
 msgstr "Безопасная загрузка SVG"
 
-#: inc/admin/settings-page.php:203
+#: inc/admin/settings-page.php:204
 msgid "Claps: up to 10 per article from each browser, with undo. Disabling claps preserves existing reactions."
 msgstr "До 10 хлопков на статью из одного браузера, с возможностью отмены. Отключение блока сохраняет накопленные реакции."
 
-#: inc/admin/settings-page.php:204
+#: inc/admin/settings-page.php:205
 msgid "Readers can search bookmarks, filter their reading history, and export or import a private backup. Data stays in the browser without an account."
 msgstr "Читатели могут искать закладки, фильтровать историю чтения и сохранять или восстанавливать личную резервную копию. Данные остаются в браузере, без регистрации."
 
-#: inc/admin/settings-page.php:208
+#: inc/admin/settings-page.php:209
 msgid "Form protection"
 msgstr "Защита форм"
 
-#: inc/admin/settings-page.php:208
+#: inc/admin/settings-page.php:209
 msgid "Built-in protection requires no keys. An external provider is enabled only after both keys are filled in."
 msgstr "Встроенная защита не требует ключей. Внешний провайдер включается только после заполнения обоих ключей."
 
-#: inc/admin/settings-page.php:210
+#: inc/admin/settings-page.php:211
+#: inc/settings-transfer/presentation.php:32
 msgid "CAPTCHA provider"
 msgstr "Провайдер CAPTCHA"
 
-#: inc/admin/settings-page.php:210
+#: inc/admin/settings-page.php:211
 msgid "Built-in protection"
 msgstr "Встроенная защита"
 
-#: inc/admin/settings-page.php:211
+#: inc/admin/settings-page.php:212
+#: inc/settings-transfer/presentation.php:33
 msgid "Site key"
 msgstr "Ключ сайта"
 
-#: inc/admin/settings-page.php:212
+#: inc/admin/settings-page.php:213
+#: inc/settings-transfer/presentation.php:34
 msgid "Secret key"
 msgstr "Секретный ключ"
 
-#: inc/admin/settings-page.php:212
+#: inc/admin/settings-page.php:213
 msgid "Key saved"
 msgstr "Ключ сохранён"
 
-#: inc/admin/settings-page.php:212
+#: inc/admin/settings-page.php:213
 msgid "Enter key"
 msgstr "Введите ключ"
 
-#: inc/admin/settings-page.php:217
+#: inc/admin/settings-page.php:218
 msgid "Footer social networks"
 msgstr "Социальные сети в подвале"
 
-#: inc/admin/settings-page.php:221
+#: inc/admin/settings-page.php:222
 #: inc/social.php:17
 msgid "VK"
 msgstr "ВКонтакте"
 
-#: inc/admin/settings-page.php:222
+#: inc/admin/settings-page.php:223
+#: inc/settings-transfer/presentation.php:41
 #: inc/social.php:18
 msgid "Odnoklassniki"
 msgstr "Одноклассники"
 
-#: inc/admin/settings-page.php:228
+#: inc/admin/settings-page.php:229
 msgid "Your edition"
 msgstr "Ваша версия"
 
-#: inc/admin/settings-page.php:228
+#: inc/admin/settings-page.php:229
 msgid "Pro publishing tools are active."
 msgstr "Издательские инструменты Pro включены."
 
-#: inc/admin/settings-page.php:228
+#: inc/admin/settings-page.php:229
 msgid "The free theme is ready for your blog. Install the Pro extension to add publishing tools."
 msgstr "Бесплатная тема готова к работе. Установите расширение Pro, чтобы добавить издательские инструменты."
 
-#: inc/admin/settings-page.php:229
+#: inc/admin/settings-page.php:230
 msgid "Free: layouts, typography, dark mode, search, automatic covers, Gutenberg patterns, comments, form protection, claps, and a reading library."
 msgstr "Free: макеты, типографика, тёмная тема, поиск, автообложки, паттерны Gutenberg, комментарии, защита форм, хлопки и библиотека читателя."
 
-#: inc/admin/settings-page.php:230
+#: inc/admin/settings-page.php:231
 msgid "Pro: cover editor, link cards, advertising, short links, integrations, article series, social covers, and reader interests."
 msgstr "Pro: редактор обложек, карточки ссылок, реклама, короткие ссылки, интеграции, серии статей, социальные обложки и интересы читателей."
 
-#: inc/admin/settings-page.php:234
+#: inc/admin/settings-page.php:235
 msgid "All changes saved"
 msgstr "Все изменения сохранены"
 
-#: inc/admin/settings-page.php:234
+#: inc/admin/settings-page.php:235
 msgid "You have unsaved changes"
 msgstr "Есть несохранённые изменения"
 
-#: inc/admin/settings-page.php:235
+#: inc/admin/settings-page.php:236
 msgid "Save settings"
 msgstr "Сохранить настройки"
 
@@ -1205,26 +1249,32 @@ msgid "Third highlight"
 msgstr "Третье преимущество"
 
 #: inc/customizer.php:25
+#: inc/settings-transfer/presentation.php:42
 msgid "First title line"
 msgstr "Первая строка заголовка"
 
 #: inc/customizer.php:26
+#: inc/settings-transfer/presentation.php:43
 msgid "Accent line"
 msgstr "Акцентная строка"
 
 #: inc/customizer.php:27
+#: inc/settings-transfer/presentation.php:44
 msgid "Description"
 msgstr "Описание"
 
 #: inc/customizer.php:28
+#: inc/settings-transfer/presentation.php:45
 msgid "Site description"
 msgstr "Описание сайта"
 
 #: inc/customizer.php:29
+#: inc/settings-transfer/presentation.php:46
 msgid "Copyright text"
 msgstr "Копирайт"
 
 #: inc/customizer.php:30
+#: inc/settings-transfer/presentation.php:48
 msgid "Search heading"
 msgstr "Заголовок поиска"
 
@@ -1235,6 +1285,7 @@ msgid "What are you looking for?"
 msgstr "Что ищем?"
 
 #: inc/customizer.php:42
+#: inc/settings-transfer/presentation.php:47
 msgid "Default color scheme"
 msgstr "Цветовая схема по умолчанию"
 
@@ -1424,6 +1475,132 @@ msgstr "Порядок каждый день"
 #: inc/services/class-css-cover-generator.php:257
 msgid "Useful and practical"
 msgstr "Полезно и по делу"
+
+#: inc/settings-transfer/admin.php:4
+msgid "Settings transfer"
+msgstr "Перенос настроек"
+
+#: inc/settings-transfer/admin.php:20
+msgid "Checking backup..."
+msgstr "Проверяем резервную копию..."
+
+#: inc/settings-transfer/admin.php:21
+msgid "The request failed. Check your connection and try again."
+msgstr "Запрос не выполнен. Проверьте соединение и повторите попытку."
+
+#: inc/settings-transfer/admin.php:22
+msgid "Choose a JSON file up to 1 MB."
+msgstr "Выберите JSON-файл размером до 1 МБ."
+
+#. translators: %d: number of changed settings.
+#: inc/settings-transfer/admin.php:24
+#, php-format
+msgid "Changes found: %d. Choose sections and confirm within ten minutes."
+msgstr "Найдено изменений: %d. Выберите разделы и подтвердите импорт в течение десяти минут."
+
+#: inc/settings-transfer/admin.php:25
+msgid "Objects not found locally; their current settings will be preserved:"
+msgstr "Объекты не найдены на этом сайте; текущие настройки будут сохранены:"
+
+#: inc/settings-transfer/admin.php:26
+msgid "No changes in the selected sections."
+msgstr "В выбранных разделах нет изменений."
+
+#. translators: %d: number of applied changes.
+#: inc/settings-transfer/admin.php:28
+#, php-format
+msgid "Settings restored. Changes applied: %d."
+msgstr "Настройки восстановлены. Применено изменений: %d."
+
+#: inc/settings-transfer/admin.php:29
+msgid "Backup source:"
+msgstr "Источник резервной копии:"
+
+#: inc/settings-transfer/admin.php:30
+msgid "Pro settings are preserved even without an active extension. A license is still required to enable Pro features."
+msgstr "Настройки Pro сохраняются даже без активного расширения. Для работы функций Pro по-прежнему нужна лицензия."
+
+#: inc/settings-transfer/controller.php:5
+#: inc/settings-transfer/controller.php:19
+#: inc/settings-transfer/controller.php:27
+msgid "You are not allowed to manage these settings."
+msgstr "У вас нет права управлять этими настройками."
+
+#: inc/settings-transfer/presentation.php:6
+msgid "Empty"
+msgstr "Пусто"
+
+#: inc/settings-transfer/presentation.php:6
+msgid "Protected content included"
+msgstr "Содержимое включено, показ скрыт"
+
+#: inc/settings-transfer/presentation.php:50
+msgid "Logo"
+msgstr "Логотип"
+
+#: inc/settings-transfer/presentation.php:51
+msgid "Site icon"
+msgstr "Иконка сайта"
+
+#: inc/settings-transfer/presentation.php:52
+msgid "Custom CSS"
+msgstr "Дополнительный CSS"
+
+#: inc/settings-transfer/presentation.php:53
+msgid "Site title"
+msgstr "Название сайта"
+
+#: inc/settings-transfer/presentation.php:54
+msgid "Tagline"
+msgstr "Краткое описание"
+
+#: inc/settings-transfer/presentation.php:56
+msgid "Code before </head>"
+msgstr "Код перед </head>"
+
+#: inc/settings-transfer/presentation.php:57
+msgid "Code before </body>"
+msgstr "Код перед </body>"
+
+#: inc/settings-transfer/schema.php:9
+msgid "Interface and language"
+msgstr "Интерфейс и язык"
+
+#: inc/settings-transfer/schema.php:11
+msgid "Reading and typography"
+msgstr "Чтение и типографика"
+
+#: inc/settings-transfer/schema.php:12
+msgid "Comments and CAPTCHA"
+msgstr "Комментарии и CAPTCHA"
+
+#: inc/settings-transfer/service.php:82
+msgid "Settings changed after preview. Select the file again."
+msgstr "Настройки изменились после предварительного просмотра. Выберите файл заново."
+
+#: inc/settings-transfer/service.php:83
+msgid "Preview expired. Select the file again."
+msgstr "Срок предварительного просмотра истёк. Выберите файл заново."
+
+#: inc/settings-transfer/service.php:84
+msgid "Importing advertising or analytics code requires unfiltered HTML permission."
+msgstr "Импорт рекламного или аналитического кода требует права на сохранение HTML без фильтрации."
+
+#: inc/settings-transfer/service.php:85
+msgid "Another import is running. Please try again shortly."
+msgstr "Другой импорт уже выполняется. Повторите попытку немного позже."
+
+#: inc/settings-transfer/service.php:86
+msgid "Settings could not be saved. Check the database and export the current settings before retrying."
+msgstr "Не удалось сохранить настройки. Проверьте базу данных и экспортируйте текущее состояние перед повторной попыткой."
+
+#: inc/settings-transfer/service.php:87
+msgid "Custom CSS could not be saved. Check the database before retrying."
+msgstr "Не удалось сохранить дополнительный CSS. Проверьте базу данных перед повторной попыткой."
+
+#: inc/settings-transfer/service.php:89
+msgid "Invalid backup. Use an IO Blog settings JSON file up to 1 MB. Check field types and install its WordPress language pack first."
+msgstr "Некорректная копия. Нужен JSON-файл настроек IO Blog до 1 МБ. Проверьте типы значений и заранее установите указанный в файле языковой пакет WordPress."
 
 #: inc/setup.php:56
 msgid "Article sidebar"
@@ -1662,6 +1839,106 @@ msgstr "Новые статьи"
 #: single.php:86
 msgid "Read next"
 msgstr "Читать далее"
+
+#: template-parts/admin/settings-transfer.php:7
+msgid "One backup for all theme and Pro settings, including advertising code and integrations."
+msgstr "Одна резервная копия всех настроек темы и Pro, включая рекламный код и интеграции."
+
+#: template-parts/admin/settings-transfer.php:10
+msgid "Confidential backup"
+msgstr "Конфиденциальная резервная копия"
+
+#: template-parts/admin/settings-transfer.php:10
+msgid "The JSON file includes CAPTCHA keys, advertising and analytics code, links, and all saved settings. It is not encrypted. Keep it private; never publish it on GitHub or send it to strangers."
+msgstr "JSON-файл содержит ключи CAPTCHA, рекламный и аналитический код, ссылки и все сохранённые настройки. Файл не зашифрован. Храните его в безопасности, не публикуйте на GitHub и не передавайте посторонним."
+
+#: template-parts/admin/settings-transfer.php:13
+msgid "Download settings"
+msgstr "Скачать настройки"
+
+#: template-parts/admin/settings-transfer.php:13
+msgid "Save a current backup before importing or moving your site."
+msgstr "Сохраните текущую копию перед импортом или переносом сайта."
+
+#: template-parts/admin/settings-transfer.php:15
+msgid "All interface, reading, homepage, comment, and CAPTCHA settings."
+msgstr "Все настройки интерфейса, чтения, главной, комментариев и CAPTCHA."
+
+#: template-parts/admin/settings-transfer.php:16
+msgid "Every advertising slot: code, enabled state, and paragraph position."
+msgstr "Все рекламные места: код, состояние переключателей и позиция в тексте."
+
+#: template-parts/admin/settings-transfer.php:17
+msgid "Analytics, short links, social networks, and saved Pro options."
+msgstr "Аналитика, короткие ссылки, социальные сети и сохранённые параметры Pro."
+
+#: template-parts/admin/settings-transfer.php:18
+msgid "Customizer values, site title and tagline, custom CSS, and references to menus, logo, and site icon."
+msgstr "Значения «Настроить», название и краткое описание сайта, дополнительный CSS и привязки к меню, логотипу и иконке сайта."
+
+#: template-parts/admin/settings-transfer.php:23
+msgid "Download JSON backup"
+msgstr "Скачать резервную копию JSON"
+
+#: template-parts/admin/settings-transfer.php:25
+msgid "This is a settings backup, not a full site backup. Posts, media files, menu items, visitor data, and license activation are not copied. References are included and matched to existing objects during import."
+msgstr "Это копия настроек, а не всего сайта. Статьи, файлы медиатеки, пункты меню, данные посетителей и активация лицензии не копируются. Привязки включены в файл и при импорте сопоставляются с существующими объектами."
+
+#: template-parts/admin/settings-transfer.php:28
+msgid "Restore settings"
+msgstr "Восстановить настройки"
+
+#: template-parts/admin/settings-transfer.php:28
+msgid "Preview first. Nothing is saved until you confirm."
+msgstr "Сначала предварительный просмотр. До подтверждения ничего не сохраняется."
+
+#: template-parts/admin/settings-transfer.php:30
+msgid "Settings backup file"
+msgstr "Файл резервной копии настроек"
+
+#: template-parts/admin/settings-transfer.php:32
+msgid "JSON up to 1 MB. Upload only a file you trust: importing code can change what runs on your site."
+msgstr "JSON до 1 МБ. Загружайте только доверенные файлы: импорт кода может изменить то, что выполняется на сайте."
+
+#: template-parts/admin/settings-transfer.php:33
+msgid "Preview import"
+msgstr "Предпросмотр импорта"
+
+#: template-parts/admin/settings-transfer.php:35
+msgid "Enable JavaScript to preview and confirm an import."
+msgstr "Включите JavaScript для предварительного просмотра и подтверждения импорта."
+
+#: template-parts/admin/settings-transfer.php:40
+msgid "Review changes"
+msgstr "Проверка изменений"
+
+#: template-parts/admin/settings-transfer.php:42
+msgid "Sections to restore"
+msgstr "Разделы для восстановления"
+
+#: template-parts/admin/settings-transfer.php:47
+msgid "Setting"
+msgstr "Параметр"
+
+#: template-parts/admin/settings-transfer.php:47
+msgid "Current value"
+msgstr "Текущее значение"
+
+#: template-parts/admin/settings-transfer.php:47
+msgid "Backup value"
+msgstr "Значение из копии"
+
+#: template-parts/admin/settings-transfer.php:48
+msgid "I trust this backup and have saved a copy of the current settings."
+msgstr "Я доверяю этому файлу и сохранил копию текущих настроек."
+
+#: template-parts/admin/settings-transfer.php:49
+msgid "Apply selected settings"
+msgstr "Применить выбранные настройки"
+
+#: template-parts/admin/settings-transfer.php:50
+msgid "Keys and code are included but masked in this preview. No URLs are rewritten automatically. Review partner links and CAPTCHA domain restrictions after moving to another domain."
+msgstr "Ключи и код включены в файл, но скрыты в предварительном просмотре. Адреса автоматически не заменяются. После переноса на другой домен проверьте партнёрские ссылки и ограничения CAPTCHA."
 
 #. translators: %s: post title.
 #: template-parts/card.php:23
