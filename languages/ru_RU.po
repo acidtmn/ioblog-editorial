@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: IO Blog Editorial 1.8.0\n"
+"Project-Id-Version: IO Blog Editorial 1.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ioblog-editorial\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-03T02:25:58+00:00\n"
+"POT-Creation-Date: 2026-10-03T04:18:49+00:00\n"
 "PO-Revision-Date: 2026-09-28 00:00+0500\n"
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -53,10 +53,13 @@ msgid "Signal"
 msgstr "Сигнал"
 
 #: inc/admin/cover-editor.php:22
+#: inc/ads/admin.php:9
+#: template-parts/admin/design.php:27
 msgid "Mobile"
 msgstr "Мобильный"
 
 #: inc/admin/cover-editor.php:22
+#: template-parts/account.php:4
 msgid "Security"
 msgstr "Безопасность"
 
@@ -129,6 +132,7 @@ msgid "Automatic covers appear when no featured image is set. A manually selecte
 msgstr "Автообложка появляется, если миниатюра не задана. Выбранный вручную стиль заменяет миниатюру на сайте."
 
 #: inc/admin/settings-sections.php:11
+#: template-parts/community-admin.php:13
 msgid "Enabled"
 msgstr "Включено"
 
@@ -142,6 +146,7 @@ msgid "Administrator HTML and JavaScript are allowed. For manual placement, use 
 msgstr "Разрешён HTML и JavaScript администратора. Для ручной вставки используйте <code>[ioblog_ad slot=\"inline\"]</code>."
 
 #: inc/admin/settings-sections.php:23
+#: inc/ads/admin.php:5
 #: inc/settings-transfer/presentation.php:13
 msgid "After the hero section"
 msgstr "После главного экрана"
@@ -151,6 +156,7 @@ msgid "Between the hero and categories on the homepage."
 msgstr "Между главным экраном и рубриками на главной странице."
 
 #: inc/admin/settings-sections.php:24
+#: inc/ads/admin.php:5
 #: inc/settings-transfer/presentation.php:13
 msgid "Inside an article"
 msgstr "Внутри статьи"
@@ -165,6 +171,7 @@ msgid "After paragraph number"
 msgstr "После абзаца №"
 
 #: inc/admin/settings-sections.php:26
+#: inc/ads/admin.php:5
 #: inc/settings-transfer/presentation.php:13
 msgid "Right sidebar"
 msgstr "Правая колонка"
@@ -174,6 +181,7 @@ msgid "Below the table of contents in the sticky article sidebar."
 msgstr "Под содержанием статьи в липком сайдбаре."
 
 #: inc/admin/settings-sections.php:27
+#: inc/ads/admin.php:5
 #: inc/settings-transfer/presentation.php:13
 msgid "After the article"
 msgstr "После статьи"
@@ -217,7 +225,60 @@ msgstr "Telegram-канал"
 msgid "Telegram Instant View metadata"
 msgstr "Метаданные Telegram Instant View"
 
-#: inc/advertising.php:26
+#: inc/ads/admin.php:4
+msgid "Advertising conditions"
+msgstr "Условия показа рекламы"
+
+#: inc/ads/admin.php:9
+msgid "Everyone"
+msgstr "Все посетители"
+
+#: inc/ads/admin.php:9
+msgid "Guests"
+msgstr "Гости"
+
+#: inc/ads/admin.php:9
+msgid "Signed-in readers"
+msgstr "Авторизованные читатели"
+
+#: inc/ads/admin.php:9
+msgid "All devices"
+msgstr "Все устройства"
+
+#: inc/ads/admin.php:9
+#: template-parts/admin/design.php:27
+msgid "Desktop"
+msgstr "Компьютер"
+
+#: inc/ads/admin.php:10
+msgid "Audience"
+msgstr "Аудитория"
+
+#: inc/ads/admin.php:10
+msgid "Devices"
+msgstr "Устройства"
+
+#: inc/ads/admin.php:13
+msgid "Category IDs, comma separated"
+msgstr "ID рубрик через запятую"
+
+#: inc/ads/admin.php:13
+msgid "Start date"
+msgstr "Дата начала"
+
+#: inc/ads/admin.php:13
+msgid "End date"
+msgstr "Дата окончания"
+
+#: inc/ads/admin.php:13
+msgid "Reserved height, px"
+msgstr "Зарезервированная высота, px"
+
+#: inc/ads/rules.php:38
+msgid "Check the advertising conditions."
+msgstr "Проверьте условия показа рекламы."
+
+#: inc/advertising.php:28
 msgid "Advertisement"
 msgstr "Реклама"
 
@@ -235,6 +296,193 @@ msgstr "Открыть ссылку на %s"
 #: inc/blocks/link-card.php:65
 msgid "Open link"
 msgstr "Открыть ссылку"
+
+#: inc/community/account.php:46
+msgid "Current password is incorrect."
+msgstr "Текущий пароль указан неверно."
+
+#: inc/community/account.php:57
+msgid "Set a password before removing your last sign-in method."
+msgstr "Установите пароль перед отключением последнего способа входа."
+
+#: inc/community/admin.php:5
+#: template-parts/community-admin.php:7
+#: inc/admin/settings-page.php:138
+msgid "Reader accounts"
+msgstr "Кабинеты читателей"
+
+#: inc/community/admin.php:11
+#: inc/community/controller.php:30
+#: inc/design/admin.php:22
+msgid "Check the field values."
+msgstr "Проверьте значения полей."
+
+#: inc/community/controller.php:31
+#: inc/community/view.php:13
+#: inc/design/admin.php:11
+msgid "Unable to save. Please retry."
+msgstr "Не удалось сохранить. Попробуйте ещё раз."
+
+#: inc/community/email.php:7
+#: inc/community/messages.php:14
+msgid "Please try again shortly."
+msgstr "Повторите попытку немного позже."
+
+#: inc/community/email.php:12
+msgid "Confirm your email address"
+msgstr "Подтвердите ваш адрес электронной почты"
+
+#: inc/community/email.php:12
+msgid "Unable to send email. Check the mail configuration."
+msgstr "Не удалось отправить письмо. Проверьте настройки почты."
+
+#: inc/community/email.php:29
+msgid "The confirmation link expired or is invalid."
+msgstr "Ссылка подтверждения недействительна или срок её действия истёк."
+
+#: inc/community/library.php:27
+#: inc/community/library.php:41
+msgid "Your library changed on another device. Reload and merge again."
+msgstr "Библиотека изменилась на другом устройстве. Обновите страницу и повторите объединение."
+
+#: inc/community/messages.php:11
+msgid "This conversation is unavailable."
+msgstr "Переписка с этим пользователем недоступна."
+
+#: inc/community/messages.php:17
+msgid "Message limit reached. Please try later."
+msgstr "Достигнут лимит сообщений. Повторите попытку позже."
+
+#: inc/community/notifications.php:42
+msgid "Your reading updates"
+msgstr "Обновления вашей библиотеки"
+
+#: inc/community/privacy.php:27
+#: template-parts/account.php:4
+msgid "Messages"
+msgstr "Сообщения"
+
+#: inc/community/privacy.php:27
+#: template-parts/account.php:21
+msgid "Message"
+msgstr "Сообщение"
+
+#: inc/community/privacy.php:28
+#: template-parts/account.php:4
+#: header.php:32
+#: template-parts/library.php:6
+msgid "My library"
+msgstr "Моя библиотека"
+
+#: inc/community/privacy.php:28
+#: template-parts/account.php:4
+msgid "Profile"
+msgstr "Профиль"
+
+#: inc/community/privacy.php:29
+#: template-parts/account.php:4
+#: template-parts/community-admin.php:5
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: inc/community/privacy.php:33
+msgid "Social sign-in methods"
+msgstr "Способы входа через внешние сервисы"
+
+#: inc/community/view.php:12
+msgid "Confirmation email sent. Open the link while signed in."
+msgstr "Письмо подтверждения отправлено. Откройте ссылку, выполнив вход в аккаунт."
+
+#: inc/community/view.php:13
+#: template-parts/community-admin.php:8
+#: inc/design/admin.php:11
+msgid "Settings saved."
+msgstr "Настройки сохранены."
+
+#: inc/community/view.php:13
+msgid "Nothing here yet."
+msgstr "Здесь пока ничего нет."
+
+#: inc/community/view.php:13
+#: template-parts/account.php:16
+msgid "Save"
+msgstr "Сохранить"
+
+#: inc/community/view.php:13
+msgid "Collection"
+msgstr "Коллекция"
+
+#: inc/community/view.php:13
+msgid "Remove"
+msgstr "Удалить"
+
+#: inc/community/view.php:13
+#: inc/series/view.php:19
+msgid "Read"
+msgstr "Прочитано"
+
+#: inc/community/view.php:13
+#: template-parts/account.php:24
+msgid "Merge browser library"
+msgstr "Объединить с библиотекой браузера"
+
+#: inc/community/view.php:13
+#: template-parts/account.php:24
+msgid "Sync with this browser"
+msgstr "Включить синхронизацию с браузером"
+
+#: inc/community/view.php:13
+msgid "Report"
+msgstr "Пожаловаться"
+
+#: inc/community/view.php:13
+msgid "Block"
+msgstr "Заблокировать"
+
+#: inc/community/view.php:13
+msgid "Unblock"
+msgstr "Разблокировать"
+
+#: inc/community/view.php:13
+#: inc/oauth/view.php:9
+msgid "Link account"
+msgstr "Привязать аккаунт"
+
+#: inc/community/view.php:13
+msgid "Remove sign-in method"
+msgstr "Отключить способ входа"
+
+#: inc/community/view.php:13
+#: template-parts/account.php:10
+msgid "Sign in to use your personal account."
+msgstr "Войдите, чтобы пользоваться личным кабинетом."
+
+#: inc/community/view.php:27
+#: template-parts/account.php:7
+msgid "My account"
+msgstr "Личный кабинет"
+
+#: inc/design/overrides.php:3
+msgid "Inherit site design"
+msgstr "Использовать оформление сайта"
+
+#: inc/design/overrides.php:3
+msgid "Warm paper"
+msgstr "Тёплая бумага"
+
+#: inc/design/overrides.php:3
+msgid "High contrast"
+msgstr "Повышенный контраст"
+
+#: inc/design/overrides.php:3
+#: inc/admin/settings-page.php:184
+msgid "Compact"
+msgstr "Компактный"
+
+#: inc/design/overrides.php:18
+#: inc/design/overrides.php:24
+msgid "Article design"
+msgstr "Оформление статьи"
 
 #: inc/interests/admin.php:5
 #: inc/interests/view-template.php:5
@@ -377,6 +625,16 @@ msgstr "Обложки создаются при сохранении стать
 msgid "Article series"
 msgstr "Серии статей"
 
+#: inc/oauth/controller.php:11
+#: inc/oauth/controller.php:21
+msgid "Unable to sign in. Check the provider settings or try another sign-in method."
+msgstr "Не удалось войти. Проверьте настройки провайдера или используйте другой способ входа."
+
+#: inc/oauth/view.php:9
+#: template-parts/account.php:10
+msgid "Sign in"
+msgstr "Войти"
+
 #: inc/series/admin.php:5
 #: inc/series/admin.php:9
 msgid "Chapter order"
@@ -399,10 +657,6 @@ msgstr "Редактировать серию"
 #, php-format
 msgid "Chapter %1$d of %2$d"
 msgstr "Глава %1$d из %2$d"
-
-#: inc/series/view.php:19
-msgid "Read"
-msgstr "Прочитано"
 
 #: inc/series/view.php:20
 msgid "Next chapter"
@@ -428,9 +682,186 @@ msgstr "Не удалось прочитать HTML страницы."
 msgid "No title was found on the page."
 msgstr "У страницы не найден заголовок."
 
-#: ioblog-editorial-pro.php:47
-msgid "IO Blog Editorial Pro requires the IO Blog Editorial theme version 1.6.0 or later."
-msgstr "Для IO Blog Editorial Pro нужна тема IO Blog Editorial версии 1.6.0 или новее."
+#: ioblog-editorial-pro.php:48
+msgid "Publishing tools require IO Blog Editorial 1.9.0 or later. Reader accounts remain available through the shortcode."
+msgstr "Издательским инструментам нужна тема IO Blog Editorial 1.9.0 или новее. Кабинет читателя доступен через шорткод."
+
+#: template-parts/account.php:4
+msgid "Personal feed"
+msgstr "Личная лента"
+
+#: template-parts/account.php:4
+msgid "My comments"
+msgstr "Мои комментарии"
+
+#: template-parts/account.php:7
+msgid "Your articles, conversations, and reading preferences."
+msgstr "Ваши статьи, переписка и настройки чтения."
+
+#: template-parts/account.php:7
+msgid "Sign out"
+msgstr "Выйти"
+
+#: template-parts/account.php:10
+msgid "Welcome back"
+msgstr "Рады видеть вас снова"
+
+#: template-parts/account.php:10
+#: template-parts/account.php:19
+msgid "Reset password"
+msgstr "Восстановить пароль"
+
+#: template-parts/account.php:10
+msgid "Register"
+msgstr "Зарегистрироваться"
+
+#: template-parts/account.php:12
+msgid "Account sections"
+msgstr "Разделы личного кабинета"
+
+#: template-parts/account.php:16
+msgid "Display name"
+msgstr "Отображаемое имя"
+
+#: template-parts/account.php:16
+msgid "About you"
+msgstr "О себе"
+
+#: template-parts/account.php:16
+msgid "Allow private messages"
+msgstr "Разрешить личные сообщения"
+
+#: template-parts/account.php:16
+msgid "Receive a daily email digest"
+msgstr "Получать ежедневную подборку по почте"
+
+#: template-parts/account.php:16
+msgid "Follow categories"
+msgstr "Подписки на рубрики"
+
+#: template-parts/account.php:17
+msgid "Email for account recovery"
+msgstr "Почта для восстановления аккаунта"
+
+#: template-parts/account.php:17
+msgid "Send confirmation email"
+msgstr "Отправить письмо подтверждения"
+
+#: template-parts/account.php:19
+msgid "Sign out other sessions"
+msgstr "Завершить другие сеансы"
+
+#: template-parts/account.php:19
+msgid "Current password"
+msgstr "Текущий пароль"
+
+#: template-parts/account.php:19
+msgid "New password, at least 12 characters"
+msgstr "Новый пароль, не менее 12 символов"
+
+#: template-parts/account.php:19
+msgid "Change password"
+msgstr "Изменить пароль"
+
+#: template-parts/account.php:21
+msgid "Recipient username"
+msgstr "Логин получателя"
+
+#: template-parts/account.php:21
+msgid "Send message"
+msgstr "Отправить сообщение"
+
+#: template-parts/account.php:23
+msgid "Disable sync in this browser"
+msgstr "Отключить синхронизацию в браузере"
+
+#: template-parts/account.php:24
+msgid "Find an article"
+msgstr "Найти статью"
+
+#: template-parts/account.php:25
+msgid "Mark all as read"
+msgstr "Отметить всё прочитанным"
+
+#: template-parts/community-admin.php:5
+msgid "Personal account"
+msgstr "Личный кабинет"
+
+#: template-parts/community-admin.php:5
+msgid "Library sync"
+msgstr "Синхронизация библиотеки"
+
+#: template-parts/community-admin.php:5
+msgid "Private messages"
+msgstr "Личные сообщения"
+
+#: template-parts/community-admin.php:5
+msgid "Category subscriptions"
+msgstr "Подписки на рубрики"
+
+#: template-parts/community-admin.php:5
+msgid "Allow new accounts through social login"
+msgstr "Разрешить создание аккаунтов через соцсети"
+
+#: template-parts/community-admin.php:7
+msgid "Turn modules on independently. Disabling a module keeps its data."
+msgstr "Включайте модули по отдельности. При отключении данные сохраняются."
+
+#: template-parts/community-admin.php:10
+msgid "Account modules"
+msgstr "Модули кабинета"
+
+#: template-parts/community-admin.php:10
+msgid "Daily message limit per user"
+msgstr "Лимит сообщений в сутки для одного пользователя"
+
+#: template-parts/community-admin.php:10
+msgid "Open personal account"
+msgstr "Открыть личный кабинет"
+
+#: template-parts/community-admin.php:10
+msgid "Messages require recipient consent. Social accounts can be linked from Security after signing in."
+msgstr "Для переписки нужно согласие получателя. Социальные аккаунты можно привязать в разделе «Безопасность» после входа."
+
+#: template-parts/community-admin.php:12
+msgid "Configured. Test with your registered application."
+msgstr "Настроено. Проверьте вход с зарегистрированным приложением."
+
+#: template-parts/community-admin.php:12
+msgid "Fill in the application settings and enable the provider."
+msgstr "Заполните настройки приложения и включите провайдера."
+
+#: template-parts/community-admin.php:13
+msgid "Register this callback URL in the provider application:"
+msgstr "Укажите этот адрес возврата в приложении провайдера:"
+
+#: template-parts/community-admin.php:14
+msgid "Telegram uses OpenID Connect. Choose RS256 in BotFather."
+msgstr "Telegram использует OpenID Connect. Выберите RS256 в BotFather."
+
+#: template-parts/community-admin.php:17
+msgid "Delivery and moderation"
+msgstr "Доставка и модерация"
+
+#: template-parts/community-admin.php:17
+msgid "WP-Cron is disabled. Configure a server cron job for notifications and daily digests."
+msgstr "WP-Cron отключён. Настройте серверный cron для уведомлений и ежедневных подборок."
+
+#: template-parts/community-admin.php:17
+msgid "Scheduled notifications use WordPress cron."
+msgstr "Отложенные уведомления используют cron WordPress."
+
+#: template-parts/community-admin.php:17
+msgid "Email is opt-in and uses the WordPress mail transport."
+msgstr "Письма отправляются с согласия пользователя через почтовый транспорт WordPress."
+
+#: template-parts/community-admin.php:20
+msgid "Dismiss report"
+msgstr "Снять жалобу"
+
+#: template-parts/community-admin.php:21
+msgid "Delete reported message"
+msgstr "Удалить сообщение с жалобой"
 
 #: template-parts/link-card.php:28
 msgid "Related material"
@@ -549,9 +980,9 @@ msgid "Return to homepage"
 msgstr "Вернуться на главную"
 
 #: comments.php:13
-#: inc/admin/settings-page.php:140
-#: single.php:34
-#: single.php:36
+#: inc/admin/settings-page.php:142
+#: single.php:35
+#: single.php:37
 msgid "Comments"
 msgstr "Комментарии"
 
@@ -615,20 +1046,15 @@ msgstr "Технологии<br>в повседневной жизни"
 msgid "Primary menu"
 msgstr "Основное меню"
 
-#: header.php:31
-#: template-parts/library.php:6
-msgid "My library"
-msgstr "Моя библиотека"
-
-#: header.php:32
+#: header.php:33
 msgid "Open search"
 msgstr "Открыть поиск"
 
-#: header.php:33
+#: header.php:34
 msgid "Toggle color scheme"
 msgstr "Переключить цветовую тему"
 
-#: header.php:34
+#: header.php:35
 msgid "Open menu"
 msgstr "Открыть меню"
 
@@ -676,8 +1102,8 @@ msgid "About the blog"
 msgstr "О блоге"
 
 #: home.php:49
-#: inc/admin/settings-page.php:168
-#: inc/admin/settings-page.php:174
+#: inc/admin/settings-page.php:170
+#: inc/admin/settings-page.php:176
 #: inc/settings-transfer/presentation.php:21
 #: inc/settings-transfer/presentation.php:24
 msgid "Editor’s choice"
@@ -692,7 +1118,7 @@ msgid "Latest articles"
 msgstr "Свежие материалы"
 
 #: home.php:58
-#: single.php:86
+#: single.php:87
 msgid "All articles"
 msgstr "Все материалы"
 
@@ -721,7 +1147,7 @@ msgid "Automatic selection"
 msgstr "Автоматический выбор"
 
 #: inc/admin/settings-page.php:131
-#: inc/admin/settings-page.php:146
+#: inc/admin/settings-page.php:148
 #: template-parts/admin/settings-transfer.php:8
 msgid "Site management"
 msgstr "Управление сайтом"
@@ -745,285 +1171,295 @@ msgid "Export and import"
 msgstr "Экспорт и импорт"
 
 #: inc/admin/settings-page.php:137
+#: inc/design/admin.php:4
+#: template-parts/admin/design.php:8
+msgid "Design studio"
+msgstr "Студия оформления"
+
+#: inc/admin/settings-page.php:139
 #: inc/settings-transfer/schema.php:15
 msgid "Appearance"
 msgstr "Внешний вид"
 
-#: inc/admin/settings-page.php:138
+#: inc/admin/settings-page.php:140
 #: inc/settings-transfer/presentation.php:49
 msgid "Menus"
 msgstr "Меню"
 
-#: inc/admin/settings-page.php:139
+#: inc/admin/settings-page.php:141
 msgid "Categories"
 msgstr "Рубрики"
 
-#: inc/admin/settings-page.php:150
+#: inc/admin/settings-page.php:152
 msgid "Site language"
 msgstr "Язык сайта"
 
-#: inc/admin/settings-page.php:150
+#: inc/admin/settings-page.php:152
 msgid "The selected language is applied to WordPress, the public site, and your administrator profile."
 msgstr "Выбранный язык применяется к WordPress, публичной части сайта и вашему профилю администратора."
 
-#: inc/admin/settings-page.php:152
+#: inc/admin/settings-page.php:154
 #: inc/settings-transfer/presentation.php:16
 msgid "WordPress language"
 msgstr "Язык WordPress"
 
-#: inc/admin/settings-page.php:160
+#: inc/admin/settings-page.php:162
 msgid "If the selected WordPress language pack is missing, it will be installed through the standard WordPress translation service when settings are saved."
 msgstr "Если выбранный языковой пакет WordPress отсутствует, он будет установлен штатной службой переводов WordPress при сохранении настроек."
 
-#: inc/admin/settings-page.php:164
+#: inc/admin/settings-page.php:166
 #: inc/settings-transfer/schema.php:10
 #: index.php:23
 #: single.php:17
 msgid "Homepage"
 msgstr "Главная"
 
-#: inc/admin/settings-page.php:164
+#: inc/admin/settings-page.php:166
 msgid "Choose the editorial sections and the content featured on the front page."
 msgstr "Выберите разделы и материалы для главной страницы."
 
-#: inc/admin/settings-page.php:166
+#: inc/admin/settings-page.php:168
 #: inc/settings-transfer/presentation.php:19
 msgid "Hero section"
 msgstr "Первый экран"
 
-#: inc/admin/settings-page.php:167
+#: inc/admin/settings-page.php:169
 #: inc/settings-transfer/presentation.php:20
 msgid "Category shortcuts"
 msgstr "Ссылки на рубрики"
 
-#: inc/admin/settings-page.php:171
+#: inc/admin/settings-page.php:173
 #: inc/settings-transfer/presentation.php:22
 msgid "Featured article"
 msgstr "Главная статья"
 
-#: inc/admin/settings-page.php:172
+#: inc/admin/settings-page.php:174
 #: inc/settings-transfer/presentation.php:23
 msgid "About page"
 msgstr "Страница о блоге"
 
-#: inc/admin/settings-page.php:173
+#: inc/admin/settings-page.php:175
 #: inc/settings-transfer/presentation.php:25
 msgid "Posts per page"
 msgstr "Записей на странице"
 
-#: inc/admin/settings-page.php:174
+#: inc/admin/settings-page.php:176
 msgid "Select up to five articles with Ctrl or Command. Leave empty for automatic selection."
 msgstr "Выберите до пяти статей с клавишей Ctrl или Command. Оставьте пустым для автоматического выбора."
 
-#: inc/admin/settings-page.php:175
+#: inc/admin/settings-page.php:177
 #: inc/settings-transfer/presentation.php:26
 msgid "Section order"
 msgstr "Порядок разделов"
 
-#: inc/admin/settings-page.php:175
+#: inc/admin/settings-page.php:177
 msgid "Categories → choice → latest"
 msgstr "Рубрики → выбор редакции → свежие"
 
-#: inc/admin/settings-page.php:175
+#: inc/admin/settings-page.php:177
 msgid "Choice → categories → latest"
 msgstr "Выбор редакции → рубрики → свежие"
 
-#: inc/admin/settings-page.php:175
+#: inc/admin/settings-page.php:177
 msgid "Choice → latest → categories"
 msgstr "Выбор редакции → свежие → рубрики"
 
-#: inc/admin/settings-page.php:180
+#: inc/admin/settings-page.php:182
 msgid "Typography and article layout"
 msgstr "Типографика и макет статьи"
 
-#: inc/admin/settings-page.php:180
+#: inc/admin/settings-page.php:182
 msgid "Reading presets keep font size, rhythm, and article width balanced."
 msgstr "Настройте размер текста, межстрочный интервал и ширину статьи."
 
-#: inc/admin/settings-page.php:182
+#: inc/admin/settings-page.php:184
 #: inc/settings-transfer/presentation.php:27
 msgid "Typography preset"
 msgstr "Стиль типографики"
 
-#: inc/admin/settings-page.php:182
+#: inc/admin/settings-page.php:184
 msgid "Editorial"
 msgstr "Редакционный"
 
-#: inc/admin/settings-page.php:182
-msgid "Compact"
-msgstr "Компактный"
-
-#: inc/admin/settings-page.php:182
+#: inc/admin/settings-page.php:184
 msgid "Comfortable"
 msgstr "Комфортный"
 
-#: inc/admin/settings-page.php:183
+#: inc/admin/settings-page.php:185
 #: inc/settings-transfer/presentation.php:28
 msgid "Article layout"
 msgstr "Макет статьи"
 
-#: inc/admin/settings-page.php:183
+#: inc/admin/settings-page.php:185
 msgid "Article with sidebar"
 msgstr "С боковой колонкой"
 
-#: inc/admin/settings-page.php:183
+#: inc/admin/settings-page.php:185
 msgid "Focused reading"
 msgstr "Сосредоточенное чтение"
 
-#: inc/admin/settings-page.php:183
+#: inc/admin/settings-page.php:185
 msgid "Wide article"
 msgstr "Широкая статья"
 
-#: inc/admin/settings-page.php:184
+#: inc/admin/settings-page.php:186
 #: inc/settings-transfer/presentation.php:29
 msgid "Body text size, px"
 msgstr "Размер текста, px"
 
-#: inc/admin/settings-page.php:185
+#: inc/admin/settings-page.php:187
 #: inc/settings-transfer/presentation.php:30
 msgid "Line height"
 msgstr "Межстрочный интервал"
 
-#: inc/admin/settings-page.php:186
+#: inc/admin/settings-page.php:188
 #: inc/settings-transfer/presentation.php:31
 msgid "Reading width, px"
 msgstr "Ширина текста, px"
 
-#: inc/admin/settings-page.php:191
+#: inc/admin/settings-page.php:193
 msgid "Interface and content"
 msgstr "Интерфейс и контент"
 
-#: inc/admin/settings-page.php:191
+#: inc/admin/settings-page.php:193
 msgid "Core settings for live search and user-generated content."
 msgstr "Основные параметры живого поиска и пользовательских материалов."
 
-#: inc/admin/settings-page.php:193
+#: inc/admin/settings-page.php:195
 #: inc/settings-transfer/presentation.php:17
 msgid "Minimum search characters"
 msgstr "Минимум символов поиска"
 
-#: inc/admin/settings-page.php:194
+#: inc/admin/settings-page.php:196
 #: inc/settings-transfer/presentation.php:18
 msgid "Results in the search window"
 msgstr "Результатов в окне"
 
-#: inc/admin/settings-page.php:195
+#: inc/admin/settings-page.php:197
 #: inc/settings-transfer/presentation.php:40
 msgid "Image limit, MB"
 msgstr "Лимит изображения, МБ"
 
-#: inc/admin/settings-page.php:198
+#: inc/admin/settings-page.php:200
 #: inc/settings-transfer/presentation.php:35
 msgid "Images in comments"
 msgstr "Изображения в комментариях"
 
-#: inc/admin/settings-page.php:199
+#: inc/admin/settings-page.php:201
 #: inc/settings-transfer/presentation.php:36
 msgid "Emoji panel"
 msgstr "Панель смайликов"
 
-#: inc/admin/settings-page.php:200
+#: inc/admin/settings-page.php:202
 #: inc/settings-transfer/presentation.php:37
 msgid "Article claps"
 msgstr "Хлопки под статьями"
 
-#: inc/admin/settings-page.php:201
+#: inc/admin/settings-page.php:203
 #: inc/settings-transfer/presentation.php:38
 msgid "Personal reading library"
 msgstr "Личная библиотека читателя"
 
-#: inc/admin/settings-page.php:202
+#: inc/admin/settings-page.php:204
 #: inc/settings-transfer/presentation.php:39
 msgid "Safe SVG uploads"
 msgstr "Безопасная загрузка SVG"
 
-#: inc/admin/settings-page.php:204
+#: inc/admin/settings-page.php:206
 msgid "Claps: up to 10 per article from each browser, with undo. Disabling claps preserves existing reactions."
 msgstr "До 10 хлопков на статью из одного браузера, с возможностью отмены. Отключение блока сохраняет накопленные реакции."
 
-#: inc/admin/settings-page.php:205
+#: inc/admin/settings-page.php:207
 msgid "Readers can search bookmarks, filter their reading history, and export or import a private backup. Data stays in the browser without an account."
 msgstr "Читатели могут искать закладки, фильтровать историю чтения и сохранять или восстанавливать личную резервную копию. Данные остаются в браузере, без регистрации."
 
-#: inc/admin/settings-page.php:209
+#: inc/admin/settings-page.php:211
 msgid "Form protection"
 msgstr "Защита форм"
 
-#: inc/admin/settings-page.php:209
+#: inc/admin/settings-page.php:211
 msgid "Built-in protection requires no keys. An external provider is enabled only after both keys are filled in."
 msgstr "Встроенная защита не требует ключей. Внешний провайдер включается только после заполнения обоих ключей."
 
-#: inc/admin/settings-page.php:211
+#: inc/admin/settings-page.php:213
 #: inc/settings-transfer/presentation.php:32
 msgid "CAPTCHA provider"
 msgstr "Провайдер CAPTCHA"
 
-#: inc/admin/settings-page.php:211
+#: inc/admin/settings-page.php:213
 msgid "Built-in protection"
 msgstr "Встроенная защита"
 
-#: inc/admin/settings-page.php:212
+#: inc/admin/settings-page.php:214
 #: inc/settings-transfer/presentation.php:33
 msgid "Site key"
 msgstr "Ключ сайта"
 
-#: inc/admin/settings-page.php:213
+#: inc/admin/settings-page.php:215
 #: inc/settings-transfer/presentation.php:34
 msgid "Secret key"
 msgstr "Секретный ключ"
 
-#: inc/admin/settings-page.php:213
+#: inc/admin/settings-page.php:215
 msgid "Key saved"
 msgstr "Ключ сохранён"
 
-#: inc/admin/settings-page.php:213
+#: inc/admin/settings-page.php:215
 msgid "Enter key"
 msgstr "Введите ключ"
 
-#: inc/admin/settings-page.php:218
+#: inc/admin/settings-page.php:220
 msgid "Footer social networks"
 msgstr "Социальные сети в подвале"
 
-#: inc/admin/settings-page.php:222
+#: inc/admin/settings-page.php:224
 #: inc/social.php:17
 msgid "VK"
 msgstr "ВКонтакте"
 
-#: inc/admin/settings-page.php:223
+#: inc/admin/settings-page.php:225
 #: inc/settings-transfer/presentation.php:41
 #: inc/social.php:18
 msgid "Odnoklassniki"
 msgstr "Одноклассники"
 
-#: inc/admin/settings-page.php:229
+#: inc/admin/settings-page.php:231
 msgid "Your edition"
 msgstr "Ваша версия"
 
-#: inc/admin/settings-page.php:229
+#: inc/admin/settings-page.php:231
 msgid "Pro publishing tools are active."
 msgstr "Издательские инструменты Pro включены."
 
-#: inc/admin/settings-page.php:229
+#: inc/admin/settings-page.php:231
 msgid "The free theme is ready for your blog. Install the Pro extension to add publishing tools."
 msgstr "Бесплатная тема готова к работе. Установите расширение Pro, чтобы добавить издательские инструменты."
 
-#: inc/admin/settings-page.php:230
+#: inc/admin/settings-page.php:232
 msgid "Free: layouts, typography, dark mode, search, automatic covers, Gutenberg patterns, comments, form protection, claps, and a reading library."
 msgstr "Free: макеты, типографика, тёмная тема, поиск, автообложки, паттерны Gutenberg, комментарии, защита форм, хлопки и библиотека читателя."
 
-#: inc/admin/settings-page.php:231
+#: inc/admin/settings-page.php:233
 msgid "Pro: cover editor, link cards, advertising, short links, integrations, article series, social covers, and reader interests."
 msgstr "Pro: редактор обложек, карточки ссылок, реклама, короткие ссылки, интеграции, серии статей, социальные обложки и интересы читателей."
 
+#: inc/admin/settings-page.php:234
+msgid "Free also includes the design studio, reader mode, print layout and full configuration backup."
+msgstr "В Free также входят студия оформления, режим чтения, версия для печати и полный экспорт настроек."
+
 #: inc/admin/settings-page.php:235
+msgid "Pro 1.3 adds reader accounts, library sync, consenting private messages, notifications, social sign-in and conditional design/advertising."
+msgstr "Pro 1.3 добавляет кабинеты читателей, синхронизацию библиотеки, личные сообщения по согласию, уведомления, социальный вход и условия оформления и рекламы."
+
+#: inc/admin/settings-page.php:239
 msgid "All changes saved"
 msgstr "Все изменения сохранены"
 
-#: inc/admin/settings-page.php:235
+#: inc/admin/settings-page.php:239
 msgid "You have unsaved changes"
 msgstr "Есть несохранённые изменения"
 
-#: inc/admin/settings-page.php:236
+#: inc/admin/settings-page.php:240
 msgid "Save settings"
 msgstr "Сохранить настройки"
 
@@ -1301,8 +1737,241 @@ msgstr "Светлая"
 msgid "Dark"
 msgstr "Тёмная"
 
+#: inc/design/bootstrap.php:23
+#: inc/design/labels.php:14
+msgid "Reader mode"
+msgstr "Режим чтения"
+
+#: inc/design/bootstrap.php:24
+#: inc/design/labels.php:14
+msgid "Print article"
+msgstr "Распечатать статью"
+
+#: inc/design/fonts.php:26
+msgid "Upload a valid WOFF2 font no larger than 2 MB."
+msgstr "Загрузите корректный шрифт WOFF2 размером до 2 МБ."
+
+#: inc/design/labels.php:6
+msgid "Page background"
+msgstr "Фон страницы"
+
+#: inc/design/labels.php:6
+msgid "Card background"
+msgstr "Фон карточек"
+
+#: inc/design/labels.php:6
+msgid "Soft background"
+msgstr "Дополнительный фон"
+
+#: inc/design/labels.php:7
+msgid "Main text"
+msgstr "Основной текст"
+
+#: inc/design/labels.php:7
+msgid "Secondary text"
+msgstr "Дополнительный текст"
+
+#: inc/design/labels.php:7
+msgid "Borders"
+msgstr "Границы"
+
+#: inc/design/labels.php:8
+msgid "Accent color"
+msgstr "Акцентный цвет"
+
+#: inc/design/labels.php:8
+msgid "Accent on hover"
+msgstr "Акцент при наведении"
+
+#: inc/design/labels.php:8
+msgid "Soft accent"
+msgstr "Фон акцентных блоков"
+
+#: inc/design/labels.php:9
+msgid "Errors"
+msgstr "Ошибки"
+
+#: inc/design/labels.php:9
+msgid "Button text"
+msgstr "Текст кнопок"
+
+#: inc/design/labels.php:9
+msgid "Keyboard focus"
+msgstr "Фокус клавиатуры"
+
+#: inc/design/labels.php:10
+msgid "Body font"
+msgstr "Шрифт основного текста"
+
+#: inc/design/labels.php:10
+msgid "Heading font"
+msgstr "Шрифт заголовков"
+
+#: inc/design/labels.php:10
+msgid "Navigation font"
+msgstr "Шрифт меню"
+
+#: inc/design/labels.php:10
+msgid "Button font"
+msgstr "Шрифт кнопок"
+
+#: inc/design/labels.php:10
+msgid "Metadata font"
+msgstr "Шрифт метаданных"
+
+#: inc/design/labels.php:10
+msgid "Code font"
+msgstr "Шрифт кода"
+
+#: inc/design/labels.php:11
+msgid "Interface text size"
+msgstr "Размер текста интерфейса"
+
+#: inc/design/labels.php:11
+msgid "Heading weight"
+msgstr "Насыщенность заголовков"
+
+#: inc/design/labels.php:11
+msgid "Heading scale, %"
+msgstr "Масштаб главного заголовка, %"
+
+#: inc/design/labels.php:11
+msgid "Paragraph spacing"
+msgstr "Отступ между абзацами"
+
+#: inc/design/labels.php:11
+msgid "Mobile article text size"
+msgstr "Размер текста статьи на телефоне"
+
+#: inc/design/labels.php:11
+msgid "Letter spacing"
+msgstr "Межбуквенный интервал"
+
+#: inc/design/labels.php:12
+msgid "Site width"
+msgstr "Ширина сайта"
+
+#: inc/design/labels.php:12
+msgid "Sidebar width"
+msgstr "Ширина боковой колонки"
+
+#: inc/design/labels.php:12
+msgid "Corner radius"
+msgstr "Скругление углов"
+
+#: inc/design/labels.php:12
+msgid "Section spacing"
+msgstr "Отступы разделов"
+
+#: inc/design/labels.php:12
+msgid "Card spacing"
+msgstr "Отступы между карточками"
+
+#: inc/design/labels.php:12
+msgid "Footer columns"
+msgstr "Количество колонок подвала"
+
+#: inc/design/labels.php:13
+msgid "Sticky header"
+msgstr "Закреплённая шапка"
+
+#: inc/design/labels.php:13
+msgid "Header search"
+msgstr "Поиск в шапке"
+
+#: inc/design/labels.php:13
+msgid "Color scheme switch"
+msgstr "Переключение светлой и тёмной темы"
+
+#: inc/design/labels.php:13
+msgid "Logo tagline"
+msgstr "Подпись возле логотипа"
+
+#: inc/design/labels.php:13
+msgid "Article cover"
+msgstr "Обложка статьи"
+
+#: inc/design/labels.php:13
+msgid "Author card"
+msgstr "Карточка автора"
+
+#: inc/design/labels.php:13
+#: single.php:63
+msgid "Adjacent articles"
+msgstr "Соседние статьи"
+
+#: inc/design/labels.php:13
+msgid "Related articles"
+msgstr "Рекомендации статей"
+
+#: inc/design/labels.php:13
+#: inc/toc.php:90
+#: single.php:50
+msgid "Table of contents"
+msgstr "Содержание статьи"
+
+#: inc/design/labels.php:13
+msgid "Sidebar articles"
+msgstr "Статьи в боковой колонке"
+
+#: inc/design/labels.php:13
+msgid "Card excerpts"
+msgstr "Анонсы на карточках"
+
+#: inc/design/labels.php:13
+msgid "Card metadata"
+msgstr "Метаданные карточек"
+
+#: inc/design/labels.php:13
+msgid "Footer social links"
+msgstr "Социальные ссылки в подвале"
+
+#: inc/design/labels.php:14
+msgid "Card image ratio"
+msgstr "Пропорции обложки карточки"
+
+#: inc/design/labels.php:14
+msgid "Shadows"
+msgstr "Тени"
+
+#: inc/design/labels.php:14
+msgid "No shadow"
+msgstr "Без теней"
+
+#: inc/design/labels.php:14
+msgid "Soft shadow"
+msgstr "Мягкие тени"
+
+#: inc/design/labels.php:14
+msgid "Strong shadow"
+msgstr "Выраженные тени"
+
+#: inc/design/labels.php:15
+msgid "Monospace"
+msgstr "Моноширинный"
+
+#: inc/design/labels.php:16
+msgid "Uploaded font"
+msgstr "Загруженный шрифт"
+
+#: inc/design/labels.php:16
+msgid "Weight: menu"
+msgstr "Насыщенность шрифта меню"
+
+#: inc/design/labels.php:16
+msgid "Weight: button"
+msgstr "Насыщенность шрифта кнопок"
+
+#: inc/design/labels.php:16
+msgid "Weight: meta"
+msgstr "Насыщенность шрифта метаданных"
+
+#: inc/design/labels.php:16
+msgid "Weight: body"
+msgstr "Насыщенность основного текста"
+
 #: inc/library.php:16
-#: single.php:29
+#: single.php:30
 msgid "Save for later"
 msgstr "Сохранить на потом"
 
@@ -1632,11 +2301,6 @@ msgstr "SVG содержит запрещённый активный или вн
 msgid "The file is not a valid SVG."
 msgstr "Файл не является корректным SVG."
 
-#: inc/toc.php:90
-#: single.php:49
-msgid "Table of contents"
-msgstr "Содержание статьи"
-
 #: inc/toc.php:91
 msgid "In this article"
 msgstr "В этой статье"
@@ -1798,47 +2462,103 @@ msgstr "Хлебные крошки"
 msgid "Article actions"
 msgstr "Действия со статьёй"
 
-#: single.php:30
-#: single.php:32
+#: single.php:31
+#: single.php:33
 #: assets/js/interface.js:47
 msgid "Copy link"
 msgstr "Скопировать ссылку"
 
-#: single.php:30
+#: single.php:31
 msgid "Link copied"
 msgstr "Ссылка скопирована"
 
-#: single.php:34
+#: single.php:35
 msgid "Go to comments"
 msgstr "Перейти к комментариям"
 
-#: single.php:58
+#: single.php:59
 msgid "IO Blog editorial team"
 msgstr "Команда редакции IO Blog"
 
-#: single.php:58
+#: single.php:59
 msgid "We write about technology that makes everyday life easier."
 msgstr "Пишем о технологиях, которые делают жизнь проще."
 
-#: single.php:62
-msgid "Adjacent articles"
-msgstr "Соседние статьи"
-
-#: single.php:64
+#: single.php:65
 msgid "Previous article"
 msgstr "Предыдущая статья"
 
-#: single.php:65
+#: single.php:66
 msgid "Next article"
 msgstr "Следующая статья"
 
-#: single.php:75
+#: single.php:76
 msgid "New articles"
 msgstr "Новые статьи"
 
-#: single.php:86
+#: single.php:87
 msgid "Read next"
 msgstr "Читать далее"
+
+#: template-parts/admin/design.php:5
+msgid "Light palette"
+msgstr "Светлая палитра"
+
+#: template-parts/admin/design.php:5
+msgid "Dark palette"
+msgstr "Тёмная палитра"
+
+#: template-parts/admin/design.php:5
+msgid "Fonts and rhythm"
+msgstr "Шрифты и ритм"
+
+#: template-parts/admin/design.php:5
+msgid "Sizes and spacing"
+msgstr "Размеры и отступы"
+
+#: template-parts/admin/design.php:5
+msgid "Site regions"
+msgstr "Области сайта"
+
+#: template-parts/admin/design.php:8
+msgid "Preview your changes before publishing."
+msgstr "Посмотрите изменения перед публикацией."
+
+#: template-parts/admin/design.php:9
+msgid "Upload your own font"
+msgstr "Загрузить собственный шрифт"
+
+#: template-parts/admin/design.php:9
+msgid "Upload font"
+msgstr "Загрузить шрифт"
+
+#: template-parts/admin/design.php:10
+msgid "Find a setting"
+msgstr "Найти настройку"
+
+#: template-parts/admin/design.php:10
+msgid "Preview"
+msgstr "Предпросмотр"
+
+#: template-parts/admin/design.php:10
+msgid "Publish design"
+msgstr "Опубликовать оформление"
+
+#: template-parts/admin/design.php:16
+msgid "No uploaded font"
+msgstr "Шрифт не выбран"
+
+#: template-parts/admin/design.php:24
+msgid "Reset"
+msgstr "Сбросить"
+
+#: template-parts/admin/design.php:27
+msgid "Tablet"
+msgstr "Планшет"
+
+#: template-parts/admin/design.php:27
+msgid "Site preview"
+msgstr "Предпросмотр сайта"
 
 #: template-parts/admin/settings-transfer.php:7
 msgid "One backup for all theme and Pro settings, including advertising code and integrations."

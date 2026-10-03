@@ -28,6 +28,7 @@
 		</nav>
 
 		<div class="io-header__actions">
+			<?php do_action( 'ioblog_header_actions' ); ?>
 			<?php if ( ioblog_get_setting( 'library_enabled' ) ) { ?><button class="io-icon-button io-library-open" type="button" hidden aria-label="<?php esc_attr_e( 'My library', 'ioblog-editorial' ); ?>" aria-controls="io-library" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg><span class="io-library-count" hidden aria-hidden="true"></span></button><?php } ?>
 			<button class="io-icon-button io-search-open" type="button" aria-label="<?php esc_attr_e( 'Open search', 'ioblog-editorial' ); ?>" aria-controls="io-search-modal"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg></button>
 			<button class="io-icon-button io-theme-toggle" type="button" aria-label="<?php esc_attr_e( 'Toggle color scheme', 'ioblog-editorial' ); ?>"><svg class="io-theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><svg class="io-theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8 8 0 0 1 8.8 4 8.2 8.2 0 1 0 20 15.2z"></path></svg></button>

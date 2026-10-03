@@ -3,7 +3,7 @@ Contributors: kirillaleksandrov
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.8.0
+Stable tag: 1.9.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, news, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -30,6 +30,8 @@ The theme uses local assets only by default. Advertising, analytics snippets, so
 * Article claps: up to ten per browser, personal undo, clap and supporter counters.
 * Personal browser-local library with bookmarks, searchable reading history, status filters, backup export/import and explicit resume controls.
 * Full theme-settings JSON export/import, including saved Pro advertising code, analytics, CAPTCHA keys, Customizer values and custom CSS.
+* Design studio with separate light/dark palettes, six font roles, heading sizes and weights, local WOFF2 uploads, geometry, region visibility and private live preview.
+* Reader mode, print layout, and real image/CSS cover previews in bookmarks and reading history.
 * Built-in anti-spam with optional Yandex SmartCaptcha or Google reCAPTCHA v2.
 * Optional Pro extension: link cards, visual cover editor, advertising, short links, series, social PNG covers and reader-interest dashboard.
 * Footer menu and optional Telegram, MAX, VK, and Odnoklassniki links.
@@ -43,7 +45,7 @@ The theme uses local assets only by default. Advertising, analytics snippets, so
 3. Activate IO Blog Editorial.
 4. Open Appearance > Customize to set the homepage copy, footer text, and default color scheme.
 5. Open IO Blog in the main administration menu to configure the homepage, reading layout, search, comments, CAPTCHA, and social links.
-6. Optionally install IO Blog Editorial Pro 1.2.1 as a plugin to enable publishing tools. Install it through Plugins, not Themes. This is one theme with an optional extension, not two themes.
+6. Optionally install IO Blog Editorial Pro 1.3.0 as a plugin to enable publishing tools and reader accounts. Install it through Plugins, not Themes.
 7. Assign menus to the Primary menu and Footer menu locations.
 8. Set the Site Icon in Appearance > Customize > Site Identity.
 
@@ -142,6 +144,15 @@ Yes. Upload a featured image in the post editor. It automatically replaces the g
 Use the bundled POT file with Poedit, Loco Translate, or the WordPress i18n tools. Save compiled translations with the `ioblog-editorial` text domain.
 
 == Changelog ==
+
+= 1.9.0 =
+* Added a design studio with 70 validated settings, private responsive preview and explicit publication.
+* Added separate light/dark palettes, font roles, heading sizes/weights, administrator-only local WOFF2 upload and region controls.
+* Added distraction-free reader mode and a printable article layout.
+* Fixed CSS cover previews in bookmarks/history, including Clearfy REST compatibility and stale redirect caching.
+* Extended full settings transfer to design, fonts, Pro account configuration and conditional advertising.
+* Added integration points for Pro 1.3.0 reader accounts without requiring Pro for existing Free functions.
+* Updated Russian translations and setup/privacy documentation.
 
 = 1.8.0 =
 

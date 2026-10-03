@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: IO Blog Editorial 1.8.0\n"
+"Project-Id-Version: IO Blog Editorial 1.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ioblog-editorial\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-03T02:25:58+00:00\n"
+"POT-Creation-Date: 2026-10-03T04:18:49+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ioblog-editorial\n"
@@ -51,10 +51,13 @@ msgid "Signal"
 msgstr ""
 
 #: inc/admin/cover-editor.php:22
+#: inc/ads/admin.php:9
+#: template-parts/admin/design.php:27
 msgid "Mobile"
 msgstr ""
 
 #: inc/admin/cover-editor.php:22
+#: template-parts/account.php:4
 msgid "Security"
 msgstr ""
 
@@ -127,6 +130,7 @@ msgid "Automatic covers appear when no featured image is set. A manually selecte
 msgstr ""
 
 #: inc/admin/settings-sections.php:11
+#: template-parts/community-admin.php:13
 msgid "Enabled"
 msgstr ""
 
@@ -140,6 +144,7 @@ msgid "Administrator HTML and JavaScript are allowed. For manual placement, use 
 msgstr ""
 
 #: inc/admin/settings-sections.php:23
+#: inc/ads/admin.php:5
 #: inc/settings-transfer/presentation.php:13
 msgid "After the hero section"
 msgstr ""
@@ -149,6 +154,7 @@ msgid "Between the hero and categories on the homepage."
 msgstr ""
 
 #: inc/admin/settings-sections.php:24
+#: inc/ads/admin.php:5
 #: inc/settings-transfer/presentation.php:13
 msgid "Inside an article"
 msgstr ""
@@ -163,6 +169,7 @@ msgid "After paragraph number"
 msgstr ""
 
 #: inc/admin/settings-sections.php:26
+#: inc/ads/admin.php:5
 #: inc/settings-transfer/presentation.php:13
 msgid "Right sidebar"
 msgstr ""
@@ -172,6 +179,7 @@ msgid "Below the table of contents in the sticky article sidebar."
 msgstr ""
 
 #: inc/admin/settings-sections.php:27
+#: inc/ads/admin.php:5
 #: inc/settings-transfer/presentation.php:13
 msgid "After the article"
 msgstr ""
@@ -215,7 +223,60 @@ msgstr ""
 msgid "Telegram Instant View metadata"
 msgstr ""
 
-#: inc/advertising.php:26
+#: inc/ads/admin.php:4
+msgid "Advertising conditions"
+msgstr ""
+
+#: inc/ads/admin.php:9
+msgid "Everyone"
+msgstr ""
+
+#: inc/ads/admin.php:9
+msgid "Guests"
+msgstr ""
+
+#: inc/ads/admin.php:9
+msgid "Signed-in readers"
+msgstr ""
+
+#: inc/ads/admin.php:9
+msgid "All devices"
+msgstr ""
+
+#: inc/ads/admin.php:9
+#: template-parts/admin/design.php:27
+msgid "Desktop"
+msgstr ""
+
+#: inc/ads/admin.php:10
+msgid "Audience"
+msgstr ""
+
+#: inc/ads/admin.php:10
+msgid "Devices"
+msgstr ""
+
+#: inc/ads/admin.php:13
+msgid "Category IDs, comma separated"
+msgstr ""
+
+#: inc/ads/admin.php:13
+msgid "Start date"
+msgstr ""
+
+#: inc/ads/admin.php:13
+msgid "End date"
+msgstr ""
+
+#: inc/ads/admin.php:13
+msgid "Reserved height, px"
+msgstr ""
+
+#: inc/ads/rules.php:38
+msgid "Check the advertising conditions."
+msgstr ""
+
+#: inc/advertising.php:28
 msgid "Advertisement"
 msgstr ""
 
@@ -232,6 +293,193 @@ msgstr ""
 #. translators: %s: destination host name.
 #: inc/blocks/link-card.php:65
 msgid "Open link"
+msgstr ""
+
+#: inc/community/account.php:46
+msgid "Current password is incorrect."
+msgstr ""
+
+#: inc/community/account.php:57
+msgid "Set a password before removing your last sign-in method."
+msgstr ""
+
+#: inc/community/admin.php:5
+#: template-parts/community-admin.php:7
+#: inc/admin/settings-page.php:138
+msgid "Reader accounts"
+msgstr ""
+
+#: inc/community/admin.php:11
+#: inc/community/controller.php:30
+#: inc/design/admin.php:22
+msgid "Check the field values."
+msgstr ""
+
+#: inc/community/controller.php:31
+#: inc/community/view.php:13
+#: inc/design/admin.php:11
+msgid "Unable to save. Please retry."
+msgstr ""
+
+#: inc/community/email.php:7
+#: inc/community/messages.php:14
+msgid "Please try again shortly."
+msgstr ""
+
+#: inc/community/email.php:12
+msgid "Confirm your email address"
+msgstr ""
+
+#: inc/community/email.php:12
+msgid "Unable to send email. Check the mail configuration."
+msgstr ""
+
+#: inc/community/email.php:29
+msgid "The confirmation link expired or is invalid."
+msgstr ""
+
+#: inc/community/library.php:27
+#: inc/community/library.php:41
+msgid "Your library changed on another device. Reload and merge again."
+msgstr ""
+
+#: inc/community/messages.php:11
+msgid "This conversation is unavailable."
+msgstr ""
+
+#: inc/community/messages.php:17
+msgid "Message limit reached. Please try later."
+msgstr ""
+
+#: inc/community/notifications.php:42
+msgid "Your reading updates"
+msgstr ""
+
+#: inc/community/privacy.php:27
+#: template-parts/account.php:4
+msgid "Messages"
+msgstr ""
+
+#: inc/community/privacy.php:27
+#: template-parts/account.php:21
+msgid "Message"
+msgstr ""
+
+#: inc/community/privacy.php:28
+#: template-parts/account.php:4
+#: header.php:32
+#: template-parts/library.php:6
+msgid "My library"
+msgstr ""
+
+#: inc/community/privacy.php:28
+#: template-parts/account.php:4
+msgid "Profile"
+msgstr ""
+
+#: inc/community/privacy.php:29
+#: template-parts/account.php:4
+#: template-parts/community-admin.php:5
+msgid "Notifications"
+msgstr ""
+
+#: inc/community/privacy.php:33
+msgid "Social sign-in methods"
+msgstr ""
+
+#: inc/community/view.php:12
+msgid "Confirmation email sent. Open the link while signed in."
+msgstr ""
+
+#: inc/community/view.php:13
+#: template-parts/community-admin.php:8
+#: inc/design/admin.php:11
+msgid "Settings saved."
+msgstr ""
+
+#: inc/community/view.php:13
+msgid "Nothing here yet."
+msgstr ""
+
+#: inc/community/view.php:13
+#: template-parts/account.php:16
+msgid "Save"
+msgstr ""
+
+#: inc/community/view.php:13
+msgid "Collection"
+msgstr ""
+
+#: inc/community/view.php:13
+msgid "Remove"
+msgstr ""
+
+#: inc/community/view.php:13
+#: inc/series/view.php:19
+msgid "Read"
+msgstr ""
+
+#: inc/community/view.php:13
+#: template-parts/account.php:24
+msgid "Merge browser library"
+msgstr ""
+
+#: inc/community/view.php:13
+#: template-parts/account.php:24
+msgid "Sync with this browser"
+msgstr ""
+
+#: inc/community/view.php:13
+msgid "Report"
+msgstr ""
+
+#: inc/community/view.php:13
+msgid "Block"
+msgstr ""
+
+#: inc/community/view.php:13
+msgid "Unblock"
+msgstr ""
+
+#: inc/community/view.php:13
+#: inc/oauth/view.php:9
+msgid "Link account"
+msgstr ""
+
+#: inc/community/view.php:13
+msgid "Remove sign-in method"
+msgstr ""
+
+#: inc/community/view.php:13
+#: template-parts/account.php:10
+msgid "Sign in to use your personal account."
+msgstr ""
+
+#: inc/community/view.php:27
+#: template-parts/account.php:7
+msgid "My account"
+msgstr ""
+
+#: inc/design/overrides.php:3
+msgid "Inherit site design"
+msgstr ""
+
+#: inc/design/overrides.php:3
+msgid "Warm paper"
+msgstr ""
+
+#: inc/design/overrides.php:3
+msgid "High contrast"
+msgstr ""
+
+#: inc/design/overrides.php:3
+#: inc/admin/settings-page.php:184
+msgid "Compact"
+msgstr ""
+
+#: inc/design/overrides.php:18
+#: inc/design/overrides.php:24
+msgid "Article design"
 msgstr ""
 
 #: inc/interests/admin.php:5
@@ -375,6 +623,16 @@ msgstr ""
 msgid "Article series"
 msgstr ""
 
+#: inc/oauth/controller.php:11
+#: inc/oauth/controller.php:21
+msgid "Unable to sign in. Check the provider settings or try another sign-in method."
+msgstr ""
+
+#: inc/oauth/view.php:9
+#: template-parts/account.php:10
+msgid "Sign in"
+msgstr ""
+
 #: inc/series/admin.php:5
 #: inc/series/admin.php:9
 msgid "Chapter order"
@@ -396,10 +654,6 @@ msgstr ""
 #: inc/series/view.php:18
 #, php-format
 msgid "Chapter %1$d of %2$d"
-msgstr ""
-
-#: inc/series/view.php:19
-msgid "Read"
 msgstr ""
 
 #: inc/series/view.php:20
@@ -426,8 +680,185 @@ msgstr ""
 msgid "No title was found on the page."
 msgstr ""
 
-#: ioblog-editorial-pro.php:47
-msgid "IO Blog Editorial Pro requires the IO Blog Editorial theme version 1.6.0 or later."
+#: ioblog-editorial-pro.php:48
+msgid "Publishing tools require IO Blog Editorial 1.9.0 or later. Reader accounts remain available through the shortcode."
+msgstr ""
+
+#: template-parts/account.php:4
+msgid "Personal feed"
+msgstr ""
+
+#: template-parts/account.php:4
+msgid "My comments"
+msgstr ""
+
+#: template-parts/account.php:7
+msgid "Your articles, conversations, and reading preferences."
+msgstr ""
+
+#: template-parts/account.php:7
+msgid "Sign out"
+msgstr ""
+
+#: template-parts/account.php:10
+msgid "Welcome back"
+msgstr ""
+
+#: template-parts/account.php:10
+#: template-parts/account.php:19
+msgid "Reset password"
+msgstr ""
+
+#: template-parts/account.php:10
+msgid "Register"
+msgstr ""
+
+#: template-parts/account.php:12
+msgid "Account sections"
+msgstr ""
+
+#: template-parts/account.php:16
+msgid "Display name"
+msgstr ""
+
+#: template-parts/account.php:16
+msgid "About you"
+msgstr ""
+
+#: template-parts/account.php:16
+msgid "Allow private messages"
+msgstr ""
+
+#: template-parts/account.php:16
+msgid "Receive a daily email digest"
+msgstr ""
+
+#: template-parts/account.php:16
+msgid "Follow categories"
+msgstr ""
+
+#: template-parts/account.php:17
+msgid "Email for account recovery"
+msgstr ""
+
+#: template-parts/account.php:17
+msgid "Send confirmation email"
+msgstr ""
+
+#: template-parts/account.php:19
+msgid "Sign out other sessions"
+msgstr ""
+
+#: template-parts/account.php:19
+msgid "Current password"
+msgstr ""
+
+#: template-parts/account.php:19
+msgid "New password, at least 12 characters"
+msgstr ""
+
+#: template-parts/account.php:19
+msgid "Change password"
+msgstr ""
+
+#: template-parts/account.php:21
+msgid "Recipient username"
+msgstr ""
+
+#: template-parts/account.php:21
+msgid "Send message"
+msgstr ""
+
+#: template-parts/account.php:23
+msgid "Disable sync in this browser"
+msgstr ""
+
+#: template-parts/account.php:24
+msgid "Find an article"
+msgstr ""
+
+#: template-parts/account.php:25
+msgid "Mark all as read"
+msgstr ""
+
+#: template-parts/community-admin.php:5
+msgid "Personal account"
+msgstr ""
+
+#: template-parts/community-admin.php:5
+msgid "Library sync"
+msgstr ""
+
+#: template-parts/community-admin.php:5
+msgid "Private messages"
+msgstr ""
+
+#: template-parts/community-admin.php:5
+msgid "Category subscriptions"
+msgstr ""
+
+#: template-parts/community-admin.php:5
+msgid "Allow new accounts through social login"
+msgstr ""
+
+#: template-parts/community-admin.php:7
+msgid "Turn modules on independently. Disabling a module keeps its data."
+msgstr ""
+
+#: template-parts/community-admin.php:10
+msgid "Account modules"
+msgstr ""
+
+#: template-parts/community-admin.php:10
+msgid "Daily message limit per user"
+msgstr ""
+
+#: template-parts/community-admin.php:10
+msgid "Open personal account"
+msgstr ""
+
+#: template-parts/community-admin.php:10
+msgid "Messages require recipient consent. Social accounts can be linked from Security after signing in."
+msgstr ""
+
+#: template-parts/community-admin.php:12
+msgid "Configured. Test with your registered application."
+msgstr ""
+
+#: template-parts/community-admin.php:12
+msgid "Fill in the application settings and enable the provider."
+msgstr ""
+
+#: template-parts/community-admin.php:13
+msgid "Register this callback URL in the provider application:"
+msgstr ""
+
+#: template-parts/community-admin.php:14
+msgid "Telegram uses OpenID Connect. Choose RS256 in BotFather."
+msgstr ""
+
+#: template-parts/community-admin.php:17
+msgid "Delivery and moderation"
+msgstr ""
+
+#: template-parts/community-admin.php:17
+msgid "WP-Cron is disabled. Configure a server cron job for notifications and daily digests."
+msgstr ""
+
+#: template-parts/community-admin.php:17
+msgid "Scheduled notifications use WordPress cron."
+msgstr ""
+
+#: template-parts/community-admin.php:17
+msgid "Email is opt-in and uses the WordPress mail transport."
+msgstr ""
+
+#: template-parts/community-admin.php:20
+msgid "Dismiss report"
+msgstr ""
+
+#: template-parts/community-admin.php:21
+msgid "Delete reported message"
 msgstr ""
 
 #: template-parts/link-card.php:28
@@ -547,9 +978,9 @@ msgid "Return to homepage"
 msgstr ""
 
 #: comments.php:13
-#: inc/admin/settings-page.php:140
-#: single.php:34
-#: single.php:36
+#: inc/admin/settings-page.php:142
+#: single.php:35
+#: single.php:37
 msgid "Comments"
 msgstr ""
 
@@ -613,20 +1044,15 @@ msgstr ""
 msgid "Primary menu"
 msgstr ""
 
-#: header.php:31
-#: template-parts/library.php:6
-msgid "My library"
-msgstr ""
-
-#: header.php:32
+#: header.php:33
 msgid "Open search"
 msgstr ""
 
-#: header.php:33
+#: header.php:34
 msgid "Toggle color scheme"
 msgstr ""
 
-#: header.php:34
+#: header.php:35
 msgid "Open menu"
 msgstr ""
 
@@ -674,8 +1100,8 @@ msgid "About the blog"
 msgstr ""
 
 #: home.php:49
-#: inc/admin/settings-page.php:168
-#: inc/admin/settings-page.php:174
+#: inc/admin/settings-page.php:170
+#: inc/admin/settings-page.php:176
 #: inc/settings-transfer/presentation.php:21
 #: inc/settings-transfer/presentation.php:24
 msgid "Editor’s choice"
@@ -690,7 +1116,7 @@ msgid "Latest articles"
 msgstr ""
 
 #: home.php:58
-#: single.php:86
+#: single.php:87
 msgid "All articles"
 msgstr ""
 
@@ -719,7 +1145,7 @@ msgid "Automatic selection"
 msgstr ""
 
 #: inc/admin/settings-page.php:131
-#: inc/admin/settings-page.php:146
+#: inc/admin/settings-page.php:148
 #: template-parts/admin/settings-transfer.php:8
 msgid "Site management"
 msgstr ""
@@ -743,285 +1169,295 @@ msgid "Export and import"
 msgstr ""
 
 #: inc/admin/settings-page.php:137
+#: inc/design/admin.php:4
+#: template-parts/admin/design.php:8
+msgid "Design studio"
+msgstr ""
+
+#: inc/admin/settings-page.php:139
 #: inc/settings-transfer/schema.php:15
 msgid "Appearance"
 msgstr ""
 
-#: inc/admin/settings-page.php:138
+#: inc/admin/settings-page.php:140
 #: inc/settings-transfer/presentation.php:49
 msgid "Menus"
 msgstr ""
 
-#: inc/admin/settings-page.php:139
+#: inc/admin/settings-page.php:141
 msgid "Categories"
 msgstr ""
 
-#: inc/admin/settings-page.php:150
+#: inc/admin/settings-page.php:152
 msgid "Site language"
 msgstr ""
 
-#: inc/admin/settings-page.php:150
+#: inc/admin/settings-page.php:152
 msgid "The selected language is applied to WordPress, the public site, and your administrator profile."
 msgstr ""
 
-#: inc/admin/settings-page.php:152
+#: inc/admin/settings-page.php:154
 #: inc/settings-transfer/presentation.php:16
 msgid "WordPress language"
 msgstr ""
 
-#: inc/admin/settings-page.php:160
+#: inc/admin/settings-page.php:162
 msgid "If the selected WordPress language pack is missing, it will be installed through the standard WordPress translation service when settings are saved."
 msgstr ""
 
-#: inc/admin/settings-page.php:164
+#: inc/admin/settings-page.php:166
 #: inc/settings-transfer/schema.php:10
 #: index.php:23
 #: single.php:17
 msgid "Homepage"
 msgstr ""
 
-#: inc/admin/settings-page.php:164
+#: inc/admin/settings-page.php:166
 msgid "Choose the editorial sections and the content featured on the front page."
 msgstr ""
 
-#: inc/admin/settings-page.php:166
+#: inc/admin/settings-page.php:168
 #: inc/settings-transfer/presentation.php:19
 msgid "Hero section"
 msgstr ""
 
-#: inc/admin/settings-page.php:167
+#: inc/admin/settings-page.php:169
 #: inc/settings-transfer/presentation.php:20
 msgid "Category shortcuts"
 msgstr ""
 
-#: inc/admin/settings-page.php:171
+#: inc/admin/settings-page.php:173
 #: inc/settings-transfer/presentation.php:22
 msgid "Featured article"
 msgstr ""
 
-#: inc/admin/settings-page.php:172
+#: inc/admin/settings-page.php:174
 #: inc/settings-transfer/presentation.php:23
 msgid "About page"
 msgstr ""
 
-#: inc/admin/settings-page.php:173
+#: inc/admin/settings-page.php:175
 #: inc/settings-transfer/presentation.php:25
 msgid "Posts per page"
 msgstr ""
 
-#: inc/admin/settings-page.php:174
+#: inc/admin/settings-page.php:176
 msgid "Select up to five articles with Ctrl or Command. Leave empty for automatic selection."
 msgstr ""
 
-#: inc/admin/settings-page.php:175
+#: inc/admin/settings-page.php:177
 #: inc/settings-transfer/presentation.php:26
 msgid "Section order"
 msgstr ""
 
-#: inc/admin/settings-page.php:175
+#: inc/admin/settings-page.php:177
 msgid "Categories → choice → latest"
 msgstr ""
 
-#: inc/admin/settings-page.php:175
+#: inc/admin/settings-page.php:177
 msgid "Choice → categories → latest"
 msgstr ""
 
-#: inc/admin/settings-page.php:175
+#: inc/admin/settings-page.php:177
 msgid "Choice → latest → categories"
 msgstr ""
 
-#: inc/admin/settings-page.php:180
+#: inc/admin/settings-page.php:182
 msgid "Typography and article layout"
 msgstr ""
 
-#: inc/admin/settings-page.php:180
+#: inc/admin/settings-page.php:182
 msgid "Reading presets keep font size, rhythm, and article width balanced."
 msgstr ""
 
-#: inc/admin/settings-page.php:182
+#: inc/admin/settings-page.php:184
 #: inc/settings-transfer/presentation.php:27
 msgid "Typography preset"
 msgstr ""
 
-#: inc/admin/settings-page.php:182
+#: inc/admin/settings-page.php:184
 msgid "Editorial"
 msgstr ""
 
-#: inc/admin/settings-page.php:182
-msgid "Compact"
-msgstr ""
-
-#: inc/admin/settings-page.php:182
+#: inc/admin/settings-page.php:184
 msgid "Comfortable"
 msgstr ""
 
-#: inc/admin/settings-page.php:183
+#: inc/admin/settings-page.php:185
 #: inc/settings-transfer/presentation.php:28
 msgid "Article layout"
 msgstr ""
 
-#: inc/admin/settings-page.php:183
+#: inc/admin/settings-page.php:185
 msgid "Article with sidebar"
 msgstr ""
 
-#: inc/admin/settings-page.php:183
+#: inc/admin/settings-page.php:185
 msgid "Focused reading"
 msgstr ""
 
-#: inc/admin/settings-page.php:183
+#: inc/admin/settings-page.php:185
 msgid "Wide article"
 msgstr ""
 
-#: inc/admin/settings-page.php:184
+#: inc/admin/settings-page.php:186
 #: inc/settings-transfer/presentation.php:29
 msgid "Body text size, px"
 msgstr ""
 
-#: inc/admin/settings-page.php:185
+#: inc/admin/settings-page.php:187
 #: inc/settings-transfer/presentation.php:30
 msgid "Line height"
 msgstr ""
 
-#: inc/admin/settings-page.php:186
+#: inc/admin/settings-page.php:188
 #: inc/settings-transfer/presentation.php:31
 msgid "Reading width, px"
 msgstr ""
 
-#: inc/admin/settings-page.php:191
+#: inc/admin/settings-page.php:193
 msgid "Interface and content"
 msgstr ""
 
-#: inc/admin/settings-page.php:191
+#: inc/admin/settings-page.php:193
 msgid "Core settings for live search and user-generated content."
 msgstr ""
 
-#: inc/admin/settings-page.php:193
+#: inc/admin/settings-page.php:195
 #: inc/settings-transfer/presentation.php:17
 msgid "Minimum search characters"
 msgstr ""
 
-#: inc/admin/settings-page.php:194
+#: inc/admin/settings-page.php:196
 #: inc/settings-transfer/presentation.php:18
 msgid "Results in the search window"
 msgstr ""
 
-#: inc/admin/settings-page.php:195
+#: inc/admin/settings-page.php:197
 #: inc/settings-transfer/presentation.php:40
 msgid "Image limit, MB"
 msgstr ""
 
-#: inc/admin/settings-page.php:198
+#: inc/admin/settings-page.php:200
 #: inc/settings-transfer/presentation.php:35
 msgid "Images in comments"
 msgstr ""
 
-#: inc/admin/settings-page.php:199
+#: inc/admin/settings-page.php:201
 #: inc/settings-transfer/presentation.php:36
 msgid "Emoji panel"
 msgstr ""
 
-#: inc/admin/settings-page.php:200
+#: inc/admin/settings-page.php:202
 #: inc/settings-transfer/presentation.php:37
 msgid "Article claps"
 msgstr ""
 
-#: inc/admin/settings-page.php:201
+#: inc/admin/settings-page.php:203
 #: inc/settings-transfer/presentation.php:38
 msgid "Personal reading library"
 msgstr ""
 
-#: inc/admin/settings-page.php:202
+#: inc/admin/settings-page.php:204
 #: inc/settings-transfer/presentation.php:39
 msgid "Safe SVG uploads"
 msgstr ""
 
-#: inc/admin/settings-page.php:204
+#: inc/admin/settings-page.php:206
 msgid "Claps: up to 10 per article from each browser, with undo. Disabling claps preserves existing reactions."
 msgstr ""
 
-#: inc/admin/settings-page.php:205
+#: inc/admin/settings-page.php:207
 msgid "Readers can search bookmarks, filter their reading history, and export or import a private backup. Data stays in the browser without an account."
 msgstr ""
 
-#: inc/admin/settings-page.php:209
+#: inc/admin/settings-page.php:211
 msgid "Form protection"
 msgstr ""
 
-#: inc/admin/settings-page.php:209
+#: inc/admin/settings-page.php:211
 msgid "Built-in protection requires no keys. An external provider is enabled only after both keys are filled in."
 msgstr ""
 
-#: inc/admin/settings-page.php:211
+#: inc/admin/settings-page.php:213
 #: inc/settings-transfer/presentation.php:32
 msgid "CAPTCHA provider"
 msgstr ""
 
-#: inc/admin/settings-page.php:211
+#: inc/admin/settings-page.php:213
 msgid "Built-in protection"
 msgstr ""
 
-#: inc/admin/settings-page.php:212
+#: inc/admin/settings-page.php:214
 #: inc/settings-transfer/presentation.php:33
 msgid "Site key"
 msgstr ""
 
-#: inc/admin/settings-page.php:213
+#: inc/admin/settings-page.php:215
 #: inc/settings-transfer/presentation.php:34
 msgid "Secret key"
 msgstr ""
 
-#: inc/admin/settings-page.php:213
+#: inc/admin/settings-page.php:215
 msgid "Key saved"
 msgstr ""
 
-#: inc/admin/settings-page.php:213
+#: inc/admin/settings-page.php:215
 msgid "Enter key"
 msgstr ""
 
-#: inc/admin/settings-page.php:218
+#: inc/admin/settings-page.php:220
 msgid "Footer social networks"
 msgstr ""
 
-#: inc/admin/settings-page.php:222
+#: inc/admin/settings-page.php:224
 #: inc/social.php:17
 msgid "VK"
 msgstr ""
 
-#: inc/admin/settings-page.php:223
+#: inc/admin/settings-page.php:225
 #: inc/settings-transfer/presentation.php:41
 #: inc/social.php:18
 msgid "Odnoklassniki"
 msgstr ""
 
-#: inc/admin/settings-page.php:229
+#: inc/admin/settings-page.php:231
 msgid "Your edition"
 msgstr ""
 
-#: inc/admin/settings-page.php:229
+#: inc/admin/settings-page.php:231
 msgid "Pro publishing tools are active."
 msgstr ""
 
-#: inc/admin/settings-page.php:229
+#: inc/admin/settings-page.php:231
 msgid "The free theme is ready for your blog. Install the Pro extension to add publishing tools."
 msgstr ""
 
-#: inc/admin/settings-page.php:230
+#: inc/admin/settings-page.php:232
 msgid "Free: layouts, typography, dark mode, search, automatic covers, Gutenberg patterns, comments, form protection, claps, and a reading library."
 msgstr ""
 
-#: inc/admin/settings-page.php:231
+#: inc/admin/settings-page.php:233
 msgid "Pro: cover editor, link cards, advertising, short links, integrations, article series, social covers, and reader interests."
 msgstr ""
 
+#: inc/admin/settings-page.php:234
+msgid "Free also includes the design studio, reader mode, print layout and full configuration backup."
+msgstr ""
+
 #: inc/admin/settings-page.php:235
+msgid "Pro 1.3 adds reader accounts, library sync, consenting private messages, notifications, social sign-in and conditional design/advertising."
+msgstr ""
+
+#: inc/admin/settings-page.php:239
 msgid "All changes saved"
 msgstr ""
 
-#: inc/admin/settings-page.php:235
+#: inc/admin/settings-page.php:239
 msgid "You have unsaved changes"
 msgstr ""
 
-#: inc/admin/settings-page.php:236
+#: inc/admin/settings-page.php:240
 msgid "Save settings"
 msgstr ""
 
@@ -1297,8 +1733,241 @@ msgstr ""
 msgid "Dark"
 msgstr ""
 
+#: inc/design/bootstrap.php:23
+#: inc/design/labels.php:14
+msgid "Reader mode"
+msgstr ""
+
+#: inc/design/bootstrap.php:24
+#: inc/design/labels.php:14
+msgid "Print article"
+msgstr ""
+
+#: inc/design/fonts.php:26
+msgid "Upload a valid WOFF2 font no larger than 2 MB."
+msgstr ""
+
+#: inc/design/labels.php:6
+msgid "Page background"
+msgstr ""
+
+#: inc/design/labels.php:6
+msgid "Card background"
+msgstr ""
+
+#: inc/design/labels.php:6
+msgid "Soft background"
+msgstr ""
+
+#: inc/design/labels.php:7
+msgid "Main text"
+msgstr ""
+
+#: inc/design/labels.php:7
+msgid "Secondary text"
+msgstr ""
+
+#: inc/design/labels.php:7
+msgid "Borders"
+msgstr ""
+
+#: inc/design/labels.php:8
+msgid "Accent color"
+msgstr ""
+
+#: inc/design/labels.php:8
+msgid "Accent on hover"
+msgstr ""
+
+#: inc/design/labels.php:8
+msgid "Soft accent"
+msgstr ""
+
+#: inc/design/labels.php:9
+msgid "Errors"
+msgstr ""
+
+#: inc/design/labels.php:9
+msgid "Button text"
+msgstr ""
+
+#: inc/design/labels.php:9
+msgid "Keyboard focus"
+msgstr ""
+
+#: inc/design/labels.php:10
+msgid "Body font"
+msgstr ""
+
+#: inc/design/labels.php:10
+msgid "Heading font"
+msgstr ""
+
+#: inc/design/labels.php:10
+msgid "Navigation font"
+msgstr ""
+
+#: inc/design/labels.php:10
+msgid "Button font"
+msgstr ""
+
+#: inc/design/labels.php:10
+msgid "Metadata font"
+msgstr ""
+
+#: inc/design/labels.php:10
+msgid "Code font"
+msgstr ""
+
+#: inc/design/labels.php:11
+msgid "Interface text size"
+msgstr ""
+
+#: inc/design/labels.php:11
+msgid "Heading weight"
+msgstr ""
+
+#: inc/design/labels.php:11
+msgid "Heading scale, %"
+msgstr ""
+
+#: inc/design/labels.php:11
+msgid "Paragraph spacing"
+msgstr ""
+
+#: inc/design/labels.php:11
+msgid "Mobile article text size"
+msgstr ""
+
+#: inc/design/labels.php:11
+msgid "Letter spacing"
+msgstr ""
+
+#: inc/design/labels.php:12
+msgid "Site width"
+msgstr ""
+
+#: inc/design/labels.php:12
+msgid "Sidebar width"
+msgstr ""
+
+#: inc/design/labels.php:12
+msgid "Corner radius"
+msgstr ""
+
+#: inc/design/labels.php:12
+msgid "Section spacing"
+msgstr ""
+
+#: inc/design/labels.php:12
+msgid "Card spacing"
+msgstr ""
+
+#: inc/design/labels.php:12
+msgid "Footer columns"
+msgstr ""
+
+#: inc/design/labels.php:13
+msgid "Sticky header"
+msgstr ""
+
+#: inc/design/labels.php:13
+msgid "Header search"
+msgstr ""
+
+#: inc/design/labels.php:13
+msgid "Color scheme switch"
+msgstr ""
+
+#: inc/design/labels.php:13
+msgid "Logo tagline"
+msgstr ""
+
+#: inc/design/labels.php:13
+msgid "Article cover"
+msgstr ""
+
+#: inc/design/labels.php:13
+msgid "Author card"
+msgstr ""
+
+#: inc/design/labels.php:13
+#: single.php:63
+msgid "Adjacent articles"
+msgstr ""
+
+#: inc/design/labels.php:13
+msgid "Related articles"
+msgstr ""
+
+#: inc/design/labels.php:13
+#: inc/toc.php:90
+#: single.php:50
+msgid "Table of contents"
+msgstr ""
+
+#: inc/design/labels.php:13
+msgid "Sidebar articles"
+msgstr ""
+
+#: inc/design/labels.php:13
+msgid "Card excerpts"
+msgstr ""
+
+#: inc/design/labels.php:13
+msgid "Card metadata"
+msgstr ""
+
+#: inc/design/labels.php:13
+msgid "Footer social links"
+msgstr ""
+
+#: inc/design/labels.php:14
+msgid "Card image ratio"
+msgstr ""
+
+#: inc/design/labels.php:14
+msgid "Shadows"
+msgstr ""
+
+#: inc/design/labels.php:14
+msgid "No shadow"
+msgstr ""
+
+#: inc/design/labels.php:14
+msgid "Soft shadow"
+msgstr ""
+
+#: inc/design/labels.php:14
+msgid "Strong shadow"
+msgstr ""
+
+#: inc/design/labels.php:15
+msgid "Monospace"
+msgstr ""
+
+#: inc/design/labels.php:16
+msgid "Uploaded font"
+msgstr ""
+
+#: inc/design/labels.php:16
+msgid "Weight: menu"
+msgstr ""
+
+#: inc/design/labels.php:16
+msgid "Weight: button"
+msgstr ""
+
+#: inc/design/labels.php:16
+msgid "Weight: meta"
+msgstr ""
+
+#: inc/design/labels.php:16
+msgid "Weight: body"
+msgstr ""
+
 #: inc/library.php:16
-#: single.php:29
+#: single.php:30
 msgid "Save for later"
 msgstr ""
 
@@ -1628,11 +2297,6 @@ msgstr ""
 msgid "The file is not a valid SVG."
 msgstr ""
 
-#: inc/toc.php:90
-#: single.php:49
-msgid "Table of contents"
-msgstr ""
-
 #: inc/toc.php:91
 msgid "In this article"
 msgstr ""
@@ -1794,46 +2458,102 @@ msgstr ""
 msgid "Article actions"
 msgstr ""
 
-#: single.php:30
-#: single.php:32
+#: single.php:31
+#: single.php:33
 #: assets/js/interface.js:47
 msgid "Copy link"
 msgstr ""
 
-#: single.php:30
+#: single.php:31
 msgid "Link copied"
 msgstr ""
 
-#: single.php:34
+#: single.php:35
 msgid "Go to comments"
 msgstr ""
 
-#: single.php:58
+#: single.php:59
 msgid "IO Blog editorial team"
 msgstr ""
 
-#: single.php:58
+#: single.php:59
 msgid "We write about technology that makes everyday life easier."
 msgstr ""
 
-#: single.php:62
-msgid "Adjacent articles"
-msgstr ""
-
-#: single.php:64
+#: single.php:65
 msgid "Previous article"
 msgstr ""
 
-#: single.php:65
+#: single.php:66
 msgid "Next article"
 msgstr ""
 
-#: single.php:75
+#: single.php:76
 msgid "New articles"
 msgstr ""
 
-#: single.php:86
+#: single.php:87
 msgid "Read next"
+msgstr ""
+
+#: template-parts/admin/design.php:5
+msgid "Light palette"
+msgstr ""
+
+#: template-parts/admin/design.php:5
+msgid "Dark palette"
+msgstr ""
+
+#: template-parts/admin/design.php:5
+msgid "Fonts and rhythm"
+msgstr ""
+
+#: template-parts/admin/design.php:5
+msgid "Sizes and spacing"
+msgstr ""
+
+#: template-parts/admin/design.php:5
+msgid "Site regions"
+msgstr ""
+
+#: template-parts/admin/design.php:8
+msgid "Preview your changes before publishing."
+msgstr ""
+
+#: template-parts/admin/design.php:9
+msgid "Upload your own font"
+msgstr ""
+
+#: template-parts/admin/design.php:9
+msgid "Upload font"
+msgstr ""
+
+#: template-parts/admin/design.php:10
+msgid "Find a setting"
+msgstr ""
+
+#: template-parts/admin/design.php:10
+msgid "Preview"
+msgstr ""
+
+#: template-parts/admin/design.php:10
+msgid "Publish design"
+msgstr ""
+
+#: template-parts/admin/design.php:16
+msgid "No uploaded font"
+msgstr ""
+
+#: template-parts/admin/design.php:24
+msgid "Reset"
+msgstr ""
+
+#: template-parts/admin/design.php:27
+msgid "Tablet"
+msgstr ""
+
+#: template-parts/admin/design.php:27
+msgid "Site preview"
 msgstr ""
 
 #: template-parts/admin/settings-transfer.php:7

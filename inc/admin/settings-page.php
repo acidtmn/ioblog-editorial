@@ -134,6 +134,8 @@ function ioblog_render_settings_page() {
 
 		<nav class="io-admin-links">
 			<a href="<?php echo esc_url( admin_url( 'admin.php?page=ioblog-settings-transfer' ) ); ?>"><?php esc_html_e( 'Export and import', 'ioblog-editorial' ); ?></a>
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=ioblog-design' ) ); ?>"><?php esc_html_e( 'Design studio', 'ioblog-editorial' ); ?></a>
+			<?php if ( class_exists( 'Ioblog_Community_Settings' ) ) { ?><a href="<?php echo esc_url( admin_url( 'admin.php?page=ioblog-community' ) ); ?>"><?php esc_html_e( 'Reader accounts', 'ioblog-editorial' ); ?></a><?php } ?>
 			<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>"><?php esc_html_e( 'Appearance', 'ioblog-editorial' ); ?></a>
 			<a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>"><?php esc_html_e( 'Menus', 'ioblog-editorial' ); ?></a>
 			<a href="<?php echo esc_url( admin_url( 'edit-tags.php?taxonomy=category' ) ); ?>"><?php esc_html_e( 'Categories', 'ioblog-editorial' ); ?></a>
@@ -229,6 +231,8 @@ function ioblog_render_settings_page() {
 				<div class="io-admin-card__heading"><span><?php echo ioblog_has_pro() ? 'PRO' : 'FREE'; ?></span><div><h2><?php esc_html_e( 'Your edition', 'ioblog-editorial' ); ?></h2><p><?php echo esc_html( ioblog_has_pro() ? __( 'Pro publishing tools are active.', 'ioblog-editorial' ) : __( 'The free theme is ready for your blog. Install the Pro extension to add publishing tools.', 'ioblog-editorial' ) ); ?></p></div></div>
 				<p><?php esc_html_e( 'Free: layouts, typography, dark mode, search, automatic covers, Gutenberg patterns, comments, form protection, claps, and a reading library.', 'ioblog-editorial' ); ?></p>
 				<p><?php esc_html_e( 'Pro: cover editor, link cards, advertising, short links, integrations, article series, social covers, and reader interests.', 'ioblog-editorial' ); ?></p>
+				<p><?php esc_html_e( 'Free also includes the design studio, reader mode, print layout and full configuration backup.', 'ioblog-editorial' ); ?></p>
+				<p><?php esc_html_e( 'Pro 1.3 adds reader accounts, library sync, consenting private messages, notifications, social sign-in and conditional design/advertising.', 'ioblog-editorial' ); ?></p>
 			</section>
 			</div>
 			<div class="io-admin-savebar">

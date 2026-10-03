@@ -62,6 +62,7 @@
         const error = store.remove(item.id);
         if (error) { report(error); return; }
       });
+      if (window.IOBlogCoverPreview) row.append(IOBlogCoverPreview(item.id));
       row.append(body, remove); list.append(row);
     }
     // Перерисовка при сохранении прогресса не выбрасывает пользователя из списка при работе клавиатурой.

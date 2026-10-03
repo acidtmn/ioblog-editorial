@@ -1,0 +1,6 @@
+/* Общие превью нужны и браузерной библиотеке, и кабинету независимо от переключателя Free-библиотеки. */
+.io-library__list li{display:grid!important;grid-template-columns:128px minmax(0,1fr) auto!important;align-items:center}
+.io-library-cover{width:128px;height:76px;overflow:hidden;border-radius:9px;background:var(--io-surface-soft);container-type:inline-size}
+.io-library-cover>img{width:100%;height:100%;object-fit:cover}.io-library-cover>.io-cover{width:100%;height:100%;border-radius:0}
+.io-account-item>.io-library-cover{float:left;margin:0 18px 12px 0}
+@media(max-width:500px){.io-library__list li{grid-template-columns:90px minmax(0,1fr) auto!important}.io-library-cover{width:90px;height:60px}}

@@ -4,11 +4,11 @@
 
 A lightweight editorial WordPress theme by **Kirill Aleksandrov** for personal blogs and technology publications.
 
-**Free 1.8.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
+**Free 1.9.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
 
 ## Download and Install
 
-Download the installable `ioblog-editorial-1.8.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.8.0), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
+Download the installable `ioblog-editorial-1.9.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.9.0), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
 
 In WordPress open **Appearance → Themes → Add New → Upload Theme**, install the ZIP and activate it. Then open **IO Blog** in the main dashboard menu. Configure the homepage, reading layout, search and comments; assign Primary and Footer menus. Set your logo and Site Icon in **Appearance → Customize → Site Identity**.
 
@@ -16,6 +16,8 @@ In WordPress open **Appearance → Themes → Add New → Upload Theme**, instal
 
 - Editorial homepage with a featured post, editor picks and a recent-post grid.
 - Reading presets, adjustable typography and three article layouts.
+- A 70-setting design studio: separate palettes, six font roles, heading sizes/weights, local WOFF2, geometry and region controls.
+- Private responsive preview, explicit publication, reader mode and a printable layout.
 - Light/dark modes and locally hosted DM Sans fonts.
 - Live search and a responsive table of contents.
 - Automatic lightweight HTML/CSS covers for posts without featured images.
@@ -23,6 +25,7 @@ In WordPress open **Appearance → Themes → Add New → Upload Theme**, instal
 - Native comments with optional images and an emoji picker.
 - Article claps: up to ten per browser, personal undo and supporter counters.
 - A browser-local library with bookmarks, searchable reading history, status filters and resume-reading controls.
+- Actual photo/CSS cover previews in bookmarks and history, including Clearfy REST compatibility.
 - Private JSON export/import for manual library transfer between devices on the same site.
 - Full settings export/import, including saved Pro advertising snippets, analytics, CAPTCHA keys, Customizer values and custom CSS.
 - Built-in anti-spam and optional Yandex SmartCaptcha / Google reCAPTCHA.
@@ -33,7 +36,11 @@ External integrations are opt-in. Free requires no license key and does not cont
 
 Library exports contain reading history and should be kept private. Imports are limited to 256 KB, validate the whole file, preserve existing bookmarks and require the same scheme, hostname and port. Import does not send history or bookmark events to Pro statistics. See the privacy guide before deploying.
 
-## New in 1.8.0
+## New in 1.9.0
+
+**IO Blog → Design studio** includes searchable settings, per-field reset, a contrast indicator and desktop/tablet/mobile previews. Preview drafts are restricted to their administrator and do not change the public site. WOFF2 uploads are administrator-only and limited to 2 MB. Design, conditional ads and Pro account configuration are included in complete backup. Previous release archives remain unchanged.
+
+## Complete Settings Backup
 
 **IO Blog → Export and import** downloads every saved theme/Pro setting in one JSON file, including advertising code, enabled states, inline position, integrations and CAPTCHA keys. Import accepts up to 1 MB, previews changes, supports section selection and explicit confirmation, masks secrets in preview and rejects stale confirmations. References to content, menus and images are matched to existing objects rather than blindly assigning foreign IDs. Inactive Pro settings remain available without enabling paid features.
 
@@ -41,7 +48,9 @@ Library exports contain reading history and should be kept private. Imports are 
 
 ## Optional Pro Extension
 
-This is **one theme**, not separate Free and Pro themes. The separately distributed **Pro 1.2.1** plugin adds a visual cover editor, link cards, advertising, short links, integrations, ordered article series, save-time social PNG covers and an opt-in reader-interest dashboard in the same IO Blog dashboard. Pro requires Free 1.6.0 or later and works with Free 1.8.0. Social PNG text uses the site language independently of an editor's profile language.
+This is **one theme**, not separate Free and Pro themes. The separately distributed **Pro 1.3.0** plugin adds a visual cover editor, link cards, conditional advertising, short links, integrations, series, social PNG covers and opt-in reader interests. Publishing tools require Free 1.9.0 or later.
+
+New independently switchable Pro modules include reader accounts, collections, opt-in library sync, category feed, own comments, confirmed email, sessions, notifications and consenting text messages with limits, blocking and reports. VK, Yandex, Telegram, Google and GitHub sign-in requires your registered applications. No Odnoklassniki or Mail.ru login is included. Digests require configured WordPress mail and cron. The account shortcode works independently of the active theme. Account modules are disabled by default.
 
 **Pro code, keys, customer data and site configuration are not included in this public repository or its releases.** Official Pro downloads and updates are managed separately by the author's store. Pro is installed through Plugins, not Themes.
 

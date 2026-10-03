@@ -26,6 +26,7 @@ $ioblog_modules = array(
 	'comments',
 	'claps/bootstrap',
 	'library',
+	'library-covers',
 	'social',
 	'svg',
 	'services/class-css-cover-generator',
@@ -34,6 +35,7 @@ $ioblog_modules = array(
 	'admin/site-language',
 	'admin/settings-page',
 	'settings-transfer/bootstrap',
+	'design/bootstrap',
 );
 
 foreach ( $ioblog_modules as $ioblog_module ) {

@@ -2,7 +2,7 @@
 /** Читаемые подписи и скрытие конфиденциальных значений только для предварительного просмотра. */
 final class Ioblog_Settings_Transfer_Presentation {
 	public static function summary( $key, $value ) {
-		if ( preg_match( '/(key|secret|token|password|credential|code|redirects|custom_css)/i', $key ) ) {
+		if ( preg_match( '/(key|secret|token|password|credential|code|redirects|custom_css|community_config)/i', $key ) ) {
 			return empty( $value ) ? __( 'Empty', 'ioblog-editorial' ) : __( 'Protected content included', 'ioblog-editorial' );
 		}
 		$value = is_scalar( $value ) ? (string) $value : wp_json_encode( $value );

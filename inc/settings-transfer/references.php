@@ -4,6 +4,7 @@ final class Ioblog_Settings_Transfer_References {
 	public static function collect( $snapshot ) {
 		$ids = array( $snapshot['settings']['home_featured_post'] ?? 0, $snapshot['settings']['home_about_page'] ?? 0, $snapshot['mods']['custom_logo'] ?? 0, $snapshot['site_icon'] ?? 0 );
 		$ids = array_merge( $ids, explode( ',', $snapshot['settings']['home_editorial_posts'] ?? '' ) );
+		$ids[] = $snapshot['settings']['design_config']['font_attachment'] ?? 0;
 		$result = array( 'posts' => array(), 'menus' => array() );
 		foreach ( array_unique( array_map( 'absint', $ids ) ) as $id ) {
 			$post = $id ? get_post( $id ) : null;
@@ -16,14 +17,14 @@ final class Ioblog_Settings_Transfer_References {
 		return $result;
 	}
 
-	private static function post( $id, $type, $data, $same_site ) {
+	private static function post( $id, $type, $data, $same_site, $mime = null ) {
 		if ( 0 === $id ) { return 0; }
 		$identity = $data['references']['posts'][ $id ] ?? null;
 		if ( ! is_array( $identity ) || ! is_string( $identity['slug'] ?? null ) || $type !== ( $identity['type'] ?? null ) ) { return null; }
 		$post = $same_site ? get_post( $id ) : get_page_by_path( $identity['slug'], OBJECT, $type );
 		// Проверяем не только существование, но и тип/slug: одинаковые ID могут относиться к разным статьям.
 		if ( ! $post || $post->post_type !== $type || $post->post_name !== $identity['slug'] || ( 'attachment' !== $type && ( 'publish' !== $post->post_status || $post->post_password ) ) ) { return null; }
-		if ( 'attachment' === $type && ! wp_attachment_is_image( $post->ID ) ) { return null; }
+		if ( 'attachment' === $type && ( null === $mime ? ! wp_attachment_is_image( $post->ID ) : get_post_mime_type( $post->ID ) !== $mime ) ) { return null; }
 		return $post->ID;
 	}
 
@@ -31,6 +32,12 @@ final class Ioblog_Settings_Transfer_References {
 	public static function resolve( $data ) {
 		$same = untrailingslashit( $data['site_url'] ) === untrailingslashit( home_url( '/' ) );
 		$skipped = array();
+		if ( ! empty( $data['settings']['design_config']['font_attachment'] ) ) {
+			$font = self::post( $data['settings']['design_config']['font_attachment'], 'attachment', $data, $same, 'font/woff2' );
+			// Без перенесённого файла сохраняем нынешний дизайн целиком: чужой ID не должен стать шрифтом.
+			if ( null === $font ) { unset( $data['settings']['design_config'] ); $skipped[] = 'design_config.font_attachment'; }
+			else { $data['settings']['design_config']['font_attachment'] = $font; }
+		}
 		foreach ( array( 'home_featured_post' => 'post', 'home_about_page' => 'page' ) as $key => $type ) {
 			if ( ! isset( $data['settings'][ $key ] ) ) { continue; }
 			$id = self::post( $data['settings'][ $key ], $type, $data, $same );
