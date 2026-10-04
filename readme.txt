@@ -3,7 +3,7 @@ Contributors: kirillaleksandrov
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.12.0
+Stable tag: 1.12.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, news, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -12,7 +12,7 @@ A fast, responsive editorial theme for technology blogs with dark mode, live sea
 
 == Description ==
 
-Version 1.12.0 aligns clap totals and read arrows in card footers and adds a visible Write header entry when publishing is enabled. Pro 1.7.0 adds actual locally bundled Editor.js, Gutenberg serialization, secure image uploads, provider video, tables, nested checklists, member-gated text, author subscriptions and a complete account navigation. Site owners still create their own legal documents.
+Version 1.12.1 replaces the detailed outline clap icon with a clear native clapping-hands emoji shared by cards and article reactions. No remote emoji images or fonts are required. Version 1.12.0 aligned card footers and added the Write entry; the paired Pro 1.7.0 editor and account features remain unchanged. Site owners still create their own legal documents.
 
 IO Blog Editorial is a responsive classic WordPress theme designed for readable technology publications, personal blogs, and online magazines. It combines a distinctive editorial homepage with a focused single-post layout, a sticky table of contents, accessible dark mode, and lightweight CSS-generated covers for posts without featured images.
 
@@ -147,6 +147,9 @@ Yes. Upload a featured image in the post editor. It automatically replaces the g
 Use the bundled POT file with Poedit, Loco Translate, or the WordPress i18n tools. Save compiled translations with the `ioblog-editorial` text domain.
 
 == Changelog ==
+
+= 1.12.1 =
+Replaced the overlapping outline hand paths with one native color clapping-hands emoji in cards and article reactions. Shared the icon template, preserved accessible action names and counters, and excluded the icon from WordPress CDN emoji replacement. Retained light/dark styling, reaction animation and reduced-motion support. Pro 1.7.0 remains unchanged.
 
 = 1.12.0 =
 Moved clap totals to the card footer alongside the read arrow, preserving accessible labels and stable title spacing. Styled the explicit Write entry for the optional author newsroom. Bundled updated Russian translations for the paired Pro 1.7.0 Editor.js tools, account, subscriptions and native WordPress blocks. Updated setup documentation. Old archives remain immutable.

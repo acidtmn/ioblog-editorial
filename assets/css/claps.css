@@ -7,11 +7,9 @@
 .io-claps__button { position: relative; display: grid; place-items: center; width: 86px; height: 86px; padding: 18px; border: 1px solid var(--io-accent); border-radius: 50%; color: var(--io-accent); background: var(--io-surface); cursor: pointer; touch-action: manipulation; transition: background .18s, box-shadow .18s; }
 .io-claps__button:hover, .io-claps__button.has-claps { background: var(--io-accent-soft); box-shadow: 0 0 0 6px color-mix(in srgb, var(--io-accent) 9%, transparent); }
 .io-claps__button:disabled { cursor: default; opacity: .7; }
-.io-claps__icon { width: 48px; height: 48px; stroke-width: 1.8; overflow: visible; }
-.io-claps__hand--back { fill: var(--io-accent-soft); }
-.io-claps__hand--front { fill: var(--io-surface); }
+.io-claps__button .io-clap-icon { font-size: 46px; }
 .io-claps__burst { position: absolute; top: -5px; right: -8px; padding: 3px 9px; border-radius: 999px; color: var(--io-surface); background: var(--io-accent); font-size: 13px; font-weight: 800; opacity: 0; pointer-events: none; }
-.io-claps__button.is-clapping .io-claps__icon { animation: io-clap .3s ease-out; }
+.io-claps__button.is-clapping .io-clap-icon { animation: io-clap .3s ease-out; }
 .io-claps__button.is-clapping .io-claps__burst { animation: io-clap-burst .6s ease-out; }
 .io-claps__mine { min-height: 18px; color: var(--io-muted); font-size: 11px; font-variant-numeric: tabular-nums; }
 .io-claps__undo { min-height: 32px; padding: 3px 5px; border: 0; background: none; color: var(--io-muted); font-size: 11px; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }

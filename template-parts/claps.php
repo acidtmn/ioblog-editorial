@@ -11,7 +11,7 @@ if ( ! ioblog_get_setting( 'claps_enabled' ) || 'publish' !== get_post_status() 
 	</div>
 	<div class="io-claps__interaction">
 		<button class="io-claps__button" type="button" disabled aria-label="<?php esc_attr_e( 'Clap for this article', 'ioblog-editorial' ); ?>" aria-describedby="io-claps-mine">
-			<svg class="io-claps__icon" viewBox="0 0 48 48" aria-hidden="true"><g class="io-claps__hand io-claps__hand--back"><path d="m24 31-9-12a2 2 0 0 1 3-2l6 7-7-13a2 2 0 0 1 4-2l7 13-4-15a2 2 0 0 1 4-1l4 15 1-12a2 2 0 0 1 4 0l-1 17-2 8z"/></g><g class="io-claps__hand io-claps__hand--front"><path d="m13 39-7-13a2 2 0 0 1 3-2l5 7-2-18a2 2 0 0 1 4 0l2 13 1-17a2 2 0 0 1 4 0l-1 17 4-14a2 2 0 0 1 4 1l-3 16 5-6a3 3 0 0 1 4 4l-8 13a9 9 0 0 1-15-1z"/></g><path class="io-claps__rays" d="m37 4 2-2m1 10 4-1M9 6 7 3"/></svg>
+			<?php get_template_part( 'template-parts/clap-icon' ); ?>
 			<span class="io-claps__burst" aria-hidden="true">+1</span>
 		</button>
 		<span id="io-claps-mine" class="io-claps__mine"></span>

@@ -4,15 +4,17 @@
 
 A lightweight editorial WordPress theme by **Kirill Aleksandrov** for personal blogs and technology publications.
 
-**Free 1.12.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
+**Free 1.12.1** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
 
 ## Download and Install
 
-Download the installable `ioblog-editorial-1.12.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.12.0), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
+Download the installable `ioblog-editorial-1.12.1.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.12.1), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
 
 In WordPress open **Appearance → Themes → Add New → Upload Theme**, install the ZIP and activate it. Then open **IO Blog** in the main dashboard menu. Configure the homepage, reading layout, search and comments; assign Primary and Footer menus. Set your logo and Site Icon in **Appearance → Customize → Site Identity**.
 
 ## Included in Free
+
+Version 1.12.1 replaces the intricate outline clap icon with a clear native color clapping-hands emoji in cards and article reactions. One shared component preserves accessible names, counters, animation and reduced-motion support. No remote emoji images or fonts are required; artwork can vary slightly between devices. Pro remains 1.7.0 with no code or license-contract changes.
 
 In 1.12.0 clap totals are aligned in the card footer beside the read arrow. A visible Write button appears when the optional newsroom is enabled. Russian translations now cover the paired Pro 1.7.0 editor, subscriptions and native blocks.
 
