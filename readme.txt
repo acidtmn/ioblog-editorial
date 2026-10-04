@@ -3,7 +3,7 @@ Contributors: kirillaleksandrov
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.11.0
+Stable tag: 1.12.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, news, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -12,7 +12,7 @@ A fast, responsive editorial theme for technology blogs with dark mode, live sea
 
 == Description ==
 
-Version 1.11.0 displays clap totals on article cards, fixes reader/print tooltips and shows real author profile data instead of a generic editorial biography. Pro 1.6.0 adds an optional frontend Gutenberg author newsroom, drafts, editorial review and reputation. Site owners still create their own legal documents.
+Version 1.12.0 aligns clap totals and read arrows in card footers and adds a visible Write header entry when publishing is enabled. Pro 1.7.0 adds actual locally bundled Editor.js, Gutenberg serialization, secure image uploads, provider video, tables, nested checklists, member-gated text, author subscriptions and a complete account navigation. Site owners still create their own legal documents.
 
 IO Blog Editorial is a responsive classic WordPress theme designed for readable technology publications, personal blogs, and online magazines. It combines a distinctive editorial homepage with a focused single-post layout, a sticky table of contents, accessible dark mode, and lightweight CSS-generated covers for posts without featured images.
 
@@ -147,6 +147,9 @@ Yes. Upload a featured image in the post editor. It automatically replaces the g
 Use the bundled POT file with Poedit, Loco Translate, or the WordPress i18n tools. Save compiled translations with the `ioblog-editorial` text domain.
 
 == Changelog ==
+
+= 1.12.0 =
+Moved clap totals to the card footer alongside the read arrow, preserving accessible labels and stable title spacing. Styled the explicit Write entry for the optional author newsroom. Bundled updated Russian translations for the paired Pro 1.7.0 Editor.js tools, account, subscriptions and native WordPress blocks. Updated setup documentation. Old archives remain immutable.
 
 = 1.11.0 =
 Added accessible clap totals linking to article reactions on homepage/archive/related cards. Fixed reader-mode and print tooltips. Removed the misleading generic author biography; real public profile data and profile links are shown when available. Added author-newsroom hooks and full settings-transfer support for writing configuration. Fixed SmartCaptcha hostname comparison for nonstandard ports. Updated Russian translations and documentation. Paired with Pro 1.6.0.

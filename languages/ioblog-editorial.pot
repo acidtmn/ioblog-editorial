@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: IO Blog Editorial 1.11.0\n"
+"Project-Id-Version: IO Blog Editorial 1.12.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ioblog-editorial\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-04T03:00:43+00:00\n"
+"POT-Creation-Date: 2026-10-04T12:08:34+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ioblog-editorial\n"
@@ -122,6 +122,8 @@ msgid "Kicker"
 msgstr ""
 
 #: inc/admin/cover-editor.php:42
+#: inc/writing/editor/assets.php:21
+#: assets/js/editor-native.js:4
 msgid "Caption"
 msgstr ""
 
@@ -130,7 +132,7 @@ msgid "Automatic covers appear when no featured image is set. A manually selecte
 msgstr ""
 
 #: inc/admin/settings-sections.php:11
-#: template-parts/community-admin.php:14
+#: template-parts/community-admin.php:15
 msgid "Enabled"
 msgstr ""
 
@@ -323,10 +325,10 @@ msgstr ""
 
 #: inc/auth/controller.php:12
 #: inc/auth/view.php:11
-#: inc/community/controller.php:36
-#: inc/community/view.php:20
-#: inc/writing/errors.php:8
-#: inc/writing/view.php:13
+#: inc/community/controller.php:38
+#: inc/community/view.php:21
+#: inc/writing/editor/assets.php:16
+#: inc/writing/errors.php:11
 #: inc/design/admin.php:11
 msgid "Unable to save. Please retry."
 msgstr ""
@@ -360,7 +362,7 @@ msgid "Unable to sign in. Check your email and password."
 msgstr ""
 
 #: inc/auth/view.php:8
-#: template-parts/account.php:11
+#: template-parts/account.php:12
 #: template-parts/auth-modal.php:8
 msgid "Welcome back"
 msgstr ""
@@ -380,7 +382,8 @@ msgstr ""
 
 #: inc/auth/view.php:10
 #: inc/oauth/view.php:15
-#: template-parts/account.php:11
+#: inc/writing/editor/blocks.php:20
+#: template-parts/account.php:12
 #: template-parts/auth-modal.php:26
 #: template-parts/auth-modal.php:28
 msgid "Sign in"
@@ -414,25 +417,27 @@ msgstr ""
 
 #. translators: %s: destination host name.
 #: inc/blocks/link-card.php:65
+#: inc/writing/editor/blocks.php:24
 msgid "Open link"
 msgstr ""
 
-#: inc/community/account.php:52
+#: inc/community/account.php:53
 msgid "Current password is incorrect."
 msgstr ""
 
-#: inc/community/account.php:63
+#: inc/community/account.php:64
 msgid "Set a password before removing your last sign-in method."
 msgstr ""
 
 #: inc/community/admin.php:5
 #: template-parts/community-admin.php:8
+#: template-parts/writing-admin.php:9
 #: inc/admin/settings-page.php:139
 msgid "Reader accounts"
 msgstr ""
 
 #: inc/community/admin.php:11
-#: inc/community/controller.php:35
+#: inc/community/controller.php:37
 #: inc/mail/admin.php:10
 #: inc/writing/admin.php:11
 #: inc/design/admin.php:22
@@ -459,7 +464,7 @@ msgid "Your library changed on another device. Reload and merge again."
 msgstr ""
 
 #: inc/community/messages.php:11
-#: inc/community/view.php:25
+#: inc/community/view.php:26
 msgid "This conversation is unavailable."
 msgstr ""
 
@@ -467,7 +472,7 @@ msgstr ""
 msgid "Message limit reached. Please try later."
 msgstr ""
 
-#: inc/community/notifications.php:42
+#: inc/community/notifications.php:43
 msgid "Your reading updates"
 msgstr ""
 
@@ -505,29 +510,35 @@ msgstr ""
 msgid "Avatar"
 msgstr ""
 
-#: inc/community/privacy.php:37
+#: inc/community/privacy.php:35
+#: template-parts/account.php:4
+msgid "Subscriptions"
+msgstr ""
+
+#: inc/community/privacy.php:38
 msgid "Social sign-in methods"
 msgstr ""
 
-#: inc/community/privacy.php:42
-#: template-parts/account.php:9
+#: inc/community/privacy.php:43
+#: template-parts/account.php:14
 #: template-parts/writing.php:6
 msgid "My articles and drafts"
 msgstr ""
 
-#: inc/community/privacy.php:42
+#: inc/community/privacy.php:43
 #: inc/interests/view-template.php:9
 msgid "Article"
 msgstr ""
 
-#: inc/community/privacy.php:47
+#: inc/community/privacy.php:48
+#: template-parts/community-admin.php:9
 #: inc/admin/settings-page.php:138
 #: inc/legal/admin.php:4
 #: template-parts/legal-admin.php:7
 msgid "Privacy and consent"
 msgstr ""
 
-#: inc/community/privacy.php:47
+#: inc/community/privacy.php:48
 msgid "Consent record"
 msgstr ""
 
@@ -544,7 +555,16 @@ msgid "Confirmation email sent. Open the link while signed in."
 msgstr ""
 
 #: inc/community/view.php:20
-#: template-parts/community-admin.php:9
+#: template-parts/reader-profile.php:12
+msgid "Follow author"
+msgstr ""
+
+#: inc/community/view.php:20
+msgid "Unfollow"
+msgstr ""
+
+#: inc/community/view.php:21
+#: template-parts/community-admin.php:10
 #: template-parts/mail-admin.php:7
 #: template-parts/writing-admin.php:8
 #: inc/design/admin.php:11
@@ -552,77 +572,77 @@ msgstr ""
 msgid "Settings saved."
 msgstr ""
 
-#: inc/community/view.php:20
-#: template-parts/writing-admin.php:17
+#: inc/community/view.php:21
+#: template-parts/writing-admin.php:18
 msgid "Nothing here yet."
 msgstr ""
 
-#: inc/community/view.php:20
+#: inc/community/view.php:21
 #: template-parts/profile-editor.php:22
 msgid "Save"
 msgstr ""
 
-#: inc/community/view.php:20
+#: inc/community/view.php:21
 msgid "Collection"
 msgstr ""
 
-#: inc/community/view.php:20
+#: inc/community/view.php:21
 msgid "Remove"
 msgstr ""
 
-#: inc/community/view.php:20
+#: inc/community/view.php:21
 #: inc/series/view.php:19
 msgid "Read"
 msgstr ""
 
-#: inc/community/view.php:20
-#: template-parts/account.php:25
+#: inc/community/view.php:21
+#: template-parts/account.php:28
 msgid "Merge browser library"
 msgstr ""
 
-#: inc/community/view.php:20
-#: template-parts/account.php:25
+#: inc/community/view.php:21
+#: template-parts/account.php:28
 msgid "Sync with this browser"
 msgstr ""
 
-#: inc/community/view.php:20
+#: inc/community/view.php:21
 msgid "Report"
 msgstr ""
 
-#: inc/community/view.php:20
+#: inc/community/view.php:21
 #: template-parts/chat.php:8
 msgid "Block"
 msgstr ""
 
-#: inc/community/view.php:20
+#: inc/community/view.php:21
 msgid "Unblock"
 msgstr ""
 
-#: inc/community/view.php:20
+#: inc/community/view.php:21
 #: inc/oauth/view.php:15
 msgid "Link account"
 msgstr ""
 
-#: inc/community/view.php:20
+#: inc/community/view.php:21
 msgid "Remove sign-in method"
 msgstr ""
 
-#: inc/community/view.php:20
+#: inc/community/view.php:21
 #: inc/writing/view.php:6
-#: template-parts/account.php:11
+#: template-parts/account.php:12
 msgid "Sign in to use your personal account."
 msgstr ""
 
-#: inc/community/view.php:25
+#: inc/community/view.php:26
 msgid "No readers found. Only people who allow messages appear here."
 msgstr ""
 
-#: inc/community/view.php:25
+#: inc/community/view.php:26
 msgid "Start a conversation"
 msgstr ""
 
-#: inc/community/view.php:39
-#: template-parts/account.php:7
+#: inc/community/view.php:40
+#: template-parts/account.php:8
 #: template-parts/writing.php:6
 msgid "My account"
 msgstr ""
@@ -846,6 +866,7 @@ msgid "Next chapter"
 msgstr ""
 
 #: inc/services/class-link-preview-service.php:55
+#: inc/writing/editor/assets.php:21
 msgid "Enter a complete address beginning with http:// or https://."
 msgstr ""
 
@@ -866,9 +887,293 @@ msgid "No title was found on the page."
 msgstr ""
 
 #: inc/writing/admin.php:5
+#: template-parts/community-admin.php:9
 #: template-parts/writing-admin.php:7
+#: template-parts/writing.php:5
 #: template-parts/writing.php:6
 msgid "Author newsroom"
+msgstr ""
+
+#: inc/writing/editor/assets.php:16
+msgid "No articles yet. Start your first draft."
+msgstr ""
+
+#: inc/writing/editor/assets.php:16
+msgid "Draft saved."
+msgstr ""
+
+#: inc/writing/editor/assets.php:16
+msgid "You have unsaved changes."
+msgstr ""
+
+#: inc/writing/editor/assets.php:16
+#: template-parts/writing.php:8
+msgid "Draft"
+msgstr ""
+
+#: inc/writing/editor/assets.php:16
+#: template-parts/writing.php:8
+msgid "In review"
+msgstr ""
+
+#: inc/writing/editor/assets.php:16
+#: template-parts/reader-profile.php:14
+#: template-parts/writing.php:8
+msgid "Published"
+msgstr ""
+
+#: inc/writing/editor/assets.php:16
+msgid "Moved to trash"
+msgstr ""
+
+#: inc/writing/editor/assets.php:16
+#: template-parts/reader-profile.php:13
+msgid "Author reputation"
+msgstr ""
+
+#: inc/writing/editor/assets.php:17
+msgid "Start writing. Use + to add a block."
+msgstr ""
+
+#: inc/writing/editor/assets.php:17
+#: inc/writing/errors.php:7
+msgid "This article contains blocks edited in WordPress that cannot be imported without loss. Open it in WordPress instead."
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+msgid "Text"
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+msgid "Heading"
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+msgid "List"
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+msgid "Quote"
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+msgid "Code"
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+msgid "Image"
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+msgid "Table"
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+msgid "Delimiter"
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+#: assets/js/editor-native.js:4
+msgid "Video"
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+#: assets/js/editor-link-card.js:83
+#: assets/js/editor-link-card.js:120
+msgid "Link card"
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+#: assets/js/editor-native.js:5
+msgid "Members only"
+msgstr ""
+
+#: inc/writing/editor/assets.php:19
+msgid "Bold"
+msgstr ""
+
+#: inc/writing/editor/assets.php:19
+msgid "Italic"
+msgstr ""
+
+#: inc/writing/editor/assets.php:19
+msgid "Link"
+msgstr ""
+
+#: inc/writing/editor/assets.php:19
+msgid "Inline code"
+msgstr ""
+
+#: inc/writing/editor/assets.php:19
+#: inc/writing/editor/assets.php:23
+msgid "Ordered list"
+msgstr ""
+
+#: inc/writing/editor/assets.php:19
+#: inc/writing/editor/assets.php:23
+msgid "Unordered list"
+msgstr ""
+
+#: inc/writing/editor/assets.php:19
+#: assets/js/editor-native.js:6
+msgid "Checklist"
+msgstr ""
+
+#: inc/writing/editor/assets.php:20
+#: template-parts/writing.php:13
+msgid "Add a block"
+msgstr ""
+
+#: inc/writing/editor/assets.php:20
+msgid "Find a block"
+msgstr ""
+
+#: inc/writing/editor/assets.php:20
+msgid "Nothing found."
+msgstr ""
+
+#: inc/writing/editor/assets.php:20
+msgid "Delete"
+msgstr ""
+
+#: inc/writing/editor/assets.php:20
+msgid "Click to delete"
+msgstr ""
+
+#: inc/writing/editor/assets.php:20
+msgid "Move up"
+msgstr ""
+
+#: inc/writing/editor/assets.php:20
+msgid "Move down"
+msgstr ""
+
+#: inc/writing/editor/assets.php:20
+msgid "Convert to"
+msgstr ""
+
+#: inc/writing/editor/assets.php:20
+msgid "Block settings"
+msgstr ""
+
+#: inc/writing/editor/assets.php:20
+msgid "or drag to move"
+msgstr ""
+
+#: inc/writing/editor/assets.php:21
+msgid "Upload an image"
+msgstr ""
+
+#: inc/writing/editor/assets.php:21
+msgid "Add a link"
+msgstr ""
+
+#: inc/writing/editor/assets.php:21
+msgid "Apply"
+msgstr ""
+
+#: inc/writing/editor/assets.php:22
+msgid "With headings"
+msgstr ""
+
+#: inc/writing/editor/assets.php:22
+msgid "Without headings"
+msgstr ""
+
+#: inc/writing/editor/assets.php:22
+msgid "Add row above"
+msgstr ""
+
+#: inc/writing/editor/assets.php:22
+msgid "Add row below"
+msgstr ""
+
+#: inc/writing/editor/assets.php:22
+msgid "Delete row"
+msgstr ""
+
+#: inc/writing/editor/assets.php:22
+msgid "Add column to left"
+msgstr ""
+
+#: inc/writing/editor/assets.php:22
+msgid "Add column to right"
+msgstr ""
+
+#: inc/writing/editor/assets.php:22
+msgid "Delete column"
+msgstr ""
+
+#: inc/writing/editor/assets.php:23
+msgid "Align left"
+msgstr ""
+
+#: inc/writing/editor/assets.php:23
+msgid "Align center"
+msgstr ""
+
+#: inc/writing/editor/assets.php:23
+msgid "Start with"
+msgstr ""
+
+#: inc/writing/editor/assets.php:24
+msgid "Everything below is for signed-in readers. Images remain public; do not upload confidential files."
+msgstr ""
+
+#: inc/writing/editor/assets.php:24
+#: inc/writing/errors.php:9
+#: assets/js/editor-native.js:4
+msgid "YouTube, Vimeo, VK Video or Rutube URL"
+msgstr ""
+
+#: inc/writing/editor/assets.php:24
+#: inc/writing/errors.php:8
+msgid "Upload a JPG, PNG, WebP or GIF up to 5 MB. GIF is converted to a still image."
+msgstr ""
+
+#: inc/writing/editor/assets.php:24
+msgid "Loading..."
+msgstr ""
+
+#: inc/writing/editor/assets.php:24
+#: inc/writing/editor/controller.php:12
+msgid "Preview unavailable. The link will still be saved."
+msgstr ""
+
+#: inc/writing/editor/assets.php:24
+msgid "words"
+msgstr ""
+
+#: inc/writing/editor/assets.php:24
+msgid "Autosave starts after the first save."
+msgstr ""
+
+#: inc/writing/editor/blocks.php:20
+msgid "Continue reading with an account"
+msgstr ""
+
+#: inc/writing/editor/blocks.php:20
+msgid "This part is available to signed-in readers."
+msgstr ""
+
+#: inc/writing/editor/blocks.php:24
+msgid "Load video from external provider"
+msgstr ""
+
+#: inc/writing/editor/blocks.php:24
+msgid "Watch video"
+msgstr ""
+
+#: inc/writing/editor/blocks.php:24
+msgid "The player connects only after your click."
+msgstr ""
+
+#: inc/writing/editor/blocks.php:29
+msgid "Completed"
+msgstr ""
+
+#: inc/writing/editor/blocks.php:29
+msgid "Not completed"
 msgstr ""
 
 #: inc/writing/errors.php:5
@@ -895,69 +1200,39 @@ msgstr ""
 msgid "The writing limit has been reached. Try again later."
 msgstr ""
 
-#: inc/writing/errors.php:10
+#: inc/writing/errors.php:13
 msgid "Check the title, length and allowed Gutenberg blocks."
 msgstr ""
 
-#: inc/writing/view.php:13
-msgid "No articles yet. Start your first draft."
-msgstr ""
-
-#: inc/writing/view.php:13
-msgid "Draft saved."
-msgstr ""
-
-#: inc/writing/view.php:13
-msgid "You have unsaved changes."
-msgstr ""
-
-#: inc/writing/view.php:13
-msgid "Draft"
-msgstr ""
-
-#: inc/writing/view.php:13
-msgid "In review"
-msgstr ""
-
-#: inc/writing/view.php:13
-msgid "Published"
-msgstr ""
-
-#: inc/writing/view.php:13
-msgid "Moved to trash"
-msgstr ""
-
-#: inc/writing/view.php:13
-msgid "Author reputation"
-msgstr ""
-
-#: inc/writing/view.php:13
-msgid "Add a block"
-msgstr ""
-
-#: inc/writing/view.php:18
+#: inc/writing/view.php:12
+#: template-parts/account.php:10
+#: template-parts/writing-admin.php:9
 msgid "Write an article"
 msgstr ""
 
-#: inc/writing/view.php:21
+#: inc/writing/view.php:12
+msgid "Write"
+msgstr ""
+
+#: inc/writing/view.php:15
 #: template-parts/profile-editor.php:18
 msgid "View public profile"
 msgstr ""
 
-#: inc/writing/view.php:22
+#: inc/writing/view.php:16
 msgid "Edit your author profile"
 msgstr ""
 
-#: inc/writing/view.php:27
+#: inc/writing/view.php:21
 msgid "Community authors"
 msgstr ""
 
-#: inc/writing/view.php:27
+#: inc/writing/view.php:21
 msgid "Ranked by editorial reputation, then publication date."
 msgstr ""
 
 #: ioblog-editorial-pro.php:50
-msgid "Publishing tools require IO Blog Editorial 1.11.0 or later. Reader accounts remain available through the shortcode."
+msgid "Publishing tools require IO Blog Editorial 1.12.0 or later. Reader accounts remain available through the shortcode."
 msgstr ""
 
 #: template-parts/account.php:4
@@ -968,65 +1243,89 @@ msgstr ""
 msgid "My comments"
 msgstr ""
 
-#: template-parts/account.php:7
+#: template-parts/account.php:8
 msgid "Your articles, conversations, and reading preferences."
 msgstr ""
 
-#: template-parts/account.php:7
+#: template-parts/account.php:8
 msgid "Sign out"
 msgstr ""
 
-#: template-parts/account.php:11
-#: template-parts/account.php:20
+#: template-parts/account.php:10
+msgid "Your next story starts here"
+msgstr ""
+
+#: template-parts/account.php:10
+msgid "Your editor, drafts and editorial feedback in one workspace."
+msgstr ""
+
+#: template-parts/account.php:12
+#: template-parts/account.php:21
 msgid "Reset password"
 msgstr ""
 
-#: template-parts/account.php:11
+#: template-parts/account.php:12
 msgid "Register"
 msgstr ""
 
-#: template-parts/account.php:13
+#: template-parts/account.php:14
 msgid "Account sections"
 msgstr ""
 
-#: template-parts/account.php:18
+#: template-parts/account.php:19
 msgid "Email for account recovery"
 msgstr ""
 
-#: template-parts/account.php:18
+#: template-parts/account.php:19
 msgid "Send confirmation email"
 msgstr ""
 
-#: template-parts/account.php:20
+#: template-parts/account.php:21
 msgid "Connect a social account to sign in faster. Keep at least one sign-in method."
 msgstr ""
 
-#: template-parts/account.php:20
+#: template-parts/account.php:21
 msgid "Sign out other sessions"
 msgstr ""
 
-#: template-parts/account.php:20
+#: template-parts/account.php:21
 msgid "Current password"
 msgstr ""
 
-#: template-parts/account.php:20
+#: template-parts/account.php:21
 #: template-parts/auth-modal.php:14
 msgid "New password, at least 12 characters"
 msgstr ""
 
-#: template-parts/account.php:20
+#: template-parts/account.php:21
 msgid "Change password"
 msgstr ""
 
-#: template-parts/account.php:24
-msgid "Disable sync in this browser"
+#: template-parts/account.php:25
+msgid "Follow authors and select categories in your profile to build your personal feed."
 msgstr ""
 
 #: template-parts/account.php:25
+msgid "Find an author"
+msgstr ""
+
+#: template-parts/account.php:25
+#: searchform.php:11
+#: template-parts/search-modal.php:18
+#: template-parts/search-modal.php:20
+msgid "Search"
+msgstr ""
+
+#: template-parts/account.php:27
+msgid "Disable sync in this browser"
+msgstr ""
+
+#: template-parts/account.php:28
+#: template-parts/writing.php:8
 msgid "Find an article"
 msgstr ""
 
-#: template-parts/account.php:26
+#: template-parts/account.php:29
 msgid "Mark all as read"
 msgstr ""
 
@@ -1152,59 +1451,68 @@ msgstr ""
 msgid "Turn modules on independently. Disabling a module keeps its data."
 msgstr ""
 
-#: template-parts/community-admin.php:11
+#: template-parts/community-admin.php:9
+msgid "Writing has its own switch. Enable reader accounts here, then enable author publishing in the newsroom."
+msgstr ""
+
+#: template-parts/community-admin.php:9
+#: template-parts/writing-admin.php:12
+msgid "Author publishing settings"
+msgstr ""
+
+#: template-parts/community-admin.php:12
 msgid "Account modules"
 msgstr ""
 
-#: template-parts/community-admin.php:11
+#: template-parts/community-admin.php:12
 msgid "Daily message limit per user"
 msgstr ""
 
-#: template-parts/community-admin.php:11
+#: template-parts/community-admin.php:12
 msgid "Open personal account"
 msgstr ""
 
-#: template-parts/community-admin.php:11
+#: template-parts/community-admin.php:12
 msgid "Messages require recipient consent. Social accounts can be linked from Security after signing in."
 msgstr ""
 
-#: template-parts/community-admin.php:13
+#: template-parts/community-admin.php:14
 msgid "Configured. Test with your registered application."
 msgstr ""
 
-#: template-parts/community-admin.php:13
+#: template-parts/community-admin.php:14
 msgid "Fill in the application settings and enable the provider."
 msgstr ""
 
-#: template-parts/community-admin.php:14
+#: template-parts/community-admin.php:15
 msgid "Register this callback URL in the provider application:"
 msgstr ""
 
-#: template-parts/community-admin.php:15
+#: template-parts/community-admin.php:16
 msgid "Telegram uses OpenID Connect. Choose RS256 in BotFather."
 msgstr ""
 
-#: template-parts/community-admin.php:18
+#: template-parts/community-admin.php:19
 msgid "Delivery and moderation"
 msgstr ""
 
-#: template-parts/community-admin.php:18
+#: template-parts/community-admin.php:19
 msgid "WP-Cron is disabled. Configure a server cron job for notifications and daily digests."
 msgstr ""
 
-#: template-parts/community-admin.php:18
+#: template-parts/community-admin.php:19
 msgid "Scheduled notifications use WordPress cron."
 msgstr ""
 
-#: template-parts/community-admin.php:18
+#: template-parts/community-admin.php:19
 msgid "Email is opt-in and uses the WordPress mail transport."
 msgstr ""
 
-#: template-parts/community-admin.php:21
+#: template-parts/community-admin.php:22
 msgid "Dismiss report"
 msgstr ""
 
-#: template-parts/community-admin.php:22
+#: template-parts/community-admin.php:23
 msgid "Delete reported message"
 msgstr ""
 
@@ -1424,72 +1732,86 @@ msgstr ""
 msgid "Write at your own pace. The editorial team reviews submissions before publication."
 msgstr ""
 
-#: template-parts/writing-admin.php:11
-msgid "Author publishing settings"
+#: template-parts/writing-admin.php:9
+msgid "Text, headings, lists, checklists, quotes, code, images, tables, video, link cards and members-only sections. No CDN is used."
 msgstr ""
 
-#: template-parts/writing-admin.php:11
+#: template-parts/writing-admin.php:9
+msgid "Images are public WordPress media. Members-only sections protect text, not confidential uploads."
+msgstr ""
+
+#: template-parts/writing-admin.php:12
 msgid "The reader-account module must also be enabled. Subscriber roles are not promoted. Review is required by default."
 msgstr ""
 
-#: template-parts/writing-admin.php:12
+#: template-parts/writing-admin.php:13
 msgid "Allow readers to write articles"
 msgstr ""
 
-#: template-parts/writing-admin.php:12
+#: template-parts/writing-admin.php:13
 msgid "Require confirmed email"
 msgstr ""
 
-#: template-parts/writing-admin.php:12
+#: template-parts/writing-admin.php:13
 msgid "Show a reputation-ranked community section on the homepage"
 msgstr ""
 
-#: template-parts/writing-admin.php:12
+#: template-parts/writing-admin.php:13
 msgid "Allow trusted authors to publish new articles without review"
 msgstr ""
 
-#: template-parts/writing-admin.php:13
+#: template-parts/writing-admin.php:14
 msgid "New drafts per day"
 msgstr ""
 
-#: template-parts/writing-admin.php:13
+#: template-parts/writing-admin.php:14
 msgid "Maximum unfinished drafts"
 msgstr ""
 
-#: template-parts/writing-admin.php:13
+#: template-parts/writing-admin.php:14
 msgid "Trusted author reputation threshold"
 msgstr ""
 
-#: template-parts/writing-admin.php:14
+#: template-parts/writing-admin.php:15
 msgid "Reputation: +5 for a published community article, -2 for a rejected article, minimum 0. Anonymous claps do not grant publishing privileges. Updates to published articles always require review."
 msgstr ""
 
-#: template-parts/writing-admin.php:14
+#: template-parts/writing-admin.php:15
 msgid "Save changes"
 msgstr ""
 
-#: template-parts/writing-admin.php:15
+#: template-parts/writing-admin.php:16
 msgid "Editorial review queue"
 msgstr ""
 
-#: template-parts/writing-admin.php:15
+#: template-parts/writing-admin.php:16
 msgid "Review the article in Gutenberg before approving. A public author profile with current consent is required."
 msgstr ""
 
-#: template-parts/writing-admin.php:16
+#: template-parts/writing-admin.php:17
 msgid "Editorial note"
 msgstr ""
 
-#: template-parts/writing-admin.php:16
+#: template-parts/writing-admin.php:17
 msgid "Approve publication"
 msgstr ""
 
-#: template-parts/writing-admin.php:16
+#: template-parts/writing-admin.php:17
 msgid "Return for revision"
 msgstr ""
 
 #: template-parts/writing.php:8
 msgid "New draft"
+msgstr ""
+
+#: template-parts/writing.php:8
+msgid "Article status"
+msgstr ""
+
+#: template-parts/writing.php:8
+#: home.php:58
+#: single.php:87
+msgid "All articles"
 msgstr ""
 
 #: template-parts/writing.php:9
@@ -1517,30 +1839,39 @@ msgid "Select a category"
 msgstr ""
 
 #: template-parts/writing.php:11
-msgid "Use / to add Gutenberg blocks. Text, headings, lists, quotes and code are supported. A CSS cover is created automatically."
+msgid "Editor"
 msgstr ""
 
-#: template-parts/writing.php:13
+#: template-parts/writing.php:11
+#: template-parts/admin/design.php:10
+msgid "Preview"
+msgstr ""
+
+#: template-parts/writing.php:12
+msgid "Choose a tool below or use + beside a paragraph. Your CSS cover is generated automatically."
+msgstr ""
+
+#: template-parts/writing.php:15
 msgid "Read article"
 msgstr ""
 
-#: template-parts/writing.php:14
+#: template-parts/writing.php:16
 msgid "Save draft"
 msgstr ""
 
-#: template-parts/writing.php:14
+#: template-parts/writing.php:16
 msgid "Submit for review"
 msgstr ""
 
-#: template-parts/writing.php:14
+#: template-parts/writing.php:16
 msgid "Withdraw submission"
 msgstr ""
 
-#: template-parts/writing.php:14
+#: template-parts/writing.php:16
 msgid "Propose an update"
 msgstr ""
 
-#: template-parts/writing.php:14
+#: template-parts/writing.php:16
 msgid "Move to trash"
 msgstr ""
 
@@ -1566,11 +1897,6 @@ msgstr ""
 
 #: assets/js/editor-link-card.js:67
 msgid "Open in a new tab"
-msgstr ""
-
-#: assets/js/editor-link-card.js:83
-#: assets/js/editor-link-card.js:120
-msgid "Link card"
 msgstr ""
 
 #: assets/js/editor-link-card.js:84
@@ -1599,6 +1925,14 @@ msgstr ""
 
 #: assets/js/editor-link-card.js:124
 msgid "embed"
+msgstr ""
+
+#: assets/js/editor-native.js:5
+msgid "Edit the members-only text in the author workspace. It is stored separately from the public article."
+msgstr ""
+
+#: assets/js/editor-native.js:6
+msgid "Edit this checklist in the author workspace."
 msgstr ""
 
 #: blocks/link-card/block.json
@@ -1784,11 +2118,6 @@ msgstr ""
 
 #: home.php:58
 msgid "Latest articles"
-msgstr ""
-
-#: home.php:58
-#: single.php:87
-msgid "All articles"
 msgstr ""
 
 #: home.php:58
@@ -3103,12 +3432,6 @@ msgstr ""
 msgid "Search the site"
 msgstr ""
 
-#: searchform.php:11
-#: template-parts/search-modal.php:18
-#: template-parts/search-modal.php:20
-msgid "Search"
-msgstr ""
-
 #: single.php:16
 msgid "Breadcrumbs"
 msgstr ""
@@ -3185,10 +3508,6 @@ msgstr ""
 
 #: template-parts/admin/design.php:10
 msgid "Find a setting"
-msgstr ""
-
-#: template-parts/admin/design.php:10
-msgid "Preview"
 msgstr ""
 
 #: template-parts/admin/design.php:10
@@ -3312,13 +3631,13 @@ msgid "Keys and code are included but masked in this preview. No URLs are rewrit
 msgstr ""
 
 #. translators: %d: total claps.
-#: template-parts/card.php:20
+#: template-parts/card.php:25
 #, php-format
 msgid "Claps: %d"
 msgstr ""
 
 #. translators: %s: post title.
-#: template-parts/card.php:26
+#: template-parts/card.php:27
 #, php-format
 msgid "Read: %s"
 msgstr ""

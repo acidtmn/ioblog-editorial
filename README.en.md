@@ -4,15 +4,19 @@
 
 A lightweight editorial WordPress theme by **Kirill Aleksandrov** for personal blogs and technology publications.
 
-**Free 1.11.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
+**Free 1.12.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
 
 ## Download and Install
 
-Download the installable `ioblog-editorial-1.11.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.11.0), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
+Download the installable `ioblog-editorial-1.12.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.12.0), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
 
 In WordPress open **Appearance → Themes → Add New → Upload Theme**, install the ZIP and activate it. Then open **IO Blog** in the main dashboard menu. Configure the homepage, reading layout, search and comments; assign Primary and Footer menus. Set your logo and Site Icon in **Appearance → Customize → Site Identity**.
 
 ## Included in Free
+
+In 1.12.0 clap totals are aligned in the card footer beside the read arrow. A visible Write button appears when the optional newsroom is enabled. Russian translations now cover the paired Pro 1.7.0 editor, subscriptions and native blocks.
+
+The separate private Pro 1.7.0 ships actual locally bundled Editor.js, secure image uploads, nested lists/checklists, tables, quotes, code, lazy provider video, link cards and registration-gated text, serialized as Gutenberg. It adds author following and a combined category/author feed. The customer-facing interface calls the tool Editor. Private text is not present in public post_content, RSS or public REST; uploaded images remain public. This is registration gating, not paid membership. Site owners supply their own consent documents. Pro code is not included here.
 
 - Editorial homepage with a featured post, editor picks and a recent-post grid.
 - Reading presets, adjustable typography and three article layouts.
