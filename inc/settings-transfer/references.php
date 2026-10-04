@@ -5,6 +5,7 @@ final class Ioblog_Settings_Transfer_References {
 		$ids = array( $snapshot['settings']['home_featured_post'] ?? 0, $snapshot['settings']['home_about_page'] ?? 0, $snapshot['mods']['custom_logo'] ?? 0, $snapshot['site_icon'] ?? 0 );
 		$ids = array_merge( $ids, explode( ',', $snapshot['settings']['home_editorial_posts'] ?? '' ) );
 		$ids[] = $snapshot['settings']['design_config']['font_attachment'] ?? 0;
+		foreach ( array( 'privacy_page', 'consent_page', 'disclosure_page' ) as $key ) { $ids[] = $snapshot['settings']['legal_config'][ $key ] ?? 0; }
 		$result = array( 'posts' => array(), 'menus' => array() );
 		foreach ( array_unique( array_map( 'absint', $ids ) ) as $id ) {
 			$post = $id ? get_post( $id ) : null;
@@ -32,6 +33,17 @@ final class Ioblog_Settings_Transfer_References {
 	public static function resolve( $data ) {
 		$same = untrailingslashit( $data['site_url'] ) === untrailingslashit( home_url( '/' ) );
 		$skipped = array();
+		if ( isset( $data['settings']['legal_config'] ) ) {
+			$legal = $data['settings']['legal_config'];
+			foreach ( array( 'privacy_page', 'consent_page', 'disclosure_page' ) as $key ) {
+				if ( empty( $legal[ $key ] ) ) { continue; }
+				$mapped = self::post( (int) $legal[ $key ], 'page', $data, $same );
+				// Частичный перенос согласий опасен: сохраняем текущую конфигурацию целиком и предупреждаем владельца.
+				if ( null === $mapped ) { unset( $data['settings']['legal_config'] ); $skipped[] = 'legal_config.' . $key; break; }
+				$legal[ $key ] = $mapped;
+			}
+			if ( isset( $data['settings']['legal_config'] ) ) { $data['settings']['legal_config'] = $legal; }
+		}
 		if ( ! empty( $data['settings']['design_config']['font_attachment'] ) ) {
 			$font = self::post( $data['settings']['design_config']['font_attachment'], 'attachment', $data, $same, 'font/woff2' );
 			// Без перенесённого файла сохраняем нынешний дизайн целиком: чужой ID не должен стать шрифтом.

@@ -3,7 +3,7 @@ Contributors: kirillaleksandrov
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.9.1
+Stable tag: 1.10.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, news, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -12,7 +12,7 @@ A fast, responsive editorial theme for technology blogs with dark mode, live sea
 
 == Description ==
 
-Version 1.9.1 adds a Header navigation switch to Design studio > Site regions. Hide both desktop and mobile menus while keeping the homepage categories. The menu assignment is preserved and can be restored with the same switch.
+Version 1.10.0 adds Privacy and consent settings: select your own published Gutenberg documents, configure registration consent and manage optional integration code. The theme does not create legal documents or certify legal compliance. Pro 1.5.0 adds consent-aware registration, private/public reader profiles and avatar cropping.
 
 IO Blog Editorial is a responsive classic WordPress theme designed for readable technology publications, personal blogs, and online magazines. It combines a distinctive editorial homepage with a focused single-post layout, a sticky table of contents, accessible dark mode, and lightweight CSS-generated covers for posts without featured images.
 
@@ -147,6 +147,14 @@ Yes. Upload a featured image in the post editor. It automatically replaces the g
 Use the bundled POT file with Poedit, Loco Translate, or the WordPress i18n tools. Save compiled translations with the `ioblog-editorial` text domain.
 
 == Changelog ==
+
+= 1.10.0 =
+
+* Added modular Privacy and consent administration with owner-selected documents and revision tracking.
+* Added optional analytics/advertising controls with essential-only, selected and allow-optional choices; code remains inert before permission.
+* Added safe transfer of legal-page identities and preserved destination configuration if documents cannot be mapped.
+* Added a public-author signature extension point, Russian translations and setup documentation.
+* Legal texts are created by the site owner. Other plugins, manual embeds, CAPTCHA and OAuth require separate assessment.
 
 = 1.9.1 =
 * Added a separate header-navigation switch to the design studio without removing assigned menus or header actions.

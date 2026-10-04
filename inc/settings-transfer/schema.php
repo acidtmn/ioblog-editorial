@@ -55,6 +55,7 @@ final class Ioblog_Settings_Transfer_Schema {
 			if ( ! is_string( $key ) || ! preg_match( '/^[a-z][a-z0-9_]{0,99}$/D', $key ) ) { throw new InvalidArgumentException( 'key' ); }
 			if ( ! in_array( $key, $allowed, true ) ) { throw new InvalidArgumentException( 'unsupported' ); }
 			if ( 'design_config' === $key ) { Ioblog_Design_Schema::validate( $value ); }
+			if ( 'legal_config' === $key ) { Ioblog_Legal_Settings::validate( $value ); }
 			if ( in_array( $key, array( 'community_config', 'mail_config', 'ad_rules' ), true ) && ! is_array( $value ) ) { throw new InvalidArgumentException( $key ); }
 			if ( 'mail_config' === $key && class_exists( 'Ioblog_Mail_Settings' ) ) { Ioblog_Mail_Settings::validate( $value ); }
 			if ( 'community_config' === $key && class_exists( 'Ioblog_Community_Settings' ) ) { Ioblog_Community_Settings::validate( $value ); }

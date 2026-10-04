@@ -4,11 +4,11 @@
 
 A lightweight editorial WordPress theme by **Kirill Aleksandrov** for personal blogs and technology publications.
 
-**Free 1.9.1** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
+**Free 1.10.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
 
 ## Download and Install
 
-Download the installable `ioblog-editorial-1.9.1.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.9.1), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
+Download the installable `ioblog-editorial-1.10.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.10.0), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
 
 In WordPress open **Appearance → Themes → Add New → Upload Theme**, install the ZIP and activate it. Then open **IO Blog** in the main dashboard menu. Configure the homepage, reading layout, search and comments; assign Primary and Footer menus. Set your logo and Site Icon in **Appearance → Customize → Site Identity**.
 
@@ -31,14 +31,17 @@ In WordPress open **Appearance → Themes → Add New → Upload Theme**, instal
 - Built-in anti-spam and optional Yandex SmartCaptcha / Google reCAPTCHA.
 - Footer menu and optional social links.
 - English interface and bundled Russian translations.
+- A privacy/consent dashboard for site-owner documents, consent revisions and optional theme analytics/advertising.
 
 External integrations are opt-in. Free requires no license key and does not contact the licensing store. Reading a clap counter creates no cookie; explicit claps use this site's signed anonymous cookie and local database. Library data remains in browser localStorage without account or cloud synchronization.
 
 Library exports contain reading history and should be kept private. Imports are limited to 256 KB, validate the whole file, preserve existing bookmarks and require the same scheme, hostname and port. Import does not send history or bookmark events to Pro statistics. See the privacy guide before deploying.
 
-## New in 1.9.1
+## New in 1.10.0
 
-Header navigation can now be hidden independently, preserving menu assignments and header actions. Complete settings backup includes Pro SMTP credentials with masked import preview. The dashboard includes an SMTP shortcut when Pro 1.4.0 is installed. Russian translations and setup guides have been updated.
+**IO Blog → Privacy and consent** connects published owner-authored documents to Pro forms and the visitor notice. Theme analytics and advertising remain inert until their category is allowed; visitors can change their choice. Complete settings backup includes document configuration and matches references to existing published pages on import. Russian translations and setup guides have been updated.
+
+These are technical tools, not legal certification or ready-made policies for Russian Law 152-FZ. The purchaser writes their own privacy policy, separate processing consent and separate profile-publication consent. Other plugins, manual embeds, CAPTCHA and OAuth are not controlled by the category switches. Choices expire after 180 days or document changes; revocation reloads the page but does not automatically delete third-party cookies.
 
 ## Design Studio
 
@@ -52,9 +55,11 @@ Header navigation can now be hidden independently, preserving menu assignments a
 
 ## Optional Pro Extension
 
-This is **one theme**, not separate Free and Pro themes. The separately distributed **Pro 1.4.0** plugin adds a visual cover editor, link cards, conditional advertising, short links, integrations, series, social PNG covers and opt-in reader interests. Publishing tools require Free 1.9.0 or later.
+This is **one theme**, not separate Free and Pro themes. The separately distributed **Pro 1.5.0** plugin adds a visual cover editor, link cards, conditional advertising, short links, integrations, series, social PNG covers and opt-in reader interests. Publishing tools require Free 1.10.0 or later.
 
 Pro 1.4.0 adds accessible login/recovery dialogs, email-code registration without a username field, bundled provider SVG icons, a responsive conversation UI with unread counts and drafts, and a separate SMTP panel with SSL/STARTTLS, strict-by-default certificate validation and administrator delivery tests. Complete private settings exports include the saved SMTP password.
+
+Pro 1.5.0 adds extended profiles, a headline, biography, optional location/HTTPS website and an accessible browser avatar cropper. Only the selected square is uploaded and reencoded as WebP. Profiles are private by default; public access requires independent consent and can be withdrawn. Email/social registration validates document revisions before account creation. Native WordPress personal-data export/erasure includes profile, avatar and consent history. Configure separate published documents before enabling registration with required consent; existing sign-in and recovery remain available.
 
 New independently switchable Pro modules include reader accounts, collections, opt-in library sync, category feed, own comments, confirmed email, sessions, notifications and consenting text messages with limits, blocking and reports. VK, Yandex, Telegram, Google and GitHub sign-in requires your registered applications. No Odnoklassniki or Mail.ru login is included. Digests require configured WordPress mail and cron. The account shortcode works independently of the active theme. Account modules are disabled by default.
 

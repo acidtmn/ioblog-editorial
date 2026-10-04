@@ -36,6 +36,7 @@ $ioblog_modules = array(
 	'admin/settings-page',
 	'settings-transfer/bootstrap',
 	'design/bootstrap',
+	'legal/bootstrap',
 );
 
 foreach ( $ioblog_modules as $ioblog_module ) {
