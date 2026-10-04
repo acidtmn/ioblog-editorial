@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: IO Blog Editorial 1.10.0\n"
+"Project-Id-Version: IO Blog Editorial 1.11.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ioblog-editorial\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-03T14:53:27+00:00\n"
+"POT-Creation-Date: 2026-10-04T03:00:43+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ioblog-editorial\n"
@@ -281,12 +281,13 @@ msgid "Advertisement"
 msgstr ""
 
 #: inc/auth/captcha.php:14
+#: inc/auth/view.php:9
 #: inc/captcha.php:137
 msgid "Confirm that you are not a robot."
 msgstr ""
 
-#: inc/auth/captcha.php:23
-#: inc/captcha.php:154
+#: inc/auth/captcha.php:26
+#: inc/captcha.php:155
 msgid "CAPTCHA verification failed. Refresh the page and try again."
 msgstr ""
 
@@ -321,9 +322,11 @@ msgid "This feature is unavailable."
 msgstr ""
 
 #: inc/auth/controller.php:12
-#: inc/auth/view.php:10
+#: inc/auth/view.php:11
 #: inc/community/controller.php:36
 #: inc/community/view.php:20
+#: inc/writing/errors.php:8
+#: inc/writing/view.php:13
 #: inc/design/admin.php:11
 msgid "Unable to save. Please retry."
 msgstr ""
@@ -357,7 +360,7 @@ msgid "Unable to sign in. Check your email and password."
 msgstr ""
 
 #: inc/auth/view.php:8
-#: template-parts/account.php:10
+#: template-parts/account.php:11
 #: template-parts/auth-modal.php:8
 msgid "Welcome back"
 msgstr ""
@@ -375,27 +378,27 @@ msgstr ""
 msgid "Check your email"
 msgstr ""
 
-#: inc/auth/view.php:9
+#: inc/auth/view.php:10
 #: inc/oauth/view.php:15
-#: template-parts/account.php:10
+#: template-parts/account.php:11
 #: template-parts/auth-modal.php:26
 #: template-parts/auth-modal.php:28
 msgid "Sign in"
 msgstr ""
 
-#: inc/auth/view.php:9
+#: inc/auth/view.php:10
 msgid "Send verification code"
 msgstr ""
 
-#: inc/auth/view.php:9
+#: inc/auth/view.php:10
 msgid "Confirm and continue"
 msgstr ""
 
-#: inc/auth/view.php:10
+#: inc/auth/view.php:11
 msgid "If this address is eligible, a code has been sent. Check your spam folder too."
 msgstr ""
 
-#: inc/auth/view.php:10
+#: inc/auth/view.php:11
 msgid "Please wait…"
 msgstr ""
 
@@ -414,11 +417,11 @@ msgstr ""
 msgid "Open link"
 msgstr ""
 
-#: inc/community/account.php:50
+#: inc/community/account.php:52
 msgid "Current password is incorrect."
 msgstr ""
 
-#: inc/community/account.php:61
+#: inc/community/account.php:63
 msgid "Set a password before removing your last sign-in method."
 msgstr ""
 
@@ -431,6 +434,7 @@ msgstr ""
 #: inc/community/admin.php:11
 #: inc/community/controller.php:35
 #: inc/mail/admin.php:10
+#: inc/writing/admin.php:11
 #: inc/design/admin.php:22
 #: inc/legal/admin.php:10
 msgid "Check the field values."
@@ -505,14 +509,25 @@ msgstr ""
 msgid "Social sign-in methods"
 msgstr ""
 
-#: inc/community/privacy.php:41
+#: inc/community/privacy.php:42
+#: template-parts/account.php:9
+#: template-parts/writing.php:6
+msgid "My articles and drafts"
+msgstr ""
+
+#: inc/community/privacy.php:42
+#: inc/interests/view-template.php:9
+msgid "Article"
+msgstr ""
+
+#: inc/community/privacy.php:47
 #: inc/admin/settings-page.php:138
 #: inc/legal/admin.php:4
 #: template-parts/legal-admin.php:7
 msgid "Privacy and consent"
 msgstr ""
 
-#: inc/community/privacy.php:41
+#: inc/community/privacy.php:47
 msgid "Consent record"
 msgstr ""
 
@@ -531,12 +546,14 @@ msgstr ""
 #: inc/community/view.php:20
 #: template-parts/community-admin.php:9
 #: template-parts/mail-admin.php:7
+#: template-parts/writing-admin.php:8
 #: inc/design/admin.php:11
 #: template-parts/legal-admin.php:8
 msgid "Settings saved."
 msgstr ""
 
 #: inc/community/view.php:20
+#: template-parts/writing-admin.php:17
 msgid "Nothing here yet."
 msgstr ""
 
@@ -559,12 +576,12 @@ msgid "Read"
 msgstr ""
 
 #: inc/community/view.php:20
-#: template-parts/account.php:24
+#: template-parts/account.php:25
 msgid "Merge browser library"
 msgstr ""
 
 #: inc/community/view.php:20
-#: template-parts/account.php:24
+#: template-parts/account.php:25
 msgid "Sync with this browser"
 msgstr ""
 
@@ -591,7 +608,8 @@ msgid "Remove sign-in method"
 msgstr ""
 
 #: inc/community/view.php:20
-#: template-parts/account.php:10
+#: inc/writing/view.php:6
+#: template-parts/account.php:11
 msgid "Sign in to use your personal account."
 msgstr ""
 
@@ -605,10 +623,11 @@ msgstr ""
 
 #: inc/community/view.php:39
 #: template-parts/account.php:7
+#: template-parts/writing.php:6
 msgid "My account"
 msgstr ""
 
-#: inc/consent/service.php:30
+#: inc/consent/service.php:32
 msgid "Read the configured documents and give separate consent. If they changed, reload the form."
 msgstr ""
 
@@ -682,10 +701,6 @@ msgstr ""
 
 #: inc/interests/view-template.php:8
 msgid "Collection is disabled. Enable it in Publishing and readership to begin. Existing data is preserved."
-msgstr ""
-
-#: inc/interests/view-template.php:9
-msgid "Article"
 msgstr ""
 
 #: inc/interests/view-template.php:9
@@ -850,8 +865,99 @@ msgstr ""
 msgid "No title was found on the page."
 msgstr ""
 
-#: ioblog-editorial-pro.php:49
-msgid "Publishing tools require IO Blog Editorial 1.10.0 or later. Reader accounts remain available through the shortcode."
+#: inc/writing/admin.php:5
+#: template-parts/writing-admin.php:7
+#: template-parts/writing.php:6
+msgid "Author newsroom"
+msgstr ""
+
+#: inc/writing/errors.php:5
+msgid "Writing is unavailable for this account."
+msgstr ""
+
+#: inc/writing/errors.php:5
+msgid "Confirm your email in your profile before writing."
+msgstr ""
+
+#: inc/writing/errors.php:5
+msgid "Publish your author profile with separate consent before submitting an article."
+msgstr ""
+
+#: inc/writing/errors.php:5
+msgid "The article changed. Reload it before saving."
+msgstr ""
+
+#: inc/writing/errors.php:5
+msgid "Withdraw the submission before editing it."
+msgstr ""
+
+#: inc/writing/errors.php:5
+msgid "The writing limit has been reached. Try again later."
+msgstr ""
+
+#: inc/writing/errors.php:10
+msgid "Check the title, length and allowed Gutenberg blocks."
+msgstr ""
+
+#: inc/writing/view.php:13
+msgid "No articles yet. Start your first draft."
+msgstr ""
+
+#: inc/writing/view.php:13
+msgid "Draft saved."
+msgstr ""
+
+#: inc/writing/view.php:13
+msgid "You have unsaved changes."
+msgstr ""
+
+#: inc/writing/view.php:13
+msgid "Draft"
+msgstr ""
+
+#: inc/writing/view.php:13
+msgid "In review"
+msgstr ""
+
+#: inc/writing/view.php:13
+msgid "Published"
+msgstr ""
+
+#: inc/writing/view.php:13
+msgid "Moved to trash"
+msgstr ""
+
+#: inc/writing/view.php:13
+msgid "Author reputation"
+msgstr ""
+
+#: inc/writing/view.php:13
+msgid "Add a block"
+msgstr ""
+
+#: inc/writing/view.php:18
+msgid "Write an article"
+msgstr ""
+
+#: inc/writing/view.php:21
+#: template-parts/profile-editor.php:18
+msgid "View public profile"
+msgstr ""
+
+#: inc/writing/view.php:22
+msgid "Edit your author profile"
+msgstr ""
+
+#: inc/writing/view.php:27
+msgid "Community authors"
+msgstr ""
+
+#: inc/writing/view.php:27
+msgid "Ranked by editorial reputation, then publication date."
+msgstr ""
+
+#: ioblog-editorial-pro.php:50
+msgid "Publishing tools require IO Blog Editorial 1.11.0 or later. Reader accounts remain available through the shortcode."
 msgstr ""
 
 #: template-parts/account.php:4
@@ -870,57 +976,57 @@ msgstr ""
 msgid "Sign out"
 msgstr ""
 
-#: template-parts/account.php:10
-#: template-parts/account.php:19
+#: template-parts/account.php:11
+#: template-parts/account.php:20
 msgid "Reset password"
 msgstr ""
 
-#: template-parts/account.php:10
+#: template-parts/account.php:11
 msgid "Register"
 msgstr ""
 
-#: template-parts/account.php:12
+#: template-parts/account.php:13
 msgid "Account sections"
 msgstr ""
 
-#: template-parts/account.php:17
+#: template-parts/account.php:18
 msgid "Email for account recovery"
 msgstr ""
 
-#: template-parts/account.php:17
+#: template-parts/account.php:18
 msgid "Send confirmation email"
 msgstr ""
 
-#: template-parts/account.php:19
+#: template-parts/account.php:20
 msgid "Connect a social account to sign in faster. Keep at least one sign-in method."
 msgstr ""
 
-#: template-parts/account.php:19
+#: template-parts/account.php:20
 msgid "Sign out other sessions"
 msgstr ""
 
-#: template-parts/account.php:19
+#: template-parts/account.php:20
 msgid "Current password"
 msgstr ""
 
-#: template-parts/account.php:19
+#: template-parts/account.php:20
 #: template-parts/auth-modal.php:14
 msgid "New password, at least 12 characters"
 msgstr ""
 
-#: template-parts/account.php:19
+#: template-parts/account.php:20
 msgid "Change password"
 msgstr ""
 
-#: template-parts/account.php:23
+#: template-parts/account.php:24
 msgid "Disable sync in this browser"
 msgstr ""
 
-#: template-parts/account.php:24
+#: template-parts/account.php:25
 msgid "Find an article"
 msgstr ""
 
-#: template-parts/account.php:25
+#: template-parts/account.php:26
 msgid "Mark all as read"
 msgstr ""
 
@@ -1281,10 +1387,6 @@ msgstr ""
 msgid "I separately consent to publication of these profile fields."
 msgstr ""
 
-#: template-parts/profile-editor.php:18
-msgid "View public profile"
-msgstr ""
-
 #: template-parts/profile-editor.php:19
 msgid "Allow private messages"
 msgstr ""
@@ -1315,6 +1417,131 @@ msgstr ""
 
 #: template-parts/profile-editor.php:26
 msgid "Save avatar"
+msgstr ""
+
+#: template-parts/writing-admin.php:7
+#: template-parts/writing.php:6
+msgid "Write at your own pace. The editorial team reviews submissions before publication."
+msgstr ""
+
+#: template-parts/writing-admin.php:11
+msgid "Author publishing settings"
+msgstr ""
+
+#: template-parts/writing-admin.php:11
+msgid "The reader-account module must also be enabled. Subscriber roles are not promoted. Review is required by default."
+msgstr ""
+
+#: template-parts/writing-admin.php:12
+msgid "Allow readers to write articles"
+msgstr ""
+
+#: template-parts/writing-admin.php:12
+msgid "Require confirmed email"
+msgstr ""
+
+#: template-parts/writing-admin.php:12
+msgid "Show a reputation-ranked community section on the homepage"
+msgstr ""
+
+#: template-parts/writing-admin.php:12
+msgid "Allow trusted authors to publish new articles without review"
+msgstr ""
+
+#: template-parts/writing-admin.php:13
+msgid "New drafts per day"
+msgstr ""
+
+#: template-parts/writing-admin.php:13
+msgid "Maximum unfinished drafts"
+msgstr ""
+
+#: template-parts/writing-admin.php:13
+msgid "Trusted author reputation threshold"
+msgstr ""
+
+#: template-parts/writing-admin.php:14
+msgid "Reputation: +5 for a published community article, -2 for a rejected article, minimum 0. Anonymous claps do not grant publishing privileges. Updates to published articles always require review."
+msgstr ""
+
+#: template-parts/writing-admin.php:14
+msgid "Save changes"
+msgstr ""
+
+#: template-parts/writing-admin.php:15
+msgid "Editorial review queue"
+msgstr ""
+
+#: template-parts/writing-admin.php:15
+msgid "Review the article in Gutenberg before approving. A public author profile with current consent is required."
+msgstr ""
+
+#: template-parts/writing-admin.php:16
+msgid "Editorial note"
+msgstr ""
+
+#: template-parts/writing-admin.php:16
+msgid "Approve publication"
+msgstr ""
+
+#: template-parts/writing-admin.php:16
+msgid "Return for revision"
+msgstr ""
+
+#: template-parts/writing.php:8
+msgid "New draft"
+msgstr ""
+
+#: template-parts/writing.php:9
+msgid "Article editor"
+msgstr ""
+
+#: template-parts/writing.php:10
+msgid "Article title"
+msgstr ""
+
+#: template-parts/writing.php:10
+msgid "A title worth reading"
+msgstr ""
+
+#: template-parts/writing.php:10
+msgid "Short introduction"
+msgstr ""
+
+#: template-parts/writing.php:10
+msgid "Category"
+msgstr ""
+
+#: template-parts/writing.php:10
+msgid "Select a category"
+msgstr ""
+
+#: template-parts/writing.php:11
+msgid "Use / to add Gutenberg blocks. Text, headings, lists, quotes and code are supported. A CSS cover is created automatically."
+msgstr ""
+
+#: template-parts/writing.php:13
+msgid "Read article"
+msgstr ""
+
+#: template-parts/writing.php:14
+msgid "Save draft"
+msgstr ""
+
+#: template-parts/writing.php:14
+msgid "Submit for review"
+msgstr ""
+
+#: template-parts/writing.php:14
+msgid "Withdraw submission"
+msgstr ""
+
+#: template-parts/writing.php:14
+msgid "Propose an update"
+msgstr ""
+
+#: template-parts/writing.php:14
+msgid "Move to trash"
 msgstr ""
 
 #: assets/js/editor-link-card.js:51
@@ -1927,7 +2154,7 @@ msgstr ""
 msgid "This form is protected by the built-in IO Blog anti-spam."
 msgstr ""
 
-#: inc/captcha.php:171
+#: inc/captcha.php:172
 msgid "CAPTCHA verification"
 msgstr ""
 
@@ -2905,11 +3132,7 @@ msgid "Go to comments"
 msgstr ""
 
 #: single.php:59
-msgid "IO Blog editorial team"
-msgstr ""
-
-#: single.php:59
-msgid "We write about technology that makes everyday life easier."
+msgid "Author"
 msgstr ""
 
 #: single.php:65
@@ -3088,8 +3311,14 @@ msgstr ""
 msgid "Keys and code are included but masked in this preview. No URLs are rewritten automatically. Review partner links and CAPTCHA domain restrictions after moving to another domain."
 msgstr ""
 
+#. translators: %d: total claps.
+#: template-parts/card.php:20
+#, php-format
+msgid "Claps: %d"
+msgstr ""
+
 #. translators: %s: post title.
-#: template-parts/card.php:23
+#: template-parts/card.php:26
 #, php-format
 msgid "Read: %s"
 msgstr ""

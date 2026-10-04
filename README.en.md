@@ -4,11 +4,11 @@
 
 A lightweight editorial WordPress theme by **Kirill Aleksandrov** for personal blogs and technology publications.
 
-**Free 1.10.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
+**Free 1.11.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
 
 ## Download and Install
 
-Download the installable `ioblog-editorial-1.10.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.10.0), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
+Download the installable `ioblog-editorial-1.11.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.11.0), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
 
 In WordPress open **Appearance → Themes → Add New → Upload Theme**, install the ZIP and activate it. Then open **IO Blog** in the main dashboard menu. Configure the homepage, reading layout, search and comments; assign Primary and Footer menus. Set your logo and Site Icon in **Appearance → Customize → Site Identity**.
 
@@ -37,7 +37,13 @@ External integrations are opt-in. Free requires no license key and does not cont
 
 Library exports contain reading history and should be kept private. Imports are limited to 256 KB, validate the whole file, preserve existing bookmarks and require the same scheme, hostname and port. Import does not send history or bookmark events to Pro statistics. See the privacy guide before deploying.
 
-## New in 1.10.0
+## New in 1.11.0
+
+Article cards show real clap totals and link to reactions. Reader-mode and print tooltips are populated. Author cards display actual profiles rather than a generic editorial biography. SmartCaptcha checks support nonstandard ports. Russian translations and instructions are updated.
+
+Private **Pro 1.6.0** adds an opt-in frontend Gutenberg author newsroom, own drafts, autosave, editorial review, proposed updates and editorial reputation ranking. Review is required by default, subscriber roles stay unchanged, and anonymous claps never grant publishing privileges. Automatic advertising avoids nested callouts and quotes. This is not a complete Medium/w3a clone; Pro code is not published here.
+
+## Previously: 1.10.0
 
 **IO Blog → Privacy and consent** connects published owner-authored documents to Pro forms and the visitor notice. Theme analytics and advertising remain inert until their category is allowed; visitors can change their choice. Complete settings backup includes document configuration and matches references to existing published pages on import. Russian translations and setup guides have been updated.
 
@@ -55,7 +61,7 @@ These are technical tools, not legal certification or ready-made policies for Ru
 
 ## Optional Pro Extension
 
-This is **one theme**, not separate Free and Pro themes. The separately distributed **Pro 1.5.0** plugin adds a visual cover editor, link cards, conditional advertising, short links, integrations, series, social PNG covers and opt-in reader interests. Publishing tools require Free 1.10.0 or later.
+This is **one theme**, not separate Free and Pro themes. The separately distributed **Pro 1.6.0** plugin adds a visual cover editor, link cards, conditional advertising, short links, integrations, series, social PNG covers and opt-in reader interests. Publishing tools require Free 1.11.0 or later.
 
 Pro 1.4.0 adds accessible login/recovery dialogs, email-code registration without a username field, bundled provider SVG icons, a responsive conversation UI with unread counts and drafts, and a separate SMTP panel with SSL/STARTTLS, strict-by-default certificate validation and administrator delivery tests. Complete private settings exports include the saved SMTP password.
 

@@ -145,9 +145,10 @@ function ioblog_validate_captcha_response() {
 	$result = json_decode( wp_remote_retrieve_body( $response ), true );
 	$passed = 'yandex' === $provider ? isset( $result['status'] ) && 'ok' === $result['status'] : ! empty( $result['success'] );
 	$host   = 'yandex' === $provider ? ( $result['host'] ?? '' ) : ( $result['hostname'] ?? '' );
-	$domain = wp_parse_url( home_url( '/' ), PHP_URL_HOST );
+	$site   = wp_parse_url( home_url( '/' ) );
+	$domain = ( $site['host'] ?? '' ) . ( 'yandex' === $provider && ! empty( $site['port'] ) ? ':' . $site['port'] : '' );
 
-	if ( $passed && $host && $domain && strtolower( $host ) !== strtolower( $domain ) ) {
+	if ( ! is_string( $host ) || ( $passed && $host && $domain && strtolower( $host ) !== strtolower( $domain ) ) ) {
 		$passed = false;
 	}
 

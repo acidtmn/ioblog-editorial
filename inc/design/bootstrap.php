@@ -20,6 +20,6 @@ add_filter( 'block_editor_settings_all', static function ( $settings ) {
 } );
 add_action( 'ioblog_article_actions', static function () {
 	$config = Ioblog_Design_Service::effective();
-	if ( $config['reader_mode'] ) { echo '<button type="button" class="io-action-button io-reader-toggle" aria-pressed="false" aria-label="' . esc_attr__( 'Reader mode', 'ioblog-editorial' ) . '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 3 3v14a4 4 0 0 0-4-2H4zM13 7a3 3 0 0 1 3-3h5v15h-4a4 4 0 0 0-4 2"/></svg></button>'; }
-	if ( $config['print_button'] ) { echo '<button type="button" class="io-action-button io-print-article" aria-label="' . esc_attr__( 'Print article', 'ioblog-editorial' ) . '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8V3h10v5M7 17H3V9h18v8h-4M7 14h10v7H7z"/></svg></button>'; }
+	if ( $config['reader_mode'] ) { echo '<button type="button" class="io-action-button io-reader-toggle" aria-pressed="false" data-tooltip="' . esc_attr__( 'Reader mode', 'ioblog-editorial' ) . '" aria-label="' . esc_attr__( 'Reader mode', 'ioblog-editorial' ) . '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 3 3v14a4 4 0 0 0-4-2H4zM13 7a3 3 0 0 1 3-3h5v15h-4a4 4 0 0 0-4 2"/></svg></button>'; }
+	if ( $config['print_button'] ) { echo '<button type="button" class="io-action-button io-print-article" data-tooltip="' . esc_attr__( 'Print article', 'ioblog-editorial' ) . '" aria-label="' . esc_attr__( 'Print article', 'ioblog-editorial' ) . '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8V3h10v5M7 17H3V9h18v8h-4M7 14h10v7H7z"/></svg></button>'; }
 } );

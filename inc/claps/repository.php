@@ -3,6 +3,19 @@
 namespace IOBlog\Claps;
 
 final class Repository {
+	/** Один агрегатный запрос на карточки текущей выборки вместо отдельного запроса для каждой карточки. */
+	public static function total( int $post_id ): int {
+		static $totals = array();
+		if ( ! array_key_exists( $post_id, $totals ) ) {
+			global $wpdb, $wp_query;
+			$ids = array_unique( array_merge( array( $post_id ), wp_list_pluck( $wp_query->posts ?? array(), 'ID' ) ) );
+			$ids = array_map( 'absint', $ids );
+			foreach ( $ids as $id ) { $totals[ $id ] = 0; }
+			$rows = $wpdb->get_results( 'SELECT post_id,SUM(claps) AS total FROM ' . $wpdb->prefix . 'ioblog_claps WHERE post_id IN (' . implode( ',', $ids ) . ') GROUP BY post_id' );
+			foreach ( (array) $rows as $row ) { $totals[ (int) $row->post_id ] = (int) $row->total; }
+		}
+		return $totals[ $post_id ];
+	}
 	public function state( int $post_id, string $actor ): array {
 		global $wpdb;
 		$row = $wpdb->get_row( $wpdb->prepare(

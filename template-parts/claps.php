@@ -3,7 +3,7 @@
 defined( 'ABSPATH' ) || exit;
 if ( ! ioblog_get_setting( 'claps_enabled' ) || 'publish' !== get_post_status() || get_post_field( 'post_password', get_the_ID() ) ) { return; }
 ?>
-<section class="io-claps" aria-labelledby="io-claps-title">
+<section id="io-claps" class="io-claps" aria-labelledby="io-claps-title">
 	<div class="io-claps__intro">
 		<span class="io-claps__eyebrow"><?php esc_html_e( 'A little applause goes a long way', 'ioblog-editorial' ); ?></span>
 		<h2 id="io-claps-title"><?php esc_html_e( 'Was this useful?', 'ioblog-editorial' ); ?></h2>

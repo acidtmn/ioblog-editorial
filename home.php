@@ -65,5 +65,6 @@ $section_order  = 1 === $paged ? Ioblog_Homepage_Layout::section_order() : array
 			</section>
 		<?php } ?>
 	<?php } ?>
+	<?php if ( 1 === $paged ) { do_action( 'ioblog_home_after_sections' ); } ?>
 </div>
 <?php get_footer(); ?>

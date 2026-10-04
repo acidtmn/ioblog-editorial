@@ -56,7 +56,7 @@ while ( have_posts() ) {
 					<?php the_tags( '<div class="io-tags">', '', '</div>' ); ?>
 					<div class="io-author-card">
 						<?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?>
-						<div><strong><?php the_author(); ?></strong><span><?php echo esc_html( apply_filters( 'ioblog_author_signature', __( 'IO Blog editorial team', 'ioblog-editorial' ), get_the_author_meta( 'ID' ) ) ); ?></span><p><?php echo esc_html( get_the_author_meta( 'description' ) ?: __( 'We write about technology that makes everyday life easier.', 'ioblog-editorial' ) ); ?></p></div>
+						<div><strong><?php the_author(); ?></strong><span><?php echo esc_html( apply_filters( 'ioblog_author_signature', __( 'Author', 'ioblog-editorial' ), get_the_author_meta( 'ID' ) ) ); ?></span><?php if ( get_the_author_meta( 'description' ) ) { ?><p><?php echo esc_html( get_the_author_meta( 'description' ) ); ?></p><?php } do_action( 'ioblog_author_card_actions', get_the_author_meta( 'ID' ) ); ?></div>
 					</div>
 				</footer>
 
