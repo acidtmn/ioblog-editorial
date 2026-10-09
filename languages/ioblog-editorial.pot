@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: IO Blog Editorial 1.12.0\n"
+"Project-Id-Version: IO Blog Editorial 1.13.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ioblog-editorial\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-04T12:08:34+00:00\n"
+"POT-Creation-Date: 2026-10-09T01:12:49+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ioblog-editorial\n"
@@ -57,6 +57,7 @@ msgid "Mobile"
 msgstr ""
 
 #: inc/admin/cover-editor.php:22
+#: inc/community/mobile-navigation.php:12
 #: template-parts/account.php:4
 msgid "Security"
 msgstr ""
@@ -122,7 +123,7 @@ msgid "Kicker"
 msgstr ""
 
 #: inc/admin/cover-editor.php:42
-#: inc/writing/editor/assets.php:21
+#: inc/writing/editor/assets.php:24
 #: assets/js/editor-native.js:4
 msgid "Caption"
 msgstr ""
@@ -132,7 +133,7 @@ msgid "Automatic covers appear when no featured image is set. A manually selecte
 msgstr ""
 
 #: inc/admin/settings-sections.php:11
-#: template-parts/community-admin.php:15
+#: template-parts/community-admin.php:16
 msgid "Enabled"
 msgstr ""
 
@@ -166,7 +167,7 @@ msgid "Automatically after the selected paragraph or manually via shortcode."
 msgstr ""
 
 #: inc/admin/settings-sections.php:25
-#: inc/settings-transfer/presentation.php:56
+#: inc/settings-transfer/presentation.php:57
 msgid "After paragraph number"
 msgstr ""
 
@@ -192,7 +193,7 @@ msgstr ""
 
 #: inc/admin/settings-sections.php:30
 #: inc/admin/settings-sections.php:31
-#: inc/settings-transfer/presentation.php:59
+#: inc/settings-transfer/presentation.php:60
 msgid "Short links"
 msgstr ""
 
@@ -312,6 +313,7 @@ msgstr ""
 
 #: inc/auth/codes.php:25
 #: inc/community/email.php:12
+#: template-parts/mailing-admin.php:9
 msgid "Unable to send email. Check the mail configuration."
 msgstr ""
 
@@ -326,8 +328,9 @@ msgstr ""
 #: inc/auth/controller.php:12
 #: inc/auth/view.php:11
 #: inc/community/controller.php:38
-#: inc/community/view.php:21
-#: inc/writing/editor/assets.php:16
+#: inc/community/view.php:25
+#: inc/notifications/controller.php:18
+#: inc/writing/editor/assets.php:19
 #: inc/writing/errors.php:11
 #: inc/design/admin.php:11
 msgid "Unable to save. Please retry."
@@ -421,11 +424,11 @@ msgstr ""
 msgid "Open link"
 msgstr ""
 
-#: inc/community/account.php:53
+#: inc/community/account.php:52
 msgid "Current password is incorrect."
 msgstr ""
 
-#: inc/community/account.php:64
+#: inc/community/account.php:63
 msgid "Set a password before removing your last sign-in method."
 msgstr ""
 
@@ -439,6 +442,8 @@ msgstr ""
 #: inc/community/admin.php:11
 #: inc/community/controller.php:37
 #: inc/mail/admin.php:10
+#: inc/mailing/admin.php:8
+#: inc/notifications/controller.php:17
 #: inc/writing/admin.php:11
 #: inc/design/admin.php:22
 #: inc/legal/admin.php:10
@@ -447,6 +452,8 @@ msgstr ""
 
 #: inc/community/email.php:7
 #: inc/community/messages.php:14
+#: inc/mailing/admin.php:14
+#: inc/mailing/unsubscribe.php:12
 msgid "Please try again shortly."
 msgstr ""
 
@@ -464,7 +471,7 @@ msgid "Your library changed on another device. Reload and merge again."
 msgstr ""
 
 #: inc/community/messages.php:11
-#: inc/community/view.php:26
+#: inc/community/view.php:30
 msgid "This conversation is unavailable."
 msgstr ""
 
@@ -472,14 +479,57 @@ msgstr ""
 msgid "Message limit reached. Please try later."
 msgstr ""
 
-#: inc/community/notifications.php:43
-msgid "Your reading updates"
+#: inc/community/mobile-navigation.php:5
+#: inc/community/view.php:44
+#: inc/routing/bootstrap.php:34
+#: template-parts/account-routes.php:4
+#: template-parts/account.php:8
+#: template-parts/writing.php:6
+msgid "My account"
 msgstr ""
 
+#: inc/community/mobile-navigation.php:7
+#: inc/community/privacy.php:43
+#: inc/routing/bootstrap.php:34
+#: template-parts/account-routes.php:4
+#: template-parts/account.php:15
+#: template-parts/writing-list.php:2
+#: template-parts/writing.php:6
+msgid "My articles and drafts"
+msgstr ""
+
+#: inc/community/mobile-navigation.php:8
+#: inc/community/privacy.php:29
+#: inc/notifications/presentation.php:26
+#: template-parts/account-routes.php:4
+#: template-parts/account.php:4
+#: template-parts/community-admin.php:5
+#: template-parts/notification-bell.php:3
+#: template-parts/notification-bell.php:5
+msgid "Notifications"
+msgstr ""
+
+#: inc/community/mobile-navigation.php:8
 #: inc/community/privacy.php:27
+#: template-parts/account-routes.php:4
 #: template-parts/account.php:4
 #: template-parts/chat.php:9
 msgid "Messages"
+msgstr ""
+
+#: inc/community/mobile-navigation.php:8
+#: inc/community/privacy.php:35
+#: template-parts/account.php:4
+msgid "Subscriptions"
+msgstr ""
+
+#: inc/community/mobile-navigation.php:11
+#: inc/community/privacy.php:28
+#: inc/community/privacy.php:33
+#: inc/routing/bootstrap.php:34
+#: template-parts/account-routes.php:4
+#: template-parts/account.php:4
+msgid "Profile"
 msgstr ""
 
 #: inc/community/privacy.php:27
@@ -491,28 +541,12 @@ msgstr ""
 #: template-parts/account.php:4
 #: header.php:32
 #: template-parts/library.php:6
+#: template-parts/mobile-navigation.php:9
 msgid "My library"
-msgstr ""
-
-#: inc/community/privacy.php:28
-#: inc/community/privacy.php:33
-#: template-parts/account.php:4
-msgid "Profile"
-msgstr ""
-
-#: inc/community/privacy.php:29
-#: template-parts/account.php:4
-#: template-parts/community-admin.php:5
-msgid "Notifications"
 msgstr ""
 
 #: inc/community/privacy.php:34
 msgid "Avatar"
-msgstr ""
-
-#: inc/community/privacy.php:35
-#: template-parts/account.php:4
-msgid "Subscriptions"
 msgstr ""
 
 #: inc/community/privacy.php:38
@@ -520,13 +554,8 @@ msgid "Social sign-in methods"
 msgstr ""
 
 #: inc/community/privacy.php:43
-#: template-parts/account.php:14
-#: template-parts/writing.php:6
-msgid "My articles and drafts"
-msgstr ""
-
-#: inc/community/privacy.php:43
 #: inc/interests/view-template.php:9
+#: template-parts/writing-list.php:6
 msgid "Article"
 msgstr ""
 
@@ -539,112 +568,110 @@ msgid "Privacy and consent"
 msgstr ""
 
 #: inc/community/privacy.php:48
+#: inc/mailing/privacy.php:16
 msgid "Consent record"
 msgstr ""
 
-#: inc/community/view.php:15
+#: inc/community/view.php:16
 msgid "Choose a JPG, PNG or WebP image up to 5 MB and 16 megapixels."
 msgstr ""
 
-#: inc/community/view.php:15
+#: inc/community/view.php:16
 msgid "Drag or use arrow keys to position your avatar."
 msgstr ""
 
-#: inc/community/view.php:19
+#: inc/community/view.php:23
 msgid "Confirmation email sent. Open the link while signed in."
 msgstr ""
 
-#: inc/community/view.php:20
+#: inc/community/view.php:24
 #: template-parts/reader-profile.php:12
 msgid "Follow author"
 msgstr ""
 
-#: inc/community/view.php:20
+#: inc/community/view.php:24
 msgid "Unfollow"
 msgstr ""
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
+#: inc/notifications/view.php:8
 #: template-parts/community-admin.php:10
 #: template-parts/mail-admin.php:7
+#: template-parts/mailing-admin.php:9
 #: template-parts/writing-admin.php:8
 #: inc/design/admin.php:11
 #: template-parts/legal-admin.php:8
 msgid "Settings saved."
 msgstr ""
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 #: template-parts/writing-admin.php:18
 msgid "Nothing here yet."
 msgstr ""
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
+#: template-parts/notification-center.php:6
 #: template-parts/profile-editor.php:22
 msgid "Save"
 msgstr ""
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 msgid "Collection"
 msgstr ""
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 msgid "Remove"
 msgstr ""
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 #: inc/series/view.php:19
 msgid "Read"
 msgstr ""
 
-#: inc/community/view.php:21
-#: template-parts/account.php:28
+#: inc/community/view.php:25
+#: template-parts/account.php:30
 msgid "Merge browser library"
 msgstr ""
 
-#: inc/community/view.php:21
-#: template-parts/account.php:28
+#: inc/community/view.php:25
+#: template-parts/account.php:30
 msgid "Sync with this browser"
 msgstr ""
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 msgid "Report"
 msgstr ""
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 #: template-parts/chat.php:8
 msgid "Block"
 msgstr ""
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 msgid "Unblock"
 msgstr ""
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 #: inc/oauth/view.php:15
 msgid "Link account"
 msgstr ""
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 msgid "Remove sign-in method"
 msgstr ""
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 #: inc/writing/view.php:6
 #: template-parts/account.php:12
 msgid "Sign in to use your personal account."
 msgstr ""
 
-#: inc/community/view.php:26
+#: inc/community/view.php:30
 msgid "No readers found. Only people who allow messages appear here."
 msgstr ""
 
-#: inc/community/view.php:26
+#: inc/community/view.php:30
 msgid "Start a conversation"
-msgstr ""
-
-#: inc/community/view.php:40
-#: template-parts/account.php:8
-#: template-parts/writing.php:6
-msgid "My account"
 msgstr ""
 
 #: inc/consent/service.php:32
@@ -816,6 +843,7 @@ msgstr ""
 
 #: inc/mail/admin.php:4
 #: template-parts/mail-admin.php:6
+#: template-parts/mailing-admin.php:10
 #: inc/admin/settings-page.php:140
 #: inc/settings-transfer/presentation.php:16
 msgid "Email / SMTP"
@@ -827,6 +855,146 @@ msgstr ""
 
 #: inc/mail/transport.php:20
 msgid "This is a test email from the IO Blog mail settings. If you received it, the mail transport is working."
+msgstr ""
+
+#: inc/mailing/admin.php:3
+#: template-parts/mailing-admin.php:8
+#: inc/settings-transfer/presentation.php:17
+msgid "Notifications and newsletters"
+msgstr ""
+
+#: inc/mailing/content.php:19
+msgid "New article"
+msgstr ""
+
+#: inc/mailing/content.php:29
+#: template-parts/mailing-admin.php:13
+msgid "Your reading updates"
+msgstr ""
+
+#: inc/mailing/content.php:37
+#: inc/mailing/content.php:40
+#: inc/mailing/privacy.php:15
+#: template-parts/notification-center.php:5
+#: template-parts/profile-editor.php:20
+msgid "Email and notification settings"
+msgstr ""
+
+#: inc/mailing/content.php:38
+msgid "You receive this email because you subscribed in your account."
+msgstr ""
+
+#: inc/mailing/content.php:38
+#: inc/mailing/content.php:41
+#: inc/mailing/unsubscribe.php:15
+msgid "Unsubscribe"
+msgstr ""
+
+#: inc/mailing/preferences.php:28
+#: inc/notifications/view.php:8
+msgid "Confirm your email in Profile before subscribing."
+msgstr ""
+
+#: inc/mailing/privacy.php:15
+#: inc/mailing/privacy.php:16
+#: inc/mailing/privacy.php:17
+#: inc/mailing/unsubscribe.php:13
+#: inc/mailing/unsubscribe.php:16
+#: inc/routing/bootstrap.php:34
+#: template-parts/notification-center.php:7
+msgid "Email subscription"
+msgstr ""
+
+#: inc/mailing/privacy.php:17
+#: template-parts/mailing-admin.php:14
+msgid "Delivery queue"
+msgstr ""
+
+#: inc/mailing/unsubscribe.php:10
+msgid "The unsubscribe link is invalid. Manage email in your account."
+msgstr ""
+
+#: inc/mailing/unsubscribe.php:13
+msgid "You have unsubscribed from reading emails. Account security emails are not affected."
+msgstr ""
+
+#: inc/mailing/unsubscribe.php:15
+msgid "Stop all digests and editorial newsletters for this account?"
+msgstr ""
+
+#: inc/notifications/presentation.php:5
+msgid "Private message"
+msgstr ""
+
+#: inc/notifications/presentation.php:5
+msgid "Reply to your comment"
+msgstr ""
+
+#: inc/notifications/presentation.php:5
+msgid "Comment on your article"
+msgstr ""
+
+#: inc/notifications/presentation.php:5
+msgid "New article from your subscriptions"
+msgstr ""
+
+#: inc/notifications/presentation.php:5
+msgid "Editorial update"
+msgstr ""
+
+#: inc/notifications/presentation.php:5
+msgid "New follower"
+msgstr ""
+
+#: inc/notifications/presentation.php:27
+msgid "Article published"
+msgstr ""
+
+#: inc/notifications/presentation.php:27
+msgid "Article returned to draft"
+msgstr ""
+
+#: inc/notifications/presentation.php:27
+msgid "Article review updated"
+msgstr ""
+
+#: inc/notifications/view.php:8
+msgid "You are all caught up"
+msgstr ""
+
+#: inc/notifications/view.php:8
+msgid "Replies, new articles and editorial updates will appear here."
+msgstr ""
+
+#: inc/notifications/view.php:8
+msgid "Unable to load notifications. Please retry."
+msgstr ""
+
+#: inc/notifications/view.php:8
+msgid "Mark as read"
+msgstr ""
+
+#: inc/notifications/view.php:8
+#: template-parts/notification-center.php:3
+msgid "All events"
+msgstr ""
+
+#: inc/notifications/view.php:8
+#: template-parts/notification-bell.php:6
+#: template-parts/notification-center.php:3
+msgid "Unread only"
+msgstr ""
+
+#: inc/notifications/view.php:8
+msgid "Unread notifications"
+msgstr ""
+
+#: inc/notifications/view.php:8
+msgid "Email delivery is paused by the site owner. Your selection is saved."
+msgstr ""
+
+#: inc/notifications/view.php:8
+msgid "Your email subscription is active."
 msgstr ""
 
 #: inc/oauth/controller.php:15
@@ -866,7 +1034,7 @@ msgid "Next chapter"
 msgstr ""
 
 #: inc/services/class-link-preview-service.php:55
-#: inc/writing/editor/assets.php:21
+#: inc/writing/editor/assets.php:24
 msgid "Enter a complete address beginning with http:// or https://."
 msgstr ""
 
@@ -894,257 +1062,285 @@ msgstr ""
 msgid "Author newsroom"
 msgstr ""
 
-#: inc/writing/editor/assets.php:16
+#: inc/writing/editor/assets.php:18
+msgid "Edit"
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+msgid "Open"
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+#: template-parts/writing.php:16
+msgid "Read article"
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+msgid "Proposed article update"
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+msgid "Articles found"
+msgstr ""
+
+#: inc/writing/editor/assets.php:18
+msgid "No publications match these filters."
+msgstr ""
+
+#: inc/writing/editor/assets.php:19
 msgid "No articles yet. Start your first draft."
 msgstr ""
 
-#: inc/writing/editor/assets.php:16
+#: inc/writing/editor/assets.php:19
 msgid "Draft saved."
 msgstr ""
 
-#: inc/writing/editor/assets.php:16
+#: inc/writing/editor/assets.php:19
 msgid "You have unsaved changes."
 msgstr ""
 
-#: inc/writing/editor/assets.php:16
-#: template-parts/writing.php:8
+#: inc/writing/editor/assets.php:19
+#: template-parts/writing-list.php:4
+#: template-parts/writing-list.php:5
 msgid "Draft"
 msgstr ""
 
-#: inc/writing/editor/assets.php:16
-#: template-parts/writing.php:8
+#: inc/writing/editor/assets.php:19
+#: template-parts/writing-list.php:4
+#: template-parts/writing-list.php:5
 msgid "In review"
 msgstr ""
 
-#: inc/writing/editor/assets.php:16
+#: inc/writing/editor/assets.php:19
 #: template-parts/reader-profile.php:14
-#: template-parts/writing.php:8
+#: template-parts/writing-list.php:4
+#: template-parts/writing-list.php:5
 msgid "Published"
 msgstr ""
 
-#: inc/writing/editor/assets.php:16
+#: inc/writing/editor/assets.php:19
 msgid "Moved to trash"
 msgstr ""
 
-#: inc/writing/editor/assets.php:16
+#: inc/writing/editor/assets.php:19
 #: template-parts/reader-profile.php:13
 msgid "Author reputation"
 msgstr ""
 
-#: inc/writing/editor/assets.php:17
+#: inc/writing/editor/assets.php:20
 msgid "Start writing. Use + to add a block."
 msgstr ""
 
-#: inc/writing/editor/assets.php:17
+#: inc/writing/editor/assets.php:20
 #: inc/writing/errors.php:7
 msgid "This article contains blocks edited in WordPress that cannot be imported without loss. Open it in WordPress instead."
 msgstr ""
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "Text"
 msgstr ""
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "Heading"
 msgstr ""
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "List"
 msgstr ""
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "Quote"
 msgstr ""
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "Code"
 msgstr ""
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "Image"
 msgstr ""
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "Table"
 msgstr ""
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "Delimiter"
 msgstr ""
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 #: assets/js/editor-native.js:4
 msgid "Video"
 msgstr ""
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 #: assets/js/editor-link-card.js:83
 #: assets/js/editor-link-card.js:120
 msgid "Link card"
 msgstr ""
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 #: assets/js/editor-native.js:5
 msgid "Members only"
 msgstr ""
 
-#: inc/writing/editor/assets.php:19
+#: inc/writing/editor/assets.php:22
 msgid "Bold"
 msgstr ""
 
-#: inc/writing/editor/assets.php:19
+#: inc/writing/editor/assets.php:22
 msgid "Italic"
 msgstr ""
 
-#: inc/writing/editor/assets.php:19
+#: inc/writing/editor/assets.php:22
 msgid "Link"
 msgstr ""
 
-#: inc/writing/editor/assets.php:19
+#: inc/writing/editor/assets.php:22
 msgid "Inline code"
 msgstr ""
 
-#: inc/writing/editor/assets.php:19
-#: inc/writing/editor/assets.php:23
+#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:26
 msgid "Ordered list"
 msgstr ""
 
-#: inc/writing/editor/assets.php:19
-#: inc/writing/editor/assets.php:23
+#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:26
 msgid "Unordered list"
 msgstr ""
 
-#: inc/writing/editor/assets.php:19
+#: inc/writing/editor/assets.php:22
 #: assets/js/editor-native.js:6
 msgid "Checklist"
 msgstr ""
 
-#: inc/writing/editor/assets.php:20
-#: template-parts/writing.php:13
+#: inc/writing/editor/assets.php:23
+#: template-parts/writing.php:14
 msgid "Add a block"
 msgstr ""
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Find a block"
 msgstr ""
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Nothing found."
 msgstr ""
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Delete"
 msgstr ""
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Click to delete"
 msgstr ""
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Move up"
 msgstr ""
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Move down"
 msgstr ""
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Convert to"
 msgstr ""
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Block settings"
 msgstr ""
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "or drag to move"
 msgstr ""
 
-#: inc/writing/editor/assets.php:21
+#: inc/writing/editor/assets.php:24
 msgid "Upload an image"
 msgstr ""
 
-#: inc/writing/editor/assets.php:21
+#: inc/writing/editor/assets.php:24
 msgid "Add a link"
 msgstr ""
 
-#: inc/writing/editor/assets.php:21
+#: inc/writing/editor/assets.php:24
 msgid "Apply"
 msgstr ""
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "With headings"
 msgstr ""
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "Without headings"
 msgstr ""
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "Add row above"
 msgstr ""
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "Add row below"
 msgstr ""
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "Delete row"
 msgstr ""
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "Add column to left"
 msgstr ""
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "Add column to right"
 msgstr ""
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "Delete column"
 msgstr ""
 
-#: inc/writing/editor/assets.php:23
+#: inc/writing/editor/assets.php:26
 msgid "Align left"
 msgstr ""
 
-#: inc/writing/editor/assets.php:23
+#: inc/writing/editor/assets.php:26
 msgid "Align center"
 msgstr ""
 
-#: inc/writing/editor/assets.php:23
+#: inc/writing/editor/assets.php:26
 msgid "Start with"
 msgstr ""
 
-#: inc/writing/editor/assets.php:24
+#: inc/writing/editor/assets.php:27
 msgid "Everything below is for signed-in readers. Images remain public; do not upload confidential files."
 msgstr ""
 
-#: inc/writing/editor/assets.php:24
+#: inc/writing/editor/assets.php:27
 #: inc/writing/errors.php:9
 #: assets/js/editor-native.js:4
 msgid "YouTube, Vimeo, VK Video or Rutube URL"
 msgstr ""
 
-#: inc/writing/editor/assets.php:24
+#: inc/writing/editor/assets.php:27
 #: inc/writing/errors.php:8
 msgid "Upload a JPG, PNG, WebP or GIF up to 5 MB. GIF is converted to a still image."
 msgstr ""
 
-#: inc/writing/editor/assets.php:24
+#: inc/writing/editor/assets.php:27
 msgid "Loading..."
 msgstr ""
 
-#: inc/writing/editor/assets.php:24
+#: inc/writing/editor/assets.php:27
 #: inc/writing/editor/controller.php:12
 msgid "Preview unavailable. The link will still be saved."
 msgstr ""
 
-#: inc/writing/editor/assets.php:24
+#: inc/writing/editor/assets.php:27
 msgid "words"
 msgstr ""
 
-#: inc/writing/editor/assets.php:24
+#: inc/writing/editor/assets.php:27
 msgid "Autosave starts after the first save."
 msgstr ""
 
@@ -1231,8 +1427,21 @@ msgstr ""
 msgid "Ranked by editorial reputation, then publication date."
 msgstr ""
 
-#: ioblog-editorial-pro.php:50
+#: ioblog-editorial-pro.php:57
 msgid "Publishing tools require IO Blog Editorial 1.12.0 or later. Reader accounts remain available through the shortcode."
+msgstr ""
+
+#: template-parts/account-routes.php:4
+#: template-parts/writing-list.php:3
+msgid "New draft"
+msgstr ""
+
+#: template-parts/account-routes.php:7
+msgid "Account addresses"
+msgstr ""
+
+#: template-parts/account-routes.php:9
+msgid "Permalink settings"
 msgstr ""
 
 #: template-parts/account.php:4
@@ -1260,7 +1469,7 @@ msgid "Your editor, drafts and editorial feedback in one workspace."
 msgstr ""
 
 #: template-parts/account.php:12
-#: template-parts/account.php:21
+#: template-parts/account.php:23
 msgid "Reset password"
 msgstr ""
 
@@ -1272,64 +1481,62 @@ msgstr ""
 msgid "Account sections"
 msgstr ""
 
-#: template-parts/account.php:19
+#: template-parts/account.php:21
 msgid "Email for account recovery"
 msgstr ""
 
-#: template-parts/account.php:19
+#: template-parts/account.php:21
 msgid "Send confirmation email"
 msgstr ""
 
-#: template-parts/account.php:21
+#: template-parts/account.php:23
 msgid "Connect a social account to sign in faster. Keep at least one sign-in method."
 msgstr ""
 
-#: template-parts/account.php:21
+#: template-parts/account.php:23
 msgid "Sign out other sessions"
 msgstr ""
 
-#: template-parts/account.php:21
+#: template-parts/account.php:23
 msgid "Current password"
 msgstr ""
 
-#: template-parts/account.php:21
+#: template-parts/account.php:23
 #: template-parts/auth-modal.php:14
 msgid "New password, at least 12 characters"
 msgstr ""
 
-#: template-parts/account.php:21
+#: template-parts/account.php:23
 msgid "Change password"
 msgstr ""
 
-#: template-parts/account.php:25
+#: template-parts/account.php:27
 msgid "Follow authors and select categories in your profile to build your personal feed."
 msgstr ""
 
-#: template-parts/account.php:25
+#: template-parts/account.php:27
 msgid "Find an author"
 msgstr ""
 
-#: template-parts/account.php:25
+#: template-parts/account.php:27
 #: searchform.php:11
+#: template-parts/mobile-navigation.php:10
 #: template-parts/search-modal.php:18
 #: template-parts/search-modal.php:20
 msgid "Search"
 msgstr ""
 
-#: template-parts/account.php:27
+#: template-parts/account.php:29
 msgid "Disable sync in this browser"
 msgstr ""
 
-#: template-parts/account.php:28
-#: template-parts/writing.php:8
+#: template-parts/account.php:30
+#: template-parts/writing-list.php:5
 msgid "Find an article"
 msgstr ""
 
-#: template-parts/account.php:29
-msgid "Mark all as read"
-msgstr ""
-
 #: template-parts/auth-modal.php:6
+#: template-parts/notification-bell.php:5
 msgid "Close"
 msgstr ""
 
@@ -1460,59 +1667,61 @@ msgstr ""
 msgid "Author publishing settings"
 msgstr ""
 
-#: template-parts/community-admin.php:12
+#: template-parts/community-admin.php:13
+#: template-parts/mailing-admin.php:10
 msgid "Account modules"
 msgstr ""
 
-#: template-parts/community-admin.php:12
+#: template-parts/community-admin.php:13
 msgid "Daily message limit per user"
 msgstr ""
 
-#: template-parts/community-admin.php:12
+#: template-parts/community-admin.php:13
 msgid "Open personal account"
 msgstr ""
 
-#: template-parts/community-admin.php:12
+#: template-parts/community-admin.php:13
 msgid "Messages require recipient consent. Social accounts can be linked from Security after signing in."
 msgstr ""
 
-#: template-parts/community-admin.php:14
+#: template-parts/community-admin.php:15
 msgid "Configured. Test with your registered application."
 msgstr ""
 
-#: template-parts/community-admin.php:14
+#: template-parts/community-admin.php:15
 msgid "Fill in the application settings and enable the provider."
 msgstr ""
 
-#: template-parts/community-admin.php:15
+#: template-parts/community-admin.php:16
 msgid "Register this callback URL in the provider application:"
 msgstr ""
 
-#: template-parts/community-admin.php:16
+#: template-parts/community-admin.php:17
 msgid "Telegram uses OpenID Connect. Choose RS256 in BotFather."
 msgstr ""
 
-#: template-parts/community-admin.php:19
+#: template-parts/community-admin.php:20
 msgid "Delivery and moderation"
 msgstr ""
 
-#: template-parts/community-admin.php:19
+#: template-parts/community-admin.php:20
 msgid "WP-Cron is disabled. Configure a server cron job for notifications and daily digests."
 msgstr ""
 
-#: template-parts/community-admin.php:19
+#: template-parts/community-admin.php:20
+#: template-parts/mailing-admin.php:14
 msgid "Scheduled notifications use WordPress cron."
 msgstr ""
 
-#: template-parts/community-admin.php:19
+#: template-parts/community-admin.php:20
 msgid "Email is opt-in and uses the WordPress mail transport."
 msgstr ""
 
-#: template-parts/community-admin.php:22
+#: template-parts/community-admin.php:23
 msgid "Dismiss report"
 msgstr ""
 
-#: template-parts/community-admin.php:23
+#: template-parts/community-admin.php:24
 msgid "Delete reported message"
 msgstr ""
 
@@ -1634,6 +1843,208 @@ msgstr ""
 msgid "Send test email"
 msgstr ""
 
+#: template-parts/mailing-admin.php:6
+msgid "Queued"
+msgstr ""
+
+#: template-parts/mailing-admin.php:6
+msgid "Sending"
+msgstr ""
+
+#: template-parts/mailing-admin.php:6
+msgid "Accepted by mail transport"
+msgstr ""
+
+#: template-parts/mailing-admin.php:6
+msgid "Delivery failed"
+msgstr ""
+
+#: template-parts/mailing-admin.php:6
+msgid "Delivery uncertain — review required"
+msgstr ""
+
+#: template-parts/mailing-admin.php:6
+msgid "Cancelled"
+msgstr ""
+
+#: template-parts/mailing-admin.php:8
+msgid "A notification center and opt-in reading emails, without a separate mailing plugin."
+msgstr ""
+
+#: template-parts/mailing-admin.php:9
+msgid "The test email was accepted by the mail transport. Check your mailbox; this is not proof of delivery."
+msgstr ""
+
+#: template-parts/mailing-admin.php:10
+msgid "Notification center"
+msgstr ""
+
+#: template-parts/mailing-admin.php:10
+msgid "The header bell shows replies, comments on author articles, subscription updates, messages and editorial decisions. Readers choose their event types independently."
+msgstr ""
+
+#: template-parts/mailing-admin.php:12
+msgid "Reading newsletters"
+msgstr ""
+
+#: template-parts/mailing-admin.php:12
+msgid "Enable scheduled email delivery"
+msgstr ""
+
+#: template-parts/mailing-admin.php:12
+msgid "Off by default. Enabling delivery does not subscribe anyone. Only verified readers with an explicit email selection receive digests or new-article roundups."
+msgstr ""
+
+#: template-parts/mailing-admin.php:13
+msgid "Email subject"
+msgstr ""
+
+#: template-parts/mailing-admin.php:13
+msgid "Delivery hour"
+msgstr ""
+
+#: template-parts/mailing-admin.php:13
+msgid "Weekly delivery day"
+msgstr ""
+
+#: template-parts/mailing-admin.php:13
+msgid "Monday"
+msgstr ""
+
+#: template-parts/mailing-admin.php:13
+msgid "Tuesday"
+msgstr ""
+
+#: template-parts/mailing-admin.php:13
+msgid "Wednesday"
+msgstr ""
+
+#: template-parts/mailing-admin.php:13
+msgid "Thursday"
+msgstr ""
+
+#: template-parts/mailing-admin.php:13
+msgid "Friday"
+msgstr ""
+
+#: template-parts/mailing-admin.php:13
+msgid "Saturday"
+msgstr ""
+
+#: template-parts/mailing-admin.php:13
+msgid "Sunday"
+msgstr ""
+
+#: template-parts/mailing-admin.php:13
+msgid "Emails per five-minute batch"
+msgstr ""
+
+#: template-parts/mailing-admin.php:13
+msgid "Site timezone:"
+msgstr ""
+
+#: template-parts/mailing-admin.php:13
+msgid "Editorial introduction"
+msgstr ""
+
+#: template-parts/mailing-admin.php:14
+msgid "The worker runs every five minutes via WP-Cron. With low traffic or DISABLE_WP_CRON, configure a real server cron. SMTP settings are shared with account emails."
+msgstr ""
+
+#: template-parts/mailing-admin.php:14
+msgid "WP-Cron is disabled."
+msgstr ""
+
+#: template-parts/mailing-admin.php:15
+#: template-parts/writing-list.php:6
+msgid "Status"
+msgstr ""
+
+#: template-parts/mailing-admin.php:15
+msgid "Count"
+msgstr ""
+
+#: template-parts/mailing-admin.php:15
+msgid "Temporary mail errors retry up to three attempts. Interrupted sends are held for review to avoid duplicates. Accepted does not mean delivered; there is no bounce tracking."
+msgstr ""
+
+#: template-parts/mailing-admin.php:16
+msgid "Cancel failed and uncertain batches"
+msgstr ""
+
+#: template-parts/mailing-admin.php:17
+msgid "Preview and test"
+msgstr ""
+
+#: template-parts/mailing-admin.php:17
+msgid "A test sends only to your administrator email. It does not start a campaign or create a subscription."
+msgstr ""
+
+#: template-parts/mailing-admin.php:17
+msgid "Newsletter preview"
+msgstr ""
+
+#: template-parts/mailing-admin.php:17
+msgid "Send a test to me"
+msgstr ""
+
+#: template-parts/mailing-admin.php:17
+msgid "Roundups contain up to 12 recent public articles and digests up to 30 events. Every real newsletter includes account settings and a signed unsubscribe link; link scanners cannot unsubscribe with GET."
+msgstr ""
+
+#: template-parts/notification-bell.php:6
+#: template-parts/notification-center.php:3
+msgid "Mark all as read"
+msgstr ""
+
+#: template-parts/notification-bell.php:8
+msgid "All notifications and email settings"
+msgstr ""
+
+#: template-parts/notification-center.php:3
+msgid "Event type"
+msgstr ""
+
+#: template-parts/notification-center.php:4
+msgid "Load older events"
+msgstr ""
+
+#: template-parts/notification-center.php:6
+msgid "Notify me on the site"
+msgstr ""
+
+#: template-parts/notification-center.php:7
+msgid "Email me a digest of my notifications"
+msgstr ""
+
+#: template-parts/notification-center.php:7
+msgid "Email me an editorial roundup of new site articles"
+msgstr ""
+
+#: template-parts/notification-center.php:7
+msgid "Frequency"
+msgstr ""
+
+#: template-parts/notification-center.php:7
+msgid "Daily"
+msgstr ""
+
+#: template-parts/notification-center.php:7
+msgid "Weekly"
+msgstr ""
+
+#: template-parts/notification-center.php:8
+msgid "These are separate voluntary email subscriptions. Uncheck both to unsubscribe, or use the link in any newsletter. Security and sign-in emails are not newsletters."
+msgstr ""
+
+#: template-parts/notification-center.php:8
+msgid "Confirm your email in Profile"
+msgstr ""
+
+#: template-parts/notification-center.php:8
+msgid "Save email preferences"
+msgstr ""
+
 #: template-parts/oauth-consent.php:5
 msgid "Social sign-in"
 msgstr ""
@@ -1697,10 +2108,6 @@ msgstr ""
 
 #: template-parts/profile-editor.php:19
 msgid "Allow private messages"
-msgstr ""
-
-#: template-parts/profile-editor.php:20
-msgid "Receive a daily email digest"
 msgstr ""
 
 #: template-parts/profile-editor.php:21
@@ -1800,18 +2207,64 @@ msgstr ""
 msgid "Return for revision"
 msgstr ""
 
-#: template-parts/writing.php:8
-msgid "New draft"
+#: template-parts/writing-list.php:3
+#: template-parts/writing-list.php:6
+msgid "Your publications"
 msgstr ""
 
-#: template-parts/writing.php:8
+#: template-parts/writing-list.php:5
 msgid "Article status"
 msgstr ""
 
-#: template-parts/writing.php:8
+#: template-parts/writing-list.php:5
 #: home.php:58
 #: single.php:87
 msgid "All articles"
+msgstr ""
+
+#: template-parts/writing-list.php:5
+msgid "Sort publications"
+msgstr ""
+
+#: template-parts/writing-list.php:5
+msgid "Recently updated first"
+msgstr ""
+
+#: template-parts/writing-list.php:5
+msgid "Newest created first"
+msgstr ""
+
+#: template-parts/writing-list.php:5
+msgid "Title A–Z"
+msgstr ""
+
+#: template-parts/writing-list.php:6
+#: template-parts/writing.php:11
+msgid "Category"
+msgstr ""
+
+#: template-parts/writing-list.php:6
+msgid "Last updated"
+msgstr ""
+
+#: template-parts/writing-list.php:6
+#: comments.php:13
+#: inc/admin/settings-page.php:144
+#: single.php:35
+#: single.php:37
+msgid "Comments"
+msgstr ""
+
+#: template-parts/writing-list.php:6
+msgid "Actions"
+msgstr ""
+
+#: template-parts/writing-list.php:7
+msgid "Previous"
+msgstr ""
+
+#: template-parts/writing-list.php:7
+msgid "Next"
 msgstr ""
 
 #: template-parts/writing.php:9
@@ -1819,59 +2272,55 @@ msgid "Article editor"
 msgstr ""
 
 #: template-parts/writing.php:10
+msgid "Back to publications"
+msgstr ""
+
+#: template-parts/writing.php:11
 msgid "Article title"
 msgstr ""
 
-#: template-parts/writing.php:10
+#: template-parts/writing.php:11
 msgid "A title worth reading"
 msgstr ""
 
-#: template-parts/writing.php:10
+#: template-parts/writing.php:11
 msgid "Short introduction"
 msgstr ""
 
-#: template-parts/writing.php:10
-msgid "Category"
-msgstr ""
-
-#: template-parts/writing.php:10
+#: template-parts/writing.php:11
 msgid "Select a category"
 msgstr ""
 
-#: template-parts/writing.php:11
+#: template-parts/writing.php:12
 msgid "Editor"
 msgstr ""
 
-#: template-parts/writing.php:11
+#: template-parts/writing.php:12
 #: template-parts/admin/design.php:10
 msgid "Preview"
 msgstr ""
 
-#: template-parts/writing.php:12
+#: template-parts/writing.php:13
 msgid "Choose a tool below or use + beside a paragraph. Your CSS cover is generated automatically."
 msgstr ""
 
-#: template-parts/writing.php:15
-msgid "Read article"
-msgstr ""
-
-#: template-parts/writing.php:16
+#: template-parts/writing.php:17
 msgid "Save draft"
 msgstr ""
 
-#: template-parts/writing.php:16
+#: template-parts/writing.php:17
 msgid "Submit for review"
 msgstr ""
 
-#: template-parts/writing.php:16
+#: template-parts/writing.php:17
 msgid "Withdraw submission"
 msgstr ""
 
-#: template-parts/writing.php:16
+#: template-parts/writing.php:17
 msgid "Propose an update"
 msgstr ""
 
-#: template-parts/writing.php:16
+#: template-parts/writing.php:17
 msgid "Move to trash"
 msgstr ""
 
@@ -1982,13 +2431,6 @@ msgstr ""
 msgid "Return to homepage"
 msgstr ""
 
-#: comments.php:13
-#: inc/admin/settings-page.php:144
-#: single.php:35
-#: single.php:37
-msgid "Comments"
-msgstr ""
-
 #: comments.php:21
 msgid "Join the discussion"
 msgstr ""
@@ -2015,7 +2457,7 @@ msgid "An independent blog about technology, computers, software, and practical 
 msgstr ""
 
 #: footer.php:15
-#: inc/setup.php:36
+#: inc/setup.php:37
 msgid "Footer menu"
 msgstr ""
 
@@ -2059,6 +2501,10 @@ msgstr ""
 
 #: header.php:35
 msgid "Open menu"
+msgstr ""
+
+#: header.php:35
+msgid "Close menu"
 msgstr ""
 
 #: home.php:22
@@ -2107,8 +2553,8 @@ msgstr ""
 #: home.php:49
 #: inc/admin/settings-page.php:172
 #: inc/admin/settings-page.php:178
-#: inc/settings-transfer/presentation.php:22
-#: inc/settings-transfer/presentation.php:25
+#: inc/settings-transfer/presentation.php:23
+#: inc/settings-transfer/presentation.php:26
 msgid "Editor’s choice"
 msgstr ""
 
@@ -2180,7 +2626,7 @@ msgid "Appearance"
 msgstr ""
 
 #: inc/admin/settings-page.php:142
-#: inc/settings-transfer/presentation.php:50
+#: inc/settings-transfer/presentation.php:51
 msgid "Menus"
 msgstr ""
 
@@ -2197,7 +2643,7 @@ msgid "The selected language is applied to WordPress, the public site, and your 
 msgstr ""
 
 #: inc/admin/settings-page.php:156
-#: inc/settings-transfer/presentation.php:17
+#: inc/settings-transfer/presentation.php:18
 msgid "WordPress language"
 msgstr ""
 
@@ -2217,27 +2663,27 @@ msgid "Choose the editorial sections and the content featured on the front page.
 msgstr ""
 
 #: inc/admin/settings-page.php:170
-#: inc/settings-transfer/presentation.php:20
+#: inc/settings-transfer/presentation.php:21
 msgid "Hero section"
 msgstr ""
 
 #: inc/admin/settings-page.php:171
-#: inc/settings-transfer/presentation.php:21
+#: inc/settings-transfer/presentation.php:22
 msgid "Category shortcuts"
 msgstr ""
 
 #: inc/admin/settings-page.php:175
-#: inc/settings-transfer/presentation.php:23
+#: inc/settings-transfer/presentation.php:24
 msgid "Featured article"
 msgstr ""
 
 #: inc/admin/settings-page.php:176
-#: inc/settings-transfer/presentation.php:24
+#: inc/settings-transfer/presentation.php:25
 msgid "About page"
 msgstr ""
 
 #: inc/admin/settings-page.php:177
-#: inc/settings-transfer/presentation.php:26
+#: inc/settings-transfer/presentation.php:27
 msgid "Posts per page"
 msgstr ""
 
@@ -2246,7 +2692,7 @@ msgid "Select up to five articles with Ctrl or Command. Leave empty for automati
 msgstr ""
 
 #: inc/admin/settings-page.php:179
-#: inc/settings-transfer/presentation.php:27
+#: inc/settings-transfer/presentation.php:28
 msgid "Section order"
 msgstr ""
 
@@ -2271,7 +2717,7 @@ msgid "Reading presets keep font size, rhythm, and article width balanced."
 msgstr ""
 
 #: inc/admin/settings-page.php:186
-#: inc/settings-transfer/presentation.php:28
+#: inc/settings-transfer/presentation.php:29
 msgid "Typography preset"
 msgstr ""
 
@@ -2284,7 +2730,7 @@ msgid "Comfortable"
 msgstr ""
 
 #: inc/admin/settings-page.php:187
-#: inc/settings-transfer/presentation.php:29
+#: inc/settings-transfer/presentation.php:30
 msgid "Article layout"
 msgstr ""
 
@@ -2301,17 +2747,17 @@ msgid "Wide article"
 msgstr ""
 
 #: inc/admin/settings-page.php:188
-#: inc/settings-transfer/presentation.php:30
+#: inc/settings-transfer/presentation.php:31
 msgid "Body text size, px"
 msgstr ""
 
 #: inc/admin/settings-page.php:189
-#: inc/settings-transfer/presentation.php:31
+#: inc/settings-transfer/presentation.php:32
 msgid "Line height"
 msgstr ""
 
 #: inc/admin/settings-page.php:190
-#: inc/settings-transfer/presentation.php:32
+#: inc/settings-transfer/presentation.php:33
 msgid "Reading width, px"
 msgstr ""
 
@@ -2324,42 +2770,42 @@ msgid "Core settings for live search and user-generated content."
 msgstr ""
 
 #: inc/admin/settings-page.php:197
-#: inc/settings-transfer/presentation.php:18
+#: inc/settings-transfer/presentation.php:19
 msgid "Minimum search characters"
 msgstr ""
 
 #: inc/admin/settings-page.php:198
-#: inc/settings-transfer/presentation.php:19
+#: inc/settings-transfer/presentation.php:20
 msgid "Results in the search window"
 msgstr ""
 
 #: inc/admin/settings-page.php:199
-#: inc/settings-transfer/presentation.php:41
+#: inc/settings-transfer/presentation.php:42
 msgid "Image limit, MB"
 msgstr ""
 
 #: inc/admin/settings-page.php:202
-#: inc/settings-transfer/presentation.php:36
+#: inc/settings-transfer/presentation.php:37
 msgid "Images in comments"
 msgstr ""
 
 #: inc/admin/settings-page.php:203
-#: inc/settings-transfer/presentation.php:37
+#: inc/settings-transfer/presentation.php:38
 msgid "Emoji panel"
 msgstr ""
 
 #: inc/admin/settings-page.php:204
-#: inc/settings-transfer/presentation.php:38
+#: inc/settings-transfer/presentation.php:39
 msgid "Article claps"
 msgstr ""
 
 #: inc/admin/settings-page.php:205
-#: inc/settings-transfer/presentation.php:39
+#: inc/settings-transfer/presentation.php:40
 msgid "Personal reading library"
 msgstr ""
 
 #: inc/admin/settings-page.php:206
-#: inc/settings-transfer/presentation.php:40
+#: inc/settings-transfer/presentation.php:41
 msgid "Safe SVG uploads"
 msgstr ""
 
@@ -2380,7 +2826,7 @@ msgid "Built-in protection requires no keys. An external provider is enabled onl
 msgstr ""
 
 #: inc/admin/settings-page.php:215
-#: inc/settings-transfer/presentation.php:33
+#: inc/settings-transfer/presentation.php:34
 msgid "CAPTCHA provider"
 msgstr ""
 
@@ -2389,12 +2835,12 @@ msgid "Built-in protection"
 msgstr ""
 
 #: inc/admin/settings-page.php:216
-#: inc/settings-transfer/presentation.php:34
+#: inc/settings-transfer/presentation.php:35
 msgid "Site key"
 msgstr ""
 
 #: inc/admin/settings-page.php:217
-#: inc/settings-transfer/presentation.php:35
+#: inc/settings-transfer/presentation.php:36
 msgid "Secret key"
 msgstr ""
 
@@ -2408,7 +2854,7 @@ msgid "VK"
 msgstr ""
 
 #: inc/admin/settings-page.php:227
-#: inc/settings-transfer/presentation.php:42
+#: inc/settings-transfer/presentation.php:43
 #: inc/social.php:18
 msgid "Odnoklassniki"
 msgstr ""
@@ -2665,32 +3111,32 @@ msgid "Third highlight"
 msgstr ""
 
 #: inc/customizer.php:25
-#: inc/settings-transfer/presentation.php:43
+#: inc/settings-transfer/presentation.php:44
 msgid "First title line"
 msgstr ""
 
 #: inc/customizer.php:26
-#: inc/settings-transfer/presentation.php:44
+#: inc/settings-transfer/presentation.php:45
 msgid "Accent line"
 msgstr ""
 
 #: inc/customizer.php:27
-#: inc/settings-transfer/presentation.php:45
+#: inc/settings-transfer/presentation.php:46
 msgid "Description"
 msgstr ""
 
 #: inc/customizer.php:28
-#: inc/settings-transfer/presentation.php:46
+#: inc/settings-transfer/presentation.php:47
 msgid "Site description"
 msgstr ""
 
 #: inc/customizer.php:29
-#: inc/settings-transfer/presentation.php:47
+#: inc/settings-transfer/presentation.php:48
 msgid "Copyright text"
 msgstr ""
 
 #: inc/customizer.php:30
-#: inc/settings-transfer/presentation.php:49
+#: inc/settings-transfer/presentation.php:50
 msgid "Search heading"
 msgstr ""
 
@@ -2701,7 +3147,7 @@ msgid "What are you looking for?"
 msgstr ""
 
 #: inc/customizer.php:42
-#: inc/settings-transfer/presentation.php:48
+#: inc/settings-transfer/presentation.php:49
 msgid "Default color scheme"
 msgstr ""
 
@@ -2718,12 +3164,12 @@ msgid "Dark"
 msgstr ""
 
 #: inc/design/bootstrap.php:23
-#: inc/design/labels.php:15
+#: inc/design/labels.php:16
 msgid "Reader mode"
 msgstr ""
 
 #: inc/design/bootstrap.php:24
-#: inc/design/labels.php:15
+#: inc/design/labels.php:16
 msgid "Print article"
 msgstr ""
 
@@ -2736,221 +3182,225 @@ msgid "Header navigation"
 msgstr ""
 
 #: inc/design/labels.php:7
+msgid "Mobile navigation"
+msgstr ""
+
+#: inc/design/labels.php:8
 msgid "Page background"
 msgstr ""
 
-#: inc/design/labels.php:7
+#: inc/design/labels.php:8
 msgid "Card background"
 msgstr ""
 
-#: inc/design/labels.php:7
+#: inc/design/labels.php:8
 msgid "Soft background"
 msgstr ""
 
-#: inc/design/labels.php:8
+#: inc/design/labels.php:9
 msgid "Main text"
 msgstr ""
 
-#: inc/design/labels.php:8
+#: inc/design/labels.php:9
 msgid "Secondary text"
 msgstr ""
 
-#: inc/design/labels.php:8
+#: inc/design/labels.php:9
 msgid "Borders"
 msgstr ""
 
-#: inc/design/labels.php:9
+#: inc/design/labels.php:10
 msgid "Accent color"
 msgstr ""
 
-#: inc/design/labels.php:9
+#: inc/design/labels.php:10
 msgid "Accent on hover"
 msgstr ""
 
-#: inc/design/labels.php:9
+#: inc/design/labels.php:10
 msgid "Soft accent"
 msgstr ""
 
-#: inc/design/labels.php:10
+#: inc/design/labels.php:11
 msgid "Errors"
 msgstr ""
 
-#: inc/design/labels.php:10
+#: inc/design/labels.php:11
 msgid "Button text"
 msgstr ""
 
-#: inc/design/labels.php:10
+#: inc/design/labels.php:11
 msgid "Keyboard focus"
 msgstr ""
 
-#: inc/design/labels.php:11
+#: inc/design/labels.php:12
 msgid "Body font"
 msgstr ""
 
-#: inc/design/labels.php:11
+#: inc/design/labels.php:12
 msgid "Heading font"
 msgstr ""
 
-#: inc/design/labels.php:11
+#: inc/design/labels.php:12
 msgid "Navigation font"
 msgstr ""
 
-#: inc/design/labels.php:11
+#: inc/design/labels.php:12
 msgid "Button font"
 msgstr ""
 
-#: inc/design/labels.php:11
+#: inc/design/labels.php:12
 msgid "Metadata font"
 msgstr ""
 
-#: inc/design/labels.php:11
+#: inc/design/labels.php:12
 msgid "Code font"
 msgstr ""
 
-#: inc/design/labels.php:12
+#: inc/design/labels.php:13
 msgid "Interface text size"
 msgstr ""
 
-#: inc/design/labels.php:12
+#: inc/design/labels.php:13
 msgid "Heading weight"
 msgstr ""
 
-#: inc/design/labels.php:12
+#: inc/design/labels.php:13
 msgid "Heading scale, %"
 msgstr ""
 
-#: inc/design/labels.php:12
+#: inc/design/labels.php:13
 msgid "Paragraph spacing"
 msgstr ""
 
-#: inc/design/labels.php:12
+#: inc/design/labels.php:13
 msgid "Mobile article text size"
 msgstr ""
 
-#: inc/design/labels.php:12
+#: inc/design/labels.php:13
 msgid "Letter spacing"
 msgstr ""
 
-#: inc/design/labels.php:13
+#: inc/design/labels.php:14
 msgid "Site width"
 msgstr ""
 
-#: inc/design/labels.php:13
+#: inc/design/labels.php:14
 msgid "Sidebar width"
 msgstr ""
 
-#: inc/design/labels.php:13
+#: inc/design/labels.php:14
 msgid "Corner radius"
 msgstr ""
 
-#: inc/design/labels.php:13
+#: inc/design/labels.php:14
 msgid "Section spacing"
 msgstr ""
 
-#: inc/design/labels.php:13
+#: inc/design/labels.php:14
 msgid "Card spacing"
 msgstr ""
 
-#: inc/design/labels.php:13
+#: inc/design/labels.php:14
 msgid "Footer columns"
 msgstr ""
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Sticky header"
 msgstr ""
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Header search"
 msgstr ""
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Color scheme switch"
 msgstr ""
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Logo tagline"
 msgstr ""
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Article cover"
 msgstr ""
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Author card"
 msgstr ""
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 #: single.php:63
 msgid "Adjacent articles"
 msgstr ""
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Related articles"
 msgstr ""
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 #: inc/toc.php:90
 #: single.php:50
 msgid "Table of contents"
 msgstr ""
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Sidebar articles"
 msgstr ""
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Card excerpts"
 msgstr ""
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Card metadata"
 msgstr ""
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Footer social links"
 msgstr ""
 
-#: inc/design/labels.php:15
+#: inc/design/labels.php:16
 msgid "Card image ratio"
 msgstr ""
 
-#: inc/design/labels.php:15
+#: inc/design/labels.php:16
 msgid "Shadows"
 msgstr ""
 
-#: inc/design/labels.php:15
+#: inc/design/labels.php:16
 msgid "No shadow"
 msgstr ""
 
-#: inc/design/labels.php:15
+#: inc/design/labels.php:16
 msgid "Soft shadow"
 msgstr ""
 
-#: inc/design/labels.php:15
+#: inc/design/labels.php:16
 msgid "Strong shadow"
 msgstr ""
 
-#: inc/design/labels.php:16
+#: inc/design/labels.php:17
 msgid "Monospace"
 msgstr ""
 
-#: inc/design/labels.php:17
+#: inc/design/labels.php:18
 msgid "Uploaded font"
 msgstr ""
 
-#: inc/design/labels.php:17
+#: inc/design/labels.php:18
 msgid "Weight: menu"
 msgstr ""
 
-#: inc/design/labels.php:17
+#: inc/design/labels.php:18
 msgid "Weight: button"
 msgstr ""
 
-#: inc/design/labels.php:17
+#: inc/design/labels.php:18
 msgid "Weight: meta"
 msgstr ""
 
-#: inc/design/labels.php:17
+#: inc/design/labels.php:18
 msgid "Weight: body"
 msgstr ""
 
@@ -3187,31 +3637,31 @@ msgstr ""
 msgid "Protected content included"
 msgstr ""
 
-#: inc/settings-transfer/presentation.php:51
+#: inc/settings-transfer/presentation.php:52
 msgid "Logo"
 msgstr ""
 
-#: inc/settings-transfer/presentation.php:52
+#: inc/settings-transfer/presentation.php:53
 msgid "Site icon"
 msgstr ""
 
-#: inc/settings-transfer/presentation.php:53
+#: inc/settings-transfer/presentation.php:54
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/settings-transfer/presentation.php:54
+#: inc/settings-transfer/presentation.php:55
 msgid "Site title"
 msgstr ""
 
-#: inc/settings-transfer/presentation.php:55
+#: inc/settings-transfer/presentation.php:56
 msgid "Tagline"
 msgstr ""
 
-#: inc/settings-transfer/presentation.php:57
+#: inc/settings-transfer/presentation.php:58
 msgid "Code before </head>"
 msgstr ""
 
-#: inc/settings-transfer/presentation.php:58
+#: inc/settings-transfer/presentation.php:59
 msgid "Code before </body>"
 msgstr ""
 
@@ -3255,11 +3705,16 @@ msgstr ""
 msgid "Invalid backup. Use an IO Blog settings JSON file up to 1 MB. Check field types and install its WordPress language pack first."
 msgstr ""
 
-#: inc/setup.php:56
+#: inc/setup.php:36
+#: template-parts/mobile-navigation.php:5
+msgid "Mobile menu"
+msgstr ""
+
+#: inc/setup.php:57
 msgid "Article sidebar"
 msgstr ""
 
-#: inc/setup.php:58
+#: inc/setup.php:59
 msgid "Widgets displayed in the sticky sidebar of a single article."
 msgstr ""
 
@@ -3442,7 +3897,7 @@ msgstr ""
 
 #: single.php:31
 #: single.php:33
-#: assets/js/interface.js:47
+#: assets/js/interface.js:37
 msgid "Copy link"
 msgstr ""
 
@@ -3847,6 +4302,10 @@ msgstr ""
 msgid "The file contains your reading history. Keep it private. Import merges data for this site without removing existing bookmarks."
 msgstr ""
 
+#: template-parts/mobile-navigation.php:7
+msgid "Home"
+msgstr ""
+
 #: template-parts/reading-resume.php:6
 msgid "Dismiss reading position"
 msgstr ""
@@ -3860,15 +4319,15 @@ msgstr ""
 msgid "Article title or topic…"
 msgstr ""
 
-#: assets/js/interface.js:40
+#: assets/js/interface.js:30
 msgid "Copy this link:"
 msgstr ""
 
-#: assets/js/interface.js:104
+#: assets/js/interface.js:94
 msgid "Image preview"
 msgstr ""
 
-#: assets/js/interface.js:107
+#: assets/js/interface.js:97
 msgid "Remove image"
 msgstr ""
 

@@ -34,6 +34,7 @@ function ioblog_enqueue_assets() {
 		'ioblog-archive'    => 'assets/css/archive.css',
 		'ioblog-dark'       => 'assets/css/dark.css',
 		'ioblog-responsive' => 'assets/css/responsive.css',
+		'ioblog-navigation' => 'assets/css/navigation.css',
 	);
 	$dependency = array();
 
@@ -42,6 +43,7 @@ function ioblog_enqueue_assets() {
 		$dependency = array( $handle );
 	}
 
+	wp_enqueue_script( 'ioblog-navigation', get_theme_file_uri( 'assets/js/navigation.js' ), array(), ioblog_asset_version( 'assets/js/navigation.js' ), true );
 	wp_enqueue_script( 'ioblog-interface', get_theme_file_uri( 'assets/js/interface.js' ), array( 'wp-i18n' ), ioblog_asset_version( 'assets/js/interface.js' ), true );
 	wp_set_script_translations( 'ioblog-interface', 'ioblog-editorial', get_theme_file_path( 'languages' ) );
 }

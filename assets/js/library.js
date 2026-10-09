@@ -4,11 +4,11 @@
   const store = window.IOBlogLibraryStore;
   const dialog = document.querySelector('#io-library');
   if (!config || !store || !dialog || !dialog.showModal) return;
-  const open = document.querySelector('.io-library-open');
+  const openButtons = [...document.querySelectorAll('.io-library-open')];
   const save = document.querySelector('.io-save-article');
   const list = dialog.querySelector('.io-library__list');
   const status = dialog.querySelector('.io-library__status');
-  const count = open?.querySelector('.io-library-count');
+  const count = openButtons[0]?.querySelector('.io-library-count');
   const labels = config.labels;
   const search = dialog.querySelector('.io-library__search');
   const filter = dialog.querySelector('.io-library__filter');
@@ -72,10 +72,13 @@
     }
     status.textContent = items.length ? '' : query || filter.value !== 'all' ? labels.noMatches : view === 'history' ? labels.emptyHistory : labels.empty;
   };
-  if (open) {
-    open.hidden = false;
-    open.addEventListener('click', () => { opener = open; dialog.showModal(); render(); });
-  }
+  openButtons.forEach(button => {
+    button.hidden = false;
+    button.addEventListener('click', () => {
+      opener = button.closest('.io-mobile-nav') ? document.querySelector('.io-menu-toggle') : button;
+      dialog.showModal(); render();
+    });
+  });
   views.forEach(button => button.addEventListener('click', () => {
     view = button.dataset.libraryView;
     views.forEach(item => item.setAttribute('aria-pressed', String(item === button)));

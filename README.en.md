@@ -4,17 +4,25 @@
 
 A lightweight editorial WordPress theme by **Kirill Aleksandrov** for personal blogs and technology publications.
 
-**Free 1.12.1** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
+**Free 1.13.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
 
 ## Download and Install
 
-Download the installable `ioblog-editorial-1.12.1.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.12.1), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
+Download the installable `ioblog-editorial-1.13.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.13.0), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
 
 In WordPress open **Appearance → Themes → Add New → Upload Theme**, install the ZIP and activate it. Then open **IO Blog** in the main dashboard menu. Configure the homepage, reading layout, search and comments; assign Primary and Footer menus. Set your logo and Site Icon in **Appearance → Customize → Site Identity**.
 
 ## Included in Free
 
-Version 1.12.1 replaces the intricate outline clap icon with a clear native color clapping-hands emoji in cards and article reactions. One shared component preserves accessible names, counters, animation and reduced-motion support. No remote emoji images or fonts are required; artwork can vary slightly between devices. Pro remains 1.7.0 with no code or license-contract changes.
+Version 1.13.0 fixes 320-768px layouts and provides independent mobile navigation for Home, search and the browser library. Enabled Pro account actions appear when its plugin is installed. Disabling desktop categories does not disable the phone panel. The 72-field design studio has a separate mobile-navigation switch; additional links use the Mobile menu location. Phone cards place their cover above readable text.
+
+Pro 1.8.0 also provides pretty account URLs, including `/account/profile/`, `/account/notifications/`, `/account/messages/123/` and `/account/articles/123/`; public profiles use `/readers/123/`. Legacy links redirect, existing owner pages are preserved, and private ownership checks remain in place. These routes require the separate Pro plugin.
+
+Version 1.13.0 adds paired Russian translations and configuration-backup support for Pro 1.8.0. Publisher mailing settings survive export with Pro disabled; personal consent receipts and delivery history are not theme configuration.
+
+The separate private Pro 1.8.0 adds a header notification bell with owner-only unread count and a filtered account inbox for messages, approved replies/comments, subscriptions, followers and editorial decisions. Reading emails require verified, explicit opt-in and are disabled by default. Daily/weekly schedules, sandboxed preview, administrator tests, persistent SMTP-backed queue, bounded retries and signed unsubscribe are included. Author publications now use a full-width, searchable and sortable table with server-side pagination and a separately opened editor. These features are not bundled with Free; licensing is unchanged.
+
+Previously, 1.12.1 replaced the outline clap icon with a native color clapping-hands emoji. Accessible names, counters and reduced motion remain supported without CDN images or fonts.
 
 In 1.12.0 clap totals are aligned in the card footer beside the read arrow. A visible Write button appears when the optional newsroom is enabled. Russian translations now cover the paired Pro 1.7.0 editor, subscriptions and native blocks.
 
@@ -22,7 +30,7 @@ The separate private Pro 1.7.0 ships actual locally bundled Editor.js, secure im
 
 - Editorial homepage with a featured post, editor picks and a recent-post grid.
 - Reading presets, adjustable typography and three article layouts.
-- A 71-setting design studio: separate palettes, six font roles, heading sizes/weights, local WOFF2, geometry and region controls.
+- A 72-setting design studio: separate palettes, six font roles, heading sizes/weights, local WOFF2, geometry and region controls.
 - Private responsive preview, explicit publication, reader mode and a printable layout.
 - Light/dark modes and locally hosted DM Sans fonts.
 - Live search and a responsive table of contents.

@@ -33,6 +33,7 @@ function ioblog_setup_theme() {
 	register_nav_menus(
 		array(
 			'primary' => __( 'Primary menu', 'ioblog-editorial' ),
+			'mobile'  => __( 'Mobile menu', 'ioblog-editorial' ),
 			'footer'  => __( 'Footer menu', 'ioblog-editorial' ),
 		)
 	);

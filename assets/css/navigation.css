@@ -1,0 +1,17 @@
+/* Панель мобильных действий не наследует сетку и выключатель меню рубрик. */
+.io-mobile-nav[hidden]{display:none!important}
+.io-mobile-nav{display:none;position:absolute;inset:100% 0 auto;border:1px solid var(--io-border);background:var(--io-surface);color:var(--io-text);box-shadow:var(--io-shadow);max-height:calc(100dvh - 80px - var(--wp-admin--admin-bar--height,0px));overflow:auto;overscroll-behavior:contain}
+.io-mobile-nav__list{width:min(100%,var(--io-container));margin-inline:auto;padding:12px 18px;gap:4px}
+.io-mobile-nav__list a,.io-mobile-nav__list button{display:flex;align-items:center;gap:12px;width:100%;min-height:46px;padding:12px;border:0;border-radius:10px;background:transparent;color:inherit;font:inherit;font-size:15px;font-weight:650;text-align:left;cursor:pointer;overflow-wrap:anywhere}
+.io-mobile-nav__list a:hover,.io-mobile-nav__list button:hover,.io-mobile-nav__list .current-menu-item>a{background:var(--io-accent-soft);color:var(--io-accent)}
+.io-mobile-nav__list svg{flex:0 0 20px;width:20px;height:20px;color:var(--io-accent)}
+.io-mobile-nav__list button[hidden]{display:none!important}.io-mobile-nav__list li:has(>button[hidden]){display:none}
+.io-mobile-nav__custom{border-top:1px solid var(--io-border)}.io-mobile-nav__custom ul{list-style:none;margin:0;padding:0 0 0 18px}
+.io-menu-toggle[aria-expanded=true]{border-color:var(--io-accent);background:var(--io-accent-soft);color:var(--io-accent)}
+@media(max-width:900px){.io-mobile-nav:not([hidden]){display:block}.io-header__inner{grid-template-columns:minmax(0,1fr) auto;gap:12px}.io-header__actions{min-width:0}}
+@media(max-width:680px){
+  .io-header .io-header__actions>.io-icon-button{flex-shrink:0;width:44px;height:44px}.io-header__actions{gap:2px}
+  .io-header--mobile-navigation .io-header__actions>.io-account-open,.io-header--mobile-navigation .io-header__actions>.io-write-link,.io-header--mobile-navigation .io-header__actions>.io-library-open{display:none}
+  .io-header .io-menu-toggle{display:grid}.io-brand{min-width:0}.io-header__inner{gap:6px}
+}
+@media(max-width:360px){.io-header__inner{column-gap:2px}.io-brand__mark{font-size:19px}.io-brand>strong{font-size:17px}.io-header__actions{gap:0}}

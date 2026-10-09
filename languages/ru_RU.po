@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: IO Blog Editorial 1.12.0\n"
+"Project-Id-Version: IO Blog Editorial 1.13.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ioblog-editorial\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-04T12:08:34+00:00\n"
+"POT-Creation-Date: 2026-10-09T01:12:49+00:00\n"
 "PO-Revision-Date: 2026-09-28 00:00+0500\n"
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -59,6 +59,7 @@ msgid "Mobile"
 msgstr "Мобильный"
 
 #: inc/admin/cover-editor.php:22
+#: inc/community/mobile-navigation.php:12
 #: template-parts/account.php:4
 msgid "Security"
 msgstr "Безопасность"
@@ -124,7 +125,7 @@ msgid "Kicker"
 msgstr "Надзаголовок"
 
 #: inc/admin/cover-editor.php:42
-#: inc/writing/editor/assets.php:21
+#: inc/writing/editor/assets.php:24
 #: assets/js/editor-native.js:4
 msgid "Caption"
 msgstr "Подпись"
@@ -134,7 +135,7 @@ msgid "Automatic covers appear when no featured image is set. A manually selecte
 msgstr "Автообложка появляется, если миниатюра не задана. Выбранный вручную стиль заменяет миниатюру на сайте."
 
 #: inc/admin/settings-sections.php:11
-#: template-parts/community-admin.php:15
+#: template-parts/community-admin.php:16
 msgid "Enabled"
 msgstr "Включено"
 
@@ -168,7 +169,7 @@ msgid "Automatically after the selected paragraph or manually via shortcode."
 msgstr "Автоматически после выбранного абзаца или вручную через шорткод."
 
 #: inc/admin/settings-sections.php:25
-#: inc/settings-transfer/presentation.php:56
+#: inc/settings-transfer/presentation.php:57
 msgid "After paragraph number"
 msgstr "После абзаца №"
 
@@ -194,7 +195,7 @@ msgstr "Полноширинный нативный баннер перед бл
 
 #: inc/admin/settings-sections.php:30
 #: inc/admin/settings-sections.php:31
-#: inc/settings-transfer/presentation.php:59
+#: inc/settings-transfer/presentation.php:60
 msgid "Short links"
 msgstr "Короткие ссылки"
 
@@ -314,6 +315,7 @@ msgstr "Код действует 10 минут. Введите его в бра
 
 #: inc/auth/codes.php:25
 #: inc/community/email.php:12
+#: template-parts/mailing-admin.php:9
 msgid "Unable to send email. Check the mail configuration."
 msgstr "Не удалось отправить письмо. Проверьте настройки почты."
 
@@ -328,8 +330,9 @@ msgstr "Эта функция недоступна."
 #: inc/auth/controller.php:12
 #: inc/auth/view.php:11
 #: inc/community/controller.php:38
-#: inc/community/view.php:21
-#: inc/writing/editor/assets.php:16
+#: inc/community/view.php:25
+#: inc/notifications/controller.php:18
+#: inc/writing/editor/assets.php:19
 #: inc/writing/errors.php:11
 #: inc/design/admin.php:11
 msgid "Unable to save. Please retry."
@@ -423,11 +426,11 @@ msgstr "Открыть ссылку на %s"
 msgid "Open link"
 msgstr "Открыть ссылку"
 
-#: inc/community/account.php:53
+#: inc/community/account.php:52
 msgid "Current password is incorrect."
 msgstr "Текущий пароль указан неверно."
 
-#: inc/community/account.php:64
+#: inc/community/account.php:63
 msgid "Set a password before removing your last sign-in method."
 msgstr "Установите пароль перед отключением последнего способа входа."
 
@@ -441,6 +444,8 @@ msgstr "Кабинеты читателей"
 #: inc/community/admin.php:11
 #: inc/community/controller.php:37
 #: inc/mail/admin.php:10
+#: inc/mailing/admin.php:8
+#: inc/notifications/controller.php:17
 #: inc/writing/admin.php:11
 #: inc/design/admin.php:22
 #: inc/legal/admin.php:10
@@ -449,6 +454,8 @@ msgstr "Проверьте значения полей."
 
 #: inc/community/email.php:7
 #: inc/community/messages.php:14
+#: inc/mailing/admin.php:14
+#: inc/mailing/unsubscribe.php:12
 msgid "Please try again shortly."
 msgstr "Повторите попытку немного позже."
 
@@ -466,7 +473,7 @@ msgid "Your library changed on another device. Reload and merge again."
 msgstr "Библиотека изменилась на другом устройстве. Обновите страницу и повторите объединение."
 
 #: inc/community/messages.php:11
-#: inc/community/view.php:26
+#: inc/community/view.php:30
 msgid "This conversation is unavailable."
 msgstr "Переписка с этим пользователем недоступна."
 
@@ -474,15 +481,58 @@ msgstr "Переписка с этим пользователем недосту
 msgid "Message limit reached. Please try later."
 msgstr "Достигнут лимит сообщений. Повторите попытку позже."
 
-#: inc/community/notifications.php:43
-msgid "Your reading updates"
-msgstr "Обновления вашей библиотеки"
+#: inc/community/mobile-navigation.php:5
+#: inc/community/view.php:44
+#: inc/routing/bootstrap.php:34
+#: template-parts/account-routes.php:4
+#: template-parts/account.php:8
+#: template-parts/writing.php:6
+msgid "My account"
+msgstr "Личный кабинет"
 
+#: inc/community/mobile-navigation.php:7
+#: inc/community/privacy.php:43
+#: inc/routing/bootstrap.php:34
+#: template-parts/account-routes.php:4
+#: template-parts/account.php:15
+#: template-parts/writing-list.php:2
+#: template-parts/writing.php:6
+msgid "My articles and drafts"
+msgstr "Мои статьи и черновики"
+
+#: inc/community/mobile-navigation.php:8
+#: inc/community/privacy.php:29
+#: inc/notifications/presentation.php:26
+#: template-parts/account-routes.php:4
+#: template-parts/account.php:4
+#: template-parts/community-admin.php:5
+#: template-parts/notification-bell.php:3
+#: template-parts/notification-bell.php:5
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: inc/community/mobile-navigation.php:8
 #: inc/community/privacy.php:27
+#: template-parts/account-routes.php:4
 #: template-parts/account.php:4
 #: template-parts/chat.php:9
 msgid "Messages"
 msgstr "Сообщения"
+
+#: inc/community/mobile-navigation.php:8
+#: inc/community/privacy.php:35
+#: template-parts/account.php:4
+msgid "Subscriptions"
+msgstr "Подписки"
+
+#: inc/community/mobile-navigation.php:11
+#: inc/community/privacy.php:28
+#: inc/community/privacy.php:33
+#: inc/routing/bootstrap.php:34
+#: template-parts/account-routes.php:4
+#: template-parts/account.php:4
+msgid "Profile"
+msgstr "Профиль"
 
 #: inc/community/privacy.php:27
 #: template-parts/chat.php:10
@@ -493,42 +543,21 @@ msgstr "Сообщение"
 #: template-parts/account.php:4
 #: header.php:32
 #: template-parts/library.php:6
+#: template-parts/mobile-navigation.php:9
 msgid "My library"
 msgstr "Моя библиотека"
-
-#: inc/community/privacy.php:28
-#: inc/community/privacy.php:33
-#: template-parts/account.php:4
-msgid "Profile"
-msgstr "Профиль"
-
-#: inc/community/privacy.php:29
-#: template-parts/account.php:4
-#: template-parts/community-admin.php:5
-msgid "Notifications"
-msgstr "Уведомления"
 
 #: inc/community/privacy.php:34
 msgid "Avatar"
 msgstr "Аватар"
-
-#: inc/community/privacy.php:35
-#: template-parts/account.php:4
-msgid "Subscriptions"
-msgstr "Подписки"
 
 #: inc/community/privacy.php:38
 msgid "Social sign-in methods"
 msgstr "Способы входа через внешние сервисы"
 
 #: inc/community/privacy.php:43
-#: template-parts/account.php:14
-#: template-parts/writing.php:6
-msgid "My articles and drafts"
-msgstr "Мои статьи и черновики"
-
-#: inc/community/privacy.php:43
 #: inc/interests/view-template.php:9
+#: template-parts/writing-list.php:6
 msgid "Article"
 msgstr "Статья"
 
@@ -541,113 +570,111 @@ msgid "Privacy and consent"
 msgstr "Данные и согласия"
 
 #: inc/community/privacy.php:48
+#: inc/mailing/privacy.php:16
 msgid "Consent record"
 msgstr "Запись согласия"
 
-#: inc/community/view.php:15
+#: inc/community/view.php:16
 msgid "Choose a JPG, PNG or WebP image up to 5 MB and 16 megapixels."
 msgstr "Выберите JPG, PNG или WebP до 5 МБ и 16 мегапикселей."
 
-#: inc/community/view.php:15
+#: inc/community/view.php:16
 msgid "Drag or use arrow keys to position your avatar."
 msgstr "Перетаскивайте аватар или перемещайте его клавишами со стрелками."
 
-#: inc/community/view.php:19
+#: inc/community/view.php:23
 msgid "Confirmation email sent. Open the link while signed in."
 msgstr "Письмо подтверждения отправлено. Откройте ссылку, выполнив вход в аккаунт."
 
-#: inc/community/view.php:20
+#: inc/community/view.php:24
 #: template-parts/reader-profile.php:12
 msgid "Follow author"
 msgstr "Подписаться на автора"
 
-#: inc/community/view.php:20
+#: inc/community/view.php:24
 msgid "Unfollow"
 msgstr "Отписаться"
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
+#: inc/notifications/view.php:8
 #: template-parts/community-admin.php:10
 #: template-parts/mail-admin.php:7
+#: template-parts/mailing-admin.php:9
 #: template-parts/writing-admin.php:8
 #: inc/design/admin.php:11
 #: template-parts/legal-admin.php:8
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 #: template-parts/writing-admin.php:18
 msgid "Nothing here yet."
 msgstr "Здесь пока ничего нет."
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
+#: template-parts/notification-center.php:6
 #: template-parts/profile-editor.php:22
 msgid "Save"
 msgstr "Сохранить"
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 msgid "Collection"
 msgstr "Коллекция"
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 msgid "Remove"
 msgstr "Удалить"
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 #: inc/series/view.php:19
 msgid "Read"
 msgstr "Прочитано"
 
-#: inc/community/view.php:21
-#: template-parts/account.php:28
+#: inc/community/view.php:25
+#: template-parts/account.php:30
 msgid "Merge browser library"
 msgstr "Объединить с библиотекой браузера"
 
-#: inc/community/view.php:21
-#: template-parts/account.php:28
+#: inc/community/view.php:25
+#: template-parts/account.php:30
 msgid "Sync with this browser"
 msgstr "Включить синхронизацию с браузером"
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 msgid "Report"
 msgstr "Пожаловаться"
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 #: template-parts/chat.php:8
 msgid "Block"
 msgstr "Заблокировать"
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 msgid "Unblock"
 msgstr "Разблокировать"
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 #: inc/oauth/view.php:15
 msgid "Link account"
 msgstr "Привязать аккаунт"
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 msgid "Remove sign-in method"
 msgstr "Отключить способ входа"
 
-#: inc/community/view.php:21
+#: inc/community/view.php:25
 #: inc/writing/view.php:6
 #: template-parts/account.php:12
 msgid "Sign in to use your personal account."
 msgstr "Войдите, чтобы пользоваться личным кабинетом."
 
-#: inc/community/view.php:26
+#: inc/community/view.php:30
 msgid "No readers found. Only people who allow messages appear here."
 msgstr "Никого не нашли. Здесь видны только читатели, разрешившие сообщения."
 
-#: inc/community/view.php:26
+#: inc/community/view.php:30
 msgid "Start a conversation"
 msgstr "Начать переписку"
-
-#: inc/community/view.php:40
-#: template-parts/account.php:8
-#: template-parts/writing.php:6
-msgid "My account"
-msgstr "Личный кабинет"
 
 #: inc/consent/service.php:32
 msgid "Read the configured documents and give separate consent. If they changed, reload the form."
@@ -818,6 +845,7 @@ msgstr "Серии статей"
 
 #: inc/mail/admin.php:4
 #: template-parts/mail-admin.php:6
+#: template-parts/mailing-admin.php:10
 #: inc/admin/settings-page.php:140
 #: inc/settings-transfer/presentation.php:16
 msgid "Email / SMTP"
@@ -830,6 +858,146 @@ msgstr "Проверка SMTP IO Blog"
 #: inc/mail/transport.php:20
 msgid "This is a test email from the IO Blog mail settings. If you received it, the mail transport is working."
 msgstr "Это тестовое письмо из настроек почты IO Blog. Если вы его получили, почтовый транспорт работает."
+
+#: inc/mailing/admin.php:3
+#: template-parts/mailing-admin.php:8
+#: inc/settings-transfer/presentation.php:17
+msgid "Notifications and newsletters"
+msgstr "Уведомления и рассылки"
+
+#: inc/mailing/content.php:19
+msgid "New article"
+msgstr "Новая статья"
+
+#: inc/mailing/content.php:29
+#: template-parts/mailing-admin.php:13
+msgid "Your reading updates"
+msgstr "Обновления вашей библиотеки"
+
+#: inc/mailing/content.php:37
+#: inc/mailing/content.php:40
+#: inc/mailing/privacy.php:15
+#: template-parts/notification-center.php:5
+#: template-parts/profile-editor.php:20
+msgid "Email and notification settings"
+msgstr "Настройки писем и уведомлений"
+
+#: inc/mailing/content.php:38
+msgid "You receive this email because you subscribed in your account."
+msgstr "Вы получили это письмо, потому что подписались в личном кабинете."
+
+#: inc/mailing/content.php:38
+#: inc/mailing/content.php:41
+#: inc/mailing/unsubscribe.php:15
+msgid "Unsubscribe"
+msgstr "Отписаться"
+
+#: inc/mailing/preferences.php:28
+#: inc/notifications/view.php:8
+msgid "Confirm your email in Profile before subscribing."
+msgstr "Перед подпиской подтвердите почту в разделе «Профиль»."
+
+#: inc/mailing/privacy.php:15
+#: inc/mailing/privacy.php:16
+#: inc/mailing/privacy.php:17
+#: inc/mailing/unsubscribe.php:13
+#: inc/mailing/unsubscribe.php:16
+#: inc/routing/bootstrap.php:34
+#: template-parts/notification-center.php:7
+msgid "Email subscription"
+msgstr "Подписка на письма"
+
+#: inc/mailing/privacy.php:17
+#: template-parts/mailing-admin.php:14
+msgid "Delivery queue"
+msgstr "Очередь отправки"
+
+#: inc/mailing/unsubscribe.php:10
+msgid "The unsubscribe link is invalid. Manage email in your account."
+msgstr "Ссылка отписки недействительна. Измените настройки писем в кабинете."
+
+#: inc/mailing/unsubscribe.php:13
+msgid "You have unsubscribed from reading emails. Account security emails are not affected."
+msgstr "Вы отписались от рассылки. Письма безопасности аккаунта продолжат работать."
+
+#: inc/mailing/unsubscribe.php:15
+msgid "Stop all digests and editorial newsletters for this account?"
+msgstr "Отключить все дайджесты и редакционные подборки для этого аккаунта?"
+
+#: inc/notifications/presentation.php:5
+msgid "Private message"
+msgstr "Личное сообщение"
+
+#: inc/notifications/presentation.php:5
+msgid "Reply to your comment"
+msgstr "Ответ на ваш комментарий"
+
+#: inc/notifications/presentation.php:5
+msgid "Comment on your article"
+msgstr "Комментарий к вашей статье"
+
+#: inc/notifications/presentation.php:5
+msgid "New article from your subscriptions"
+msgstr "Новая статья из ваших подписок"
+
+#: inc/notifications/presentation.php:5
+msgid "Editorial update"
+msgstr "Решение редакции"
+
+#: inc/notifications/presentation.php:5
+msgid "New follower"
+msgstr "Новый подписчик"
+
+#: inc/notifications/presentation.php:27
+msgid "Article published"
+msgstr "Статья опубликована"
+
+#: inc/notifications/presentation.php:27
+msgid "Article returned to draft"
+msgstr "Статья возвращена в черновик"
+
+#: inc/notifications/presentation.php:27
+msgid "Article review updated"
+msgstr "Рассмотрение статьи обновлено"
+
+#: inc/notifications/view.php:8
+msgid "You are all caught up"
+msgstr "Вы всё прочитали"
+
+#: inc/notifications/view.php:8
+msgid "Replies, new articles and editorial updates will appear here."
+msgstr "Здесь появятся ответы, новые статьи и сообщения редакции."
+
+#: inc/notifications/view.php:8
+msgid "Unable to load notifications. Please retry."
+msgstr "Не удалось загрузить уведомления. Попробуйте ещё раз."
+
+#: inc/notifications/view.php:8
+msgid "Mark as read"
+msgstr "Прочитать"
+
+#: inc/notifications/view.php:8
+#: template-parts/notification-center.php:3
+msgid "All events"
+msgstr "Все события"
+
+#: inc/notifications/view.php:8
+#: template-parts/notification-bell.php:6
+#: template-parts/notification-center.php:3
+msgid "Unread only"
+msgstr "Только непрочитанные"
+
+#: inc/notifications/view.php:8
+msgid "Unread notifications"
+msgstr "Непрочитанные уведомления"
+
+#: inc/notifications/view.php:8
+msgid "Email delivery is paused by the site owner. Your selection is saved."
+msgstr "Владелец сайта приостановил отправку писем. Ваш выбор сохранён."
+
+#: inc/notifications/view.php:8
+msgid "Your email subscription is active."
+msgstr "Подписка на письма активна."
 
 #: inc/oauth/controller.php:15
 #: inc/oauth/controller.php:25
@@ -868,7 +1036,7 @@ msgid "Next chapter"
 msgstr "Следующая глава"
 
 #: inc/services/class-link-preview-service.php:55
-#: inc/writing/editor/assets.php:21
+#: inc/writing/editor/assets.php:24
 msgid "Enter a complete address beginning with http:// or https://."
 msgstr "Укажите полный адрес с http:// или https://."
 
@@ -896,257 +1064,285 @@ msgstr "У страницы не найден заголовок."
 msgid "Author newsroom"
 msgstr "Авторская редакция"
 
-#: inc/writing/editor/assets.php:16
+#: inc/writing/editor/assets.php:18
+msgid "Edit"
+msgstr "Редактировать"
+
+#: inc/writing/editor/assets.php:18
+msgid "Open"
+msgstr "Открыть"
+
+#: inc/writing/editor/assets.php:18
+#: template-parts/writing.php:16
+msgid "Read article"
+msgstr "Открыть статью"
+
+#: inc/writing/editor/assets.php:18
+msgid "Proposed article update"
+msgstr "Предложенные изменения статьи"
+
+#: inc/writing/editor/assets.php:18
+msgid "Articles found"
+msgstr "Найдено статей"
+
+#: inc/writing/editor/assets.php:18
+msgid "No publications match these filters."
+msgstr "По этим условиям публикации не найдены."
+
+#: inc/writing/editor/assets.php:19
 msgid "No articles yet. Start your first draft."
 msgstr "Пока нет статей. Начните первый черновик."
 
-#: inc/writing/editor/assets.php:16
+#: inc/writing/editor/assets.php:19
 msgid "Draft saved."
 msgstr "Черновик сохранён."
 
-#: inc/writing/editor/assets.php:16
+#: inc/writing/editor/assets.php:19
 msgid "You have unsaved changes."
 msgstr "Есть несохранённые изменения. Продолжить без сохранения?"
 
-#: inc/writing/editor/assets.php:16
-#: template-parts/writing.php:8
+#: inc/writing/editor/assets.php:19
+#: template-parts/writing-list.php:4
+#: template-parts/writing-list.php:5
 msgid "Draft"
 msgstr "Черновик"
 
-#: inc/writing/editor/assets.php:16
-#: template-parts/writing.php:8
+#: inc/writing/editor/assets.php:19
+#: template-parts/writing-list.php:4
+#: template-parts/writing-list.php:5
 msgid "In review"
 msgstr "На проверке"
 
-#: inc/writing/editor/assets.php:16
+#: inc/writing/editor/assets.php:19
 #: template-parts/reader-profile.php:14
-#: template-parts/writing.php:8
+#: template-parts/writing-list.php:4
+#: template-parts/writing-list.php:5
 msgid "Published"
 msgstr "Опубликовано"
 
-#: inc/writing/editor/assets.php:16
+#: inc/writing/editor/assets.php:19
 msgid "Moved to trash"
 msgstr "Перемещено в корзину"
 
-#: inc/writing/editor/assets.php:16
+#: inc/writing/editor/assets.php:19
 #: template-parts/reader-profile.php:13
 msgid "Author reputation"
 msgstr "Репутация автора"
 
-#: inc/writing/editor/assets.php:17
+#: inc/writing/editor/assets.php:20
 msgid "Start writing. Use + to add a block."
 msgstr "Начните писать. Нажмите +, чтобы добавить блок."
 
-#: inc/writing/editor/assets.php:17
+#: inc/writing/editor/assets.php:20
 #: inc/writing/errors.php:7
 msgid "This article contains blocks edited in WordPress that cannot be imported without loss. Open it in WordPress instead."
 msgstr "В статье есть блоки WordPress, которые нельзя перенести без потерь. Продолжите редактирование в WordPress."
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "Text"
 msgstr "Текст"
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "Heading"
 msgstr "Заголовок"
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "List"
 msgstr "Список"
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "Quote"
 msgstr "Цитата"
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "Code"
 msgstr "Код"
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "Image"
 msgstr "Изображение"
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "Table"
 msgstr "Таблица"
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 msgid "Delimiter"
 msgstr "Разделитель"
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 #: assets/js/editor-native.js:4
 msgid "Video"
 msgstr "Видео"
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 #: assets/js/editor-link-card.js:83
 #: assets/js/editor-link-card.js:120
 msgid "Link card"
 msgstr "Карточка ссылки"
 
-#: inc/writing/editor/assets.php:18
+#: inc/writing/editor/assets.php:21
 #: assets/js/editor-native.js:5
 msgid "Members only"
 msgstr "Для участников"
 
-#: inc/writing/editor/assets.php:19
+#: inc/writing/editor/assets.php:22
 msgid "Bold"
 msgstr "Жирный"
 
-#: inc/writing/editor/assets.php:19
+#: inc/writing/editor/assets.php:22
 msgid "Italic"
 msgstr "Курсив"
 
-#: inc/writing/editor/assets.php:19
+#: inc/writing/editor/assets.php:22
 msgid "Link"
 msgstr "Ссылка"
 
-#: inc/writing/editor/assets.php:19
+#: inc/writing/editor/assets.php:22
 msgid "Inline code"
 msgstr "Код в строке"
 
-#: inc/writing/editor/assets.php:19
-#: inc/writing/editor/assets.php:23
+#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:26
 msgid "Ordered list"
 msgstr "Нумерованный список"
 
-#: inc/writing/editor/assets.php:19
-#: inc/writing/editor/assets.php:23
+#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:26
 msgid "Unordered list"
 msgstr "Маркированный список"
 
-#: inc/writing/editor/assets.php:19
+#: inc/writing/editor/assets.php:22
 #: assets/js/editor-native.js:6
 msgid "Checklist"
 msgstr "Чек-лист"
 
-#: inc/writing/editor/assets.php:20
-#: template-parts/writing.php:13
+#: inc/writing/editor/assets.php:23
+#: template-parts/writing.php:14
 msgid "Add a block"
 msgstr "Добавить блок"
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Find a block"
 msgstr "Найти блок"
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Nothing found."
 msgstr "Ничего не найдено."
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Delete"
 msgstr "Удалить"
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Click to delete"
 msgstr "Нажмите для удаления"
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Move up"
 msgstr "Выше"
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Move down"
 msgstr "Ниже"
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Convert to"
 msgstr "Преобразовать в"
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "Block settings"
 msgstr "Настройки блока"
 
-#: inc/writing/editor/assets.php:20
+#: inc/writing/editor/assets.php:23
 msgid "or drag to move"
 msgstr "или перетащите блок"
 
-#: inc/writing/editor/assets.php:21
+#: inc/writing/editor/assets.php:24
 msgid "Upload an image"
 msgstr "Загрузить изображение"
 
-#: inc/writing/editor/assets.php:21
+#: inc/writing/editor/assets.php:24
 msgid "Add a link"
 msgstr "Добавить ссылку"
 
-#: inc/writing/editor/assets.php:21
+#: inc/writing/editor/assets.php:24
 msgid "Apply"
 msgstr "Применить"
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "With headings"
 msgstr "С заголовками"
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "Without headings"
 msgstr "Без заголовков"
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "Add row above"
 msgstr "Добавить строку выше"
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "Add row below"
 msgstr "Добавить строку ниже"
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "Delete row"
 msgstr "Удалить строку"
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "Add column to left"
 msgstr "Добавить столбец слева"
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "Add column to right"
 msgstr "Добавить столбец справа"
 
-#: inc/writing/editor/assets.php:22
+#: inc/writing/editor/assets.php:25
 msgid "Delete column"
 msgstr "Удалить столбец"
 
-#: inc/writing/editor/assets.php:23
+#: inc/writing/editor/assets.php:26
 msgid "Align left"
 msgstr "По левому краю"
 
-#: inc/writing/editor/assets.php:23
+#: inc/writing/editor/assets.php:26
 msgid "Align center"
 msgstr "По центру"
 
-#: inc/writing/editor/assets.php:23
+#: inc/writing/editor/assets.php:26
 msgid "Start with"
 msgstr "Начать с"
 
-#: inc/writing/editor/assets.php:24
+#: inc/writing/editor/assets.php:27
 msgid "Everything below is for signed-in readers. Images remain public; do not upload confidential files."
 msgstr "Всё ниже этого блока увидят только вошедшие читатели. Изображения остаются публичными: не загружайте конфиденциальные файлы."
 
-#: inc/writing/editor/assets.php:24
+#: inc/writing/editor/assets.php:27
 #: inc/writing/errors.php:9
 #: assets/js/editor-native.js:4
 msgid "YouTube, Vimeo, VK Video or Rutube URL"
 msgstr "Ссылка на YouTube, Vimeo, VK Видео или Rutube"
 
-#: inc/writing/editor/assets.php:24
+#: inc/writing/editor/assets.php:27
 #: inc/writing/errors.php:8
 msgid "Upload a JPG, PNG, WebP or GIF up to 5 MB. GIF is converted to a still image."
 msgstr "Загрузите JPG, PNG, WebP или GIF до 5 МБ. GIF преобразуется в неподвижное изображение."
 
-#: inc/writing/editor/assets.php:24
+#: inc/writing/editor/assets.php:27
 msgid "Loading..."
 msgstr "Загрузка..."
 
-#: inc/writing/editor/assets.php:24
+#: inc/writing/editor/assets.php:27
 #: inc/writing/editor/controller.php:12
 msgid "Preview unavailable. The link will still be saved."
 msgstr "Превью недоступно. Ссылка всё равно сохранится."
 
-#: inc/writing/editor/assets.php:24
+#: inc/writing/editor/assets.php:27
 msgid "words"
 msgstr "слов"
 
-#: inc/writing/editor/assets.php:24
+#: inc/writing/editor/assets.php:27
 msgid "Autosave starts after the first save."
 msgstr "После первого сохранения включится автосохранение."
 
@@ -1233,9 +1429,22 @@ msgstr "Статьи сообщества"
 msgid "Ranked by editorial reputation, then publication date."
 msgstr "По редакционной репутации, затем по дате публикации."
 
-#: ioblog-editorial-pro.php:50
+#: ioblog-editorial-pro.php:57
 msgid "Publishing tools require IO Blog Editorial 1.12.0 or later. Reader accounts remain available through the shortcode."
 msgstr "Издательским инструментам нужна тема IO Blog Editorial 1.12.0 или новее. Кабинет читателя доступен через шорткод."
+
+#: template-parts/account-routes.php:4
+#: template-parts/writing-list.php:3
+msgid "New draft"
+msgstr "Новый черновик"
+
+#: template-parts/account-routes.php:7
+msgid "Account addresses"
+msgstr "Адреса кабинета"
+
+#: template-parts/account-routes.php:9
+msgid "Permalink settings"
+msgstr "Настройки постоянных ссылок"
 
 #: template-parts/account.php:4
 msgid "Personal feed"
@@ -1262,7 +1471,7 @@ msgid "Your editor, drafts and editorial feedback in one workspace."
 msgstr "Удобный редактор, черновики и обратная связь редакции в одном месте."
 
 #: template-parts/account.php:12
-#: template-parts/account.php:21
+#: template-parts/account.php:23
 msgid "Reset password"
 msgstr "Восстановить пароль"
 
@@ -1274,64 +1483,62 @@ msgstr "Зарегистрироваться"
 msgid "Account sections"
 msgstr "Разделы личного кабинета"
 
-#: template-parts/account.php:19
+#: template-parts/account.php:21
 msgid "Email for account recovery"
 msgstr "Почта для восстановления аккаунта"
 
-#: template-parts/account.php:19
+#: template-parts/account.php:21
 msgid "Send confirmation email"
 msgstr "Отправить письмо подтверждения"
 
-#: template-parts/account.php:21
+#: template-parts/account.php:23
 msgid "Connect a social account to sign in faster. Keep at least one sign-in method."
 msgstr "Подключите соцсети для быстрого входа. Оставьте хотя бы один способ входа в аккаунт."
 
-#: template-parts/account.php:21
+#: template-parts/account.php:23
 msgid "Sign out other sessions"
 msgstr "Завершить другие сеансы"
 
-#: template-parts/account.php:21
+#: template-parts/account.php:23
 msgid "Current password"
 msgstr "Текущий пароль"
 
-#: template-parts/account.php:21
+#: template-parts/account.php:23
 #: template-parts/auth-modal.php:14
 msgid "New password, at least 12 characters"
 msgstr "Новый пароль, не менее 12 символов"
 
-#: template-parts/account.php:21
+#: template-parts/account.php:23
 msgid "Change password"
 msgstr "Изменить пароль"
 
-#: template-parts/account.php:25
+#: template-parts/account.php:27
 msgid "Follow authors and select categories in your profile to build your personal feed."
 msgstr "Подписывайтесь на авторов и выбирайте рубрики в профиле, чтобы настроить личную ленту."
 
-#: template-parts/account.php:25
+#: template-parts/account.php:27
 msgid "Find an author"
 msgstr "Найти автора"
 
-#: template-parts/account.php:25
+#: template-parts/account.php:27
 #: searchform.php:11
+#: template-parts/mobile-navigation.php:10
 #: template-parts/search-modal.php:18
 #: template-parts/search-modal.php:20
 msgid "Search"
 msgstr "Найти"
 
-#: template-parts/account.php:27
+#: template-parts/account.php:29
 msgid "Disable sync in this browser"
 msgstr "Отключить синхронизацию в браузере"
 
-#: template-parts/account.php:28
-#: template-parts/writing.php:8
+#: template-parts/account.php:30
+#: template-parts/writing-list.php:5
 msgid "Find an article"
 msgstr "Найти статью"
 
-#: template-parts/account.php:29
-msgid "Mark all as read"
-msgstr "Отметить всё прочитанным"
-
 #: template-parts/auth-modal.php:6
+#: template-parts/notification-bell.php:5
 msgid "Close"
 msgstr "Закрыть"
 
@@ -1462,59 +1669,61 @@ msgstr "У авторской редакции свой переключател
 msgid "Author publishing settings"
 msgstr "Настройки авторских публикаций"
 
-#: template-parts/community-admin.php:12
+#: template-parts/community-admin.php:13
+#: template-parts/mailing-admin.php:10
 msgid "Account modules"
 msgstr "Модули кабинета"
 
-#: template-parts/community-admin.php:12
+#: template-parts/community-admin.php:13
 msgid "Daily message limit per user"
 msgstr "Лимит сообщений в сутки для одного пользователя"
 
-#: template-parts/community-admin.php:12
+#: template-parts/community-admin.php:13
 msgid "Open personal account"
 msgstr "Открыть личный кабинет"
 
-#: template-parts/community-admin.php:12
+#: template-parts/community-admin.php:13
 msgid "Messages require recipient consent. Social accounts can be linked from Security after signing in."
 msgstr "Для переписки нужно согласие получателя. Социальные аккаунты можно привязать в разделе «Безопасность» после входа."
 
-#: template-parts/community-admin.php:14
+#: template-parts/community-admin.php:15
 msgid "Configured. Test with your registered application."
 msgstr "Настроено. Проверьте вход с зарегистрированным приложением."
 
-#: template-parts/community-admin.php:14
+#: template-parts/community-admin.php:15
 msgid "Fill in the application settings and enable the provider."
 msgstr "Заполните настройки приложения и включите провайдера."
 
-#: template-parts/community-admin.php:15
+#: template-parts/community-admin.php:16
 msgid "Register this callback URL in the provider application:"
 msgstr "Укажите этот адрес возврата в приложении провайдера:"
 
-#: template-parts/community-admin.php:16
+#: template-parts/community-admin.php:17
 msgid "Telegram uses OpenID Connect. Choose RS256 in BotFather."
 msgstr "Telegram использует OpenID Connect. Выберите RS256 в BotFather."
 
-#: template-parts/community-admin.php:19
+#: template-parts/community-admin.php:20
 msgid "Delivery and moderation"
 msgstr "Доставка и модерация"
 
-#: template-parts/community-admin.php:19
+#: template-parts/community-admin.php:20
 msgid "WP-Cron is disabled. Configure a server cron job for notifications and daily digests."
 msgstr "WP-Cron отключён. Настройте серверный cron для уведомлений и ежедневных подборок."
 
-#: template-parts/community-admin.php:19
+#: template-parts/community-admin.php:20
+#: template-parts/mailing-admin.php:14
 msgid "Scheduled notifications use WordPress cron."
 msgstr "Отложенные уведомления используют cron WordPress."
 
-#: template-parts/community-admin.php:19
+#: template-parts/community-admin.php:20
 msgid "Email is opt-in and uses the WordPress mail transport."
 msgstr "Письма отправляются с согласия пользователя через почтовый транспорт WordPress."
 
-#: template-parts/community-admin.php:22
+#: template-parts/community-admin.php:23
 msgid "Dismiss report"
 msgstr "Снять жалобу"
 
-#: template-parts/community-admin.php:23
+#: template-parts/community-admin.php:24
 msgid "Delete reported message"
 msgstr "Удалить сообщение с жалобой"
 
@@ -1636,6 +1845,208 @@ msgstr "Тест отправляется только на почту адми�
 msgid "Send test email"
 msgstr "Отправить тестовое письмо"
 
+#: template-parts/mailing-admin.php:6
+msgid "Queued"
+msgstr "В очереди"
+
+#: template-parts/mailing-admin.php:6
+msgid "Sending"
+msgstr "Отправляется"
+
+#: template-parts/mailing-admin.php:6
+msgid "Accepted by mail transport"
+msgstr "Принято почтовым транспортом"
+
+#: template-parts/mailing-admin.php:6
+msgid "Delivery failed"
+msgstr "Ошибка отправки"
+
+#: template-parts/mailing-admin.php:6
+msgid "Delivery uncertain — review required"
+msgstr "Доставка неопределённа: требуется проверка"
+
+#: template-parts/mailing-admin.php:6
+msgid "Cancelled"
+msgstr "Отменено"
+
+#: template-parts/mailing-admin.php:8
+msgid "A notification center and opt-in reading emails, without a separate mailing plugin."
+msgstr "Центр уведомлений и добровольные подписки на письма без отдельного плагина рассылок."
+
+#: template-parts/mailing-admin.php:9
+msgid "The test email was accepted by the mail transport. Check your mailbox; this is not proof of delivery."
+msgstr "Тестовое письмо принято почтовым транспортом. Проверьте ящик: это ещё не подтверждение доставки."
+
+#: template-parts/mailing-admin.php:10
+msgid "Notification center"
+msgstr "Центр уведомлений"
+
+#: template-parts/mailing-admin.php:10
+msgid "The header bell shows replies, comments on author articles, subscription updates, messages and editorial decisions. Readers choose their event types independently."
+msgstr "Колокольчик в шапке показывает ответы, комментарии к авторским статьям, обновления подписок, личные сообщения и решения редакции. Читатели самостоятельно выбирают типы событий."
+
+#: template-parts/mailing-admin.php:12
+msgid "Reading newsletters"
+msgstr "Рассылки для читателей"
+
+#: template-parts/mailing-admin.php:12
+msgid "Enable scheduled email delivery"
+msgstr "Включить отправку писем по расписанию"
+
+#: template-parts/mailing-admin.php:12
+msgid "Off by default. Enabling delivery does not subscribe anyone. Only verified readers with an explicit email selection receive digests or new-article roundups."
+msgstr "По умолчанию выключено. Включение отправки никого не подписывает. Дайджесты и подборки получают только читатели с подтверждённой почтой и явным выбором подписки."
+
+#: template-parts/mailing-admin.php:13
+msgid "Email subject"
+msgstr "Тема письма"
+
+#: template-parts/mailing-admin.php:13
+msgid "Delivery hour"
+msgstr "Час отправки"
+
+#: template-parts/mailing-admin.php:13
+msgid "Weekly delivery day"
+msgstr "День еженедельной отправки"
+
+#: template-parts/mailing-admin.php:13
+msgid "Monday"
+msgstr "Понедельник"
+
+#: template-parts/mailing-admin.php:13
+msgid "Tuesday"
+msgstr "Вторник"
+
+#: template-parts/mailing-admin.php:13
+msgid "Wednesday"
+msgstr "Среда"
+
+#: template-parts/mailing-admin.php:13
+msgid "Thursday"
+msgstr "Четверг"
+
+#: template-parts/mailing-admin.php:13
+msgid "Friday"
+msgstr "Пятница"
+
+#: template-parts/mailing-admin.php:13
+msgid "Saturday"
+msgstr "Суббота"
+
+#: template-parts/mailing-admin.php:13
+msgid "Sunday"
+msgstr "Воскресенье"
+
+#: template-parts/mailing-admin.php:13
+msgid "Emails per five-minute batch"
+msgstr "Писем за пятиминутную порцию"
+
+#: template-parts/mailing-admin.php:13
+msgid "Site timezone:"
+msgstr "Часовой пояс сайта:"
+
+#: template-parts/mailing-admin.php:13
+msgid "Editorial introduction"
+msgstr "Редакторское вступление"
+
+#: template-parts/mailing-admin.php:14
+msgid "The worker runs every five minutes via WP-Cron. With low traffic or DISABLE_WP_CRON, configure a real server cron. SMTP settings are shared with account emails."
+msgstr "Обработчик запускается раз в пять минут через WP-Cron. При малой посещаемости или DISABLE_WP_CRON настройте системный cron. SMTP общий с письмами аккаунта."
+
+#: template-parts/mailing-admin.php:14
+msgid "WP-Cron is disabled."
+msgstr "WP-Cron отключён."
+
+#: template-parts/mailing-admin.php:15
+#: template-parts/writing-list.php:6
+msgid "Status"
+msgstr "Статус"
+
+#: template-parts/mailing-admin.php:15
+msgid "Count"
+msgstr "Количество"
+
+#: template-parts/mailing-admin.php:15
+msgid "Temporary mail errors retry up to three attempts. Interrupted sends are held for review to avoid duplicates. Accepted does not mean delivered; there is no bounce tracking."
+msgstr "При временных ошибках почты выполняется до трёх попыток. Прерванная отправка задерживается для проверки, чтобы не создавать дубликаты. Принято не означает доставлено; отслеживание возвратов не подключено."
+
+#: template-parts/mailing-admin.php:16
+msgid "Cancel failed and uncertain batches"
+msgstr "Отменить ошибочные и неопределённые порции"
+
+#: template-parts/mailing-admin.php:17
+msgid "Preview and test"
+msgstr "Предпросмотр и тест"
+
+#: template-parts/mailing-admin.php:17
+msgid "A test sends only to your administrator email. It does not start a campaign or create a subscription."
+msgstr "Тест отправляет письмо только на вашу почту администратора. Он не запускает массовую рассылку и не создаёт подписку."
+
+#: template-parts/mailing-admin.php:17
+msgid "Newsletter preview"
+msgstr "Предпросмотр письма"
+
+#: template-parts/mailing-admin.php:17
+msgid "Send a test to me"
+msgstr "Отправить тест мне"
+
+#: template-parts/mailing-admin.php:17
+msgid "Roundups contain up to 12 recent public articles and digests up to 30 events. Every real newsletter includes account settings and a signed unsubscribe link; link scanners cannot unsubscribe with GET."
+msgstr "Подборки содержат до 12 новых открытых статей, дайджесты — до 30 событий. Каждое письмо содержит настройки кабинета и защищённую ссылку отписки; проверка ссылки GET-запросом не отписывает пользователя."
+
+#: template-parts/notification-bell.php:6
+#: template-parts/notification-center.php:3
+msgid "Mark all as read"
+msgstr "Отметить всё прочитанным"
+
+#: template-parts/notification-bell.php:8
+msgid "All notifications and email settings"
+msgstr "Все уведомления и настройки писем"
+
+#: template-parts/notification-center.php:3
+msgid "Event type"
+msgstr "Тип события"
+
+#: template-parts/notification-center.php:4
+msgid "Load older events"
+msgstr "Загрузить предыдущие события"
+
+#: template-parts/notification-center.php:6
+msgid "Notify me on the site"
+msgstr "Уведомлять меня на сайте"
+
+#: template-parts/notification-center.php:7
+msgid "Email me a digest of my notifications"
+msgstr "Присылать мне дайджест моих уведомлений"
+
+#: template-parts/notification-center.php:7
+msgid "Email me an editorial roundup of new site articles"
+msgstr "Присылать мне редакционную подборку новых статей сайта"
+
+#: template-parts/notification-center.php:7
+msgid "Frequency"
+msgstr "Периодичность"
+
+#: template-parts/notification-center.php:7
+msgid "Daily"
+msgstr "Ежедневно"
+
+#: template-parts/notification-center.php:7
+msgid "Weekly"
+msgstr "Еженедельно"
+
+#: template-parts/notification-center.php:8
+msgid "These are separate voluntary email subscriptions. Uncheck both to unsubscribe, or use the link in any newsletter. Security and sign-in emails are not newsletters."
+msgstr "Это отдельные добровольные подписки на письма. Снимите оба флажка для отписки или воспользуйтесь ссылкой в любом письме. Письма безопасности и входа в аккаунт не являются рассылкой."
+
+#: template-parts/notification-center.php:8
+msgid "Confirm your email in Profile"
+msgstr "Подтвердить почту в профиле"
+
+#: template-parts/notification-center.php:8
+msgid "Save email preferences"
+msgstr "Сохранить настройки писем"
+
 #: template-parts/oauth-consent.php:5
 msgid "Social sign-in"
 msgstr "Вход через социальную сеть"
@@ -1700,10 +2111,6 @@ msgstr "Я отдельно даю согласие на публикацию э
 #: template-parts/profile-editor.php:19
 msgid "Allow private messages"
 msgstr "Разрешить личные сообщения"
-
-#: template-parts/profile-editor.php:20
-msgid "Receive a daily email digest"
-msgstr "Получать ежедневную подборку по почте"
 
 #: template-parts/profile-editor.php:21
 msgid "Follow categories"
@@ -1802,78 +2209,120 @@ msgstr "Одобрить публикацию"
 msgid "Return for revision"
 msgstr "Вернуть на доработку"
 
-#: template-parts/writing.php:8
-msgid "New draft"
-msgstr "Новый черновик"
+#: template-parts/writing-list.php:3
+#: template-parts/writing-list.php:6
+msgid "Your publications"
+msgstr "Ваши публикации"
 
-#: template-parts/writing.php:8
+#: template-parts/writing-list.php:5
 msgid "Article status"
 msgstr "Статус статьи"
 
-#: template-parts/writing.php:8
+#: template-parts/writing-list.php:5
 #: home.php:58
 #: single.php:87
 msgid "All articles"
 msgstr "Все материалы"
+
+#: template-parts/writing-list.php:5
+msgid "Sort publications"
+msgstr "Порядок публикаций"
+
+#: template-parts/writing-list.php:5
+msgid "Recently updated first"
+msgstr "Сначала недавно изменённые"
+
+#: template-parts/writing-list.php:5
+msgid "Newest created first"
+msgstr "Сначала новые"
+
+#: template-parts/writing-list.php:5
+msgid "Title A–Z"
+msgstr "По названию А–Я"
+
+#: template-parts/writing-list.php:6
+#: template-parts/writing.php:11
+msgid "Category"
+msgstr "Рубрика"
+
+#: template-parts/writing-list.php:6
+msgid "Last updated"
+msgstr "Изменено"
+
+#: template-parts/writing-list.php:6
+#: comments.php:13
+#: inc/admin/settings-page.php:144
+#: single.php:35
+#: single.php:37
+msgid "Comments"
+msgstr "Комментарии"
+
+#: template-parts/writing-list.php:6
+msgid "Actions"
+msgstr "Действия"
+
+#: template-parts/writing-list.php:7
+msgid "Previous"
+msgstr "Назад"
+
+#: template-parts/writing-list.php:7
+msgid "Next"
+msgstr "Далее"
 
 #: template-parts/writing.php:9
 msgid "Article editor"
 msgstr "Редактор статьи"
 
 #: template-parts/writing.php:10
+msgid "Back to publications"
+msgstr "К списку публикаций"
+
+#: template-parts/writing.php:11
 msgid "Article title"
 msgstr "Заголовок статьи"
 
-#: template-parts/writing.php:10
+#: template-parts/writing.php:11
 msgid "A title worth reading"
 msgstr "Заголовок, который хочется прочитать"
 
-#: template-parts/writing.php:10
+#: template-parts/writing.php:11
 msgid "Short introduction"
 msgstr "Короткое вступление"
 
-#: template-parts/writing.php:10
-msgid "Category"
-msgstr "Рубрика"
-
-#: template-parts/writing.php:10
+#: template-parts/writing.php:11
 msgid "Select a category"
 msgstr "Выберите рубрику"
 
-#: template-parts/writing.php:11
+#: template-parts/writing.php:12
 msgid "Editor"
 msgstr "Редактор"
 
-#: template-parts/writing.php:11
+#: template-parts/writing.php:12
 #: template-parts/admin/design.php:10
 msgid "Preview"
 msgstr "Предпросмотр"
 
-#: template-parts/writing.php:12
+#: template-parts/writing.php:13
 msgid "Choose a tool below or use + beside a paragraph. Your CSS cover is generated automatically."
 msgstr "Выберите инструмент ниже или нажмите + рядом с абзацем. CSS-обложка создаётся автоматически."
 
-#: template-parts/writing.php:15
-msgid "Read article"
-msgstr "Открыть статью"
-
-#: template-parts/writing.php:16
+#: template-parts/writing.php:17
 msgid "Save draft"
 msgstr "Сохранить черновик"
 
-#: template-parts/writing.php:16
+#: template-parts/writing.php:17
 msgid "Submit for review"
 msgstr "Отправить на проверку"
 
-#: template-parts/writing.php:16
+#: template-parts/writing.php:17
 msgid "Withdraw submission"
 msgstr "Отозвать заявку"
 
-#: template-parts/writing.php:16
+#: template-parts/writing.php:17
 msgid "Propose an update"
 msgstr "Предложить правку"
 
-#: template-parts/writing.php:16
+#: template-parts/writing.php:17
 msgid "Move to trash"
 msgstr "В корзину"
 
@@ -1984,13 +2433,6 @@ msgstr "Возможно, адрес изменился. Поиск поможе
 msgid "Return to homepage"
 msgstr "Вернуться на главную"
 
-#: comments.php:13
-#: inc/admin/settings-page.php:144
-#: single.php:35
-#: single.php:37
-msgid "Comments"
-msgstr "Комментарии"
-
 #: comments.php:21
 msgid "Join the discussion"
 msgstr "Присоединиться к обсуждению"
@@ -2017,7 +2459,7 @@ msgid "An independent blog about technology, computers, software, and practical 
 msgstr "Авторский блог о технологиях, компьютерах, программах и полезных решениях без лишнего шума."
 
 #: footer.php:15
-#: inc/setup.php:36
+#: inc/setup.php:37
 msgid "Footer menu"
 msgstr "Меню в подвале"
 
@@ -2062,6 +2504,10 @@ msgstr "Переключить цветовую тему"
 #: header.php:35
 msgid "Open menu"
 msgstr "Открыть меню"
+
+#: header.php:35
+msgid "Close menu"
+msgstr "Закрыть меню"
 
 #: home.php:22
 #: inc/customizer.php:21
@@ -2109,8 +2555,8 @@ msgstr "О блоге"
 #: home.php:49
 #: inc/admin/settings-page.php:172
 #: inc/admin/settings-page.php:178
-#: inc/settings-transfer/presentation.php:22
-#: inc/settings-transfer/presentation.php:25
+#: inc/settings-transfer/presentation.php:23
+#: inc/settings-transfer/presentation.php:26
 msgid "Editor’s choice"
 msgstr "Выбор редакции"
 
@@ -2182,7 +2628,7 @@ msgid "Appearance"
 msgstr "Внешний вид"
 
 #: inc/admin/settings-page.php:142
-#: inc/settings-transfer/presentation.php:50
+#: inc/settings-transfer/presentation.php:51
 msgid "Menus"
 msgstr "Меню"
 
@@ -2199,7 +2645,7 @@ msgid "The selected language is applied to WordPress, the public site, and your 
 msgstr "Выбранный язык применяется к WordPress, публичной части сайта и вашему профилю администратора."
 
 #: inc/admin/settings-page.php:156
-#: inc/settings-transfer/presentation.php:17
+#: inc/settings-transfer/presentation.php:18
 msgid "WordPress language"
 msgstr "Язык WordPress"
 
@@ -2219,27 +2665,27 @@ msgid "Choose the editorial sections and the content featured on the front page.
 msgstr "Выберите разделы и материалы для главной страницы."
 
 #: inc/admin/settings-page.php:170
-#: inc/settings-transfer/presentation.php:20
+#: inc/settings-transfer/presentation.php:21
 msgid "Hero section"
 msgstr "Первый экран"
 
 #: inc/admin/settings-page.php:171
-#: inc/settings-transfer/presentation.php:21
+#: inc/settings-transfer/presentation.php:22
 msgid "Category shortcuts"
 msgstr "Ссылки на рубрики"
 
 #: inc/admin/settings-page.php:175
-#: inc/settings-transfer/presentation.php:23
+#: inc/settings-transfer/presentation.php:24
 msgid "Featured article"
 msgstr "Главная статья"
 
 #: inc/admin/settings-page.php:176
-#: inc/settings-transfer/presentation.php:24
+#: inc/settings-transfer/presentation.php:25
 msgid "About page"
 msgstr "Страница о блоге"
 
 #: inc/admin/settings-page.php:177
-#: inc/settings-transfer/presentation.php:26
+#: inc/settings-transfer/presentation.php:27
 msgid "Posts per page"
 msgstr "Записей на странице"
 
@@ -2248,7 +2694,7 @@ msgid "Select up to five articles with Ctrl or Command. Leave empty for automati
 msgstr "Выберите до пяти статей с клавишей Ctrl или Command. Оставьте пустым для автоматического выбора."
 
 #: inc/admin/settings-page.php:179
-#: inc/settings-transfer/presentation.php:27
+#: inc/settings-transfer/presentation.php:28
 msgid "Section order"
 msgstr "Порядок разделов"
 
@@ -2273,7 +2719,7 @@ msgid "Reading presets keep font size, rhythm, and article width balanced."
 msgstr "Настройте размер текста, межстрочный интервал и ширину статьи."
 
 #: inc/admin/settings-page.php:186
-#: inc/settings-transfer/presentation.php:28
+#: inc/settings-transfer/presentation.php:29
 msgid "Typography preset"
 msgstr "Стиль типографики"
 
@@ -2286,7 +2732,7 @@ msgid "Comfortable"
 msgstr "Комфортный"
 
 #: inc/admin/settings-page.php:187
-#: inc/settings-transfer/presentation.php:29
+#: inc/settings-transfer/presentation.php:30
 msgid "Article layout"
 msgstr "Макет статьи"
 
@@ -2303,17 +2749,17 @@ msgid "Wide article"
 msgstr "Широкая статья"
 
 #: inc/admin/settings-page.php:188
-#: inc/settings-transfer/presentation.php:30
+#: inc/settings-transfer/presentation.php:31
 msgid "Body text size, px"
 msgstr "Размер текста, px"
 
 #: inc/admin/settings-page.php:189
-#: inc/settings-transfer/presentation.php:31
+#: inc/settings-transfer/presentation.php:32
 msgid "Line height"
 msgstr "Межстрочный интервал"
 
 #: inc/admin/settings-page.php:190
-#: inc/settings-transfer/presentation.php:32
+#: inc/settings-transfer/presentation.php:33
 msgid "Reading width, px"
 msgstr "Ширина текста, px"
 
@@ -2326,42 +2772,42 @@ msgid "Core settings for live search and user-generated content."
 msgstr "Основные параметры живого поиска и пользовательских материалов."
 
 #: inc/admin/settings-page.php:197
-#: inc/settings-transfer/presentation.php:18
+#: inc/settings-transfer/presentation.php:19
 msgid "Minimum search characters"
 msgstr "Минимум символов поиска"
 
 #: inc/admin/settings-page.php:198
-#: inc/settings-transfer/presentation.php:19
+#: inc/settings-transfer/presentation.php:20
 msgid "Results in the search window"
 msgstr "Результатов в окне"
 
 #: inc/admin/settings-page.php:199
-#: inc/settings-transfer/presentation.php:41
+#: inc/settings-transfer/presentation.php:42
 msgid "Image limit, MB"
 msgstr "Лимит изображения, МБ"
 
 #: inc/admin/settings-page.php:202
-#: inc/settings-transfer/presentation.php:36
+#: inc/settings-transfer/presentation.php:37
 msgid "Images in comments"
 msgstr "Изображения в комментариях"
 
 #: inc/admin/settings-page.php:203
-#: inc/settings-transfer/presentation.php:37
+#: inc/settings-transfer/presentation.php:38
 msgid "Emoji panel"
 msgstr "Панель смайликов"
 
 #: inc/admin/settings-page.php:204
-#: inc/settings-transfer/presentation.php:38
+#: inc/settings-transfer/presentation.php:39
 msgid "Article claps"
 msgstr "Хлопки под статьями"
 
 #: inc/admin/settings-page.php:205
-#: inc/settings-transfer/presentation.php:39
+#: inc/settings-transfer/presentation.php:40
 msgid "Personal reading library"
 msgstr "Личная библиотека читателя"
 
 #: inc/admin/settings-page.php:206
-#: inc/settings-transfer/presentation.php:40
+#: inc/settings-transfer/presentation.php:41
 msgid "Safe SVG uploads"
 msgstr "Безопасная загрузка SVG"
 
@@ -2382,7 +2828,7 @@ msgid "Built-in protection requires no keys. An external provider is enabled onl
 msgstr "Встроенная защита не требует ключей. Внешний провайдер включается только после заполнения обоих ключей."
 
 #: inc/admin/settings-page.php:215
-#: inc/settings-transfer/presentation.php:33
+#: inc/settings-transfer/presentation.php:34
 msgid "CAPTCHA provider"
 msgstr "Провайдер CAPTCHA"
 
@@ -2391,12 +2837,12 @@ msgid "Built-in protection"
 msgstr "Встроенная защита"
 
 #: inc/admin/settings-page.php:216
-#: inc/settings-transfer/presentation.php:34
+#: inc/settings-transfer/presentation.php:35
 msgid "Site key"
 msgstr "Ключ сайта"
 
 #: inc/admin/settings-page.php:217
-#: inc/settings-transfer/presentation.php:35
+#: inc/settings-transfer/presentation.php:36
 msgid "Secret key"
 msgstr "Секретный ключ"
 
@@ -2410,7 +2856,7 @@ msgid "VK"
 msgstr "ВКонтакте"
 
 #: inc/admin/settings-page.php:227
-#: inc/settings-transfer/presentation.php:42
+#: inc/settings-transfer/presentation.php:43
 #: inc/social.php:18
 msgid "Odnoklassniki"
 msgstr "Одноклассники"
@@ -2669,32 +3115,32 @@ msgid "Third highlight"
 msgstr "Третье преимущество"
 
 #: inc/customizer.php:25
-#: inc/settings-transfer/presentation.php:43
+#: inc/settings-transfer/presentation.php:44
 msgid "First title line"
 msgstr "Первая строка заголовка"
 
 #: inc/customizer.php:26
-#: inc/settings-transfer/presentation.php:44
+#: inc/settings-transfer/presentation.php:45
 msgid "Accent line"
 msgstr "Акцентная строка"
 
 #: inc/customizer.php:27
-#: inc/settings-transfer/presentation.php:45
+#: inc/settings-transfer/presentation.php:46
 msgid "Description"
 msgstr "Описание"
 
 #: inc/customizer.php:28
-#: inc/settings-transfer/presentation.php:46
+#: inc/settings-transfer/presentation.php:47
 msgid "Site description"
 msgstr "Описание сайта"
 
 #: inc/customizer.php:29
-#: inc/settings-transfer/presentation.php:47
+#: inc/settings-transfer/presentation.php:48
 msgid "Copyright text"
 msgstr "Копирайт"
 
 #: inc/customizer.php:30
-#: inc/settings-transfer/presentation.php:49
+#: inc/settings-transfer/presentation.php:50
 msgid "Search heading"
 msgstr "Заголовок поиска"
 
@@ -2705,7 +3151,7 @@ msgid "What are you looking for?"
 msgstr "Что ищем?"
 
 #: inc/customizer.php:42
-#: inc/settings-transfer/presentation.php:48
+#: inc/settings-transfer/presentation.php:49
 msgid "Default color scheme"
 msgstr "Цветовая схема по умолчанию"
 
@@ -2722,12 +3168,12 @@ msgid "Dark"
 msgstr "Тёмная"
 
 #: inc/design/bootstrap.php:23
-#: inc/design/labels.php:15
+#: inc/design/labels.php:16
 msgid "Reader mode"
 msgstr "Режим чтения"
 
 #: inc/design/bootstrap.php:24
-#: inc/design/labels.php:15
+#: inc/design/labels.php:16
 msgid "Print article"
 msgstr "Распечатать статью"
 
@@ -2740,221 +3186,225 @@ msgid "Header navigation"
 msgstr "Меню в шапке"
 
 #: inc/design/labels.php:7
+msgid "Mobile navigation"
+msgstr "Мобильная навигация"
+
+#: inc/design/labels.php:8
 msgid "Page background"
 msgstr "Фон страницы"
 
-#: inc/design/labels.php:7
+#: inc/design/labels.php:8
 msgid "Card background"
 msgstr "Фон карточек"
 
-#: inc/design/labels.php:7
+#: inc/design/labels.php:8
 msgid "Soft background"
 msgstr "Дополнительный фон"
 
-#: inc/design/labels.php:8
+#: inc/design/labels.php:9
 msgid "Main text"
 msgstr "Основной текст"
 
-#: inc/design/labels.php:8
+#: inc/design/labels.php:9
 msgid "Secondary text"
 msgstr "Дополнительный текст"
 
-#: inc/design/labels.php:8
+#: inc/design/labels.php:9
 msgid "Borders"
 msgstr "Границы"
 
-#: inc/design/labels.php:9
+#: inc/design/labels.php:10
 msgid "Accent color"
 msgstr "Акцентный цвет"
 
-#: inc/design/labels.php:9
+#: inc/design/labels.php:10
 msgid "Accent on hover"
 msgstr "Акцент при наведении"
 
-#: inc/design/labels.php:9
+#: inc/design/labels.php:10
 msgid "Soft accent"
 msgstr "Фон акцентных блоков"
 
-#: inc/design/labels.php:10
+#: inc/design/labels.php:11
 msgid "Errors"
 msgstr "Ошибки"
 
-#: inc/design/labels.php:10
+#: inc/design/labels.php:11
 msgid "Button text"
 msgstr "Текст кнопок"
 
-#: inc/design/labels.php:10
+#: inc/design/labels.php:11
 msgid "Keyboard focus"
 msgstr "Фокус клавиатуры"
 
-#: inc/design/labels.php:11
+#: inc/design/labels.php:12
 msgid "Body font"
 msgstr "Шрифт основного текста"
 
-#: inc/design/labels.php:11
+#: inc/design/labels.php:12
 msgid "Heading font"
 msgstr "Шрифт заголовков"
 
-#: inc/design/labels.php:11
+#: inc/design/labels.php:12
 msgid "Navigation font"
 msgstr "Шрифт меню"
 
-#: inc/design/labels.php:11
+#: inc/design/labels.php:12
 msgid "Button font"
 msgstr "Шрифт кнопок"
 
-#: inc/design/labels.php:11
+#: inc/design/labels.php:12
 msgid "Metadata font"
 msgstr "Шрифт метаданных"
 
-#: inc/design/labels.php:11
+#: inc/design/labels.php:12
 msgid "Code font"
 msgstr "Шрифт кода"
 
-#: inc/design/labels.php:12
+#: inc/design/labels.php:13
 msgid "Interface text size"
 msgstr "Размер текста интерфейса"
 
-#: inc/design/labels.php:12
+#: inc/design/labels.php:13
 msgid "Heading weight"
 msgstr "Насыщенность заголовков"
 
-#: inc/design/labels.php:12
+#: inc/design/labels.php:13
 msgid "Heading scale, %"
 msgstr "Масштаб главного заголовка, %"
 
-#: inc/design/labels.php:12
+#: inc/design/labels.php:13
 msgid "Paragraph spacing"
 msgstr "Отступ между абзацами"
 
-#: inc/design/labels.php:12
+#: inc/design/labels.php:13
 msgid "Mobile article text size"
 msgstr "Размер текста статьи на телефоне"
 
-#: inc/design/labels.php:12
+#: inc/design/labels.php:13
 msgid "Letter spacing"
 msgstr "Межбуквенный интервал"
 
-#: inc/design/labels.php:13
+#: inc/design/labels.php:14
 msgid "Site width"
 msgstr "Ширина сайта"
 
-#: inc/design/labels.php:13
+#: inc/design/labels.php:14
 msgid "Sidebar width"
 msgstr "Ширина боковой колонки"
 
-#: inc/design/labels.php:13
+#: inc/design/labels.php:14
 msgid "Corner radius"
 msgstr "Скругление углов"
 
-#: inc/design/labels.php:13
+#: inc/design/labels.php:14
 msgid "Section spacing"
 msgstr "Отступы разделов"
 
-#: inc/design/labels.php:13
+#: inc/design/labels.php:14
 msgid "Card spacing"
 msgstr "Отступы между карточками"
 
-#: inc/design/labels.php:13
+#: inc/design/labels.php:14
 msgid "Footer columns"
 msgstr "Количество колонок подвала"
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Sticky header"
 msgstr "Закреплённая шапка"
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Header search"
 msgstr "Поиск в шапке"
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Color scheme switch"
 msgstr "Переключение светлой и тёмной темы"
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Logo tagline"
 msgstr "Подпись возле логотипа"
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Article cover"
 msgstr "Обложка статьи"
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Author card"
 msgstr "Карточка автора"
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 #: single.php:63
 msgid "Adjacent articles"
 msgstr "Соседние статьи"
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Related articles"
 msgstr "Рекомендации статей"
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 #: inc/toc.php:90
 #: single.php:50
 msgid "Table of contents"
 msgstr "Содержание статьи"
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Sidebar articles"
 msgstr "Статьи в боковой колонке"
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Card excerpts"
 msgstr "Анонсы на карточках"
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Card metadata"
 msgstr "Метаданные карточек"
 
-#: inc/design/labels.php:14
+#: inc/design/labels.php:15
 msgid "Footer social links"
 msgstr "Социальные ссылки в подвале"
 
-#: inc/design/labels.php:15
+#: inc/design/labels.php:16
 msgid "Card image ratio"
 msgstr "Пропорции обложки карточки"
 
-#: inc/design/labels.php:15
+#: inc/design/labels.php:16
 msgid "Shadows"
 msgstr "Тени"
 
-#: inc/design/labels.php:15
+#: inc/design/labels.php:16
 msgid "No shadow"
 msgstr "Без теней"
 
-#: inc/design/labels.php:15
+#: inc/design/labels.php:16
 msgid "Soft shadow"
 msgstr "Мягкие тени"
 
-#: inc/design/labels.php:15
+#: inc/design/labels.php:16
 msgid "Strong shadow"
 msgstr "Выраженные тени"
 
-#: inc/design/labels.php:16
+#: inc/design/labels.php:17
 msgid "Monospace"
 msgstr "Моноширинный"
 
-#: inc/design/labels.php:17
+#: inc/design/labels.php:18
 msgid "Uploaded font"
 msgstr "Загруженный шрифт"
 
-#: inc/design/labels.php:17
+#: inc/design/labels.php:18
 msgid "Weight: menu"
 msgstr "Насыщенность шрифта меню"
 
-#: inc/design/labels.php:17
+#: inc/design/labels.php:18
 msgid "Weight: button"
 msgstr "Насыщенность шрифта кнопок"
 
-#: inc/design/labels.php:17
+#: inc/design/labels.php:18
 msgid "Weight: meta"
 msgstr "Насыщенность шрифта метаданных"
 
-#: inc/design/labels.php:17
+#: inc/design/labels.php:18
 msgid "Weight: body"
 msgstr "Насыщенность основного текста"
 
@@ -3191,31 +3641,31 @@ msgstr "Пусто"
 msgid "Protected content included"
 msgstr "Содержимое включено, показ скрыт"
 
-#: inc/settings-transfer/presentation.php:51
+#: inc/settings-transfer/presentation.php:52
 msgid "Logo"
 msgstr "Логотип"
 
-#: inc/settings-transfer/presentation.php:52
+#: inc/settings-transfer/presentation.php:53
 msgid "Site icon"
 msgstr "Иконка сайта"
 
-#: inc/settings-transfer/presentation.php:53
+#: inc/settings-transfer/presentation.php:54
 msgid "Custom CSS"
 msgstr "Дополнительный CSS"
 
-#: inc/settings-transfer/presentation.php:54
+#: inc/settings-transfer/presentation.php:55
 msgid "Site title"
 msgstr "Название сайта"
 
-#: inc/settings-transfer/presentation.php:55
+#: inc/settings-transfer/presentation.php:56
 msgid "Tagline"
 msgstr "Краткое описание"
 
-#: inc/settings-transfer/presentation.php:57
+#: inc/settings-transfer/presentation.php:58
 msgid "Code before </head>"
 msgstr "Код перед </head>"
 
-#: inc/settings-transfer/presentation.php:58
+#: inc/settings-transfer/presentation.php:59
 msgid "Code before </body>"
 msgstr "Код перед </body>"
 
@@ -3259,11 +3709,16 @@ msgstr "Не удалось сохранить дополнительный CSS.
 msgid "Invalid backup. Use an IO Blog settings JSON file up to 1 MB. Check field types and install its WordPress language pack first."
 msgstr "Некорректная копия. Нужен JSON-файл настроек IO Blog до 1 МБ. Проверьте типы значений и заранее установите указанный в файле языковой пакет WordPress."
 
-#: inc/setup.php:56
+#: inc/setup.php:36
+#: template-parts/mobile-navigation.php:5
+msgid "Mobile menu"
+msgstr "Мобильное меню"
+
+#: inc/setup.php:57
 msgid "Article sidebar"
 msgstr "Боковая колонка статьи"
 
-#: inc/setup.php:58
+#: inc/setup.php:59
 msgid "Widgets displayed in the sticky sidebar of a single article."
 msgstr "Виджеты в липкой боковой колонке отдельной статьи."
 
@@ -3446,7 +3901,7 @@ msgstr "Действия со статьёй"
 
 #: single.php:31
 #: single.php:33
-#: assets/js/interface.js:47
+#: assets/js/interface.js:37
 msgid "Copy link"
 msgstr "Скопировать ссылку"
 
@@ -3851,6 +4306,10 @@ msgstr "Файл резервной копии библиотеки"
 msgid "The file contains your reading history. Keep it private. Import merges data for this site without removing existing bookmarks."
 msgstr "Файл содержит историю чтения. Храните его в безопасности. Импорт объединяет данные этого сайта, не удаляя существующие закладки."
 
+#: template-parts/mobile-navigation.php:7
+msgid "Home"
+msgstr "Главная"
+
 #: template-parts/reading-resume.php:6
 msgid "Dismiss reading position"
 msgstr "Скрыть предложение продолжить чтение"
@@ -3864,15 +4323,15 @@ msgstr "Закрыть поиск"
 msgid "Article title or topic…"
 msgstr "Название статьи или тема…"
 
-#: assets/js/interface.js:40
+#: assets/js/interface.js:30
 msgid "Copy this link:"
 msgstr "Скопируйте эту ссылку:"
 
-#: assets/js/interface.js:104
+#: assets/js/interface.js:94
 msgid "Image preview"
 msgstr "Предпросмотр изображения"
 
-#: assets/js/interface.js:107
+#: assets/js/interface.js:97
 msgid "Remove image"
 msgstr "Удалить изображение"
 

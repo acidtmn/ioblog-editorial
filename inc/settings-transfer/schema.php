@@ -19,7 +19,7 @@ final class Ioblog_Settings_Transfer_Schema {
 	public static function group( $key, $section = 'settings' ) {
 		if ( 'settings' !== $section ) { return 'appearance'; }
 		if ( 'design_config' === $key ) { return 'appearance'; }
-		if ( in_array( $key, array( 'community_config', 'mail_config' ), true ) ) { return 'integrations'; }
+		if ( in_array( $key, array( 'community_config', 'mail_config', 'mailing_config' ), true ) ) { return 'integrations'; }
 		if ( str_starts_with( $key, 'ad_' ) ) { return 'ads'; }
 		if ( preg_match( '/^(captcha_|comments_|comment_image_|svg_uploads)/', $key ) ) { return 'comments'; }
 		if ( str_starts_with( $key, 'home_' ) ) { return 'homepage'; }
@@ -50,13 +50,14 @@ final class Ioblog_Settings_Transfer_Schema {
 		if ( ! is_array( $settings ) || count( $settings ) > 256 ) { throw new InvalidArgumentException( 'settings' ); }
 		$defaults = ioblog_settings_defaults();
 		$pro_keys = array( 'ad_home_enabled', 'ad_home_code', 'ad_inline_enabled', 'ad_inline_code', 'ad_inline_paragraph', 'ad_sidebar_enabled', 'ad_sidebar_code', 'ad_after_enabled', 'ad_after_code', 'redirects', 'head_code', 'footer_code', 'telegram_channel', 'telegram_instant_view', 'social_covers_enabled', 'interests_enabled' );
-		$allowed = array_merge( array_keys( $defaults ), array_keys( (array) get_option( 'ioblog_settings', array() ) ), $pro_keys, array( 'community_config', 'mail_config', 'writing_config', 'ad_rules' ) );
+		$allowed = array_merge( array_keys( $defaults ), array_keys( (array) get_option( 'ioblog_settings', array() ) ), $pro_keys, array( 'community_config', 'mail_config', 'mailing_config', 'writing_config', 'ad_rules' ) );
 		foreach ( $settings as $key => $value ) {
 			if ( ! is_string( $key ) || ! preg_match( '/^[a-z][a-z0-9_]{0,99}$/D', $key ) ) { throw new InvalidArgumentException( 'key' ); }
 			if ( ! in_array( $key, $allowed, true ) ) { throw new InvalidArgumentException( 'unsupported' ); }
 			if ( 'design_config' === $key ) { Ioblog_Design_Schema::validate( $value ); }
 			if ( 'legal_config' === $key ) { Ioblog_Legal_Settings::validate( $value ); }
-			if ( in_array( $key, array( 'community_config', 'mail_config', 'ad_rules' ), true ) && ! is_array( $value ) ) { throw new InvalidArgumentException( $key ); }
+			if ( in_array( $key, array( 'community_config', 'mail_config', 'mailing_config', 'ad_rules' ), true ) && ! is_array( $value ) ) { throw new InvalidArgumentException( $key ); }
+			if ( 'mailing_config' === $key && class_exists( 'Ioblog_Mailing_Settings' ) ) { Ioblog_Mailing_Settings::validate( $value ); }
 			if ( 'mail_config' === $key && class_exists( 'Ioblog_Mail_Settings' ) ) { Ioblog_Mail_Settings::validate( $value ); }
 			if ( 'writing_config' === $key ) { if ( ! is_array( $value ) ) { throw new InvalidArgumentException( $key ); } if ( class_exists( 'Ioblog_Writing_Settings' ) ) { Ioblog_Writing_Settings::validate( $value ); } }
 			if ( 'community_config' === $key && class_exists( 'Ioblog_Community_Settings' ) ) { Ioblog_Community_Settings::validate( $value ); }

@@ -14,6 +14,7 @@ final class Ioblog_Settings_Transfer_Presentation {
 		if ( preg_match( '/^ad_(home|inline|sidebar|after)_(code|enabled)$/D', $key, $match ) ) { return $slots[ $match[1] ]; }
 		$labels = array(
 			'mail_config' => __( 'Email / SMTP', 'ioblog-editorial' ),
+			'mailing_config' => __( 'Notifications and newsletters', 'ioblog-editorial' ),
 			'site_language' => __( 'WordPress language', 'ioblog-editorial' ),
 			'search_min_chars' => __( 'Minimum search characters', 'ioblog-editorial' ),
 			'search_limit' => __( 'Results in the search window', 'ioblog-editorial' ),

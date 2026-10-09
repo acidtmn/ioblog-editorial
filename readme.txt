@@ -3,7 +3,7 @@ Contributors: kirillaleksandrov
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.12.1
+Stable tag: 1.13.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, news, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -12,7 +12,9 @@ A fast, responsive editorial theme for technology blogs with dark mode, live sea
 
 == Description ==
 
-Version 1.12.1 replaces the detailed outline clap icon with a clear native clapping-hands emoji shared by cards and article reactions. No remote emoji images or fonts are required. Version 1.12.0 aligned card footers and added the Write entry; the paired Pro 1.7.0 editor and account features remain unchanged. Site owners still create their own legal documents.
+Version 1.13.0 includes translations and configuration-backup support for the paired Pro 1.8.0 notification center, voluntary newsletters and paginated author publications table. These are optional Pro features, not a mailing service bundled with Free. Existing clap icons and counters are preserved. Site owners create their own legal documents.
+
+Mobile navigation is independent of the desktop category menu. Home, search and the browser library are available in Free; Pro adds enabled account actions. An optional Mobile menu location accepts additional owner-assigned links. The design studio includes a separate mobile-navigation switch. Phone cards stack the cover above readable text, and account layouts use the available width.
 
 IO Blog Editorial is a responsive classic WordPress theme designed for readable technology publications, personal blogs, and online magazines. It combines a distinctive editorial homepage with a focused single-post layout, a sticky table of contents, accessible dark mode, and lightweight CSS-generated covers for posts without featured images.
 
@@ -47,7 +49,7 @@ The theme uses local assets only by default. Advertising, analytics snippets, so
 3. Activate IO Blog Editorial.
 4. Open Appearance > Customize to set the homepage copy, footer text, and default color scheme.
 5. Open IO Blog in the main administration menu to configure the homepage, reading layout, search, comments, CAPTCHA, and social links.
-6. Optionally install IO Blog Editorial Pro 1.3.0 as a plugin to enable publishing tools and reader accounts. Install it through Plugins, not Themes.
+6. Optionally install IO Blog Editorial Pro 1.8.0 as a plugin to enable publishing tools and reader accounts. Install it through Plugins, not Themes.
 7. Assign menus to the Primary menu and Footer menu locations.
 8. Set the Site Icon in Appearance > Customize > Site Identity.
 
@@ -147,6 +149,10 @@ Yes. Upload a featured image in the post editor. It automatically replaces the g
 Use the bundled POT file with Poedit, Loco Translate, or the WordPress i18n tools. Save compiled translations with the `ioblog-editorial` text domain.
 
 == Changelog ==
+
+= 1.13.0 =
+Added independent mobile action navigation with Escape/outside-click closure, accessible state and restored focus. Preserved disabled desktop category menus. Improved 320-768px header, card, footer and account layouts; the design studio now contains 72 settings.
+Added paired Russian translations for Pro notifications, newsletter controls and the publications table. Full settings backup now preserves mailing configuration even when Pro is inactive. Reader consent receipts, delivery queues and notification histories remain personal data, not exported theme configuration. No change to Free reaction counters or Pro licensing.
 
 = 1.12.1 =
 Replaced the overlapping outline hand paths with one native color clapping-hands emoji in cards and article reactions. Shared the icon template, preserved accessible action names and counters, and excluded the icon from WordPress CDN emoji replacement. Retained light/dark styling, reaction animation and reduced-motion support. Pro 1.7.0 remains unchanged.

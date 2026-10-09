@@ -28,6 +28,7 @@
 
 	const open = () => {
 		opener = document.activeElement;
+		if (opener.closest('.io-mobile-nav')) opener = document.querySelector('.io-menu-toggle');
 		modal.hidden = false;
 		document.body.classList.add('io-modal-open');
 		input.focus();

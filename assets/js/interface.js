@@ -4,8 +4,6 @@
 	const { __ } = window.wp.i18n;
 	const root = document.documentElement;
 	const themeButton = document.querySelector('.io-theme-toggle');
-	const menuButton = document.querySelector('.io-menu-toggle');
-	const mobileMenu = document.querySelector('.io-mobile-nav');
 
 	if (themeButton) {
 		themeButton.addEventListener('click', () => {
@@ -18,14 +16,6 @@
 			} catch (error) {
 				// Приватные настройки браузера могут запретить хранилище; переключение всё равно работает.
 			}
-		});
-	}
-
-	if (menuButton && mobileMenu) {
-		menuButton.addEventListener('click', () => {
-			const open = menuButton.getAttribute('aria-expanded') === 'true';
-			menuButton.setAttribute('aria-expanded', String(!open));
-			mobileMenu.hidden = open;
 		});
 	}
 
