@@ -24,6 +24,8 @@ The separate private Pro 1.8.0 adds a header notification bell with owner-only u
 
 Previously, 1.12.1 replaced the outline clap icon with a native color clapping-hands emoji. Accessible names, counters and reduced motion remain supported without CDN images or fonts.
 
+**Pro 1.8.2:** Fixed Yandex SmartCaptcha challenges being covered by the login dialog. The form yields to the provider challenge and returns with its fields intact, without resetting a solved token. Applies to registration, login and recovery. Server verification, consent and rate limits are unchanged. Free remains 1.13.0; only the private Pro plugin needs updating.
+
 **Pro 1.8.1:** The private Pro plugin removes the duplicate tool-button row above the editor. All tools remain in the native + menu, including images, nested lists/checklists, video, link cards and members-only sections. Drafts, autosave, preview and Gutenberg storage are unchanged. Free remains version 1.13.0; only Pro needs updating for this fix. The private Pro ZIP is not distributed in this repository.
 
 In 1.12.0 clap totals are aligned in the card footer beside the read arrow. A visible Write button appears when the optional newsroom is enabled. Russian translations now cover the paired Pro 1.7.0 editor, subscriptions and native blocks.
