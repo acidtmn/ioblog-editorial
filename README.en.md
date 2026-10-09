@@ -24,6 +24,8 @@ The separate private Pro 1.8.0 adds a header notification bell with owner-only u
 
 Previously, 1.12.1 replaced the outline clap icon with a native color clapping-hands emoji. Accessible names, counters and reduced motion remain supported without CDN images or fonts.
 
+**Pro 1.8.1:** The private Pro plugin removes the duplicate tool-button row above the editor. All tools remain in the native + menu, including images, nested lists/checklists, video, link cards and members-only sections. Drafts, autosave, preview and Gutenberg storage are unchanged. Free remains version 1.13.0; only Pro needs updating for this fix. The private Pro ZIP is not distributed in this repository.
+
 In 1.12.0 clap totals are aligned in the card footer beside the read arrow. A visible Write button appears when the optional newsroom is enabled. Russian translations now cover the paired Pro 1.7.0 editor, subscriptions and native blocks.
 
 The separate private Pro 1.7.0 ships actual locally bundled Editor.js, secure image uploads, nested lists/checklists, tables, quotes, code, lazy provider video, link cards and registration-gated text, serialized as Gutenberg. It adds author following and a combined category/author feed. The customer-facing interface calls the tool Editor. Private text is not present in public post_content, RSS or public REST; uploaded images remain public. This is registration gating, not paid membership. Site owners supply their own consent documents. Pro code is not included here.
