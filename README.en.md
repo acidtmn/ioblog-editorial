@@ -4,15 +4,19 @@
 
 A lightweight editorial WordPress theme by **Kirill Aleksandrov** for personal blogs and technology publications.
 
-**Free 1.13.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
+**Free 1.14.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
 
 ## Download and Install
 
-Download the installable `ioblog-editorial-1.13.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.13.0), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
+Download the installable `ioblog-editorial-1.14.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.14.0), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
 
 In WordPress open **Appearance → Themes → Add New → Upload Theme**, install the ZIP and activate it. Then open **IO Blog** in the main dashboard menu. Configure the homepage, reading layout, search and comments; assign Primary and Footer menus. Set your logo and Site Icon in **Appearance → Customize → Site Identity**.
 
 ## Included in Free
+
+Version 1.14.0 adds six paired light/dark palettes: Emerald, Ocean, Forest, Amber, Terracotta and Graphite. Presets only change colors, preserving fonts and layouts. Manual changes show Custom palette. Responsive preview, explicit publication and contrast checks cover both modes. External CAPTCHA now fails closed for missing keys, network failures, malformed responses and mismatched domains across native authentication and guest comments.
+
+The separate private Pro 1.9.0 adds resumable Name → Avatar → Interests setup, Russian pseudonyms, locally generated geometric WebP avatars and participation levels with an auditable, reversible experience ledger. Interests do not opt users into email. Participation never grants publishing/moderation rights or changes author reputation. Existing installations keep these optional modules disabled until explicitly enabled. Pro is not distributed in this repository.
 
 Version 1.13.0 fixes 320-768px layouts and provides independent mobile navigation for Home, search and the browser library. Enabled Pro account actions appear when its plugin is installed. Disabling desktop categories does not disable the phone panel. The 72-field design studio has a separate mobile-navigation switch; additional links use the Mobile menu location. Phone cards place their cover above readable text.
 

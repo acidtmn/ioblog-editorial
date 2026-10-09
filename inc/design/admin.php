@@ -9,6 +9,17 @@ add_action( 'admin_enqueue_scripts', static function ( $hook ) {
 	wp_enqueue_style( 'ioblog-design-admin', get_theme_file_uri( 'assets/css/design-admin.css' ), array(), ioblog_asset_version( 'assets/css/design-admin.css' ) );
 	wp_enqueue_script( 'ioblog-design-admin', get_theme_file_uri( 'assets/js/design-admin.js' ), array(), ioblog_asset_version( 'assets/js/design-admin.js' ), true );
 	wp_localize_script( 'ioblog-design-admin', 'IOBlogDesign', array( 'endpoint' => admin_url( 'admin-ajax.php' ), 'nonce' => wp_create_nonce( 'io_design' ), 'error' => __( 'Unable to save. Please retry.', 'ioblog-editorial' ), 'saved' => __( 'Settings saved.', 'ioblog-editorial' ) ) );
+	wp_localize_script( 'ioblog-design-admin', 'IOBlogDesignPalettes', array(
+		'colors' => Ioblog_Design_Presets::colors(),
+		'labels' => Ioblog_Design_Presets::labels(),
+		'custom' => __( 'Custom palette', 'ioblog-editorial' ),
+		'contrast' => array(
+			'light' => __( 'Light palette', 'ioblog-editorial' ), 'dark' => __( 'Dark palette', 'ioblog-editorial' ),
+			'text' => __( 'Main text', 'ioblog-editorial' ), 'muted' => __( 'Secondary text', 'ioblog-editorial' ),
+			'button' => __( 'Button text', 'ioblog-editorial' ), 'focus' => __( 'Keyboard focus', 'ioblog-editorial' ),
+			'pass' => __( 'Meets AA', 'ioblog-editorial' ), 'fail' => __( 'Below AA', 'ioblog-editorial' ),
+		),
+	) );
 } );
 add_action( 'wp_ajax_io_design', static function () {
 	if ( ! current_user_can( 'manage_options' ) ) { wp_send_json_error( array( 'message' => 'Forbidden' ), 403 ); }

@@ -1,6 +1,6 @@
 <?php
 /** Собирает модуль оформления, не смешивая транспорт, контракт и представление. */
-foreach ( array( 'schema', 'labels', 'fonts', 'service', 'admin' ) as $module ) { require_once __DIR__ . '/' . $module . '.php'; }
+foreach ( array( 'presets', 'schema', 'labels', 'fonts', 'service', 'admin' ) as $module ) { require_once __DIR__ . '/' . $module . '.php'; }
 add_filter( 'ioblog_settings_defaults', static function ( $settings ) { $settings['design_config'] = array(); return $settings; } );
 add_filter( 'ioblog_sanitize_settings', static function ( $settings, $input, $current ) {
 	// Штатная форма сохраняет ранее опубликованный дизайн без необходимости дублировать его поля.

@@ -4,6 +4,20 @@
   if (!form) return;
   const status = document.querySelector('#io-design-status');
   const frame = document.querySelector('.io-design-preview iframe');
+  const palettes = IOBlogDesignPalettes.colors;
+  const paletteButtons = form.querySelectorAll('[data-design-palette]');
+  const paletteStatus = document.querySelector('#io-design-palette-status');
+  const syncPalette = () => {
+    const id = Object.keys(palettes).find(key => Object.entries(palettes[key]).every(([name, value]) => form.elements[`config[${name}]`].value.toLowerCase() === value));
+    paletteButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.designPalette === id)));
+    paletteStatus.textContent = id ? IOBlogDesignPalettes.labels[id] : IOBlogDesignPalettes.custom;
+  };
+  // Пресет меняет только цвета в той же форме; сохранение по-прежнему требует публикации.
+  paletteButtons.forEach(button => button.addEventListener('click', () => {
+    Object.entries(palettes[button.dataset.designPalette]).forEach(([name, value]) => { form.elements[`config[${name}]`].value = value; });
+    form.dispatchEvent(new Event('input', {bubbles:true}));
+  }));
+  form.querySelector('.io-design-palettes').hidden = false;
   let busy = false;
   let dirty = false;
   let timer;
@@ -45,18 +59,31 @@
     return channels[0]*.2126 + channels[1]*.7152 + channels[2]*.0722;
   };
   const contrast = () => {
-    const ratios = ['light','dark'].map(scheme => {
-      const text = luminance(form.elements[`config[${scheme}_text]`].value);
-      const bg = luminance(form.elements[`config[${scheme}_bg]`].value);
-      return `${scheme}: ${((Math.max(text,bg)+.05)/(Math.min(text,bg)+.05)).toFixed(1)}:1`;
+    const labels = IOBlogDesignPalettes.contrast;
+    const rows = ['light','dark'].map(scheme => {
+      const ratio = (foreground, background) => {
+        const a = luminance(form.elements[`config[${scheme}_${foreground}]`].value);
+        const b = luminance(form.elements[`config[${scheme}_${background}]`].value);
+        return (Math.max(a,b)+.05)/(Math.min(a,b)+.05);
+      };
+      const checks = [
+        ['text', ratio('text', 'bg'), 4.5],
+        ['muted', ratio('muted', 'surface'), 4.5],
+        ['button', Math.min(ratio('button_text', 'accent'), ratio('button_text', 'accent_hover')), 4.5],
+        ['focus', Math.min(...['bg','surface','surface_soft','accent_soft'].map(background => ratio('focus', background))), 3],
+      ];
+      const row = document.createElement('p');
+      row.textContent = `${labels[scheme]}: ` + checks.map(([key, value, minimum]) => `${labels[key]} ${value.toFixed(2)}:1 (${value >= minimum ? labels.pass : labels.fail}, ${minimum}:1)`).join(' · ');
+      row.classList.toggle('io-design-contrast-warning', checks.some(([, value, minimum]) => value < minimum));
+      return row;
     });
-    document.querySelector('#io-design-contrast').textContent = ratios.join(' · ') + ' (AA ≥ 4.5:1)';
+    document.querySelector('#io-design-contrast').replaceChildren(...rows);
   };
-  form.addEventListener('input', () => { dirty = true; ++revision; contrast(); clearTimeout(timer); timer = setTimeout(() => request('preview'), 800); });
+  form.addEventListener('input', () => { dirty = true; ++revision; syncPalette(); contrast(); clearTimeout(timer); timer = setTimeout(() => request('preview'), 800); });
   document.querySelector('#io-design-search').addEventListener('input', event => {
     const needle = event.target.value.toLocaleLowerCase();
     form.querySelectorAll('[data-design-field]').forEach(field => field.hidden = !field.textContent.toLocaleLowerCase().includes(needle));
   });
   addEventListener('beforeunload', event => { if (dirty) { event.preventDefault(); event.returnValue = ''; } });
-  contrast();
+  syncPalette(); contrast();
 })();

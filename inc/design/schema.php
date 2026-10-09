@@ -4,13 +4,11 @@ final class Ioblog_Design_Schema {
 	public static function fields() {
 		$fields = array();
 		// Цвета хранятся отдельно для двух схем; зависимые компоненты наследуют эти токены.
-		$palettes = array(
-			'light' => array( 'bg' => '#f4f8fc', 'surface' => '#ffffff', 'surface_soft' => '#edf4fa', 'text' => '#101a2d', 'muted' => '#647087', 'border' => '#dce5ee', 'accent' => '#00866f', 'accent_hover' => '#006f5d', 'accent_soft' => '#ddf5ee', 'danger' => '#d52c56', 'button_text' => '#ffffff', 'focus' => '#006f5d' ),
-			'dark' => array( 'bg' => '#081120', 'surface' => '#101b2d', 'surface_soft' => '#17243a', 'text' => '#f4f7fb', 'muted' => '#aab6c8', 'border' => '#2a3951', 'accent' => '#38c7ad', 'accent_hover' => '#68ddc8', 'accent_soft' => '#153d3b', 'danger' => '#ff718a', 'button_text' => '#081120', 'focus' => '#68ddc8' ),
-		);
+		$palette = Ioblog_Design_Presets::colors()['emerald'];
 		$labels = array( 'bg' => 'Page background', 'surface' => 'Card background', 'surface_soft' => 'Soft background', 'text' => 'Main text', 'muted' => 'Secondary text', 'border' => 'Borders', 'accent' => 'Accent color', 'accent_hover' => 'Accent on hover', 'accent_soft' => 'Soft accent', 'danger' => 'Errors', 'button_text' => 'Button text', 'focus' => 'Keyboard focus' );
-		foreach ( $palettes as $scheme => $colors ) {
-			foreach ( $colors as $key => $value ) { $fields[ $scheme . '_' . $key ] = array( 'type' => 'color', 'default' => $value, 'label' => $labels[ $key ], 'group' => $scheme ); }
+		foreach ( $palette as $key => $value ) {
+			list( $scheme, $token ) = explode( '_', $key, 2 );
+			$fields[ $key ] = array( 'type' => 'color', 'default' => $value, 'label' => $labels[ $token ], 'group' => $scheme );
 		}
 		// Набор семейств закрытый: из формы нельзя внедрить CSS или загрузить сторонний шрифт.
 		$fonts = array( 'dm' => 'DM Sans', 'serif' => 'Georgia', 'sans' => 'Verdana', 'mono' => 'Monospace', 'custom' => 'Uploaded font' );

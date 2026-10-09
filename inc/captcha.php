@@ -6,16 +6,14 @@
  */
 
 /**
- * Возвращает внешний провайдер только при наличии обоих ключей.
+ * Возвращает выбранный провайдер, не подменяя ошибочную настройку встроенной защитой.
  *
  * @return string
  */
 function ioblog_active_captcha_provider() {
 	$provider = (string) ioblog_get_setting( 'captcha_provider' );
-	$site_key = (string) ioblog_get_setting( 'captcha_site_key' );
-	$secret   = (string) ioblog_get_setting( 'captcha_secret_key' );
 
-	return in_array( $provider, array( 'yandex', 'google' ), true ) && $site_key && $secret ? $provider : 'builtin';
+	return in_array( $provider, array( 'yandex', 'google' ), true ) ? $provider : 'builtin';
 }
 
 /**
@@ -110,8 +108,7 @@ function ioblog_comment_remote_ip() {
 /**
  * Проверяет присланный токен у активного внешнего сервиса.
  *
- * При сетевой ошибке сайт остаётся доступным: временная недоступность API
- * CAPTCHA не должна блокировать владельцу вход в административную панель.
+ * Ошибки настройки, сети и ответа сервиса не разрешают отправку формы.
  *
  * @return true|WP_Error
  */
@@ -122,37 +119,47 @@ function ioblog_validate_captcha_response() {
 	}
 
 	$secret = (string) ioblog_get_setting( 'captcha_secret_key' );
+	$error  = new WP_Error( 'ioblog_captcha_failed', __( 'CAPTCHA verification failed. Refresh the page and try again.', 'ioblog-editorial' ) );
+	if ( '' === trim( $secret ) || '' === trim( (string) ioblog_get_setting( 'captcha_site_key' ) ) ) {
+		return $error;
+	}
+
 	$ip     = ioblog_comment_remote_ip();
 	if ( 'yandex' === $provider ) {
-		$token    = sanitize_text_field( wp_unslash( $_POST['smart-token'] ?? '' ) );
+		$token    = wp_unslash( $_POST['smart-token'] ?? '' );
 		$endpoint = 'https://smartcaptcha.cloud.yandex.ru/validate';
 		$body     = array( 'secret' => $secret, 'token' => $token, 'ip' => $ip );
 	} else {
-		$token    = sanitize_text_field( wp_unslash( $_POST['g-recaptcha-response'] ?? '' ) );
+		$token    = wp_unslash( $_POST['g-recaptcha-response'] ?? '' );
 		$endpoint = 'https://www.google.com/recaptcha/api/siteverify';
 		$body     = array( 'secret' => $secret, 'response' => $token, 'remoteip' => $ip );
 	}
 
-	if ( '' === $token ) {
+	if ( ! is_string( $token ) || '' === trim( $token ) || strlen( $token ) > 8192 ) {
 		return new WP_Error( 'ioblog_captcha_required', __( 'Confirm that you are not a robot.', 'ioblog-editorial' ) );
 	}
 
-	$response = wp_remote_post( $endpoint, array( 'timeout' => 4, 'body' => $body ) );
+	$response = wp_remote_post( $endpoint, array( 'timeout' => 4, 'redirection' => 0, 'body' => $body ) );
 	if ( is_wp_error( $response ) || 200 !== wp_remote_retrieve_response_code( $response ) ) {
-		return true;
+		return $error;
 	}
 
 	$result = json_decode( wp_remote_retrieve_body( $response ), true );
-	$passed = 'yandex' === $provider ? isset( $result['status'] ) && 'ok' === $result['status'] : ! empty( $result['success'] );
+	if ( ! is_array( $result ) ) {
+		return $error;
+	}
+
+	$passed = 'yandex' === $provider ? 'ok' === ( $result['status'] ?? null ) : true === ( $result['success'] ?? null );
 	$host   = 'yandex' === $provider ? ( $result['host'] ?? '' ) : ( $result['hostname'] ?? '' );
 	$site   = wp_parse_url( home_url( '/' ) );
 	$domain = ( $site['host'] ?? '' ) . ( 'yandex' === $provider && ! empty( $site['port'] ) ? ':' . $site['port'] : '' );
 
-	if ( ! is_string( $host ) || ( $passed && $host && $domain && strtolower( $host ) !== strtolower( $domain ) ) ) {
+	// Пустой host SmartCaptcha может означать сбой сервиса, а не успешную проверку человека.
+	if ( ! is_string( $host ) || '' === $host || '' === $domain || strtolower( $host ) !== strtolower( $domain ) ) {
 		$passed = false;
 	}
 
-	return $passed ? true : new WP_Error( 'ioblog_captcha_failed', __( 'CAPTCHA verification failed. Refresh the page and try again.', 'ioblog-editorial' ) );
+	return $passed ? true : $error;
 }
 
 /**
