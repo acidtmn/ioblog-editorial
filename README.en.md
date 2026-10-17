@@ -6,6 +6,8 @@ A lightweight editorial WordPress theme by **Kirill Aleksandrov** for personal b
 
 **Free 1.14.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
 
+**Pro 1.9.1 update, October 17, 2026:** Modal sign-in now opens the authenticated account immediately, without an extra refresh. Partial sessions renew native WordPress cookies, and private account/editor routes are excluded from speculative guest-page loading. The ioblog.ru owner confirmed the fix. Only the private Pro plugin needs updating; Free stays at 1.14.0 and its archive is unchanged. Pro code and ZIP files are not distributed in this repository.
+
 ## Download and Install
 
 Download the installable `ioblog-editorial-1.14.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.14.0), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
