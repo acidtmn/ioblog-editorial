@@ -6,6 +6,8 @@ A lightweight editorial WordPress theme by **Kirill Aleksandrov** for personal b
 
 **Free 1.14.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
 
+**Pro 1.10.1 update, October 18, 2026:** Redesigned author pages with an avatar, biography and native article cards. Personal fields require separate valid publication consent; without it, only published password-free articles remain, twelve per page. CSS covers, claps, keyboard pagination, light/dark mode and mobile layouts are preserved. Withdrawing consent hides personal fields without deleting articles. Editorial reputation and participation experience rules are unchanged. Free remains 1.14.0; Pro code and ZIP files are not published in this repository.
+
 **Pro 1.10.0 update, October 18, 2026:** A refreshed reader account highlights profile setup and the avatar generator. The first setup step saves a display name, headline, biography, location and HTTPS website; additional fields are optional. Selecting or uploading an avatar preserves unsaved profile fields and checkboxes. Public profiles and mailing subscriptions are never enabled automatically. Free stays at 1.14.0; Pro remains separately and privately distributed.
 
 **Pro 1.9.2 update, October 18, 2026:** Profile fields preserve backslashes, and partial updates no longer clear other fields or preferences. Save feedback appears next to the button. Public-profile controls stay unavailable until publication documents are configured, without blocking private settings. Existing readers can launch or resume the optional setup wizard directly from their profile. The site owner still controls the module switch. Free stays at 1.14.0; previous ZIP files are unchanged. Pro remains privately distributed.
