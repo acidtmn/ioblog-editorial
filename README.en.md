@@ -4,7 +4,9 @@
 
 A lightweight editorial WordPress theme by **Kirill Aleksandrov** for personal blogs and technology publications.
 
-**Free 1.14.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
+**Free 1.14.1** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
+
+**Free 1.14.1 / Pro 1.10.3 release, October 18, 2026:** Free improves responsive author-card layout: avatars retain their shape, while long biographies and links stay within the text column. The separate Pro plugin gives author blogs a public rating of five points per published password-free article, including old and dashboard-created posts. Hiding and restoring an article cannot duplicate points. Received claps, participation experience and editorial trust remain separate; trusted-publishing rights are unchanged. Instructions are updated. Pro code and ZIP files remain private.
 
 **Pro 1.10.2 follow-up, October 18, 2026:** Author blogs distinguish editorial reputation from received claps on public articles, without changing points or publishing rights. Article author cards have separate blog and profile-settings actions. The account explains when a saved publication choice requires current consent; private data is preserved and consent is never accepted automatically. Free remains 1.14.0; Pro is privately distributed.
 
@@ -18,7 +20,7 @@ A lightweight editorial WordPress theme by **Kirill Aleksandrov** for personal b
 
 ## Download and Install
 
-Download the installable `ioblog-editorial-1.14.0.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.14.0), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
+Download the installable `ioblog-editorial-1.14.1.zip` from [GitHub Releases](https://github.com/acidtmn/ioblog-editorial/releases/tag/v1.14.1), not the automatically generated source archive. The release ZIP has the correct `ioblog-editorial/` root directory. Verify SHA-256 with `SHA256SUMS.txt`.
 
 In WordPress open **Appearance → Themes → Add New → Upload Theme**, install the ZIP and activate it. Then open **IO Blog** in the main dashboard menu. Configure the homepage, reading layout, search and comments; assign Primary and Footer menus. Set your logo and Site Icon in **Appearance → Customize → Site Identity**.
 
