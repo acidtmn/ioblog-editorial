@@ -6,6 +6,8 @@ A lightweight editorial WordPress theme by **Kirill Aleksandrov** for personal b
 
 **Free 1.14.0** · WordPress 6.5+ · PHP 8.1+ · GPL-2.0-or-later
 
+**Pro 1.9.2 update, October 18, 2026:** Profile fields preserve backslashes, and partial updates no longer clear other fields or preferences. Save feedback appears next to the button. Public-profile controls stay unavailable until publication documents are configured, without blocking private settings. Existing readers can launch or resume the optional setup wizard directly from their profile. The site owner still controls the module switch. Free stays at 1.14.0; previous ZIP files are unchanged. Pro remains privately distributed.
+
 **Pro 1.9.1 update, October 17, 2026:** Modal sign-in now opens the authenticated account immediately, without an extra refresh. Partial sessions renew native WordPress cookies, and private account/editor routes are excluded from speculative guest-page loading. The ioblog.ru owner confirmed the fix. Only the private Pro plugin needs updating; Free stays at 1.14.0 and its archive is unchanged. Pro code and ZIP files are not distributed in this repository.
 
 ## Download and Install
