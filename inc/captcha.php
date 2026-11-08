@@ -150,16 +150,32 @@ function ioblog_validate_captcha_response() {
 	}
 
 	$passed = 'yandex' === $provider ? 'ok' === ( $result['status'] ?? null ) : true === ( $result['success'] ?? null );
-	$host   = 'yandex' === $provider ? ( $result['host'] ?? '' ) : ( $result['hostname'] ?? '' );
-	$site   = wp_parse_url( home_url( '/' ) );
-	$domain = ( $site['host'] ?? '' ) . ( 'yandex' === $provider && ! empty( $site['port'] ) ? ':' . $site['port'] : '' );
+	// Токен должен принадлежать нашему сайту: сверяем имя хоста со всеми вариантами доступа
+	// (с www/без, фактический хост запроса), иначе вход ломался на альтернативном варианте адреса.
+	$returned = is_string( $result[ 'yandex' === $provider ? 'host' : 'hostname' ] ?? null ) ? strtolower( (string) preg_replace( '/:\d+$/', '', trim( $result[ 'yandex' === $provider ? 'host' : 'hostname' ] ) ) ) : '';
 
-	// Пустой host SmartCaptcha может означать сбой сервиса, а не успешную проверку человека.
-	if ( ! is_string( $host ) || '' === $host || '' === $domain || strtolower( $host ) !== strtolower( $domain ) ) {
+	if ( '' === $returned || ! in_array( $returned, ioblog_captcha_allowed_hosts(), true ) ) {
 		$passed = false;
 	}
 
 	return $passed ? true : $error;
+}
+
+/**
+ * Возвращает допустимые имена хостов сайта: home_url, фактический хост запроса и варианты с/без www.
+ *
+ * @return array<int, string>
+ */
+function ioblog_captcha_allowed_hosts() {
+	$hosts  = array();
+	$parsed = wp_parse_url( home_url() );
+	foreach ( array( $parsed['host'] ?? '', isset( $_SERVER['HTTP_HOST'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) : '' ) as $candidate ) {
+		$candidate = strtolower( (string) preg_replace( '/:\d+$/', '', (string) $candidate ) );
+		if ( '' === $candidate || ! preg_match( '/^[a-z0-9.-]+$/D', $candidate ) ) { continue; }
+		$bare    = (string) preg_replace( '/^www\./', '', $candidate );
+		$hosts[] = $candidate; $hosts[] = $bare; $hosts[] = 'www.' . $bare;
+	}
+	return array_values( array_unique( $hosts ) );
 }
 
 /**

@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: IO Blog Editorial 1.14.0\n"
+"Project-Id-Version: IO Blog Editorial 1.14.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ioblog-editorial\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-09T08:05:03+00:00\n"
+"POT-Creation-Date: 2026-11-08T14:47:33+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ioblog-editorial\n"
@@ -290,7 +290,7 @@ msgid "Confirm that you are not a robot."
 msgstr ""
 
 #: inc/auth/captcha.php:16
-#: inc/auth/captcha.php:27
+#: inc/auth/captcha.php:28
 #: inc/captcha.php:122
 msgid "CAPTCHA verification failed. Refresh the page and try again."
 msgstr ""
@@ -329,7 +329,7 @@ msgstr ""
 #: inc/auth/controller.php:12
 #: inc/auth/view.php:11
 #: inc/community/controller.php:41
-#: inc/community/view.php:28
+#: inc/community/view.php:41
 #: inc/notifications/controller.php:18
 #: inc/writing/editor/assets.php:19
 #: inc/writing/errors.php:11
@@ -357,7 +357,7 @@ msgstr ""
 msgid "Enter a valid email address."
 msgstr ""
 
-#: inc/auth/service.php:64
+#: inc/auth/service.php:63
 msgid "Unable to sign in. Check your email and password."
 msgstr ""
 
@@ -378,6 +378,10 @@ msgstr ""
 
 #: inc/auth/view.php:8
 msgid "Check your email"
+msgstr ""
+
+#: inc/auth/view.php:9
+msgid "The check was not completed. Pass it again and retry."
 msgstr ""
 
 #: inc/auth/view.php:10
@@ -421,11 +425,11 @@ msgstr ""
 msgid "Open link"
 msgstr ""
 
-#: inc/community/account.php:54
+#: inc/community/account.php:57
 msgid "Current password is incorrect."
 msgstr ""
 
-#: inc/community/account.php:65
+#: inc/community/account.php:68
 msgid "Set a password before removing your last sign-in method."
 msgstr ""
 
@@ -468,7 +472,7 @@ msgid "Your library changed on another device. Reload and merge again."
 msgstr ""
 
 #: inc/community/messages.php:11
-#: inc/community/view.php:33
+#: inc/community/view.php:46
 msgid "This conversation is unavailable."
 msgstr ""
 
@@ -477,8 +481,8 @@ msgid "Message limit reached. Please try later."
 msgstr ""
 
 #: inc/community/mobile-navigation.php:5
-#: inc/community/view.php:47
-#: inc/routing/bootstrap.php:34
+#: inc/community/view.php:63
+#: inc/routing/bootstrap.php:40
 #: template-parts/account-routes.php:4
 #: template-parts/account.php:12
 #: template-parts/writing.php:6
@@ -487,7 +491,7 @@ msgstr ""
 
 #: inc/community/mobile-navigation.php:7
 #: inc/community/privacy.php:46
-#: inc/routing/bootstrap.php:34
+#: inc/routing/bootstrap.php:40
 #: template-parts/account-routes.php:4
 #: template-parts/account.php:19
 #: template-parts/writing-list.php:2
@@ -523,9 +527,10 @@ msgstr ""
 #: inc/community/mobile-navigation.php:11
 #: inc/community/privacy.php:30
 #: inc/community/privacy.php:36
-#: inc/routing/bootstrap.php:34
+#: inc/routing/bootstrap.php:40
 #: template-parts/account-routes.php:4
 #: template-parts/account.php:4
+#: template-parts/account.php:12
 msgid "Profile"
 msgstr ""
 
@@ -588,20 +593,48 @@ msgstr ""
 msgid "Drag or use arrow keys to position your avatar."
 msgstr ""
 
-#: inc/community/view.php:26
+#: inc/community/view.php:21
+msgid "Robots"
+msgstr ""
+
+#: inc/community/view.php:22
+msgid "People"
+msgstr ""
+
+#: inc/community/view.php:23
+msgid "Sketches"
+msgstr ""
+
+#: inc/community/view.php:25
+msgid "All"
+msgstr ""
+
+#: inc/community/view.php:36
 msgid "Confirmation email sent. Open the link while signed in."
 msgstr ""
 
-#: inc/community/view.php:27
-#: template-parts/reader-profile.php:13
+#: inc/community/view.php:37
+msgid "Your author blog is public."
+msgstr ""
+
+#: inc/community/view.php:38
+msgid "Only your published articles are visible. Profile details are private."
+msgstr ""
+
+#: inc/community/view.php:39
+msgid "Your details are saved. To reopen your author blog, confirm the current publication consent below and save."
+msgstr ""
+
+#: inc/community/view.php:40
+#: template-parts/reader-profile.php:35
 msgid "Follow author"
 msgstr ""
 
-#: inc/community/view.php:27
+#: inc/community/view.php:40
 msgid "Unfollow"
 msgstr ""
 
-#: inc/community/view.php:28
+#: inc/community/view.php:41
 #: inc/notifications/view.php:8
 #: template-parts/community-admin.php:13
 #: template-parts/mail-admin.php:7
@@ -612,73 +645,73 @@ msgstr ""
 msgid "Settings saved."
 msgstr ""
 
-#: inc/community/view.php:28
+#: inc/community/view.php:41
 #: template-parts/writing-admin.php:18
 msgid "Nothing here yet."
 msgstr ""
 
-#: inc/community/view.php:28
+#: inc/community/view.php:41
 #: template-parts/notification-center.php:6
-#: template-parts/profile-editor.php:20
+#: template-parts/profile-editor.php:29
 msgid "Save"
 msgstr ""
 
-#: inc/community/view.php:28
+#: inc/community/view.php:41
 msgid "Collection"
 msgstr ""
 
-#: inc/community/view.php:28
+#: inc/community/view.php:41
 msgid "Remove"
 msgstr ""
 
-#: inc/community/view.php:28
+#: inc/community/view.php:41
 #: inc/series/view.php:19
 msgid "Read"
 msgstr ""
 
-#: inc/community/view.php:28
+#: inc/community/view.php:41
 #: template-parts/account.php:36
 msgid "Merge browser library"
 msgstr ""
 
-#: inc/community/view.php:28
+#: inc/community/view.php:41
 #: template-parts/account.php:36
 msgid "Sync with this browser"
 msgstr ""
 
-#: inc/community/view.php:28
+#: inc/community/view.php:41
 msgid "Report"
 msgstr ""
 
-#: inc/community/view.php:28
+#: inc/community/view.php:41
 #: template-parts/chat.php:8
 msgid "Block"
 msgstr ""
 
-#: inc/community/view.php:28
+#: inc/community/view.php:41
 msgid "Unblock"
 msgstr ""
 
-#: inc/community/view.php:28
+#: inc/community/view.php:41
 #: inc/oauth/view.php:15
 msgid "Link account"
 msgstr ""
 
-#: inc/community/view.php:28
+#: inc/community/view.php:41
 msgid "Remove sign-in method"
 msgstr ""
 
-#: inc/community/view.php:28
+#: inc/community/view.php:41
 #: inc/writing/view.php:6
 #: template-parts/account.php:16
 msgid "Sign in to use your personal account."
 msgstr ""
 
-#: inc/community/view.php:33
+#: inc/community/view.php:46
 msgid "No readers found. Only people who allow messages appear here."
 msgstr ""
 
-#: inc/community/view.php:33
+#: inc/community/view.php:46
 msgid "Start a conversation"
 msgstr ""
 
@@ -912,7 +945,7 @@ msgstr ""
 #: inc/mailing/content.php:40
 #: inc/mailing/privacy.php:15
 #: template-parts/notification-center.php:5
-#: template-parts/profile-editor.php:18
+#: template-parts/profile-editor.php:26
 msgid "Email and notification settings"
 msgstr ""
 
@@ -936,7 +969,7 @@ msgstr ""
 #: inc/mailing/privacy.php:17
 #: inc/mailing/unsubscribe.php:13
 #: inc/mailing/unsubscribe.php:16
-#: inc/routing/bootstrap.php:34
+#: inc/routing/bootstrap.php:40
 #: template-parts/notification-center.php:7
 msgid "Email subscription"
 msgstr ""
@@ -1042,8 +1075,8 @@ msgstr ""
 msgid "Unable to sign in. Check the provider settings or try another sign-in method."
 msgstr ""
 
-#: inc/onboarding/avatar.php:25
 #: inc/onboarding/service.php:21
+#: inc/profile/gallery.php:30
 msgid "This feature is disabled."
 msgstr ""
 
@@ -1051,8 +1084,16 @@ msgstr ""
 msgid "Your profile changed in another tab. Reload and try again."
 msgstr ""
 
-#: inc/profile/view.php:20
+#: inc/profile/gallery.php:33
+msgid "Choose an avatar from the gallery."
+msgstr ""
+
+#: inc/profile/view.php:21
 msgid "This profile is not public."
+msgstr ""
+
+#: inc/profile/view.php:24
+msgid "No articles on this page."
 msgstr ""
 
 #: inc/series/admin.php:5
@@ -1161,7 +1202,7 @@ msgid "In review"
 msgstr ""
 
 #: inc/writing/editor/assets.php:19
-#: template-parts/reader-profile.php:15
+#: template-parts/reader-profile.php:40
 #: template-parts/writing-list.php:4
 #: template-parts/writing-list.php:5
 msgid "Published"
@@ -1172,8 +1213,7 @@ msgid "Moved to trash"
 msgstr ""
 
 #: inc/writing/editor/assets.php:19
-#: template-parts/reader-profile.php:14
-msgid "Author reputation"
+msgid "Editorial trust"
 msgstr ""
 
 #: inc/writing/editor/assets.php:20
@@ -1458,20 +1498,25 @@ msgstr ""
 msgid "Write"
 msgstr ""
 
-#: inc/writing/view.php:15
-#: template-parts/profile-editor.php:16
-msgid "View public profile"
+#: inc/writing/view.php:17
+#: template-parts/reader-profile.php:12
+msgid "Author blog"
 msgstr ""
 
-#: inc/writing/view.php:16
+#: inc/writing/view.php:17
+msgid "View author articles"
+msgstr ""
+
+#: inc/writing/view.php:18
+#: template-parts/reader-profile.php:34
 msgid "Edit your author profile"
 msgstr ""
 
-#: inc/writing/view.php:21
+#: inc/writing/view.php:27
 msgid "Community authors"
 msgstr ""
 
-#: inc/writing/view.php:21
+#: inc/writing/view.php:27
 msgid "Ranked by editorial reputation, then publication date."
 msgstr ""
 
@@ -1501,6 +1546,7 @@ msgid "My comments"
 msgstr ""
 
 #: template-parts/account.php:6
+#: template-parts/profile-editor.php:6
 msgid "Set up profile"
 msgstr ""
 
@@ -1592,6 +1638,7 @@ msgid "Find an article"
 msgstr ""
 
 #: template-parts/auth-modal.php:6
+#: template-parts/avatar-editor.php:13
 #: template-parts/notification-bell.php:5
 msgid "Close"
 msgstr ""
@@ -1651,39 +1698,39 @@ msgid "Remove avatar"
 msgstr ""
 
 #: template-parts/avatar-editor.php:9
-msgid "Generate avatar"
+msgid "Choose from gallery"
 msgstr ""
 
 #: template-parts/avatar-editor.php:10
-msgid "JPG, PNG or WebP up to 5 MB. Crop a square before saving."
-msgstr ""
-
-#: template-parts/avatar-editor.php:11
-msgid "Avatar preview"
-msgstr ""
-
-#: template-parts/avatar-editor.php:11
-msgid "Use this avatar"
-msgstr ""
-
-#: template-parts/avatar-editor.php:11
-#: template-parts/avatar-editor.php:15
-msgid "Cancel"
-msgstr ""
-
-#: template-parts/avatar-editor.php:12
-msgid "Crop your avatar"
+msgid "JPG, PNG or WebP up to 5 MB, or pick a ready character from the gallery."
 msgstr ""
 
 #: template-parts/avatar-editor.php:13
+#: template-parts/avatar-editor.php:14
+msgid "Choose an avatar"
+msgstr ""
+
+#: template-parts/avatar-editor.php:13
+msgid "Avatar collections"
+msgstr ""
+
+#: template-parts/avatar-editor.php:17
+msgid "Crop your avatar"
+msgstr ""
+
+#: template-parts/avatar-editor.php:18
 msgid "Drag to position the image. Use arrow keys for precise movement."
 msgstr ""
 
-#: template-parts/avatar-editor.php:14
+#: template-parts/avatar-editor.php:19
 msgid "Zoom"
 msgstr ""
 
-#: template-parts/avatar-editor.php:15
+#: template-parts/avatar-editor.php:20
+msgid "Cancel"
+msgstr ""
+
+#: template-parts/avatar-editor.php:20
 msgid "Save avatar"
 msgstr ""
 
@@ -1756,7 +1803,7 @@ msgid "Registration by email verification code"
 msgstr ""
 
 #: template-parts/community-admin.php:8
-msgid "Local avatar generator"
+msgid "Built-in avatar gallery"
 msgstr ""
 
 #: template-parts/community-admin.php:11
@@ -1782,7 +1829,7 @@ msgid "Daily message limit per user"
 msgstr ""
 
 #: template-parts/community-admin.php:16
-#: template-parts/profile-setup.php:11
+#: template-parts/profile-setup.php:12
 msgid "Open personal account"
 msgstr ""
 
@@ -2163,51 +2210,94 @@ msgstr ""
 msgid "Continue"
 msgstr ""
 
+#: template-parts/profile-editor.php:6
+msgid "Make it yours"
+msgstr ""
+
+#: template-parts/profile-editor.php:6
+msgid "A profile with personality"
+msgstr ""
+
+#: template-parts/profile-editor.php:6
+msgid "Introduce yourself, choose an avatar and find your interests."
+msgstr ""
+
 #: template-parts/profile-editor.php:7
-#: template-parts/profile-setup.php:3
-#: template-parts/profile-setup.php:6
-msgid "Display name"
-msgstr ""
-
-#: template-parts/profile-editor.php:8
-msgid "Short signature"
-msgstr ""
-
-#: template-parts/profile-editor.php:8
-msgid "What you do or write about"
-msgstr ""
-
-#: template-parts/profile-editor.php:9
-msgid "About you"
-msgstr ""
-
-#: template-parts/profile-editor.php:10
-msgid "Location (optional)"
-msgstr ""
-
-#: template-parts/profile-editor.php:10
-#: template-parts/reader-profile.php:12
-msgid "Personal website"
+msgid "Your avatar"
 msgstr ""
 
 #: template-parts/profile-editor.php:11
-msgid "Publish my profile, signature, biography and avatar"
-msgstr ""
-
-#: template-parts/profile-editor.php:12
-msgid "Private by default. Your display name may still appear in comments and conversations. Email and sign-in identifiers are never added to this public profile."
+msgid "Personal details"
 msgstr ""
 
 #: template-parts/profile-editor.php:14
-msgid "I separately consent to publication of these profile fields."
+msgid "Profile visibility"
+msgstr ""
+
+#: template-parts/profile-editor.php:16
+msgid "Publish my profile, signature, biography and avatar"
 msgstr ""
 
 #: template-parts/profile-editor.php:17
+msgid "Public profiles are not available yet. You can still save your personal settings."
+msgstr ""
+
+#: template-parts/profile-editor.php:18
+msgid "Private by default. Your display name may still appear in comments and conversations. Email and sign-in identifiers are never added to this public profile."
+msgstr ""
+
+#: template-parts/profile-editor.php:20
+msgid "I separately consent to publication of these profile fields."
+msgstr ""
+
+#: template-parts/profile-editor.php:22
+msgid "View public profile"
+msgstr ""
+
+#: template-parts/profile-editor.php:24
+msgid "Conversations and interests"
+msgstr ""
+
+#: template-parts/profile-editor.php:25
 msgid "Allow private messages"
 msgstr ""
 
-#: template-parts/profile-editor.php:19
+#: template-parts/profile-editor.php:27
 msgid "Follow categories"
+msgstr ""
+
+#: template-parts/profile-fields.php:6
+msgid "Display name"
+msgstr ""
+
+#: template-parts/profile-fields.php:7
+msgid "Short signature"
+msgstr ""
+
+#: template-parts/profile-fields.php:7
+msgid "What you do or write about"
+msgstr ""
+
+#: template-parts/profile-fields.php:9
+msgid "Suggest a name"
+msgstr ""
+
+#: template-parts/profile-fields.php:10
+#: template-parts/profile-setup.php:3
+msgid "About you"
+msgstr ""
+
+#: template-parts/profile-fields.php:10
+msgid "Your experience, interests and what you would like to share"
+msgstr ""
+
+#: template-parts/profile-fields.php:12
+msgid "Location (optional)"
+msgstr ""
+
+#: template-parts/profile-fields.php:13
+#: template-parts/reader-profile.php:22
+msgid "Personal website"
 msgstr ""
 
 #: template-parts/profile-setup.php:3
@@ -2223,7 +2313,11 @@ msgid "Make yourself at home. Every step is optional and you can return later."
 msgstr ""
 
 #: template-parts/profile-setup.php:6
-msgid "Suggest a name"
+msgid "Tell your story"
+msgstr ""
+
+#: template-parts/profile-setup.php:6
+msgid "Share only what you want. These details stay private until you choose to publish your profile."
 msgstr ""
 
 #: template-parts/profile-setup.php:8
@@ -2246,16 +2340,62 @@ msgstr ""
 msgid "Skip this step"
 msgstr ""
 
-#: template-parts/profile-setup.php:11
+#: template-parts/profile-setup.php:12
 msgid "Your profile is ready"
 msgstr ""
 
-#: template-parts/profile-setup.php:11
+#: template-parts/profile-setup.php:12
 msgid "You can change your name, avatar and interests at any time."
 msgstr ""
 
-#: template-parts/profile-setup.php:11
+#: template-parts/profile-setup.php:12
 msgid "Set up again"
+msgstr ""
+
+#: template-parts/reader-profile.php:12
+msgid "Stories and ideas"
+msgstr ""
+
+#: template-parts/reader-profile.php:13
+msgid "Author articles"
+msgstr ""
+
+#: template-parts/reader-profile.php:26
+msgid "Published articles"
+msgstr ""
+
+#: template-parts/reader-profile.php:27
+msgid "Author rating"
+msgstr ""
+
+#: template-parts/reader-profile.php:28
+msgid "Claps received"
+msgstr ""
+
+#: template-parts/reader-profile.php:29
+msgid "Participation level"
+msgstr ""
+
+#. translators: %s: number of published articles.
+#: template-parts/reader-profile.php:40
+#, php-format
+msgid "Articles: %s"
+msgstr ""
+
+#: template-parts/reader-profile.php:48
+msgid "No published articles yet."
+msgstr ""
+
+#: template-parts/reader-profile.php:50
+msgid "Author article pages"
+msgstr ""
+
+#: template-parts/reader-profile.php:50
+msgid "Previous page"
+msgstr ""
+
+#: template-parts/reader-profile.php:50
+msgid "Next page"
 msgstr ""
 
 #: template-parts/writing-admin.php:7
@@ -3049,7 +3189,7 @@ msgstr ""
 msgid "This form is protected by the built-in IO Blog anti-spam."
 msgstr ""
 
-#: inc/captcha.php:179
+#: inc/captcha.php:195
 msgid "CAPTCHA verification"
 msgstr ""
 

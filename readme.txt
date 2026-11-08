@@ -3,7 +3,7 @@ Contributors: kirillaleksandrov
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.14.1
+Stable tag: 1.14.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, news, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -149,6 +149,9 @@ Yes. Upload a featured image in the post editor. It automatically replaces the g
 Use the bundled POT file with Poedit, Loco Translate, or the WordPress i18n tools. Save compiled translations with the `ioblog-editorial` text domain.
 
 == Changelog ==
+
+= 1.14.2 =
+Fixed external CAPTCHA host validation for configured site addresses with or without www and nonstandard ports. The allowed-host check remains mandatory; settings and existing content are unchanged. Updated the shared translation catalog and paired Pro 1.11.0 documentation.
 
 = 1.14.1 =
 Improved responsive article author-card layout: avatars retain their shape, long biographies and links wrap within the text column, and content aligns consistently. Updated Free/Pro setup documentation for modern author blogs, separate public article rating, editorial trust and profile consent status. Settings, translations and existing posts are preserved. Optional author blogs and public rating are provided by the separate private Pro 1.10.3 plugin.
